@@ -27,18 +27,123 @@
 
 /* galeri */
 
-.galeri_content:after
-{content:'.';display:block;overflow:hidden;visibility:hidden;font-size:0;line-height:0;width:0;height:0;}
-.clearfix:after{clear:both;}
-.clearfix{zoom:1;}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
-.fl{float:left;} .fr{float:right;} 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.image-div{margin: 10px 10px 0;padding: 10px 10px;position: relative;color:#222;background-color:--main-color #3d4149;border:1px solid #000;} 
-    .image-div .image{position:relative;} 
-       .image-div .image img{position:relative;background:none repeat scroll 0 0 transparent;padding: 2px;border: 1px solid #ccc;margin: 0 0 0 0;} 
-    .image-div .image-div-content{position: relative;} 
-        .image-div .image-div-content .row{margin: 0 0 0 0;padding: 0 0 4px 0;position: relative;}
+body {
+  font: 18px/1 'Poppins', sans-serif;
+  color: auto;
+  background: var(--main-color);
+}
+
+.line {
+position: absolute;
+width: 1352px;
+height: 0px;
+left: 25px;
+top: 100px;
+
+border: 2px solid #3E54AC;
+
+}
+
+.arrow1 {
+
+  position: absolute;
+width: 1440px;
+height: 1028px;
+left: 20px;
+top: 500px;
+padding-right: 100px;
+color: 2px var(--black);
+
+}
+
+.arrow2 {
+
+  position: absolute;
+width: 1440px;
+height: 1028px;
+right: 20px;
+top: 500px;
+padding-left: 1420px;
+color: 2px var(--black);
+
+}
+
+
+.gallery {
+  
+
+position: absolute;
+width: 133px;
+height: 49px;
+left: 75px;
+top: 3164px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 49px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > image {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 270.06px;
+  height: 269.91px;
+  left: 72px;
+  top: 3338.95px;
+  
+  background: none;
+  mix-blend-mode: normal;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+  
+  transform: rotate(-0.2deg);
+}
+
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+h1 {
+  margin:  50px;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--white);
+}
 
 /* galeri */
 
