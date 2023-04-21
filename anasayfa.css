@@ -20,6 +20,160 @@
 /* giriş ekranı */
 
 /* biz kimiz */
+.bizkimiz--section {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 3vw;
+}
+
+.bizkimiz--content {
+  width: 40%;
+  border-left: var(--side-color) 4px solid;
+  padding-left: 20px;
+}
+
+.bizkimiz--content h1 {
+  font-size: xx-large;
+}
+
+.bizkimiz--img_slider {
+  float: right;
+  display: flex;
+  width: 800px;
+  height: 400px;
+}
+
+.slides {
+  border-left: var(--side-color) 10px outset;
+  border-bottom: var(--side-color) 10px outset;
+  border-radius: 10px;
+  width: 730px;
+  height: 370px;
+  position: absolute;
+  right: 7vw;
+  top: 100px;
+}
+
+.slide {
+  position: absolute;
+  z-index: -5;
+  display: none;
+}
+
+.slide img {
+  width: 720px;
+  height: 360px;
+  object-fit: cover;
+}
+
+.bizkimiz--img_slider .arrow-right,
+.bizkimiz--img_slider .arrow-left {
+  position: relative;
+  bottom: 35%;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: var(--light-color);
+  background-color: var(--main-color);
+  opacity: 60%;
+  font-size: xx-large;
+}
+
+.bizkimiz--img_slider .arrow-right:hover,
+.bizkimiz--img_slider .arrow-left:hover {
+  opacity: 90%;
+  color: var(--side-color);
+  background-color: var(--white);
+}
+
+.bizkimiz--img_slider .arrow-right {
+  transform: translateX(615px);
+}
+
+.bizkimiz--img_slider .arrow-left {
+  transform: translateX(-15px);
+}
+
+.bizkimiz--img_slider .dots {
+  font-size: 12px;
+  color: var(--light-color);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  display: grid;
+  grid-template-rows: 15px;
+  grid-template-columns: repeat(auto-fill, 15px);
+  width: 75px;
+  height: 15px;
+  column-gap: 5px;
+  transition: ease 300ms;
+}
+.bizkimiz--img_slider .dots .dot[data-dot="selected"] {
+  color: var(--side-color);
+  text-shadow: 0px 0px 2px var(--black);
+}
+
+.bizkimiz--text_slider {
+  position: relative;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 70%;
+
+  justify-content: center;
+}
+
+.bizkimiz--text_slider .tags {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  column-gap: 250px;
+  width: 800px;
+  position: relative;
+  left: 50%;
+  top: 13px;
+  transform: translateX(-50%);
+  /* position: relative;
+  left: 15%;
+  top: 14px; */
+}
+
+.bizkimiz--text_slider .tags .tag {
+  height: 25px;
+  border-radius: 15px;
+  background-color: var(--light-color);
+  padding-top: 5px;
+  font-weight: 600;
+  transition: ease 300ms;
+}
+
+.bizkimiz--text_slider .tags .tag[data-tag="selected"] {
+  background-color: var(--side-color);
+  color: var(--white);
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 3px 1px rgba(0, 0, 0, 0.75);
+}
+
+.bizkimiz--text_slider .texts {
+  border: var(--light-color) 3px solid;
+  border-radius: 15px;
+  padding: 20px;
+  height: 200px;
+}
+
+.bizkimiz--text_slider .texts .text-slide {
+  display: none;
+  position: relative;
+  transition: ease 300ms;
+}
+.bizkimiz--text_slider .texts .text-slide[data-text="show"] {
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* biz kimiz */
 
 /* takım sayfası */

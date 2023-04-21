@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anasayfa</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="anasayfa.css" />
   </head>
   <body>
@@ -25,24 +29,45 @@
           atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur
           adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam
           nihil voluptatibus quos, nulla laudantium magnam ratione dolorem
-          asperiores beatae accusamus nisi error inventore in consectetur.
+          asperiores beatae accusamus nisi error inventore in consectetur.Lorem
+          ipsum dolor sit amet consectetur,
+        </p>
+        <p>
+          adipisicing elit. Harum, reiciendis veritatis non vero distinctio in
+          maxime, numquam expedita facere quaerat quas aut doloribus, dolorem
+          consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor,
+          sit amet consectetur adipisicing elit. Saepe beatae aperiam
+          perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium
+          magnam ratione dolorem asperiores beatae accusamus nisi error
+          inventore in consectetur.Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Harum, reiciendis veritatis non vero distinctio in
+          maxime, numquam expedita facere quaerat quas aut doloribus, dolorem
         </p>
       </div>
       <div class="bizkimiz--img_slider">
+        <div class="dots">
+          <div data-dot="selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+          <div data-dot="non-selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+          <div data-dot="non-selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+          <div data-dot="non-selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+        </div>
         <div class="slides">
           <div class="slide"><img src="img/img.png" /></div>
           <div class="slide"><img src="img/imgupside.png" /></div>
           <div class="slide"><img src="img/img.png" /></div>
           <div class="slide"><img src="img/imgupside.png" /></div>
         </div>
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <div class="arrow-left"><</div>
-        <div class="arrow-right">></div>
+
+        <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+        <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
       </div>
       <div class="bizkimiz--text_slider">
         <div class="tags">
@@ -51,23 +76,43 @@
           <div data-index="3" data-tag="non-selected" class="tag">Hedef</div>
         </div>
         <div class="texts">
-          <div data-text="1" class="text-slide">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ex
-            repellendus asperiores id qui est saepe at doloremque nemo sapiente
-            blanditiis mollitia accusamus provident animi deleniti repellat
-            aliquid quisquam officiis.
+          <div data-index="1" data-text="show" class="text-slide">
+            bu birinci Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Beatae, ex repellendus asperiores id qui est saepe at doloremque
+            nemo sapiente blanditiis mollitia accusamus provident animi deleniti
+            repellat aliquid quisquam officiis. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Cum quis exercitationem officiis
+            obcaecati dolorum laborum dolor, error quasi reprehenderit
+            dignissimos veniam fugit tempore. Dolorem sapiente laboriosam
+            distinctio. Eos, amet numquam. Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Eaque doloremque dolorum iure
+            architecto aut neque id. Officia, asperiores, voluptate totam
+            voluptates neque eum, numquam obcaecati nihil pariatur consequatur
+            velit maiores!
           </div>
-          <div data-text="2" class="text-slide">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ex
-            repellendus asperiores id qui est saepe at doloremque nemo sapiente
-            blanditiis mollitia accusamus provident animi deleniti repellat
-            aliquid quisquam officiis.
+          <div data-index="2" data-text="hide" class="text-slide">
+            bu ikiiiiii Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Beatae, ex repellendus asperiores id qui est saepe at
+            doloremque nemo sapiente blanditiis mollitia accusamus provident
+            animi deleniti repellat aliquid quisquam officiis.obcaecati dolorum
+            laborum dolor, error quasi reprehenderit dignissimos veniam fugit
+            tempore. Dolorem sapiente laboriosam distinctio. Eos, amet numquam.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+            doloremque dolorum iure architecto aut neque id. Officia,
+            asperiores, voluptate totam voluptates neque eum, numquam obcaecati
+            nihil pariatur consequatur velit maiores!
           </div>
-          <div data-text="3" class="text-slide">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, ex
-            repellendus asperiores id qui est saepe at doloremque nemo sapiente
-            blanditiis mollitia accusamus provident animi deleniti repellat
-            aliquid quisquam officiis.
+          <div data-index="3" data-text="hide" class="text-slide">
+            üçüçüçüçüççü Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Beatae, ex repellendus asperiores id qui est saepe at
+            doloremque nemo sapiente blanditiis mollitia accusamus provident
+            animi deleniti repellat aliquid quisquam officiis.obcaecati dolorum
+            laborum dolor, error quasi reprehenderit dignissimos veniam fugit
+            tempore. Dolorem sapiente laboriosam distinctio. Eos, amet numquam.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+            doloremque dolorum iure architecto aut neque id. Officia,
+            asperiores, voluptate totam voluptates neque eum, numquam obcaecati
+            nihil pariatur consequatur velit maiores!
           </div>
         </div>
       </div>
@@ -85,6 +130,6 @@
 
     <!-- footer -->
     <!-- footer -->
-    <script src="anasayfa.js"></script>
+    <script defer src="anasayfa.js"></script>
   </body>
 </html>
