@@ -30,6 +30,7 @@
   width: 40%;
   border-left: var(--side-color) 4px solid;
   padding-left: 20px;
+  margin-left: 150px;
 }
 
 .bizkimiz--content h1 {
@@ -37,39 +38,44 @@
 }
 
 .bizkimiz--img_slider {
+  position: fixed;
+  right: 100px;
+  top: 100px;
   float: right;
-  display: flex;
-  width: 800px;
-  height: 400px;
+  display: inline;
+  width: 700px;
+  height: 360px;
 }
 
 .slides {
-  border-left: var(--side-color) 10px outset;
-  border-bottom: var(--side-color) 10px outset;
-  border-radius: 10px;
-  width: 730px;
-  height: 370px;
-  position: absolute;
-  right: 7vw;
-  top: 100px;
+  background-color: var(--light-color);
+  border: var(--side-color) 10px outset;
+  border-radius: 5px;
+  width: 700px;
+  height: 360px;
+  position: relative;
+  bottom: 15px;
+  overflow: hidden;
 }
 
 .slide {
   position: absolute;
-  z-index: -5;
-  display: none;
+  opacity: 0%;
+  transition: ease 200ms;
 }
 
 .slide img {
-  width: 720px;
-  height: 360px;
+  width: 101%;
+  height: 101%;
   object-fit: cover;
 }
 
 .bizkimiz--img_slider .arrow-right,
 .bizkimiz--img_slider .arrow-left {
-  position: relative;
-  bottom: 35%;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
   text-align: center;
   width: 35px;
   height: 35px;
@@ -78,6 +84,12 @@
   background-color: var(--main-color);
   opacity: 60%;
   font-size: xx-large;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.bizkimiz--img_slider .arrow-right {
+  transform: translateX(620px);
 }
 
 .bizkimiz--img_slider .arrow-right:hover,
@@ -87,20 +99,13 @@
   background-color: var(--white);
 }
 
-.bizkimiz--img_slider .arrow-right {
-  transform: translateX(615px);
-}
-
-.bizkimiz--img_slider .arrow-left {
-  transform: translateX(-15px);
-}
-
 .bizkimiz--img_slider .dots {
   font-size: 12px;
   color: var(--light-color);
-  position: relative;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, 20px);
+  bottom: 30px;
+  transform: translateX(-50%);
   display: grid;
   grid-template-rows: 15px;
   grid-template-columns: repeat(auto-fill, 15px);
@@ -108,7 +113,13 @@
   height: 15px;
   column-gap: 5px;
   transition: ease 300ms;
+  z-index: 5;
 }
+
+.bizkimiz--img_slider .dots .dot {
+  cursor: pointer;
+}
+
 .bizkimiz--img_slider .dots .dot[data-dot="selected"] {
   color: var(--side-color);
   text-shadow: 0px 0px 2px var(--black);
@@ -146,6 +157,7 @@
   padding-top: 5px;
   font-weight: 600;
   transition: ease 300ms;
+  cursor: pointer;
 }
 
 .bizkimiz--text_slider .tags .tag[data-tag="selected"] {
