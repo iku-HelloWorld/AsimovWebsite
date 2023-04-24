@@ -17,6 +17,66 @@
 /* navbar */
 
 /* giriş ekranı */
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.mainscreenContainer {
+  background-size: cover;
+  width: 125%;
+  height: 125%;
+  border: 500px solid #3d4149;
+}
+
+#mainscreenlogo {
+  position: absolute;
+  right: 100px;
+  top: -100px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+}
+
+.mainscreensSlogan {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 80px;
+  position: absolute;
+  left: 180px;
+  top: 400px;
+  color: #d4d9df;
+}
+
+.mainscreensSlogan2 {
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 80px;
+  position: absolute;
+  left: 180px;
+  top: 480px;
+  color: #d4d9df;
+}
+
+.mainscreenScroll {
+  position: relative;
+  font-family: sans-serif;
+  color: #d4d9df;
+  font-size: 20px;
+  position: absolute;
+  right: 180px;
+  bottom: 0%;
+}
+
+.fas fa-angle-right {
+  font-size: 20px;
+}
+
 /* giriş ekranı */
 
 /* biz kimiz */
