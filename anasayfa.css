@@ -29,6 +29,60 @@
 /* galeri */
 
 /* iletişim */
+.CommunicationPage {
+  background-color: #d4d9df;
+  padding: 10px;
+  width: 100%;
+  height: 700px;
+  margin: auto;
+}
+
+.CommunicationTitle {
+  padding-left: 5%;
+  font-family: "Poppins";
+  font-size: 40px;
+}
+
+.CommunicationMap {
+  width: 500px;
+  height: 500px;
+  margin-left: -14%;
+  margin-top: -4%;
+}
+
+.mapbox {
+  margin-top: 4%;
+  padding-left: 5%;
+  background-color: #3d52a5;
+  width: 500px;
+  margin-left: 5%;
+  padding-bottom: 10px;
+}
+
+.CommunicationPagetextpage {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: -500px;
+  margin-left: 780px;
+  right: 300px
+}
+
+.CommunicationClubLogo {
+  right: 300px;
+  width: 300px;
+  height: auto;
+
+
+}
+
+.CommunicationSchoolLogo {
+  right: 300px;
+  width: 300px;
+  height: auto;
+}
+
 /* iletişim */
 
 /* footer */
