@@ -27,19 +27,19 @@
 
 /* galeri */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.galeri_content {
+  background-color: var(--main-color);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
-body {
-  font: 18px/1 'Poppins', sans-serif;
-  color: auto;
-  background: var(--main-color);
+.galeri_page {
+display: grid;
+grid-template-columns: repeat(4,20%);
+gap: 1rem;
 }
+
 
 .line {
 position: absolute;
@@ -125,23 +125,16 @@ color: #FFFFFF;
   transform: rotate(-0.2deg);
 } */
 
-.image1 {
+.image {
 
   box-sizing: border-box;
 
-  position: absolute;
-  width: 270.06px;
-  height: 269.91px;
-  left: 72px;
-  top: 250px;
-  
-  background: url(image.png);
-  mix-blend-mode: normal;
+  position: relative;
+  width: 10%;
+  height: 10%;
+    
   border: 1px solid rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(2px);
-  /* Note: backdrop-filter has minimal browser support */
-  
-  transform: rotate(-0.2deg);
 }
 
 .image_div_content {
@@ -157,7 +150,7 @@ height: 15px;
 left: 61px;
 top: 250px;
 
-font-family: 'Inter';
+font-family: "Poppins", sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -178,6 +171,7 @@ backdrop-filter: blur(2px);
 }
 
 
+<<<<<<< HEAD
 .image2 {
 
   box-sizing: border-box;
@@ -202,7 +196,7 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   left: 383px;
   top: 3586px;
   
-  font-family: 'Inter';
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -234,7 +228,7 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 .image_div_content {
 
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
+
 
 
 box-sizing: border-box;
@@ -245,7 +239,7 @@ height: 15px;
 left: 61px;
 top: 250px;
 
-font-family: 'Inter';
+font-family: "Poppins", sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -278,7 +272,7 @@ backdrop-filter: blur(2px);
 
 .image_div_content {
 
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
+
 
 
 box-sizing: border-box;
@@ -289,7 +283,7 @@ height: 15px;
 left: 61px;
 top: 250px;
 
-font-family: 'Inter';
+font-family: "Poppins", sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -327,7 +321,6 @@ backdrop-filter: blur(2px);
 
 .image_div_content {
 
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
 
 
 box-sizing: border-box;
@@ -338,7 +331,7 @@ height: 15px;
 left: 61px;
 top: 250px;
 
-font-family: 'Inter';
+font-family: "Poppins", sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -376,7 +369,7 @@ backdrop-filter: blur(2px);
 
 .image_div_content {
 
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
+
 
 
 box-sizing: border-box;
@@ -387,7 +380,7 @@ height: 15px;
 left: 61px;
 top: 250px;
 
-font-family: 'Inter';
+font-family: "Poppins", sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -419,7 +412,7 @@ backdrop-filter: blur(2px);
 
 .image_div_content {
 
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
+
 
 
 box-sizing: border-box;
@@ -430,7 +423,7 @@ height: 15px;
 left: 61px;
 top: 250px;
 
-font-family: 'Inter';
+font-family: "Poppins", sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -464,7 +457,7 @@ backdrop-filter: blur(2px);
 
 .image_div_content {
 
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
+
 
 
 box-sizing: border-box;
@@ -475,7 +468,7 @@ height: 15px;
 left: 61px;
 top: 250px;
 
-font-family: 'Inter';
+font-family: "Poppins", sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
@@ -495,6 +488,8 @@ backdrop-filter: blur(2px);
 /* Note: backdrop-filter has minimal browser support */
 }
 
+=======
+>>>>>>> c2cbe20fa6f754ee50b490c9c2b9d284ad104b4f
 .gallery > div:hover {
   z-index: 1;
 }
