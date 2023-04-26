@@ -27,19 +27,19 @@
 
 /* galeri */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.galeri_content {
+  background-color: var(--main-color);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
-body {
-  font: 18px/1 'Poppins', sans-serif;
-  color: auto;
-  background: var(--main-color);
+.galeri_page {
+display: grid;
+grid-template-columns: repeat(4,20%);
+gap: 1rem;
 }
+
 
 .line {
 position: absolute;
@@ -125,23 +125,16 @@ color: #FFFFFF;
   transform: rotate(-0.2deg);
 } */
 
-.image1 {
+.image {
 
   box-sizing: border-box;
 
-  position: absolute;
-  width: 270.06px;
-  height: 269.91px;
-  left: 72px;
-  top: 250px;
-  
-  background: url(image.png);
-  mix-blend-mode: normal;
+  position: relative;
+  width: 10%;
+  height: 10%;
+    
   border: 1px solid rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(2px);
-  /* Note: backdrop-filter has minimal browser support */
-  
-  transform: rotate(-0.2deg);
 }
 
 .image_div_content {
@@ -177,323 +170,6 @@ backdrop-filter: blur(2px);
 /* Note: backdrop-filter has minimal browser support */
 }
 
-
-.image2 {
-
-  box-sizing: border-box;
-
-position: absolute;
-width: 270px;
-height: 270px;
-left: 416px;
-top: 250px;
-
-background: url(image.png);
-mix-blend-mode: normal;
-border: 1px solid rgba(0, 0, 0, 0.48);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.image_div_content {
-
-  position: absolute;
-  width: 345px;
-  height: 15px;
-  left: 383px;
-  top: 3586px;
-  
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  /* identical to box height */
-  
-  display: flex;
-  align-items: center;
-  
-  color: #FFFFFF;
-  
-}
-
-.image3 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 271px;
-  height: 270px;
-  left: 744px;
-  top: 250px;
-  
-  background: url(image.png);
-  border: 1px solid rgba(0, 0, 0, 0.53);
-  backdrop-filter: blur(2px);
-  /* Note: backdrop-filter has minimal browser support */
- 
-}
-
-.image_div_content {
-
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
-
-
-box-sizing: border-box;
-
-position: absolute;
-width: 270px;
-height: 15px;
-left: 61px;
-top: 250px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: justify;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-border: 0.5px solid #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-}
-
-.image4 {
-  position: absolute;
-  width: 270px;
-  height: 270px;
-  left: 1088px;
-  top: 250px;
-  
-  background: url(image.png);
- 
-}
-
-.image_div_content {
-
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
-
-
-box-sizing: border-box;
-
-position: absolute;
-width: 270px;
-height: 15px;
-left: 61px;
-top: 250px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: justify;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-border: 0.5px solid #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-}
-
-.image5 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 270px;
-  height: 270px;
-  left: 73px;
-  top: 550px;
-  
-  background: url(image.png);
-  border: 1px solid rgba(0, 0, 0, 0.48);
-  backdrop-filter: blur(2px);
-  /* Note: backdrop-filter has minimal browser support */
- 
-}
-
-.image_div_content {
-
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
-
-
-box-sizing: border-box;
-
-position: absolute;
-width: 270px;
-height: 15px;
-left: 61px;
-top: 250px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: justify;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-border: 0.5px solid #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-}
-
-.image6 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 272px;
-  height: 271px;
-  left: 407px;
-  top: 550px;
-  
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(image.png);
-  border: 1px solid rgba(0, 0, 0, 0.54);
-  backdrop-filter: blur(2px);
-  /* Note: backdrop-filter has minimal browser support */
- 
-}
-
-.image_div_content {
-
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
-
-
-box-sizing: border-box;
-
-position: absolute;
-width: 270px;
-height: 15px;
-left: 61px;
-top: 250px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: justify;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-border: 0.5px solid #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-}
-
-.image7 {
-  position: absolute;
-  width: 268px;
-  height: 270px;
-  left: 742px;
-  top: 550px;
-  background: url(image.png);
- 
-}
-
-.image_div_content {
-
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
-
-
-box-sizing: border-box;
-
-position: absolute;
-width: 270px;
-height: 15px;
-left: 61px;
-top: 250px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: justify;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-border: 0.5px solid #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-}
-
-.image8 {
-  position: absolute;
-  width: 270px;
-  height: 270px;
-  left: 1088px;
-  top: 550px;
-  
-  background: url(image.png);
-  
-  
-}
-
-.image_div_content {
-
-  /* HELLO WORLD TAKIMIMIZDAN KARELER */
-
-
-box-sizing: border-box;
-
-position: absolute;
-width: 270px;
-height: 15px;
-left: 61px;
-top: 250px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: justify;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-border: 0.5px solid #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(2px);
-/* Note: backdrop-filter has minimal browser support */
-}
 
 .gallery > div:hover {
   z-index: 1;
