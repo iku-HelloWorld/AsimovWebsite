@@ -17,7 +17,7 @@
 
 .header {
   height: 20vh;
-  background: rgba(0, 0, 0, 0.711);
+  background: transparent;
   top: 0;
   z-index: 1;
   position: block;
@@ -167,7 +167,6 @@
   }
   .navbar-menu-item {
     position: relative;
-   
   }
   .nav-toggle {
     display: flex;
@@ -216,7 +215,6 @@
   }
 }
 
-
 /* navbar */
 
 /* giriş ekranı */
@@ -231,7 +229,7 @@ body {
 }
 .main-screen {
   margin: 0;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
   background: url("Asimov_Logolar - Kopya/asimovmainbackground.png");
   background-repeat: no-repeat;
@@ -243,10 +241,10 @@ body {
 }
 
 .container-screen {
-  height: 100%;
+  height: 80%;
 }
 .mainscreenContainer {
-  height: 100%;
+  height: 80vh;
   display: flex;
   align-items: center;
 }
