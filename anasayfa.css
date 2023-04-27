@@ -26,20 +26,74 @@ body {
   margin: 0;
   height: 100%;
 }
-.mainscreenContainer {
-  background-size: cover;
-  width: 100%;
+.main-screen {
+  margin: 0;
   height: 100%;
-  background-color: #3d4149;
+  overflow-x: hidden;
+  background: url("Asimov_Logolar - Kopya/asimovmainbackground.png");
+  background-repeat: no-repeat;
+  background-position: 0px, 0px;
+  transform: scale(1);
+  transition: background-position 1s;
+  width: 100%;
+  background-size: 125%;
+}
+
+.container-screen {
+  height: 100%;
+}
+.mainscreenContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #mainscreenlogo {
   position: absolute;
-  right: 100px;
+  right: 40px;
   top: -100px;
   width: 700px;
   height: 700px;
   border-radius: 50%;
+  transition: 0.6s all;
+}
+.logo-animation {
+  animation-name: logo;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes logo {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slogan-animation {
+  animation-name: slogan;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slogan {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .mainscreensSlogan {
@@ -47,9 +101,10 @@ body {
   font-family: "Poppins";
   font-size: 80px;
   position: absolute;
-  left: 180px;
   top: 400px;
   color: #d4d9df;
+  transition: 0.6s all;
+  margin-left: 60px;
 }
 
 .mainscreensSlogan2 {
@@ -57,20 +112,22 @@ body {
   font-family: "Poppins";
   font-size: 80px;
   position: absolute;
-  left: 180px;
   top: 480px;
   color: #d4d9df;
+  transition: 0.6s all;
+  margin-left: 60px;
 }
 .sidebar {
   width: 0%;
   height: 100%;
-  background-color: #fff;
+  background-color: #3d4149;
   transition: 1s ease;
   position: absolute;
   right: 0%;
   top: 0%;
-  z-index: 2;
+  z-index: 1;
   padding-top: 7%;
+  display: none;
 }
 
 .mainscreenSecond {
@@ -78,10 +135,21 @@ body {
   height: 100%;
   background-color: #fff;
   transition: 1s ease;
+  position: relative;
+  gap: 5px;
+}
+
+.mainSidebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .sidebar_show {
   width: 100%;
+  display: initial;
 }
 
 .mainscreeniconButton {
@@ -94,9 +162,10 @@ body {
   bottom: 0%;
   font-family: sans-serif;
   color: #d4d9df;
-  right: 180px;
+  right: 2%;
   font-size: 20px;
   width: 270px;
+  transition: 0.6s all;
 }
 
 .fas fa-angle-right {
@@ -139,18 +208,20 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-items: center;
   background-color: #fff;
-  box-shadow: -10px 10px #3d52a5;
+  box-shadow: -10px 10px #3d4149;
   width: 85%;
   margin-left: 8%;
-  height: 160px;
+  margin-bottom: 3%;
+  position: relative;
+  gap: 30px;
 }
 
 .mainimagepage {
   width: 150px;
   height: 150px;
   margin-left: 5px;
-  margin-bottom: -5px;
 }
 
 .maintextpage {
@@ -161,6 +232,62 @@ body {
   width: 85%;
   height: auto;
   font-size: 14px;
+}
+
+@media (max-width: 887px) {
+  #mainscreenlogo {
+    width: 350px;
+    height: 350px;
+    top: 16%;
+    right: 2%;
+    transition: 0.6s all;
+  }
+  .mainscreensSlogan,
+  .mainscreensSlogan2 {
+    font-size: 2.2rem;
+    transition: 0.6s all;
+  }
+  .mainscreensSlogan2 {
+    top: 73%;
+  }
+  .mainscreeniconButton {
+    right: 2%;
+    transition: 0.6s all;
+    font-size: 1rem;
+  }
+
+  /* İkinci sayfa responsive */
+  .sidebar {
+    height: auto;
+  }
+  .mainSidebar {
+    height: 100%;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    position: relative;
+  }
+
+  .mainnewspage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: row;
+  }
+  .mainimagepage {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    flex-direction: row;
+  }
+  .mainscreenSecond button {
+    margin-bottom: 14px;
+  }
 }
 
 /* giriş ekranı */
