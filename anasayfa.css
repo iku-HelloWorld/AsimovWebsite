@@ -29,59 +29,87 @@
 /* galeri */
 
 /* iletişim */
-.CommunicationPage {
+.communicationMain {
   background-color: #d4d9df;
-  padding: 10px;
-  width: 100%;
-  height: 700px;
-  margin: auto;
+  display:grid;
+  grid-template-rows: auto auto;
+  background-size: cover;
+  padding-bottom: 5%;
 }
 
-.CommunicationTitle {
-  padding-left: 5%;
+.communicationPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.communicationTitle {
   font-family: "Poppins";
   font-size: 40px;
+  padding-left: 9%;
 }
 
-.CommunicationMap {
+.communicationMap {
   width: 500px;
   height: 500px;
-  margin-left: -14%;
-  margin-top: -4%;
+  box-shadow: -15px 15px 0px 0px #3d52a5;
 }
 
-.mapbox {
-  margin-top: 4%;
-  padding-left: 5%;
-  background-color: #3d52a5;
-  width: 500px;
-  margin-left: 5%;
-  padding-bottom: 10px;
-}
 
-.CommunicationPagetextpage {
+.communicationPagetextpage {
   text-decoration: none;
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 200;
-  margin-top: -500px;
-  margin-left: 780px;
-  right: 300px
 }
 
-.CommunicationClubLogo {
-  right: 300px;
-  width: 300px;
-  height: auto;
-
-
-}
-
-.CommunicationSchoolLogo {
-  right: 300px;
+.communicationClubLogo {
   width: 300px;
   height: auto;
 }
+
+.communicationSchoolLogo {
+  width: 300px;
+  height: auto;
+  
+}
+@media screen and (max-width:900px) and (min-width:200px) {
+  .communicationTitle{
+    transition: 1s all;
+    font-size: 30px;
+    padding-left: 6%;
+  }
+  .communicationMain {
+  transition: 1s all;
+  align-items: center;
+  }
+  
+  .communicationPage {
+  width: 100%;
+  height: 100%;
+  transition: 1s all;
+  align-items: center;
+  }
+  
+  .communicationMap {
+  width: 200px;
+  height: 200px;
+  transition: 1s all;
+  align-items: center;
+  }
+  .communicationPagetextpage{
+    font-size: 10px;
+  }
+  
+  .communicationClubLogo,
+  .communicationSchoolLogo {
+  width: 150px;
+  transition: 1s all;
+  align-items: center;
+  }
+  }
 
 /* iletişim */
 
