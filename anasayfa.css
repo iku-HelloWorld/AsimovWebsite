@@ -26,8 +26,8 @@
 .TeamMain {
   background-color: #d4d9df;
   background-size: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
 }
 
 .TeamHeader {
@@ -85,6 +85,79 @@
   text-decoration: none;
   font-family: "Poppins";
   font-size: 25px;
+}
+@media screen and (max-width:600px) and (min-width:100px){
+  .TeamMain {
+    background-color: #d4d9df;
+    background-size: 100%;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    transition: 1s all;
+  }
+  
+  .TeamHeader {
+    margin-left: 18%;
+    margin-right: 2%;
+    transition: 1s all;
+  }
+  
+  .TeamHeader h1 {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-size: 20px;
+    transition: 1s all;
+  }
+  
+  .TeamHeader p {
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size: 10px;
+    transition: 1s all;
+  }
+  
+  .Team {
+    list-style-type: none;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    transition: 1s all;
+  }
+  
+  .TeamLogo {
+    display: inline-block;
+    width: 225px;
+    height: 50px;
+    text-align: center;
+    line-height: 25px;
+    margin: 2px;
+    padding: 5px 46px;
+    transition: 1s all;
+  }
+  
+  .TeamLogoCircle {
+    margin: auto;
+    background-color: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    transition: 1s all;
+  }
+  
+  .TeamLogoCircle img {
+    max-width: 90px;
+    max-height: auto;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff;
+  }
+  
+  .TeamLogo h3 {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-size: 13px;
+    transition: 1s all;
+  }
 }
 
 /* takım sayfası */
