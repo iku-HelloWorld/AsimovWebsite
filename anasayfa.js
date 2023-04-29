@@ -1,3 +1,11 @@
+const button = document.getElementById(`list-btn`)
+const menu = document.querySelector(`.asimov-menu`)
+
+   if(button) {
+    button.addEventListener(`click`, () => {
+        menu.classList.toggle(`active`)
+    })};
+
 "use strict";
 const sidebar = document.querySelector(".sidebar");
 const mainContent = document.querySelector(".mainscreenSecond");
@@ -21,3 +29,7 @@ mainscreenContainer.addEventListener("mousemove", function (e) {
 mainscreenContainer.addEventListener("mouseleave", function () {
   mainscreenContainer.style.backgroundPosition = "0px 0px";
 });
+
+
+    
+   
