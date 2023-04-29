@@ -381,15 +381,16 @@ body {
 }
 .sidebar {
   width: 0%;
-  height: 100%;
+  height: 100vh;
   background-color: #fff;
-  transition: 1s ease;
+  transition:  width 2s ease;
   position: absolute;
   right: 0%;
   top: 0%;
-  z-index: 1;
+  z-index: 7;
   padding-top: 7%;
   display: none;
+  
 }
 
 .mainscreenSecond {
@@ -407,6 +408,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+ 
 }
 
 .sidebar_show {
@@ -447,7 +449,7 @@ body {
   align-items: center;
   position: relative;
   left: 20px;
-  top: -70px;
+ top: -52px;
   transition: 500ms;
   cursor: pointer;
 }
@@ -495,6 +497,77 @@ body {
   width: 85%;
   height: auto;
   font-size: 14px;
+}
+
+.sidebar-header {
+  padding: 20px 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0px;
+  position: absolute;
+}
+
+.sidebar-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 20px;
+  position: relative;
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-right: 15px;
+  list-style: none;
+}
+
+.sidebar-list-item {
+  margin-right: 60px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.sidebar-list-item a {
+  color: white;
+}
+
+.sidebar-list-item:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.sidebar-toggle i {
+  cursor: pointer;
+  color: white;
+  font-size: 1.6rem;
+  margin-left: 60px;
+}
+
+.sidebar-toggle a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8;
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-toggle a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+.sidebar-list-menu {
+  display: none;
 }
 
 @media (max-width: 887px) {
@@ -557,6 +630,7 @@ body {
   }
   .mainscreenSecond button {
     margin-bottom: 14px;
+    z-index: 11;
   }
   .go_back_btn {
     width: 25px;
@@ -564,6 +638,85 @@ body {
     font-size: 15px;
     left: 20px;
     top: 0px;
+  }
+
+  .sidebar-header {
+    height: auto;
+    overflow-y: hidden;
+    z-index: 10;
+    position: block;
+  }
+
+  .sidebar-navbar {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    
+  }
+  
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    opacity: 0;
+    height: 30px;
+    transition: .7s ;
+    overflow-y: hidden;
+  }
+
+  .sidebar-active {
+    height: 300px;
+    transition: .7s ;
+    opacity: 1;
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    margin-left: 15px;
+
+  }
+
+  .sidebar-list-item {
+    margin-left: 60px;
+  }
+
+  .sidebar-list-item a {
+    display: block;
+  }
+
+  .sidebar-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35px;
+  }
+
+  .sidebar-toggle i {
+    margin-right: 60px;
+    margin-top: 10px;
+  }
+  .sidebar-list-menu {
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    z-index: 11;
+    
   }
 }
 

@@ -6,9 +6,13 @@ const menu = document.querySelector(`.asimov-menu`)
         menu.classList.toggle(`active`)
     })};
 
+
+
 "use strict";
+
 const sidebar = document.querySelector(".sidebar");
 const mainContent = document.querySelector(".mainscreenSecond");
+
 const sidebarOpen = function () {
   sidebar.classList.toggle("sidebar_show");
 };
@@ -31,5 +35,11 @@ mainscreenContainer.addEventListener("mouseleave", function () {
 });
 
 
-    
-   
+const sideButton = document.getElementById(`sidebar-button`)
+const sideMenu = document.querySelector(`.sidebar-menu`)
+
+if(sideButton)  {
+  sideButton.addEventListener(`click`, () => {
+    sideMenu.classList.toggle(`sidebar-active`)
+  })
+}
