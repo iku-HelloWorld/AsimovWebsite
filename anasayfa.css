@@ -157,6 +157,12 @@
     position: block;
     background-color: rgba(0, 0, 0, 0.3);
     
+    
+  }
+
+  .asimov-logo {
+    position: relative;
+    height: 150px;
   }
 
   .navbar-wrapper {
@@ -165,6 +171,7 @@
     align-items: center;
     justify-items: center;
     z-index: 6;
+    
     
   }
 
@@ -262,6 +269,9 @@
     display: block;
     margin-left: 10px;
     z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 15%;
     
   }
   .nav-list i {
@@ -269,6 +279,7 @@
     cursor: pointer;
     transition: .7s ;
     z-index: 2;
+    
     
 
   }
