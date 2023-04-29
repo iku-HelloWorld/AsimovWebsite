@@ -157,7 +157,7 @@ color: #FFFFFF;
   margin-right: auto;
   top: 50px;
 
-  border: 1px solid rgba(0, 0, 0, 0.28);
+  border: 1px solid --main-color#3d4149(0, 0, 0, 0.28);
   backdrop-filter: blur(2px);
 }
 
@@ -176,9 +176,10 @@ box-sizing: border-box;
 box-shadow: inset;
 
 position: absolute;
-width: 246px;
+width: 263px;
 height: 15px;
-left: 61px;
+
+
 top: 246px;
 
 
@@ -188,20 +189,35 @@ font-weight: 400;
 font-size: 12px;
 line-height: 15px;
 
+
 /* identical to box height */
 
-display: block;
+
+display: flex;
 justify-content:center;
+align-items: center;
+padding-top: 0.5rem;
+padding-left: 1rem;
+padding-right: 1rem;
+padding-bottom: 0.5rem;
+
+
 text-align: center;
 
 
 
 
-color: #FFFFFF;
+color: black;
 
-border: 0.5px solid #FFFFFF;
+/* border: 0.5px solid #FFFFFF;
 text-shadow: 0px 4px 4px --light-color#d4d9df(0, 0, 0, 0.25);
-backdrop-filter: blur(2px);
+backdrop-filter: blur(2px); */
+
+border: 1px solid var(--main-color);
+text-shadow: 0px 4px 4px --black(0, 0, 0, 0.25);
+backdrop-filter: blur(3px)--main-color#3d4149;
+
+
 /* Note: backdrop-filter has minimal browser support */
 }
 
