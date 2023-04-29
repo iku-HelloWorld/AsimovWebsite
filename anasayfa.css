@@ -48,7 +48,6 @@ column-gap: 3rem;
 row-gap: 2rem;
 } */
 
-
 .galeri_page {
   position: absolute;
   left: 50%;
@@ -62,7 +61,6 @@ row-gap: 2rem;
   transition: ease 300ms;
 }
 
-
 .galeri_page.show {
   display: grid;
   width: 100%;
@@ -72,60 +70,51 @@ row-gap: 2rem;
 }
 
 .line {
-position: absolute;
-width: 1450px;
-height: 0;
-left: 52px;
-top: 100px;
+  position: absolute;
+  width: 95vw;
+  height: 0;
+  left: 5vw;
+  top: 100px;
 
-border: 2px solid #3E54AC;
-
+  border: 2px solid #3e54ac;
 }
 
 .arrow1 {
-
   position: absolute;
 
-left: 20px;
-top: 400px;
-padding-right: 100px;
-color: 2px var(--black);
-
+  left: 20px;
+  top: 400px;
+  padding-right: 100px;
+  color: 2px var(--black);
 }
 
 .arrow2 {
-
   position: absolute;
 
-right: 20px;
-top: 400px;
-padding-left: 1420px;
-color: 2px var(--black);
-
+  right: 20px;
+  top: 400px;
+  padding-left: 1420px;
+  color: 2px var(--black);
 }
 
-
 .gallery {
-  
+  position: absolute;
+  width: 133px;
+  height: 49px;
+  left: 75px;
+  top: 3164px;
 
-position: absolute;
-width: 133px;
-height: 49px;
-left: 75px;
-top: 3164px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 
-font-family: "Poppins", sans-serif;
-box-sizing: border-box;
-text-decoration: none;
-font-weight: 700;
-font-size: 36px;
-line-height: 49px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #FFFFFF;
-
+  color: #ffffff;
 }
 
 /*.gallery > div > image {
@@ -147,7 +136,6 @@ color: #FFFFFF;
 } */
 
 .image {
-
   box-sizing: border-box;
 
   position: relative;
@@ -161,70 +149,59 @@ color: #FFFFFF;
   backdrop-filter: blur(2px);
 }
 
-.image img{
+.image img {
   width: 17vw;
   height: 17vw;
   object-fit: cover;
 }
 
 .image_div_content {
+  /* HELLO WORLD TAKIMIMIZDAN KARELER */
 
-    /* HELLO WORLD TAKIMIMIZDAN KARELER */
+  box-sizing: border-box;
+  box-shadow: inset;
 
+  position: absolute;
+  width: 263px;
+  height: 15px;
 
-box-sizing: border-box;
-box-shadow: inset;
+  top: 246px;
 
-position: absolute;
-width: 263px;
-height: 15px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 
+  /* identical to box height */
 
-top: 246px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
 
+  text-align: center;
 
-font-family: "Poppins", sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
+  color: white;
 
-
-/* identical to box height */
-
-
-display: flex;
-justify-content:center;
-align-items: center;
-padding-top: 0.5rem;
-padding-left: 1rem;
-padding-right: 1rem;
-padding-bottom: 0.5rem;
-
-
-text-align: center;
-
-
-
-
-color: white;
-
-/* border: 0.5px solid #FFFFFF;
+  /* border: 0.5px solid #FFFFFF;
 text-shadow: 0px 4px 4px --light-color#d4d9df(0, 0, 0, 0.25);
 backdrop-filter: blur(2px); */
 
-border: 0.5px solid var(--main-color);
-text-shadow: 0px 4px 4px --main-color(0, 0, 0, 0.25);
+  border: 0.5px solid var(--main-color);
+  text-shadow: 0px 4px 4px --main-color(0, 0, 0, 0.25);
 
-background: rgba(61, 65, 73, 0.65);
-backdrop-filter: blur(2px);
+  background: rgba(61, 65, 73, 0.65);
+  backdrop-filter: blur(2px);
 
-/* Note: backdrop-filter has minimal browser support */
+  /* Note: backdrop-filter has minimal browser support */
 }
 
-
 h1 {
-  margin:  50px;
+  margin: 50px;
   font-size: 20px;
   font-weight: 300;
   color: var(--white);
