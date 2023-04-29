@@ -1,14 +1,12 @@
-const button = document.getElementById(`list-btn`)
-const menu = document.querySelector(`.asimov-menu`)
-
-   if(button) {
-    button.addEventListener(`click`, () => {
-        menu.classList.toggle(`active`)
-    })};
-
-
-
 "use strict";
+const button = document.getElementById(`list-btn`);
+const menu = document.querySelector(`.asimov-menu`);
+
+if (button) {
+  button.addEventListener(`click`, () => {
+    menu.classList.toggle(`active`);
+  });
+}
 
 const sidebar = document.querySelector(".sidebar");
 const mainContent = document.querySelector(".mainscreenSecond");
@@ -22,24 +20,27 @@ document
 
 document.querySelector(".go_back_btn").addEventListener("click", sidebarOpen);
 
-var mainscreenContainer = document.querySelector(".main-screen");
+// background img follows cursor
+const bgImg = document.querySelector(".main--bgImg-ımg");
+const bgImgLeft = bgImg.getBoundingClientRect().left;
+const bgImgTop = bgImg.getBoundingClientRect().top;
 
-mainscreenContainer.addEventListener("mousemove", function (e) {
-  mainscreenContainer.style.backgroundPositionX = -e.offsetX * 0.1 + "px";
-  mainscreenContainer.style.backgroundPositionY = -e.offsetY * 0.1 + "px";
+const whenMouseMove = function (e) {
+  bgImg.style.left = `${bgImgLeft + e.pageX / 25}px `;
+  bgImg.style.top = `${bgImgTop + e.pageY / 25}px`;
+};
+console.log(bgImg.getBoundingClientRect());
+
+document.addEventListener("mousemove", function (e) {
+  whenMouseMove(e);
 });
-//reset the background positions back to the original on mouseleave
+// background img follows cursor
 
-mainscreenContainer.addEventListener("mouseleave", function () {
-  mainscreenContainer.style.backgroundPosition = "0px 0px";
-});
+const sideButton = document.getElementById(`sidebar-button`);
+const sideMenu = document.querySelector(`.sidebar-menu`);
 
-
-const sideButton = document.getElementById(`sidebar-button`)
-const sideMenu = document.querySelector(`.sidebar-menu`)
-
-if(sideButton)  {
+if (sideButton) {
   sideButton.addEventListener(`click`, () => {
-    sideMenu.classList.toggle(`sidebar-active`)
-  })
+    sideMenu.classList.toggle(`sidebar-active`);
+  });
 }

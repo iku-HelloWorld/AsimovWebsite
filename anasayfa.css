@@ -130,7 +130,6 @@
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  
 }
 
 .drop-down-menu1 li,
@@ -158,15 +157,11 @@
     z-index: 6;
     position: block;
     background-color: rgba(0, 0, 0, 0.3);
-    
-    
   }
 
   .asimov-logo {
     position: relative;
     height: 150px;
-    
-    
   }
 
   .navbar-wrapper {
@@ -175,8 +170,6 @@
     align-items: center;
     justify-items: center;
     z-index: 6;
-    
-    
   }
 
   .asimov-menu {
@@ -187,23 +180,15 @@
     gap: 10px;
     height: 0;
     visibility: hidden;
-    transition: .7s ;
-    overflow-y: hidden; 
-  
+    transition: 0.7s;
+    overflow-y: hidden;
   }
 
   .active {
     height: 62vh;
-    transition: .7s ;
+    transition: 0.7s;
     visibility: inherit;
-    
-    
-    
   }
-
-
-
-  
 
   .menu-list {
     flex-direction: column;
@@ -212,20 +197,11 @@
     justify-content: center;
     margin-right: 22rem;
     z-index: 8;
-    
-    
-    
-  
   }
-
- 
 
   .navbar-menu-item {
     position: relative;
     margin-left: 45px;
-
-
-   
   }
   .nav-toggle {
     display: flex;
@@ -234,7 +210,6 @@
     align-items: center;
     justify-items: center;
     margin-left: 10px;
-    
   }
 
   .nav-toggle i {
@@ -253,7 +228,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
-    
   }
 
   .drop-down-menu1 li,
@@ -272,26 +246,21 @@
     display: block;
   }
 
-  .nav-list  {
+  .nav-list {
     display: block;
     margin-left: 10px;
     z-index: 2;
     position: absolute;
     right: 0;
     top: 2%;
-    
   }
   .nav-list i {
     font-size: 1.5rem;
     cursor: pointer;
-    transition: .7s ;
+    transition: 0.7s;
     z-index: 2;
-    
-    
-
   }
 }
-
 
 /* navbar */
 
@@ -309,13 +278,23 @@ body {
   margin: 0;
   height: 100vh;
   overflow-x: hidden;
-  background: url("Asimov_Logolar - Kopya/asimovmainbackground.png");
+  /* background: url("Asimov_Logolar - Kopya/asimovmainbackground.png");
   background-repeat: no-repeat;
   background-position: 0px, 0px;
+  background-size: ;
+  transition: background-position 400ms; */
   transform: scale(1);
-  transition: background-position 1s;
   width: 100%;
-  background-size: 500%;
+}
+
+.main--bgImg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  height: 125vh;
+  width: 125vw;
+  object-fit: cover;
 }
 
 .container-screen {
@@ -328,13 +307,14 @@ body {
 }
 
 #mainscreenlogo {
-  position:absolute;
+  position: absolute;
   right: 40px;
   top: -100px;
   width: 700px;
   height: 700px;
   border-radius: 50%;
   transition: 0.6s all;
+  filter: drop-shadow(0px 0px 20px var(--black));
 }
 .logo-animation {
   animation-name: logo;
@@ -401,14 +381,13 @@ body {
   width: 0%;
   height: 100vh;
   background-color: #fff;
-  transition:  width 2s ease;
+  transition: width 2s ease;
   position: absolute;
   right: 0%;
   top: 0%;
   z-index: 7;
   padding-top: 7%;
   display: none;
-  
 }
 
 .mainscreenSecond {
@@ -426,7 +405,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
- 
 }
 
 .sidebar_show {
@@ -436,7 +414,7 @@ body {
 
 .mainscreeniconButton {
   background-color: transparent;
-  position:fixed;
+  position: fixed;
   border: none;
   top: 90%;
   transform: translateX(-10%);
@@ -467,7 +445,7 @@ body {
   align-items: center;
   position: relative;
   left: 20px;
- top: -52px;
+  top: -52px;
   transition: 500ms;
   cursor: pointer;
 }
@@ -613,14 +591,11 @@ body {
     font-size: 1rem;
     bottom: 0;
     z-index: 1;
-    
-
   }
 
   /* İkinci sayfa responsive */
   .sidebar {
     height: auto;
-    
   }
   .mainSidebar {
     height: 100%;
@@ -635,7 +610,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     flex-direction: row;
   }
   .mainimagepage {
@@ -673,9 +648,7 @@ body {
     justify-content: center;
     gap: 10px;
     position: relative;
-    
   }
-  
 
   .sidebar-menu {
     display: flex;
@@ -685,13 +658,13 @@ body {
     float: right;
     opacity: 0;
     height: 30px;
-    transition: .7s ;
+    transition: 0.7s;
     overflow-y: hidden;
   }
 
   .sidebar-active {
     height: 300px;
-    transition: .7s ;
+    transition: 0.7s;
     opacity: 1;
   }
 
@@ -702,7 +675,6 @@ body {
     justify-items: center;
     gap: 10px;
     margin-left: 15px;
-
   }
 
   .sidebar-list-item {
@@ -734,7 +706,6 @@ body {
     cursor: pointer;
     display: block;
     z-index: 11;
-    
   }
 }
 
