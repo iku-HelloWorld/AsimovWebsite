@@ -65,7 +65,10 @@
   transform: translate(-50%, -50%);
   z-index: 3;
   display: grid;
+  margin-left: 50px;
   row-gap: 10vh;
+  font-family: "Poppins", sans-serif;
+  color: var(--light-color);
 }
 
 .new_div-close {
@@ -73,6 +76,7 @@
   right: 3vw;
   top: 3vh;
   font-size: xx-large;
+  color: white; /* ımgFocusClose() */
 }
 
 .galeri_page {
