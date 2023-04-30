@@ -29,11 +29,14 @@ const whenMouseMove = function (e) {
   bgImg.style.transform = "translate(0,0)";
   bgImg.style.left = `${bgImgLeft + e.pageX / 25}px `;
   bgImg.style.top = `${bgImgTop + e.pageY / 25}px`;
-  console.log(bgImg.getBoundingClientRect());
+  // console.log(bgImg.getBoundingClientRect());
 };
-console.log(bgImg.getBoundingClientRect());
 document.addEventListener("mousemove", function (e) {
-  whenMouseMove(e);
+  console.log(window.visualViewport.width, window.visualViewport.height);
+
+  if (window.visualViewport.width > 775 && window.visualViewport.height > 385) {
+    whenMouseMove(e);
+  }
 });
 // background img follows cursor
 
