@@ -32,6 +32,75 @@
 /* iletişim */
 
 /* footer */
+
+.footer_container {
+
+  position: absolute;
+width: 1520px;
+height: 144px;
+left: 0px;
+top: 100px;
+
+background: #4B4B4B;
+}
+
+.footer-list {
+
+  position: absolute;
+width: 132px;
+height: 23px;
+left: 82px;
+top: 100px;
+
+font-family: "Poppins", sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+
+color:--light-color #d4d9df;
+}
+
+.footer_content {
+  
+  position: absolute;
+width: 1520px;
+height: 52px;
+left: -2px;
+top: 192px;
+
+background: black;
+}
+
+.footer-design {
+
+  position: absolute;
+width: 200px;
+height: 23px;
+left: 82px;
+top: 0;
+
+font-family: "Poppins", sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #FFFFFF;
+}
+
+
+.socialmedia-links {
+
+  position: absolute;
+  width: 35px;
+  height: 32px;
+  left: 1051px;
+  top: 4746px;
+  
+  background: url(telegram.png);
+
+}
 /* footer */
 
 /* responsiveness */
