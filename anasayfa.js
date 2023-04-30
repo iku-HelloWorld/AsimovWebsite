@@ -37,11 +37,11 @@ nextBtn.addEventListener("click", function () {
 displaySlider(index);
 
 // image focus ver
-galeriCont.addEventListener("click", function (e) {
-  const chosenImg = e.target.closest(".image");
-  if (chosenImg) {
-    galeriCont.style.filter = "blur(5px)";
-    newDiv.innerHTML = `<span class="new_div-close">x</span>
+const ımgFocusShow = function (e) {
+  console.log("hi");
+
+  galeriCont.style.filter = "blur(5px)";
+  newDiv.innerHTML = `<span onclick="ımgFocusClose()" class="new_div-close">x</span>
     <img src="asimov.jpg" />
     <div class="new_div-info">
       <p>
@@ -49,14 +49,19 @@ galeriCont.addEventListener("click", function (e) {
       </p>
       <p>tarih/trh/trih</p>
     </div>`;
-    newDiv.style.display = "initial";
+  newDiv.style.display = "initial";
+};
+const ımgFocusClose = function () {
+  newDiv.style.display = "none";
+  galeriCont.style.filter = "blur(0px)";
+};
 
+galeriCont.addEventListener("click", function (e) {
+  const chosenImg = e.target.closest(".image");
+  console.log(chosenImg);
+  if (chosenImg) {
+    ımgFocusShow(e);
     console.log("hi");
-    document
-      .getElementsByClassName(".new_div-close")
-      .addEventListener("click", function () {
-        newDiv.style.display = "none";
-      });
   }
 });
 // image focus ver
