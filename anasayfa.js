@@ -70,17 +70,17 @@ const displaySlider = function (i) {
   page.item(index - 1).classList.add("show");
 };
 
-const changeSlide = function (n) {
+const galeriChangeSlide = function (n) {
   index += n;
   displaySlider(index);
 };
 
 prevBtn.addEventListener("click", function () {
-  changeSlide(-1);
+  galeriChangeSlide(-1);
 });
 
 nextBtn.addEventListener("click", function () {
-  changeSlide(1);
+  galeriChangeSlide(1);
 });
 
 displaySlider(index);
