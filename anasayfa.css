@@ -1121,7 +1121,7 @@ h1 {
 
 /* responsive in gallery */
 
-@media only screen and (max-width: 800px) {
+@media  (max-width: 800px) {
   .galeri_content {
     height: 100%;
     width: 100%;
