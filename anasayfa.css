@@ -728,6 +728,297 @@ body {
 /* takım sayfası */
 
 /* galeri */
+
+.galeri_content {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  transition: ease 400ms;
+}
+
+.new_div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000cc;
+  z-index: 2;
+  font-size: larger;
+  font-weight: bolder;
+  display: none;
+}
+
+.new_div img {
+  left: 0;
+  height: 100%;
+  width: 50%;
+  object-fit: contain;
+  background-color: #000000e1;
+}
+
+.new_div-info {
+  position: absolute;
+  left: 75%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: grid;
+  margin-left: 50px;
+  row-gap: 10vh;
+  font-family: "Poppins", sans-serif;
+  color: var(--light-color);
+}
+
+.new_div-close {
+  position: absolute;
+  right: 3vw;
+  top: 3vh;
+  font-size: xx-large;
+  color: white; /* ımgFocusClose() */
+}
+
+.galeri_page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  opacity: 0;
+  width: 0%;
+  grid-template-columns: repeat(4, 20%);
+  gap: 1rem;
+  transition: ease 300ms;
+}
+
+.galeri_page.show {
+  display: grid;
+  width: 100%;
+  opacity: 100%;
+  grid-template-columns: repeat(4, 20%);
+  gap: 1rem;
+}
+
+.line {
+  position: absolute;
+  width: 95vw;
+  height: 0;
+  left: 5vw;
+  top: 100px;
+
+  border: 2px solid #3e54ac;
+}
+
+.arrow1 {
+  position: absolute;
+
+  left: 20px;
+  top: 400px;
+  padding-right: 100px;
+  color: 2px var(--black);
+}
+
+.arrow2 {
+  position: absolute;
+
+  right: 20px;
+  top: 400px;
+  padding-left: 1420px;
+  color: 2px var(--black);
+}
+
+.gallery {
+  position: absolute;
+  width: 133px;
+  height: 49px;
+  left: 75px;
+  top: 3164px;
+
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/*.gallery > div > image {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 270.06px;
+  height: 269.91px;
+  left: 72px;
+  top: 3338.95px;
+  
+  background: none;
+  mix-blend-mode: normal;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support 
+  
+  transform: rotate(-0.2deg);
+} */
+
+.image {
+  box-sizing: border-box;
+
+  position: relative;
+  width: 10%;
+  height: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+
+  border: 1px solid --main-color#3d4149(0, 0, 0, 0.28);
+  backdrop-filter: blur(2px);
+}
+
+.image img {
+  width: 17vw;
+  height: 17vw;
+  object-fit: cover;
+}
+
+.image_div_content {
+  /* HELLO WORLD TAKIMIMIZDAN KARELER */
+
+  box-sizing: border-box;
+  box-shadow: inset;
+
+  position: absolute;
+  width: 263px;
+  height: 15px;
+
+  top: 246px;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+
+  /* identical to box height */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+
+  text-align: center;
+
+  color: white;
+
+  /* border: 0.5px solid #FFFFFF;
+text-shadow: 0px 4px 4px --light-color#d4d9df(0, 0, 0, 0.25);
+backdrop-filter: blur(2px); */
+
+  border: 0.5px solid var(--main-color);
+  text-shadow: 0px 4px 4px --main-color(0, 0, 0, 0.25);
+
+  background: rgba(61, 65, 73, 0.65);
+  backdrop-filter: blur(2px);
+
+  /* Note: backdrop-filter has minimal browser support */
+}
+
+h1 {
+  margin: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--white);
+}
+
+/* responsive in gallery */
+
+@media only screen and (max-width: 800px) {
+  .galeri_content{
+    height: auto;
+    width: auto;
+    position: absolute;
+    transition: ease 400ms;
+  }
+
+  .galeri_page {
+    position: absolute;
+    display: grid;
+    z-index: 6;
+    gap: 1rem;
+  }
+
+  .line {
+    position: absolute;
+    width:100%;
+    height: auto;
+    
+    border: 2px solid #3e54ac;
+  }
+  
+  .arrow1 {
+    position: absolute;
+    display: block;
+    padding-right: 100px;
+    color: 2px var(--black);
+  }
+  
+  .arrow2 {
+    position: absolute;
+    display: none;
+    padding-left: auto;
+    color: 2px var(--black);
+  }
+
+  .gallery {
+    position: absolute;
+    display: flex;
+    z-index: 6;
+    align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+  }
+
+  .image {
+    box-sizing: border-box;
+  
+    position: relative;
+    width:100%;
+    height: auto;
+  
+    border: 1px solid --main-color#3d4149(0, 0, 0, 0.28);
+    backdrop-filter: blur(2px);
+  }
+
+  .image_div_content {
+    position: absolute;
+    display: flex;
+    z-index: 6;
+    font-size: auto;
+  line-height: auto;
+  text-align: center;
+  backdrop-filter: blur(2px);
+
+  color: white;
+  }
+  h1 {
+    display: subgrid;
+    z-index: 6;
+
+    color: var(--white);
+  }
+}
+
 /* galeri */
 
 /* iletişim */
