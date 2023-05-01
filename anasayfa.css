@@ -1468,6 +1468,80 @@ h1 {
 /* iletişim */
 
 /* footer */
+
+.footer-container {
+
+  position: absolute;
+width: 1520px;
+height: 144px;
+left: 0px;
+top: 100px;
+
+background: #4B4B4B;
+}
+
+.footer-list {
+
+  display: grid;
+  grid-template-columns: 140px 120px 100px 100px;
+  column-gap: 20px;
+  position: absolute;
+width: 600px;
+height: 75px;
+left: 32px;
+top: 10px;
+
+font-family: "Poppins", sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 18px;
+
+color:#d4d9df;
+
+}
+
+.footer_content {
+  
+  position: absolute;
+width: 1520px;
+height: 52px;
+left: -2px;
+top: 192px;
+
+background: black;
+}
+
+.footer-design {
+
+  position: absolute;
+width: 200px;
+height: 75px;
+left: 65px;
+top: 0;
+
+font-family: "Poppins", sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+
+color: #FFFFFF;
+}
+
+.social-links {
+
+  position: absolute;
+  width: 35px;
+  height: 32px;
+  left: 200px;
+  top: 10px;
+  
+  background: url(telegram.png);
+background: url(linkedlib.png);
+background: url(insta.png);
+background: url(518-5185628_email-icon-symbol-of-email-black);
+}
 /* footer */
 
 /* responsiveness */
