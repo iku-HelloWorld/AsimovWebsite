@@ -988,6 +988,16 @@ body {
   color: white; /* ımgFocusClose() */
 }
 
+.new_div-close:hover {
+  background-color: #000;
+  color: #fff;
+  left: 17px;
+}
+
+.new_div-close {
+  width: 0%;
+}
+
 .galeri_page {
   position: absolute;
   left: 50%;
