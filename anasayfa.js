@@ -1,3 +1,11 @@
+/* const scrollHeader = () => {
+  const header = document.getElementById(`header`);
+  this.scrollY >= 50 ? header.classList.add(`h-active`)
+                        : header.classList.remove(`h-active`)
+                        window.addEventListener(`scroll`, h-active) */
+                        /* Header aşağı kayınca pozisyon sticky olacak */
+
+
 "use strict";
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
