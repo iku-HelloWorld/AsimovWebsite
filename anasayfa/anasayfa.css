@@ -26,6 +26,11 @@
 
 .h-active{
   position: sticky;
+  height: 20vh;
+  background: transparent;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .navbar-wrapper {
@@ -245,6 +250,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
   }
 
   .drop-down-menu1 li,
@@ -256,6 +262,8 @@
   .drop-down-menu2 li a {
     padding: 10px;
     text-decoration: none;
+    font-size: 1rem;
+    
   }
 
   .navbar-menu-item:hover .drop-down-menu1,
