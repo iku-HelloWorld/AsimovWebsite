@@ -728,6 +728,7 @@ body {
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 3vw;
+  height: 100%;
 }
 
 .bizkimiz--content {
@@ -986,16 +987,16 @@ body {
   top: 3vh;
   font-size: xx-large;
   color: white; /* ımgFocusClose() */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  text-align: center;
 }
 
 .new_div-close:hover {
-  background-color: #000;
-  color: #fff;
-  left: 17px;
-}
-
-.new_div-close {
-  width: 0%;
+  background-color: var(--main-color);
+  color: var(--light-color);
 }
 
 .galeri_page {
@@ -1009,6 +1010,7 @@ body {
   grid-template-columns: repeat(4, 20%);
   gap: 1rem;
   transition: ease 300ms;
+  justify-content: center;
 }
 
 .galeri_page.show {
@@ -1031,20 +1033,34 @@ body {
 
 .arrow1 {
   position: absolute;
-
-  left: 20px;
-  top: 400px;
-  padding-right: 100px;
+  left: 2rem;
+  top: 50%;
   color: 2px var(--black);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding-left: 8px;
 }
 
 .arrow2 {
   position: absolute;
-
-  right: 20px;
-  top: 400px;
-  padding-left: 1420px;
+  right: 2rem;
+  top: 50%;
   color: 2px var(--black);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding-left: 8px;
+}
+
+.arrow1:hover,
+.arrow2:hover {
+  background-color: var(--white);
+  color: var(--side-color);
 }
 
 .gallery {
@@ -1089,8 +1105,8 @@ body {
   box-sizing: border-box;
 
   position: relative;
-  width: 10%;
-  height: 10%;
+  width: 20%a;
+  height: 20%a;
   margin-left: auto;
   margin-right: auto;
   top: 50px;
@@ -1112,11 +1128,9 @@ body {
   box-shadow: inset;
 
   position: absolute;
-  width: 263px;
+  width: 100%;
   height: 15px;
-
-  top: 246px;
-
+  transform: translateY(-100%);
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1159,83 +1173,52 @@ h1 {
 
 /* responsive in gallery */
 
-@media only screen and (max-width: 800px) {
-  .galeri_content {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: ease 400ms;
-  }
-
+@media only screen and (max-width: 1000px) {
   .galeri_page {
-    position: absolute;
-    display: grid;
-    z-index: 6;
-    gap: 1rem;
+    grid-template-columns: 19vw 19vw;
+    grid-template-rows: 19vw 19vw 19vw 19vw;
   }
 
-  .line {
-    position: absolute;
-    width: 100%;
-    height: auto;
-
-    border: 2px solid #3e54ac;
+  .galeri_page.show {
+    grid-template-columns: 19vw 19vw;
+    grid-template-rows: 19vw 19vw 19vw 19vw;
+    column-gap: 2rem;
   }
-
-  .arrow1 {
-    position: absolute;
-    display: block;
-    padding-right: 100px;
-    color: 2px var(--black);
-  }
-
-  .arrow2 {
-    position: absolute;
-    display: none;
-    padding-left: auto;
-    color: 2px var(--black);
-  }
-
-  .gallery {
-    position: absolute;
-    display: flex;
-    z-index: 6;
-    align-items: center;
-    text-align: center;
-
-    color: #ffffff;
-  }
-
   .image {
-    box-sizing: border-box;
-
-    position: relative;
-    width: 100%;
-    height: auto;
-
-    border: 1px solid --main-color#3d4149(0, 0, 0, 0.28);
-    backdrop-filter: blur(2px);
+    width: 19vw;
   }
-
+  .image img {
+    width: 19vw;
+    height: 19vw;
+  }
   .image_div_content {
-    position: absolute;
-    display: flex;
-    z-index: 6;
-    font-size: auto;
-    line-height: auto;
-    text-align: center;
-    backdrop-filter: blur(2px);
-
-    color: white;
-  }
-  h1 {
-    display: subgrid;
-    z-index: 6;
-
-    color: var(--white);
+    font-size: 10px;
   }
 }
+@media only screen and (max-width: 750px) {
+  .galeri_page {
+    grid-template-columns: 25vw 25vw;
+    grid-template-rows: 25vw 25vw 25vw 25vw;
+  }
 
+  .galeri_page.show {
+    grid-template-columns: 25vw 25vw;
+    grid-template-rows: 25vw 25vw 25vw 25vw;
+    column-gap: 2rem;
+  }
+  .image {
+    width: 25vw;
+  }
+  .image img {
+    width: 25vw;
+    height: 25vw;
+  }
+  .arrow-left,
+  .arrow-right {
+    font-size: 10px;
+    font-weight: lighter;
+  }
+}
 /* galeri */
 
 /* iletişim */
@@ -1567,7 +1550,7 @@ h1 {
 /* iletişim */
 .communicationMain {
   position: absolute;
-  top: 398vh;
+  top: 400vh;
   background-color: #d4d9df;
   display: grid;
   grid-template-rows: auto auto;
