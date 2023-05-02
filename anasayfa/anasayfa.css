@@ -30,11 +30,12 @@
 
 .navbar-wrapper {
   height: 100%;
-  padding: 0 50px;
+  padding: 0 3.2%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: block;
+  
 }
 
 .asimov-logo img {
@@ -44,7 +45,8 @@
 .asimov-menu {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  
 }
 
 .menu-list {
@@ -55,12 +57,16 @@
   padding-right: 1rem;
   align-items: center;
   z-index: 5;
-  margin-left: 22rem;
+  margin-left: 33%;
   gap: 2rem;
+ 
+  
 }
 
 .navbar-menu-item {
   margin-right: 2.5rem;
+  position: relative;
+  
 }
 
 .menu-list a {
@@ -74,6 +80,7 @@
   font-size: 1.6rem;
   align-items: center;
   display: flex;
+  position: relative;
 }
 
 .nav-toggle a {
@@ -203,7 +210,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 22rem;
+    margin-right: 33%;
     z-index: 8;
   }
 
