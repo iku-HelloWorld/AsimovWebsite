@@ -99,7 +99,7 @@ const ımgFocusShow = function (e) {
 
   galeriCont.style.filter = "blur(5px)";
   newDiv.innerHTML = `<span onclick="ımgFocusClose()" class="new_div-close">x</span>
-    <img src="asimov.jpg" />
+    <img src="asimov_Logolar/asimov.jpg" />
     <div class="new_div-info">
       <p>
         açıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklama
