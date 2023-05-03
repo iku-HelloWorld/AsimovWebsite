@@ -1,0 +1,42 @@
+:root {
+  --main-color: #3d4149;
+  --dark-color: #101010;
+  --light-color: #d4d9df;
+  --side-color: #3d52a5;
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+/* navbar */
+/* navbar */
+
+/* section1 */
+/* section1 */
+
+/* timeline */
+/* timeline */
+
+/* sayaç */
+/* sayaç */
+
+/* etkinliklerimiz */
+/* etkinliklerimiz */
+
+/* etkinlik slider */
+/* etkinlik slider */
+
+/* sponsor işbirlik */
+/* sponsor işbirlik */
+
+/* footer */
+/* footer */
