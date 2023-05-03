@@ -698,14 +698,14 @@ body {
   }
 
   .sidebar-header {
-    height: 80px;
+    /* height: 80px; */
     overflow-y: hidden;
     z-index: 10;
     position: block;
   }
 
   .sidebar-navbar {
-    height: 5%;
+    /* height: 5%; */
     display: flex;
     flex-direction: column;
     align-items: center;
