@@ -153,10 +153,10 @@
 
 .drop-down-menu1 li a,
 .drop-down-menu2 li a {
-  /* padding: 10px; */
+  padding: 1rem;
   text-decoration: none;
-  font-size: x-small;
-  font-weight: lighter;
+  font-size: medium;
+  font-weight: 400;
 }
 
 .navbar-menu-item:hover .drop-down-menu1,
@@ -263,7 +263,7 @@
 
   .drop-down-menu1 li a,
   .drop-down-menu2 li a {
-    /* padding: 10px; */
+    padding: .2rem;
     text-decoration: none;
     font-size: 1.3rem;
   }
