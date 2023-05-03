@@ -263,7 +263,7 @@
 
   .drop-down-menu1 li a,
   .drop-down-menu2 li a {
-    padding: .2rem;
+    padding: 0.2rem;
     text-decoration: none;
     font-size: 1.3rem;
   }
@@ -303,7 +303,8 @@ body {
 .main-screen {
   margin: 0;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
+  /* scrollbar-width: 0px; */
   /* background: url("Asimov_Logolar - Kopya/asimovmainbackground.png");
   background-repeat: no-repeat;
   background-position: 0px, 0px;
@@ -419,13 +420,15 @@ body {
   width: 0%;
   height: 100vh;
   background-color: #fff;
-  transition: width 2s ease;
+  transition: 600ms ease;
   position: absolute;
   right: 0%;
   top: 0%;
   z-index: 12;
   padding-top: 7%;
-  display: none;
+  display: initial;
+  scroll-snap-type: x mandatory;
+  opacity: 0;
 }
 
 .mainscreenSecond {
@@ -433,22 +436,34 @@ body {
   height: 100%;
   background-color: #fff;
   transition: 1s ease;
-  position: relative;
+  position: absolute;
+  top: 10vw;
   gap: 5px;
 }
 
 .mainSidebar {
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 100%;
+  overflow-y: scroll;
 }
-
-.sidebar_show {
+/* 
+.sidebar.show {
   width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  transition: 400ms ease;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  z-index: 12;
+  padding-top: 7%;
   display: initial;
-}
+  scroll-snap-type: x mandatory;
+} */
 
 .mainscreeniconButton {
   background-color: transparent;
@@ -481,9 +496,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: 20px;
-  top: -52px;
+  position: absolute;
+  top: 3.5vh;
+  left: 2vw;
   transition: 500ms;
   cursor: pointer;
 }
@@ -491,7 +506,8 @@ body {
 .go_back_btn:hover {
   background-color: #000;
   color: #fff;
-  left: 17px;
+  transform: translateX(-30%);
+  z-index: 50;
 }
 
 .go_back_btn i:hover {
@@ -663,6 +679,11 @@ body {
     column-gap: 15px;
     flex-direction: row;
   }
+
+  .mainscreenSecond {
+    position: relative;
+  }
+
   .mainscreenSecond button {
     margin-bottom: 14px;
     z-index: 11;
@@ -671,19 +692,20 @@ body {
     width: 25px;
     height: 25px;
     font-size: 15px;
-    left: 20px;
-    top: 0px;
+    position: absolute;
+    left: 4vw;
+    top: 3vh;
   }
 
   .sidebar-header {
-    height: auto;
+    height: 80px;
     overflow-y: hidden;
     z-index: 10;
     position: block;
   }
 
   .sidebar-navbar {
-    height: auto;
+    height: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;

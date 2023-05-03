@@ -23,9 +23,19 @@ if (button) {
 
 const sidebar = document.querySelector(".sidebar");
 const mainContent = document.querySelector(".mainscreenSecond");
+const mainScreen = document.querySelector(".main-screen");
+let isPressedDown = false;
 
 const sidebarOpen = function () {
-  sidebar.classList.toggle("sidebar_show");
+  sidebar.style.opacity = "100%";
+  sidebar.style.width = "100%";
+  mainScreen.style.overflowY = "scroll";
+};
+
+const sidebarClose = function () {
+  sidebar.style.width = "0%";
+  sidebar.style.opacity = "0";
+  mainScreen.style.overflowY = "hidden";
 };
 document
   .querySelector(".mainscreeniconButton")
@@ -33,8 +43,39 @@ document
 
 document.getElementById("bell_btn").addEventListener("click", sidebarOpen);
 
-document.querySelector(".go_back_btn").addEventListener("click", sidebarOpen);
+document.querySelector(".go_back_btn").addEventListener("click", sidebarClose);
 
+mainScreen.addEventListener("mousedown", function (e) {
+  console.log(e.target.closest(".sidebar"));
+  if (e.target.closest(".sidebar") === sidebar) return;
+  isPressedDown = true;
+  // console.log("down");
+});
+
+// console.log(sidebar.style.width);
+
+mainScreen.addEventListener("mouseup", function () {
+  isPressedDown = false;
+  if (sidebar.style.width.slice(0, -1) > 50) {
+    sidebar.style.transition = "600ms ease";
+    sidebarOpen();
+  } else {
+    sidebarClose();
+    sidebar.style.transition = "600ms ease";
+  }
+
+  // console.log("up");
+});
+mainScreen.addEventListener("mousemove", function (e) {
+  if (!isPressedDown) return;
+
+  sidebar.style.transition = "0ms";
+  e.preventDefault();
+  let width = ((visualViewport.width - e.pageX) / visualViewport.width) * 100;
+  sidebar.style.opacity = "100%";
+  sidebar.style.width = `${width}%`;
+  console.log(width, e.pageX, visualViewport.width);
+});
 // background img follows cursor
 const bgImg = document.querySelector(".main--bgImg-ımg");
 const bgImgLeft = bgImg.getBoundingClientRect().left;
@@ -47,7 +88,7 @@ const whenMouseMove = function (e) {
   // console.log(bgImg.getBoundingClientRect());
 };
 document.addEventListener("mousemove", function (e) {
-  console.log(window.visualViewport.width, window.visualViewport.height);
+  // console.log(window.visualViewport.width, window.visualViewport.height);
 
   if (window.visualViewport.width > 775 && window.visualViewport.height > 385) {
     whenMouseMove(e);
