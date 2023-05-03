@@ -1,6 +1,3 @@
-
-
-
 "use strict";
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
@@ -22,7 +19,7 @@ if (button) {
   }
 }) */
 
-                        /* Header aşağı kayınca pozisyon sticky olacak */
+/* Header aşağı kayınca pozisyon sticky olacak */
 
 const sidebar = document.querySelector(".sidebar");
 const mainContent = document.querySelector(".mainscreenSecond");
@@ -33,6 +30,8 @@ const sidebarOpen = function () {
 document
   .querySelector(".mainscreeniconButton")
   .addEventListener("click", sidebarOpen);
+
+document.getElementById("bell_btn").addEventListener("click", sidebarOpen);
 
 document.querySelector(".go_back_btn").addEventListener("click", sidebarOpen);
 

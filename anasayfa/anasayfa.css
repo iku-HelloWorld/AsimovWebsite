@@ -56,11 +56,11 @@
   display: flex;
   list-style: none;
   text-decoration: none;
-  position: relative;
+  position: absolute;
   padding-right: 1rem;
   align-items: center;
   z-index: 5;
-  margin-left: 33%;
+  right: 8%;
   gap: 2rem;
 }
 
@@ -80,13 +80,14 @@
   font-size: 1.6rem;
   align-items: center;
   display: flex;
-  position: relative;
+  position: absolute;
+  right: 3rem;
 }
 
 .nav-toggle a {
   text-decoration: none;
   color: white;
-  border-radius: 10px;
+  border-radius: 50%;
   color: black;
   padding: 5px 5px;
   background-color: white;
@@ -141,6 +142,8 @@
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  padding-left: 0;
+  text-align: center;
 }
 
 .drop-down-menu1 li,
@@ -150,8 +153,10 @@
 
 .drop-down-menu1 li a,
 .drop-down-menu2 li a {
-  padding: 10px;
+  /* padding: 10px; */
   text-decoration: none;
+  font-size: x-small;
+  font-weight: lighter;
 }
 
 .navbar-menu-item:hover .drop-down-menu1,
@@ -161,17 +166,18 @@
 
 /* Responsive */
 
-@media (max-width: 887px) {
+@media (max-width: 1040px) {
   .header {
     height: auto;
     width: 100%;
-    z-index: 6;
+    z-index: 5;
     position: block;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #3d4149c0;
   }
 
   .asimov-logo {
-    position: relative;
+    position: absolute;
+    top: 5%;
   }
 
   .asimov-logo img {
@@ -205,11 +211,14 @@
   }
 
   .menu-list {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 33%;
+    /* margin-right: 33%; */
     z-index: 8;
   }
 
@@ -254,10 +263,9 @@
 
   .drop-down-menu1 li a,
   .drop-down-menu2 li a {
-    padding: 10px;
+    /* padding: 10px; */
     text-decoration: none;
-    font-size: 1rem;
-    
+    font-size: 1.3rem;
   }
 
   .navbar-menu-item:hover .drop-down-menu1,
@@ -343,6 +351,7 @@ body {
   border-radius: 50%;
   transition: 0.6s all;
   filter: drop-shadow(0px 0px 20px var(--black));
+  z-index: -1;
 }
 .logo-animation {
   animation-name: logo;
@@ -392,9 +401,10 @@ body {
   transition: 0.6s all;
   margin-left: 60px;
   letter-spacing: 7px;
+  z-index: -1;
 }
 
-.mainscreensSlogan2 {
+/* .mainscreensSlogan2 {
   text-decoration: none;
   font-family: "Poppins";
   font-size: 80px;
@@ -404,7 +414,7 @@ body {
   transition: 0.6s all;
   margin-left: 60px;
   letter-spacing: 7px;
-}
+} */
 .sidebar {
   width: 0%;
   height: 100vh;
@@ -526,7 +536,7 @@ body {
 .sidebar-header {
   padding: 20px 20px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--main-color);
   top: 0px;
   position: absolute;
 }
@@ -535,7 +545,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 20px;
+  top: 0;
   position: relative;
 }
 
@@ -581,12 +591,12 @@ body {
   text-decoration: none;
   font-size: 1.8;
   padding: 10px 10px;
-  border-radius: 5px;
+  border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .sidebar-toggle a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--white);
   color: black;
 }
 
