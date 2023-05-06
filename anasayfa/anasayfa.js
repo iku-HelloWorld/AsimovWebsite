@@ -8,17 +8,23 @@ if (button) {
   });
 }
 
-/* $(window).on(`scroll`, function() {
-  if($(window).scrollTop()) {
-      $("header").removeClass("header");
-      $("header").addClass("h-active")
-  }
-  else {
-      $("header").addClass("header");
-      $("header").removeClass("h-active")
-  }
-}) */
+const nav = document.querySelector(".navbar-wrapper");
+const header = document.querySelector(".header");
+const navBtn = document.getElementById("list-btn");
 
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= window.visualViewport.height * 0.9) {
+    // header.style.position = "fixed";
+    header.classList.add("h-active");
+    navBtn.style.color = "var(--black)";
+    console.log("hi");
+  } else {
+    // header.style.position = "absolute";
+    header.classList.remove("h-active");
+    navBtn.style.color = "var(--black)";
+    console.log("bye");
+  }
+});
 /* Header aşağı kayınca pozisyon sticky olacak */
 
 const sidebar = document.querySelector(".sidebar");
@@ -30,12 +36,14 @@ const sidebarOpen = function () {
   sidebar.style.opacity = "100%";
   sidebar.style.width = "100%";
   mainScreen.style.overflowY = "scroll";
+  header.style.display = "none";
 };
 
 const sidebarClose = function () {
   sidebar.style.width = "0%";
   sidebar.style.opacity = "0";
   mainScreen.style.overflowY = "hidden";
+  header.style.display = "initial";
 };
 document
   .querySelector(".mainscreeniconButton")
