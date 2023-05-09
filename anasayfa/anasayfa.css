@@ -11,6 +11,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* navbar */
@@ -321,6 +322,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -5;
 }
 
 .main--bgImg img {
@@ -328,7 +330,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -2;
+  z-index: -5;
   height: 125vh;
   width: 125vw;
   object-fit: cover;
