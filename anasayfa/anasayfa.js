@@ -8,7 +8,7 @@ if (button) {
   });
 }
 
-/* $(window).on(`scroll`, function() {
+/*  $(window).on(`scroll`, function() {
   if($(window).scrollTop()) {
       $("header").removeClass("header");
       $("header").addClass("h-active")
@@ -17,7 +17,7 @@ if (button) {
       $("header").addClass("header");
       $("header").removeClass("h-active")
   }
-}) */
+})  */
 
 /* Header aşağı kayınca pozisyon sticky olacak */
 
