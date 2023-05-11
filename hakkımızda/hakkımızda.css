@@ -45,36 +45,38 @@ body {
   margin: 0;
 }
 
-.etkinliklerimiz--img_middle {
-  position: absolute;
-  width: 650px;
-  height: 867px;
-  left: 394px;
-  top: 250px;
-  
-  background: #D9D9D9;
-  box-shadow: 0px 19px 4px 5px rgba(0, 0, 0, 0.48);
-  border-radius: 20px;
-}
 
 .etkinliklerimiz--img_left {
   position: absolute;
   width: 550px;
-  height: 755px;
+  height: 745px;
   left: 48px;
-  top: 250px;
+  top: 24vw;
   
   background: #D9D9D9;
   box-shadow: 0px 19px 4px rgba(0, 0, 0, 0.48);
   border-radius: 20px;
 }
 
+
+.etkinliklerimiz--img_middle {
+  position: absolute;
+  width: 650px;
+  height: 855px;
+  left: 440px;
+  top: 20vw;
+  
+  background: #D9D9D9;
+  box-shadow: 0px 19px 4px 5px rgba(0, 0, 0, 0.48);
+  border-radius: 20px;
+}
+
 .etkinliklerimiz--img_right{
   position: absolute;
   width: 550px;
-  height: 755px;
-  left: 813px;
-  top: 250px;
+  height: 745px;
+  right: 48px;
+  top: 24vw;
   
   background: #D9D9D9;
   box-shadow: 0px 19px 4px rgba(0, 0, 0, 0.48);
