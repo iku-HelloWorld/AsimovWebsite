@@ -214,4 +214,50 @@ body {
   text-align: center;
   margin: 15px;
 }
+
+@media only screen and (max-width: 480px) {
+  .uyesayısı {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .uyesayısıyazı {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .calısmaalanısayısı {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .calısmalaanısayısıyazı {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+
+  .etkınlıksayısı {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .etkınlıksayısıyazı {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+}
 /*responsive*/
