@@ -83,6 +83,7 @@
     transition: all 1s;
   }
 }
+
 @media (max-width:850px) {
   .TeamPageContent {
     display: grid;
@@ -120,9 +121,73 @@
     transition: all 1s;
   }
 }
+@media (max-width:300px) {
+  .TeamPageContent {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    padding-top: 4%;
+    justify-content: center;
+    gap: 3vh;
+    transition: all 1s;
+  }
+
+  .TeamPageContentImg img {
+    width: 15vh;
+    box-shadow: -3px 3px 0px 0px#3d52a5;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText {
+    width: 20vh;
+    box-shadow: -1px 0px 0px 0px#3d52a5;
+    padding-left: 5%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText h1 {
+    font-family: "poppins";
+    font-size: 10px;
+    margin-top: 0%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText p {
+    font-family: sans-serif;
+    font-size: 5px;
+    transition: all 1s;
+  }
+}
+
 /* içerik 1 */
 
 /* video */
+.TeamPageVideo {
+  padding: 12%;
+}
+
+.TeamPageVideoLink {
+  background-color: var(--light-color);
+  width: 1120px;
+  height: 630px;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+@media (max-width:850px) {
+  .TeamPageVideo {
+    padding: 12%;
+    transition: all 1s;
+  }
+
+  .TeamPageVideoLink {
+    background-color: var(--light-color);
+    width: 560px;
+    height: 315px;
+    transition: all 1s;
+  }
+}
+
 /* video */
 
 /* içerik 2 */
