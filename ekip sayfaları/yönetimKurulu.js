@@ -1,51 +1,77 @@
 "use strict";
 
 /* yönetim kurulu img slider */
-const slides = document.querySelectorAll(".yönetimkuruluslide");
-const dots = document.querySelectorAll(".yönetimkuruludot");
+const slides = document.querySelectorAll(".slide");
+const prev = document.querySelectorAll(".prev");
+const next = document.querySelectorAll(".next");
+let slidePosition = 0;
+const totalSlides = slides.length;
 
-let currentSlide = 0;
+// İlk resmi göster
+slides[0].classList.add("active");
 
-function showSlide(n) {
-  if (n < 0) {
-    currentSlide = slides.length - 1;
-  } else if (n >= slides.length) {
-    currentSlide = 0;
+// Resimleri gezinmek için önceki/sonraki düğmelerine tıklama işlevleri
+function prevSlide() {
+  slides[slidePosition].classList.remove("active");
+  if (slidePosition === 0) {
+    slidePosition = totalSlides - 1;
   } else {
-    currentSlide = n;
+    slidePosition--;
   }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-  }
-
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].setAttribute("data-dot", "non-selected");
-  }
-
-  slides[currentSlide].classList.add("active");
-  dots[currentSlide].setAttribute("data-dot", "selected");
+  slides[slidePosition].classList.add("active");
 }
-
-showSlide(currentSlide);
 
 function nextSlide() {
-  showSlide(currentSlide + 1);
+  slides[slidePosition].classList.remove("active");
+  if (slidePosition === totalSlides - 1) {
+    slidePosition = 0;
+  } else {
+    slidePosition++;
+  }
+  slides[slidePosition].classList.add("active");
 }
 
-function prevSlide() {
-  showSlide(currentSlide - 1);
+// Önceki/sonraki düğmelerine tıklama olaylarını ekleme
+prev.forEach((button) => {
+  button.addEventListener("click", prevSlide);
+});
+
+next.forEach((button) => {
+  button.addEventListener("click", nextSlide);
+});
+
+// Dot'lara tıklandığında ilgili slaytı göster
+document.getElementById("dot1").onclick = function () {
+  showSlide(1);
+};
+document.getElementById("dot2").onclick = function () {
+  showSlide(2);
+};
+document.getElementById("dot3").onclick = function () {
+  showSlide(3);
+};
+document.getElementById("dot4").onclick = function () {
+  showSlide(4);
+};
+
+// Gösterilecek slaytın belirlenmesi ve gösterilmesi
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    n = 1;
+  }
+  if (n < 1) {
+    n = slides.length;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = "0";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+  slides[n - 1].style.opacity = "1";
+  dots[n - 1].classList.add("active");
 }
 
-const arrowLeft = document.querySelector(".yönetimkuruluarrowleft");
-const arrowRight = document.querySelector(".yönetimkuruluarrowright");
-
-arrowLeft.addEventListener("click", prevSlide);
-arrowRight.addEventListener("click", nextSlide);
-
-for (let i = 0; i < dots.length; i++) {
-  dots[i].addEventListener("click", function () {
-    showSlide(i);
-  });
-}
 /* yönetim kurulu img slider */
