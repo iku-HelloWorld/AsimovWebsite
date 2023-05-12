@@ -7,3 +7,4 @@ if (button) {
       menu.classList.toggle(`active`);
     });
   }
+
