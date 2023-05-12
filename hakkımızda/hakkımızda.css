@@ -82,6 +82,27 @@ body {
   box-shadow: 0px 19px 4px rgba(0, 0, 0, 0.48);
   border-radius: 20px;
 }
+
+/* @media (min-width: 768px) {
+  .etkinliklerimiz--section {
+    padding: 3vw 10vw;
+  }
+  
+  .etkinliklerimiz--img_left,
+  .etkinliklerimiz--img_right {
+    width: 40%;
+  }
+  
+  .etkinliklerimiz--img_middle {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etkinliklerimiz--section {
+    padding: 3vw 15vw;
+  }
+} 
 /*image section*/
 
 /* .hakkımızda--img_slider {
