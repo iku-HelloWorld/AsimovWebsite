@@ -8,7 +8,8 @@ let slidePosition = 0;
 const totalSlides = slides.length;
 
 // İlk resmi göster
-slides[0].classList.add("active");
+// slides[0].classList.add("active");
+showSlide(1);
 
 // Resimleri gezinmek için önceki/sonraki düğmelerine tıklama işlevleri
 function prevSlide() {
@@ -18,7 +19,8 @@ function prevSlide() {
   } else {
     slidePosition--;
   }
-  slides[slidePosition].classList.add("active");
+  // slides[slidePosition].classList.add("active");
+  showSlide(slidePosition);
 }
 
 function nextSlide() {
@@ -28,7 +30,8 @@ function nextSlide() {
   } else {
     slidePosition++;
   }
-  slides[slidePosition].classList.add("active");
+  //slides[slidePosition].classList.add("active");
+  showSlide(slidePosition);
 }
 
 // Önceki/sonraki düğmelerine tıklama olaylarını ekleme
