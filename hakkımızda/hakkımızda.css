@@ -36,7 +36,96 @@ body {
 /* etkinlik slider */
 
 /* sponsor işbirlik */
+
+.sponsor {
+  height: auto;
+  color: var(--white);
+}
+
+.sponsor-head {
+  position: absolute;
+  left: 15%;
+}
+
+.sponsor-description {
+  font-size: .9rem;
+}
+
+.sponsor-img {
+  width: 20%;
+}
+
+.isbirlik-title1 {
+  margin: 0 2rem;
+}
+
+.sponsor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+}
+
+.isbirlik1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isbirlik2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 887px) {
+  .sponsor {
+    height: auto;
+    width: auto;
+
+    
+  }
+
+
+  .sponsor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sponsor-head {
+   margin-bottom: 1rem;
+   font-size: .5rem;
+
+  }
+
+  .sponsor-title {
+    font-size: 1rem;
+  }
+  .sponsor-description {
+    font-size: .9rem;
+  }
+
+  .isbirlik1{
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  .isbirlik-title{
+    font-size: 1rem;
+  }
+
+  .isbirlik-description {
+    font-size: .8rem;
+  }
+}
+
+
 /* sponsor işbirlik */
 
 /* footer */
 /* footer */
+
