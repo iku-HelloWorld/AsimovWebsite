@@ -1718,7 +1718,7 @@ h1 {
   height: 75px;
   left: 32px;
   top: 10px;
-
+  text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1726,6 +1726,9 @@ h1 {
   line-height: 18px;
 
   color: #d4d9df;
+}
+.footer-list p:hover{
+  text-decoration: underline;
 }
 
 .footer_content {
