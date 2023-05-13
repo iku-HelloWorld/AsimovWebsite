@@ -303,6 +303,7 @@ html,
 body {
   margin: 0;
   height: 100%;
+  width: 100%;
 }
 .main-screen {
   margin: 0;
@@ -315,7 +316,6 @@ body {
   background-size: ;
   transition: background-position 400ms; */
   transform: scale(1);
-  width: 100%;
 }
 
 .main--bgImg {
@@ -511,7 +511,7 @@ body {
 .go_back_btn:hover {
   background-color: #000;
   color: #fff;
-  transform: translateX(-30%);
+  transform: translateX(-15%);
   z-index: 50;
 }
 
@@ -655,6 +655,17 @@ body {
     font-size: 1rem;
     bottom: 0;
     z-index: 1;
+  }
+
+  .main--bgImg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    height: 125vh;
+    width: 125vw;
+    object-fit: cover;
   }
 
   /* İkinci sayfa responsive */
@@ -1710,6 +1721,7 @@ h1 {
 .footer-container {
   position: absolute;
   width: 100%;
+  overflow: hidden;
   height: 144px;
   top: 300vh;
   transform: translateY(1630px);
