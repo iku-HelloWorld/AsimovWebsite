@@ -1,0 +1,61 @@
+{
+  "tr": {
+    "mainscreen": {
+      "kulübümüz": "Kulübümüz",
+      "galeri": "Galeri",
+      "takımlarımız": "Takımlarımız",
+      "iletişim": "İletişim",
+      "slogan1": "Daha Fazlasını Hayal Et",
+      "slogan2": "Daha Fazlasını Yap",
+      "kaydır": "Bildirimler için sağa kaydırınız"
+    },
+    "sidebar": {
+      "navKulübümüz": "Kulübümüz",
+      "navGaleri": "Galeri",
+      "navTakımlarımız": "Takımlarımız",
+      "navİletişim": "İletişim",
+      "başlık": "Yeni Haber",
+      "içerik": "Türkçe Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod est eget magna dapibus aliquam. Fusce consequat arcu ac urna mollis, quis dignissim nisl pharetra. Nullam dictum mauris vel libero pretium, eget mattis metus posuere. Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod est eget magna dapibus aliquam. Fusce consequat arcu ac urna mollis, quis dignissim nisl pharetra. Nullam dictum mauris vel libero pretium, eget mattis metus posuere. Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat quis lacus pulvinar bibendum id eget odio."
+    },
+    "bizKimiz": {
+      "başlık": "Biz Kimiz?",
+      "içerik": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.",
+      "misyon": "Misyon",
+      "vizyon": "Vizyon",
+      "hedef": "Hedef",
+      "misyonAçıklama": "Misyon Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
+      "vizyonAçıklama": "Vizyon Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
+      "hedefAçıklama": "Hedef Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime"
+    },
+    "takımSayfası": {
+      "başlık": "Takımlar",
+      "açıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime,.",
+      "helloworld": "Hello World Takımı",
+      "otonom": "Otonom Takımı",
+      "roket": "Roket Takımı",
+      "dataAI": "Data AI Takımı",
+      "core": "Core Takımı"
+    },
+    "galeri": {
+      "başlık": "Galeri"
+    },
+    "iletişim": {
+      "başlık": "Contact Us"
+    },
+    "footer": {
+      "hakkımızda": "Takımlar",
+      "takımlar": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime,.",
+      "iletişim": "Hello World Takımı",
+      "galeri": "Otonom Takımı",
+      "tag": "Roket Takımı"
+    }
+  },
+  "en": {
+    "mainscreen": {
+      "Kulübümüz": "Our team",
+      "Galeri": "Gallery",
+      "statusbar_empty": "Empty! No entries added yet.",
+      "statusbar_ok": "Ok."
+    }
+  }
+}

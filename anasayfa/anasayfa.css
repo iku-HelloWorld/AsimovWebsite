@@ -20,17 +20,22 @@
   background: transparent;
   top: 0;
   z-index: 1;
-  position: block;
   width: 100%;
+  position: absolute;
 }
 
 .h-active {
-  position: sticky;
-  height: 20vh;
-  background: transparent;
+  position: fixed;
+  height: 10vh;
+  background: var(--main-color);
   top: 0;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
+  transition: ease 300ms;
+}
+
+.h-active:hover {
+  height: 15vh;
 }
 
 .navbar-wrapper {
@@ -39,7 +44,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: block;
 }
 
 .asimov-logo img {
@@ -71,7 +75,7 @@
 
 .menu-list a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-size: 1.6rem;
   padding-right: 10px;
 }
@@ -86,11 +90,11 @@
 
 .nav-toggle a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   border-radius: 50%;
-  color: black;
+  color: var(--black);
   padding: 5px 5px;
-  background-color: white;
+  background-color: var(--white);
   margin-right: 5px;
   font-size: 1.6rem;
   z-index: 5;
@@ -98,11 +102,11 @@
 
 .nav-toggle a:hover {
   background-color: transparent;
-  color: black;
+  color: var(--black);
 }
 
 .nav-toggle i {
-  color: white;
+  color: var(--white);
   cursor: pointer;
   font-size: 1.6rem;
   margin-left: 5px;
@@ -111,14 +115,14 @@
 
 .nav-toggle {
   font-size: 1.1rem;
-  color: white;
+  color: var(--white);
   cursor: pointer;
 }
 
 .nav-list {
   display: none;
   font-size: 1.5rem;
-  color: white;
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -139,7 +143,7 @@
   position: absolute;
   top: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: var(--white);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1;
   padding-left: 0;
@@ -249,7 +253,7 @@
     position: absolute;
     top: 100%;
     background-color: transparent;
-    color: white;
+    color: var(--white);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
@@ -299,6 +303,7 @@ html,
 body {
   margin: 0;
   height: 100%;
+  width: 100%;
 }
 .main-screen {
   margin: 0;
@@ -311,7 +316,6 @@ body {
   background-size: ;
   transition: background-position 400ms; */
   transform: scale(1);
-  width: 100%;
 }
 
 .main--bgImg {
@@ -321,6 +325,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -3;
 }
 
 .main--bgImg img {
@@ -506,7 +511,7 @@ body {
 .go_back_btn:hover {
   background-color: #000;
   color: #fff;
-  transform: translateX(-30%);
+  transform: translateX(-15%);
   z-index: 50;
 }
 
@@ -584,26 +589,27 @@ body {
   margin-right: 60px;
   text-decoration: none;
   font-size: 1.6rem;
-  color: white;
+  color: var(--white);
+  border-bottom: 1px solid transparent;
 }
 
 .sidebar-list-item a {
-  color: white;
+  color: var(--white);
 }
 
 .sidebar-list-item:hover {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
 }
 
 .sidebar-toggle i {
   cursor: pointer;
-  color: white;
+  color: var(--white);
   font-size: 1.6rem;
   margin-left: 60px;
 }
 
 .sidebar-toggle a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-size: 1.8;
   padding: 10px 10px;
@@ -613,7 +619,7 @@ body {
 
 .sidebar-toggle a:hover {
   background-color: var(--white);
-  color: black;
+  color: var(--black);
 }
 
 .sidebar-list-menu {
@@ -649,6 +655,17 @@ body {
     font-size: 1rem;
     bottom: 0;
     z-index: 1;
+  }
+
+  .main--bgImg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    height: 125vh;
+    width: 125vw;
+    object-fit: cover;
   }
 
   /* İkinci sayfa responsive */
@@ -764,7 +781,7 @@ body {
   .sidebar-list-menu {
     top: 0;
     right: 0;
-    color: white;
+    color: var(--white);
     font-size: 1.5rem;
     position: absolute;
     cursor: pointer;
@@ -866,7 +883,7 @@ body {
   transform: translateY(-50%);
   padding-left: 10px;
 
-  z-index: 10;
+  z-index: 3;
 }
 
 .bizkimiz--img_slider .arrows .arrow-left,
@@ -1040,7 +1057,7 @@ body {
   right: 3vw;
   top: 3vh;
   font-size: xx-large;
-  color: white; /* ımgFocusClose() */
+  color: var(--white); /* ımgFocusClose() */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1203,7 +1220,7 @@ body {
 
   text-align: center;
 
-  color: white;
+  color: var(--white);
 
   /* border: 0.5px solid #FFFFFF;
 text-shadow: 0px 4px 4px --light-color#d4d9df(0, 0, 0, 0.25);
@@ -1513,7 +1530,7 @@ h1 {
 
 .TeamLogoCircle {
   margin: auto;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 50%;
   width: 180px;
   height: 180px;
@@ -1579,7 +1596,7 @@ h1 {
 
   .TeamLogoCircle {
     margin: auto;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 50%;
     width: 90px;
     height: 90px;
@@ -1704,8 +1721,10 @@ h1 {
 .footer-container {
   position: absolute;
   width: 100%;
+  overflow: hidden;
   height: 144px;
-  top: 495vh;
+  top: 300vh;
+  transform: translateY(1630px);
   background: #4b4b4b;
 }
 
@@ -1738,7 +1757,7 @@ h1 {
   left: -2px;
   bottom: 0;
 
-  background: black;
+  background: var(--black);
 }
 
 .footer-design {
@@ -1773,4 +1792,25 @@ h1 {
 /* footer */
 
 /* responsiveness */
+@media screen and (max-height: 800px) {
+  .bizkimiz--section {
+    height: 800px;
+  }
+
+  .TeamMain {
+    position: absolute;
+    top: 800px;
+    transform: translateY(100%);
+  }
+  .galeri_content {
+    height: 800px;
+    top: 200vh;
+    transform: translateY(800px);
+  }
+  .communicationMain {
+    position: absolute;
+    top: 1600px;
+    transform: translateY(200%);
+  }
+}
 /* responsiveness */
