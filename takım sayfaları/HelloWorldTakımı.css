@@ -291,12 +291,241 @@
 /* navbar */
 
 /* içerik 1 */
+.TeamPageContent {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  padding-top: 4%;
+  justify-content: center;
+  gap: 15vh;
+}
+
+.TeamPageContentImg img {
+  width: 60vh;
+  box-shadow: -10px 10px 0px 0px#3d52a5;
+}
+
+.TeamPageContentText {
+  width: 80vh;
+  box-shadow: -5px 0px 0px 0px#3d52a5;
+  padding-left: 5%;
+}
+
+.TeamPageContentText h1 {
+  font-family: "poppins";
+  font-size: 40px;
+  margin-top: 0%;
+}
+
+.TeamPageContentText p {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+@media (max-width: 1100px) {
+  .TeamPageContent {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    padding-top: 4%;
+    justify-content: center;
+    gap: 10vh;
+    transition: all 1s;
+  }
+
+  .TeamPageContentImg img {
+    width: 45vh;
+    box-shadow: -7px 7px 0px 0px#3d52a5;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText {
+    width: 60vh;
+    box-shadow: -3px 0px 0px 0px#3d52a5;
+    padding-left: 5%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText h1 {
+    font-family: "poppins";
+    font-size: 30px;
+    margin-top: 0%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText p {
+    font-family: sans-serif;
+    font-size: 15px;
+    transition: all 1s;
+  }
+}
+
+@media (max-width: 850px) {
+  .TeamPageContent {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    padding-top: 4%;
+    justify-content: center;
+    gap: 7vh;
+    transition: all 1s;
+  }
+
+  .TeamPageContentImg img {
+    width: 30vh;
+    box-shadow: -5px 5px 0px 0px#3d52a5;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText {
+    width: 40vh;
+    box-shadow: -2px 0px 0px 0px#3d52a5;
+    padding-left: 5%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText h1 {
+    font-family: "poppins";
+    font-size: 20px;
+    margin-top: 0%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText p {
+    font-family: sans-serif;
+    font-size: 10px;
+    transition: all 1s;
+  }
+}
+@media (max-width: 300px) {
+  .TeamPageContent {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    padding-top: 4%;
+    justify-content: center;
+    gap: 3vh;
+    transition: all 1s;
+  }
+
+  .TeamPageContentImg img {
+    width: 15vh;
+    box-shadow: -3px 3px 0px 0px#3d52a5;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText {
+    width: 20vh;
+    box-shadow: -1px 0px 0px 0px#3d52a5;
+    padding-left: 5%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText h1 {
+    font-family: "poppins";
+    font-size: 10px;
+    margin-top: 0%;
+    transition: all 1s;
+  }
+
+  .TeamPageContentText p {
+    font-family: sans-serif;
+    font-size: 5px;
+    transition: all 1s;
+  }
+}
+
 /* içerik 1 */
 
 /* video */
+.TeamPageVideo {
+  padding: 12%;
+}
+
+.TeamPageVideoLink {
+  background-color: var(--light-color);
+  width: 1120px;
+  height: 630px;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+@media (max-width: 850px) {
+  .TeamPageVideo {
+    padding: 12%;
+    padding-bottom: 0%;
+    transition: all 1s;
+  }
+
+  .TeamPageVideoLink {
+    background-color: var(--light-color);
+    width: 560px;
+    height: 315px;
+    transition: all 1s;
+  }
+}
+
 /* video */
 
 /* içerik 2 */
+.takımsayfasıiçerik2 p {
+  font-family: sans-serif;
+  font-size: 2vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 0%;
+}
+.takımsayfasıgaleri {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  top: 50px;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  padding: 1%;
+}
+
+.takımsayfasıresim img {
+  width: 400px;
+  height: 250px;
+  text-align: center;
+  margin: 20px;
+  padding: 0px 92px;
+  border: 5px solid var(--side-color);
+}
+@media (max-width: 850px) {
+  .takımsayfasıiçerik2 p {
+    font-family: sans-serif;
+    font-size: 1vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 0%;
+    transition: all 1s;
+  }
+  .takımsayfasıgaleri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 25px;
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+    transition: all 1s;
+  }
+
+  .takımsayfasıresim img {
+    width: 200px;
+    height: 125px;
+    text-align: center;
+    margin: 10px;
+    padding: 0px 46px;
+    border: 2px solid var(--side-color);
+    transition: all 1s;
+  }
+}
 /* içerik 2 */
 
 /* footer */
