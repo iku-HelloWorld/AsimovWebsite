@@ -22,8 +22,179 @@ body {
 /* navbar */
 /* navbar */
 
-/* section1 */
-/* section1 */
+/* section 1 */
+.etkinliklerimiz--section {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.etkinliklerimiz--content {
+  position: relative;
+  left: 3%;
+  top: 2%;
+  color: var(--white);
+  width: 80%;
+}
+
+.etkinliklerimiz--slider {
+  width: 95%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  transition: ease 400ms;
+}
+/* 
+.etkinliklerimiz--arrows {
+  position: absolute1;
+} */
+
+.etkinliklerimiz--slider .etkinliklerimiz--slides {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: ease 400ms;
+}
+
+.etkinliklerimiz--slider .etkinliklerimiz--slide {
+  width: 25%;
+  height: 100%;
+  background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  visibility: hidden;
+  transition: ease 400ms;
+  font-size: larger;
+}
+
+.etkinliklerimiz--slider .active {
+  background-color: var(--white);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) scale(1.2);
+  z-index: 2;
+  box-shadow: 0px 0px 50px 5px var(--black);
+  border: var(--black) 1px solid;
+  visibility: visible;
+  transition: ease 400ms;
+}
+
+.etkinliklerimiz--slider .before {
+  left: 20%;
+  z-index: 1;
+  visibility: visible;
+  transition: ease 400ms;
+}
+
+.etkinliklerimiz--slider .after {
+  right: 20%;
+  z-index: 1;
+  visibility: visible;
+  transition: ease 400ms;
+}
+
+.etkinliklerimiz--slider .etkinliklerimiz--slide img {
+  width: 80%;
+  height: 40%;
+  object-fit: contain;
+}
+.etkinliklerimiz--slider .etkinliklerimiz--slide h1 {
+  font-size: larger;
+  float: left;
+  margin: 0;
+  margin-bottom: 10px;
+  text-indent: 5px;
+}
+.etkinliklerimiz--slider .etkinliklerimiz--slide p {
+  font-size: larger;
+  float: left;
+  text-align: left;
+  margin: 0;
+  text-indent: 5px;
+}
+@media only screen and (max-width: 2395px) {
+  .etkinliklerimiz--slider .etkinliklerimiz--slide {
+    font-size: large;
+  }
+}
+@media only screen and (max-width: 1940px) {
+  .etkinliklerimiz--slider .etkinliklerimiz--slide {
+    font-size: medium;
+  }
+  .etkinliklerimiz--slider {
+    top: 25%;
+    height: 35vw;
+  }
+}
+@media only screen and (max-width: 1550px) {
+  .etkinliklerimiz--slider .etkinliklerimiz--slide {
+    font-size: small;
+  }
+  .etkinliklerimiz--slider {
+    width: 100%;
+    height: 40vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .etkinliklerimiz--slider .etkinliklerimiz--slide {
+    font-size: x-small;
+  }
+  .etkinliklerimiz--slider {
+    width: 100%;
+    height: 65vw;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .etkinliklerimiz--slider .etkinliklerimiz--slide {
+    font-size: x-small;
+    width: 55%;
+  }
+  .etkinliklerimiz--slider .active {
+    box-shadow: 0px 0px 30px 5px var(--black);
+  }
+  .etkinliklerimiz--slider .before {
+    position: absolute;
+    left: 1%;
+  }
+  .etkinliklerimiz--slider .after {
+    position: absolute;
+    right: 1%;
+  }
+  .etkinliklerimiz--slider {
+    width: 100vw;
+    height: 67vh;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .etkinliklerimiz--slider {
+    top: 30%;
+    height: 60vh;
+  }
+  .etkinliklerimiz--slider .etkinliklerimiz--slide {
+    font-size: xx-small;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .etkinliklerimiz--slider .etkinliklerimiz--slide {
+    font-size: 6px;
+  }
+}
+/* section 1 */
 
 /* timeline */
 .timeline_section {
@@ -415,6 +586,7 @@ body {
 /* etkinliklerimiz */
 
 /* etkinlik slider */
+
 /* etkinlik slider */
 
 /* sponsor işbirlik */
