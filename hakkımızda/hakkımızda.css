@@ -858,6 +858,83 @@ body {
 /* timeline */
 
 /* sayaç */
+
+.sayacContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  padding: 0%;
+  margin: 0%;
+  top: 70vh;
+  background: linear-gradient(to bottom, #3d4149, #3d52a5, #3d4149);
+}
+
+.uye {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+.uyesayısı {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.uyesayısıyazı {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.calısmaalanı {
+  flex-basis: 30%;
+  border-left: 5px solid #000;
+  text-align: center;
+}
+
+.calısmaalanısayısı {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.calısmalaanısayısıyazı {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.etkınlık {
+  flex-basis: 20%;
+  border-left: 5px solid #000;
+  text-align: center;
+}
+
+.etkınlıksayısı {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.etkınlıksayısıyazı {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
 /* sayaç */
 
 /* etkinliklerimiz */
@@ -940,3 +1017,147 @@ body {
   color: var(--white);
 }
 /* footer */
+
+/*responsive*/
+.sayacContainer {
+  height: 200px;
+  position: relative;
+  padding: 0%;
+  margin: 0%;
+  background: linear-gradient(to bottom, #3d4149, #3d52a5, #3d4149);
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with a maximum width of 768px */
+  .uye,
+  .calısmaalanı,
+  .etkınlık {
+    width: 100%;
+    right: 0;
+    text-align: center;
+  }
+}
+
+.uye {
+  width: 30%;
+  height: 100px;
+  right: 70%;
+  position: absolute;
+  top: 35px;
+  text-align: center;
+}
+
+.uyesayısı {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.uyesayısıyazı {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.calısmaalanı {
+  height: 100px;
+  width: 30%;
+  right: 35%;
+  position: absolute;
+  top: 35px;
+  border-left: 5px solid #000;
+  text-align: center;
+}
+
+.calısmaalanısayısı {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.calısmalaanısayısıyazı {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.etkınlık {
+  height: 100px;
+  width: 20%;
+  position: absolute;
+  right: 13%;
+  border-left: 5px solid #000;
+  top: 35px;
+  text-align: center;
+}
+
+.etkınlıksayısı {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+.etkınlıksayısıyazı {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+  .uyesayısı {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .uyesayısıyazı {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .calısmaalanısayısı {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .calısmalaanısayısıyazı {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+
+  .etkınlıksayısı {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+  .etkınlıksayısıyazı {
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+  }
+}
+/*responsive*/
