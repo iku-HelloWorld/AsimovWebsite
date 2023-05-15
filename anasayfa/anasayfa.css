@@ -11,6 +11,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* navbar */
@@ -325,7 +326,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -3;
+  z-index: -5;
 }
 
 .main--bgImg img {
@@ -333,7 +334,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -2;
+  z-index: -5;
   height: 125vh;
   width: 125vw;
   object-fit: cover;
@@ -1746,7 +1747,7 @@ h1 {
 
   color: #d4d9df;
 }
-.footer-list p:hover{
+.footer-list p:hover {
   text-decoration: underline;
 }
 
