@@ -33,45 +33,45 @@ timeline.addEventListener("click", function (e) {
 });
 
 displayTimeline(timeInd);
-const slides = document.querySelectorAll(".etkinliklerimiz--slide");
-const slider = document.querySelector(".etkinliklerimiz--slider");
-const slideArr = [...slides];
+const etkinlikSlides = document.querySelectorAll(".etkinliklerimiz--slide");
+const etkinlikSlider = document.querySelector(".etkinliklerimiz--slider");
+const etkinlikSlideArr = [...etkinlikSlides];
 
-console.log(slides);
-let slideIndex = 1;
+// console.log(slides);
+let etkinlikSlideIndex = 1;
 let afterIndex, beforeIndex;
 
 const displaySlides = function (n) {
-  afterIndex = slideIndex + 1;
-  beforeIndex = slideIndex - 1;
-  if (slideIndex === 1) beforeIndex = slides.length;
-  if (slideIndex < 1) {
-    beforeIndex = slides.length - 1;
-    slideIndex = slides.length;
+  afterIndex = etkinlikSlideIndex + 1;
+  beforeIndex = etkinlikSlideIndex - 1;
+  if (etkinlikSlideIndex === 1) beforeIndex = etkinlikSlides.length;
+  if (etkinlikSlideIndex < 1) {
+    beforeIndex = etkinlikSlides.length - 1;
+    etkinlikSlideIndex = etkinlikSlides.length;
   }
-  if (slideIndex === slides.length) afterIndex = 1;
-  if (slideIndex > slides.length) {
+  if (etkinlikSlideIndex === etkinlikSlides.length) afterIndex = 1;
+  if (etkinlikSlideIndex > etkinlikSlides.length) {
     afterIndex = 2;
-    slideIndex = 1;
+    etkinlikSlideIndex = 1;
   }
-  console.log(beforeIndex, slideIndex, afterIndex);
-  slides.forEach((s) => s.classList.remove("active"));
-  slides.forEach((s) => s.classList.remove("after"));
-  slides.forEach((s) => s.classList.remove("before"));
-  slides.item(slideIndex - 1).classList.add("active");
-  slides.item(beforeIndex - 1).classList.add("before");
-  slides.item(afterIndex - 1).classList.add("after");
+  console.log(beforeIndex, etkinlikSlideIndex, afterIndex);
+  etkinlikSlides.forEach((s) => s.classList.remove("active"));
+  etkinlikSlides.forEach((s) => s.classList.remove("after"));
+  etkinlikSlides.forEach((s) => s.classList.remove("before"));
+  etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+  etkinlikSlides.item(beforeIndex - 1).classList.add("before");
+  etkinlikSlides.item(afterIndex - 1).classList.add("after");
 };
 
-slider.addEventListener("click", function (e) {
+etkinlikSlider.addEventListener("click", function (e) {
   const target = e.target.closest(".etkinliklerimiz--slide");
-  if (!slideArr.includes(target)) return;
-  const targetIndex = slideArr.indexOf(target);
-  slideIndex = targetIndex + 1;
-  displaySlides(slideIndex);
+  if (!etkinlikSlideArr.includes(target)) return;
+  const targetIndex = etkinlikSlideArr.indexOf(target);
+  etkinlikSlideIndex = targetIndex + 1;
+  displaySlides(etkinlikSlideIndex);
 });
 
-displaySlides(slideIndex);
+displaySlides(etkinlikSlideIndex);
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
 

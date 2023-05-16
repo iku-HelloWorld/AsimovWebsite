@@ -16,8 +16,9 @@
 /* navbar */
 .header {
   height: 20vh;
-  background: transparent;
+  background: var(--main-color);
   top: 0;
+  left: 0;
   z-index: 1;
   position: sticky;
   width: 100%;
