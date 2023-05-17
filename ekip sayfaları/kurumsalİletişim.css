@@ -19,8 +19,170 @@
 /* içerik  */
 /* içerik  */
 
-/* üyeler */
-/* üyeler */
+/*üyeler*/
+.TeamPageMembers {
+  background: rgb(212, 217, 223);
+  background: linear-gradient(
+    90deg,
+    rgba(212, 217, 223, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.TeamPageMembersHeader {
+  font-size: 3vh;
+  font-family: "Poppins";
+  color: var(--black);
+  padding: 3%;
+}
+
+.TeamPageMembersMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+.TeamPageMembersCards {
+  width: 25vh;
+  height: 30vh;
+  box-shadow: -6px 6px 0px 0px var(--side-color);
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 10%;
+  margin: 2%;
+}
+
+.TeamPageMembersCardsImg img {
+  margin-top: 6%;
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+}
+
+.TeamPageMembersCardsTextHeader {
+  font-family: sans-serif;
+  color: var(--black);
+  text-align: center;
+  font-size: 2vh;
+  font-weight: 600;
+}
+
+.TeamPageMembersCardsText {
+  font-family: sans-serif;
+  color: var(--black);
+  text-align: center;
+}
+
+.TeamPageMembersCardsTextMajor {
+  font-family: sans-serif;
+  color: var(--black);
+  text-align: center;
+  font-size: 1.6vh;
+}
+
+/*üyeler*/
+/*responsive*/
+@media (max-width: 600px) and (max-height: 630px) {
+  .TeamPageMembersHeader {
+    font-size: 1vh;
+    font-family: "Poppins";
+    transition: all 1s;
+  }
+
+  .TeamPageMembersCards {
+    box-shadow: -3px 3px 0px 0px var(--side-color);
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 10%;
+    margin: 2%;
+    transition: all 1s;
+  }
+
+  .TeamPageMembersCardsImg img {
+    margin-top: 6%;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    transition: all 1s;
+  }
+}
+
+/*responsive*/
+
 
 /* footer */
+
+.footer-container {
+  position: absolute;
+  width: 100%;
+  height: 144px;
+  top: 495vh;
+  background: #4b4b4b;
+  left: 0;
+}
+
+.footer-list {
+  display: grid;
+  grid-template-columns: 140px 120px 100px 100px;
+  column-gap: 20px;
+  position: relative;
+  width: 600px;
+  height: 75px;
+  left: 32px;
+  top: 10px;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 18px;
+
+  color: #d4d9df;
+}
+
+.footer_content {
+  position: absolute;
+  width: 100%;
+  height: 52px;
+  left: -2px;
+  bottom: 0;
+
+  background: black;
+}
+
+.footer-design {
+  position: absolute;
+  width: 92%;
+  height: 75px;
+  left: 4%;
+  top: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #ffffff;
+}
+
+.social-links {
+  position: absolute;
+  right: 4%;
+  top: 1rem;
+  display: grid;
+  grid-template-columns: 25px 25px 25px 25px;
+  column-gap: 3vw;
+}
+
+.footer-link {
+  font-size: 25px;
+  color: var(--white);
+}
 /* footer */
