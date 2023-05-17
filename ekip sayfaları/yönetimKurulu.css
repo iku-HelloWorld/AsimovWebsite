@@ -16,7 +16,7 @@
 /* navbar */
 .header {
   height: 20vh;
-  background: transparent;
+  background: var(--main-color);
   top: 0;
   z-index: 1;
   position: block;
@@ -279,12 +279,14 @@
     position: absolute;
     right: 0;
     top: 2%;
+    background: var(--dark-color);
   }
   .nav-list i {
     font-size: 1.5rem;
     cursor: pointer;
     transition: 0.7s;
     z-index: 2;
+    color: white;
   }
 }
 /* navbar */
