@@ -1,4 +1,7 @@
 "use strict";
+
+import json from "/language.json" assert { type: "json" };
+
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
 
@@ -30,6 +33,7 @@ window.addEventListener("scroll", function () {
 const sidebar = document.querySelector(".sidebar");
 const mainContent = document.querySelector(".mainscreenSecond");
 const mainScreen = document.querySelector(".main-screen");
+const mainScreenContainer = document.querySelector(".mainscreenContainer");
 let isPressedDown = false;
 
 const sidebarOpen = function () {
@@ -44,6 +48,8 @@ const sidebarClose = function () {
   sidebar.style.opacity = "0";
   mainScreen.style.overflowY = "hidden";
   header.style.display = "initial";
+  mainScreenContainer.style.filter = "blur(0px)";
+  header.style.opacity = "100";
 };
 document
   .querySelector(".mainscreeniconButton")
@@ -93,14 +99,14 @@ const bgImgLeft = bgImg.getBoundingClientRect().left;
 const bgImgTop = bgImg.getBoundingClientRect().top;
 
 let totalDistance = 0;
-let oldCursorX;
+let oldCursorX, oldCursorY;
 
 $(window).on("mousemove", function (e) {
   if (!isPressedDown) return;
   if (oldCursorX)
     totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
   if (totalDistance >= cursorThreshold) {
-    console.log("Mouse moved!");
+    // console.log("Mouse moved!");
     // actual event
     cursorThreshold = 1;
     sidebar.style.transition = "0ms";
@@ -108,6 +114,8 @@ $(window).on("mousemove", function (e) {
     let width = ((visualViewport.width - e.pageX) / visualViewport.width) * 100;
     sidebar.style.opacity = "100%";
     sidebar.style.width = `${width}%`;
+    mainScreenContainer.style.filter = "blur(2px)";
+    header.style.opacity = "0";
 
     totalDistance = 0;
   }
@@ -122,6 +130,7 @@ const whenMouseMove = function (e) {
   bgImg.style.top = `${bgImgTop + e.pageY / 25}px`;
   // console.log(bgImg.getBoundingClientRect());
 };
+
 document.addEventListener("mousemove", function (e) {
   // console.log(window.visualViewport.width, window.visualViewport.height);
 
@@ -284,3 +293,87 @@ tagsDiv.addEventListener("click", function (e) {
 
 displaySlide(imgIndex);
 displayText(textIndex);
+
+// lang
+
+const textKulübümüz = document.getElementById("nav_kulübümüz");
+const textHakkımızda = document.getElementById("nav_hakkımızda");
+const textYönetimKurulu = document.getElementById("nav_yönetim_kurulu");
+const textKurumsalİletişim = document.getElementById("nav_kurumsal_iletişim");
+const textGaleri = document.getElementById("nav_galeri");
+const textTakımlar = document.getElementById("nav_takımlar");
+const textHw = document.getElementById("nav_hw");
+const textOtonom = document.getElementById("nav_otonom");
+const textRoket = document.getElementById("nav_roket");
+const textSakurai = document.getElementById("nav_sakurai");
+const textCore = document.getElementById("nav_core");
+const textİletişim = document.getElementById("nav_iletişim");
+const textBtn = document.getElementById("the_btn");
+
+let lang = "Tr";
+
+const turnAnimate = { transform: "rotate(360deg)" };
+const turnTiming = { duration: 300, iterations: 1 };
+
+const handleAnimation = function () {
+  console.log(lang);
+  textBtn.animate(turnAnimate, turnTiming);
+  // textBtn.textContent = lang;
+  handleLang();
+};
+
+console.log(json.En.mainscreen.kulübümüz);
+
+const handleLang = function () {
+  if (lang === "En") {
+    textBtn.textContent = `${json.En.mainscreen.lang}`;
+    textKulübümüz.textContent = `${json.En.mainscreen.kulübümüz}`;
+    // textHakkımızda.textContent =
+    // textYönetimKurulu.textContent =
+    // textKurumsalİletişim.textContent =
+    // textGaleri.textContent =
+    // textTakımlar.textContent =
+    // textHw.textContent =
+    // textOtonom.textContent =
+    // textRoket.textContent =
+    // textSakurai.textContent =
+    // textCore.textContent =
+    // textİletişim.textContent =
+    lang = "Tr";
+  } else {
+    textBtn.textContent = `${json.Tr.mainscreen.lang}`;
+    textKulübümüz.textContent = `${json.Tr.mainscreen.kulübümüz}`;
+    lang = "En";
+  }
+};
+
+textBtn.addEventListener("click", function () {
+  handleAnimation();
+});
+handleLang();
+/*
+<a id="nav_kulübümüz" href="#">Kulübümüz</a>
+<a id="nav_hakkımızda" href="/hakkımızda/hakkımızda.html"
+                    >Hakkımızda</a
+                  >
+
+<a
+                    id="nav_yönetim_kurulu"
+                    href="/ekip sayfaları/yönetimKurulu.html"
+                    >Yönetim Kurulu
+                  </a>
+<a
+                    id="nav_kurumsal_iletişim"
+                    href="/ekip sayfaları/kurumsalİletişim.html"
+                    >Kurumsal İletişim</a
+                  >
+<a id="nav_galeri" href="">Galeri</a>
+<a id="nav_takımlarımız" href="">Takımlarımız</a>
+<a id="nav_hw" href="">HELLO WORLD</a>
+<a id="nav_otonom" href="">OTONOM ARABA</a>
+<a id="nav_roket" href="">ROKET TAKIMI</a>
+<a id="nav_sakurai" href="">SAKURAİ TAKIMI</a>
+<a id="nav_core" href="">CORE TAKIMI</a>
+<a id="nav_iletişim" href="">İletişim</a>
+<a id="the_btn" href="">En</a>
+*/

@@ -38,37 +38,49 @@
           </div>
           <ul class="menu-list">
             <li class="navbar-menu-item">
-              <a href="#">Kulübümüz</a>
+              <a id="nav_kulübümüz" href="#">Kulübümüz</a>
               <ul class="drop-down-menu1">
-                <li><a href="/hakkımızda/hakkımızda.html">Hakkımızda</a></li>
                 <li>
-                  <a href="/ekip sayfaları/yönetimKurulu.html"
+                  <a id="nav_hakkımızda" href="/hakkımızda/hakkımızda.html"
+                    >Hakkımızda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    id="nav_yönetim_kurulu"
+                    href="/ekip sayfaları/yönetimKurulu.html"
                     >Yönetim Kurulu
                   </a>
                 </li>
                 <li>
-                  <a href="/ekip sayfaları/kurumsalİletişim.html"
+                  <a
+                    id="nav_kurumsal_iletişim"
+                    href="/ekip sayfaları/kurumsalİletişim.html"
                     >Kurumsal İletişim</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="navbar-menu-item"><a href="">Galeri</a></li>
             <li class="navbar-menu-item">
-              <a href="">Takımlarımız</a>
+              <a id="nav_galeri" href="">Galeri</a>
+            </li>
+            <li class="navbar-menu-item">
+              <a id="nav_takımlarımız" href="">Takımlarımız</a>
               <ul class="drop-down-menu2">
-                <li><a href="">HELLO WORLD</a></li>
-                <li><a href="">OTONOM ARABA</a></li>
-                <li><a href="">ROKET TAKIMI</a></li>
-                <li><a href="">SAKURAİ TAKIMI</a></li>
-                <li><a href="">CORE TAKIMI</a></li>
+                <li><a id="nav_hw" href="">HELLO WORLD</a></li>
+                <li><a id="nav_otonom" href="">OTONOM ARABA</a></li>
+                <li><a id="nav_roket" href="">ROKET TAKIMI</a></li>
+                <li><a id="nav_sakurai" href="">SAKURAİ TAKIMI</a></li>
+                <li><a id="nav_core" href="">CORE TAKIMI</a></li>
               </ul>
             </li>
-            <li class="navbar-menu-item"><a href="">İletişim</a></li>
+            <li class="navbar-menu-item">
+              <a id="nav_iletişim" href="">İletişim</a>
+            </li>
           </ul>
 
           <div class="nav-toggle">
-            <a href="">En</a>
+            <a id="the_btn" href="#">Tr</a>
             <i id="bell_btn" class="bi bi-bell"></i>
           </div>
         </div>
@@ -81,7 +93,7 @@
 
     <!-- giriş ekranı -->
     <div class="main-screen">
-      <header class="header" id="header">
+      <!-- <header class="header" id="header">
         <nav class="navbar-wrapper">
           <div class="asimov-menu">
             <div class="asimov-logo">
@@ -119,7 +131,7 @@
             <i class="bi bi-list" id="list-btn"></i>
           </div>
         </nav>
-      </header>
+      </header> -->
 
       <div class="container-screen">
         <div class="mainscreenContainer">
@@ -826,6 +838,6 @@
     </div>
 
     <!-- footer -->
-    <script defer src="anasayfa.js"></script>
+    <script defer type="module" src="anasayfa.js"></script>
   </body>
 </html>
