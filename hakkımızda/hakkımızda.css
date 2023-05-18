@@ -964,94 +964,6 @@ body {
 
 /* etkinlik slider */
 
-.başarılar_container {
-  position: relative;
-  text-align: center;
-  color: var(--black);
-}
-.slider {
-  width: 100%;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  width: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-}
-
-.başarılar--img_left {
-  position: relative;
-  width: 223px;
-  height: 409px;
-  left: 17vw;
-
-  background: #d4d9df;
-  box-shadow: 0px 10px 4px #3e54ac;
-  border-radius: 15px;
-}
-
-.başarılar--img_middle {
-  position: relative;
-  width: 327px;
-  height: 600px;
-  left: 39vw;
-  top: 10vw;
-
-  background: #d4d9df;
-  box-shadow: 0px 10px 4px #3e54ac;
-  border-radius: 15px;
-}
-
-.başarılar--img_right {
-  position: relative;
-  width: 223px;
-  height: 409px;
-  left: 68vw;
-  right: 17vw;
-  top: 15vw;
-
-  background: #d4d9df;
-  box-shadow: 0px 10px 4px #3e54ac;
-  border-radius: 15px;
-}
-
-/* .başarılar--img_left,
-.başarılar--img_middle,
-.başarılar--img_right {
-  position: relative;
-  width: 100%;
-  max-width: 327px;
-  height: auto;
-  margin: 0 auto;
-  background: #D4D9DF;
-  box-shadow: 0px 10px 4px #3E54AC;
-  border-radius: 15px;
-}
-
-@media (min-width: 768px) {
-  .başarılar--img_left,
-  .başarılar--img_right {
-    width: 40%;
-  }
-  
-  .başarılar--img_middle {
-    width: 60%;
-  }
-}  */
-
-/* etkinlik slider */
-
-/* sponsor işbirlik */
-
 .sponsor {
   height: 100vh;
   color: var(--white);
@@ -1218,7 +1130,6 @@ body {
   left: 0;
 }
 @media only screen and (max-width: 1044px) {
-    
   .footer-list {
     display: grid;
     grid-template-columns: 140px 120px 100px 100px;
@@ -1229,24 +1140,22 @@ body {
     left: 32px;
     top: 10px;
   }
-  
+
   .footer_content {
     position: absolute;
     width: 100%;
     height: 52px;
     left: -2px;
-   
   }
-  
+
   .footer-design {
     position: absolute;
     width: 92%;
     height: 75px;
     left: 4%;
     top: 0;
-
   }
-  
+
   .social-links {
     position: absolute;
     right: 4%;
@@ -1255,13 +1164,12 @@ body {
     grid-template-columns: 25px 25px 25px 25px;
     column-gap: 3vw;
   }
-  
+
   .footer-link {
     font-size: 25px;
     color: var(--white);
   }
 }
-
 
 /* footer responsive */
 
