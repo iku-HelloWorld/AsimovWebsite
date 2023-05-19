@@ -131,11 +131,4 @@ function showSlide(n) {
   dots[n - 1].classList.add("active");
 }
 
-const button = document.getElementById(`list-btn`);
-const menu = document.querySelector(`.asimov-menu`);
-
-if (button) {
-  button.addEventListener(`click`, () => {
-    menu.classList.toggle(`active`);
-  });
-}
+/* kurumsal iletişim img slider */
