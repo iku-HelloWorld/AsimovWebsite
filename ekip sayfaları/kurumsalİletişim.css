@@ -1363,9 +1363,9 @@
   background: linear-gradient(to bottom, #fff, #d4d9df, #fff);
 }
 
-.TeamPageMembersHeader {
-  font-size: 3vh;
-  font-family: "Poppins";
+.TeamPageMembersHeader h1 {
+  font-size: xx-large;
+  font-family: sans-serif;
   color: var(--black);
   padding: 3%;
 }
