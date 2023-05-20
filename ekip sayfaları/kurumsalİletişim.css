@@ -301,7 +301,7 @@
   display: grid;
   grid-template-columns: auto;
   row-gap: 5%;
-  justify-content:space-around;
+  justify-content: space-around;
   justify-items: center;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -309,6 +309,7 @@
   height: 100%;
   width: 100%;
   overflow: visible;
+  top: 3%;
 }
 
 .yönetimkurulusayfasıiçerik {
@@ -1354,12 +1355,12 @@
 /*üyeler*/
 .TeamPageMembers {
   position: relative;
-  top: 120vh;
-  background: var(--light-color);
+  top: 90vh;
   width: 100%;
   margin: 0%;
   padding-left: 10%;
   padding-right: 10%;
+  background: linear-gradient(to bottom, #fff, #d4d9df, #fff);
 }
 
 .TeamPageMembersHeader {
@@ -1415,11 +1416,9 @@
   font-size: 1.6vh;
 }
 
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .TeamPageMembers {
-    
     padding-left: 5%;
     padding-right: 5%;
     transition: all 1s;
