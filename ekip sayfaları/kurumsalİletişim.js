@@ -1,6 +1,9 @@
 "use strict";
 
 /* yönetim kurulu img slider */
+
+/* kurumsal iletişim img slider */
+
 const slides = document.querySelectorAll(".slide");
 const prev = document.querySelectorAll(".prev");
 const next = document.querySelectorAll(".next");
@@ -78,3 +81,14 @@ function showSlide(n) {
 }
 
 /* yönetim kurulu img slider */
+
+const button = document.getElementById(`list-btn`);
+const menu = document.querySelector(`.asimov-menu`);
+
+if (button) {
+  button.addEventListener(`click`, () => {
+    menu.classList.toggle(`active`);
+  });
+}
+
+/* kurumsal iletişim img slider */
