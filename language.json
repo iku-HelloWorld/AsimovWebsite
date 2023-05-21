@@ -2,8 +2,16 @@
   "Tr": {
     "mainscreen": {
       "kulübümüz": "Kulübümüz",
+      "hakkımızda": "Hakkımızda",
+      "yönetimKurulu": "Yönetim Kurulu",
+      "kurumsalİletişim": "Kurumsal İletişim",
       "galeri": "Galeri",
       "takımlarımız": "Takımlarımız",
+      "helloWorld": "Hello World",
+      "otonom": "Otonom Araba",
+      "roket": "Roket Takımı",
+      "sakurai": "Sakurai Takımı",
+      "core": "Core Takımı",
       "iletişim": "İletişim",
       "lang": "En",
       "slogan1": "Daha Fazlasını Hayal Et",
@@ -54,8 +62,16 @@
   "En": {
     "mainscreen": {
       "kulübümüz": "Our Club",
+      "hakkımızda": "About Us",
+      "yönetimKurulu": "Directory Team",
+      "kurumsalİletişim": "Corporate Communication",
       "galeri": "Gallery",
       "takımlarımız": "Teams",
+      "helloWorld": "Hello World Team",
+      "otonom": "Autonomous Car Team",
+      "roket": "Roket Team",
+      "sakurai": "Sakurai Team",
+      "core": "Core Team",
       "iletişim": "Contact Us",
       "lang": "Tr",
       "slogan1": "Dream More",
