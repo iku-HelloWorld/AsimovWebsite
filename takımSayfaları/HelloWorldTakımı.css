@@ -494,7 +494,7 @@
 
 /*üyeler*/
 .TeamPageMembers {
-  background: var(--light-color);
+  background: linear-gradient(to bottom, #fff, #d4d9df, #fff);
   height: 100%;
   width: 100%;
   margin: 0%;
@@ -554,7 +554,6 @@
   text-align: center;
   font-size: 1.6vh;
 }
-
 
 /* Responsive styles */
 @media (max-width: 768px) {
