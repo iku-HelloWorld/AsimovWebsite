@@ -1793,6 +1793,26 @@ h1 {
 .social-links a {
   color: white;
 }
+@media(max-width: 1080px) {
+  .footer-container {
+    height: auto;
+    width: auto;
+    
+
+  }
+  .footer-wrapper {
+    margin-top: 5.5%;
+     }
+
+    .footer-list {
+      margin-left: 45.7%;
+    }
+
+    .footer-design {
+      margin-left: 22.2%;
+    }
+}
+
 /* footer */
 
 /* responsiveness */
