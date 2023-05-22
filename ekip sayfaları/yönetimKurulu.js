@@ -77,6 +77,7 @@ function showSlide(n) {
   dots[n - 1].classList.add("active");
 }
 
+/*navbar*/
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
 
@@ -87,3 +88,4 @@ if (button) {
 }
 
 /* yönetim kurulu img slider */
+/*navbar*/
