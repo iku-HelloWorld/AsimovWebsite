@@ -1204,6 +1204,7 @@ body {
   width: 17vw;
   height: 17vw;
   object-fit: cover;
+  border-radius: 14%;
 }
 
 .image_div_content {
