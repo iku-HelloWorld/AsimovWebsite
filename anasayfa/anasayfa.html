@@ -38,37 +38,49 @@
           </div>
           <ul class="menu-list">
             <li class="navbar-menu-item">
-              <a href="#">Kulübümüz</a>
+              <a id="nav_kulübümüz" href="#">Kulübümüz</a>
               <ul class="drop-down-menu1">
-                <li><a href="/hakkımızda/hakkımızda.html">Hakkımızda</a></li>
                 <li>
-                  <a href="/ekip sayfaları/yönetimKurulu.html"
+                  <a id="nav_hakkımızda" href="/hakkımızda/hakkımızda.html"
+                    >Hakkımızda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    id="nav_yönetim_kurulu"
+                    href="/ekip sayfaları/yönetimKurulu.html"
                     >Yönetim Kurulu
                   </a>
                 </li>
                 <li>
-                  <a href="/ekip sayfaları/kurumsalİletişim.html"
+                  <a
+                    id="nav_kurumsal_iletişim"
+                    href="/ekip sayfaları/kurumsalİletişim.html"
                     >Kurumsal İletişim</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="navbar-menu-item"><a href="#galleryy">Galeri</a></li>
             <li class="navbar-menu-item">
-              <a href="#teamss">Takımlarımız</a>
+              <a id="nav_galeri" href="">Galeri</a>
+            </li>
+            <li class="navbar-menu-item">
+              <a id="nav_takımlarımız" href="">Takımlarımız</a>
               <ul class="drop-down-menu2">
-                <li><a href="">HELLO WORLD</a></li>
-                <li><a href="">OTONOM ARABA</a></li>
-                <li><a href="">ROKET TAKIMI</a></li>
-                <li><a href="">SAKURAİ TAKIMI</a></li>
-                <li><a href="">CORE TAKIMI</a></li>
+                <li><a id="nav_hw" href="">Hello World</a></li>
+                <li><a id="nav_otonom" href="">Otonom Araba</a></li>
+                <li><a id="nav_roket" href="">Roket Takımı</a></li>
+                <li><a id="nav_sakurai" href="">Sakurai Takımı</a></li>
+                <li><a id="nav_core" href="">Core Takımı</a></li>
               </ul>
             </li>
-            <li class="navbar-menu-item"><a href="#contactt">İletişim</a></li>
+            <li class="navbar-menu-item">
+              <a id="nav_iletişim" href="">İletişim</a>
+            </li>
           </ul>
 
           <div class="nav-toggle">
-            <a href="">En</a>
+            <a id="the_btn" href="#">Tr</a>
             <i id="bell_btn" class="bi bi-bell"></i>
           </div>
         </div>
@@ -81,7 +93,7 @@
 
     <!-- giriş ekranı -->
     <div class="main-screen">
-      <header class="header" id="header">
+      <!-- <header class="header" id="header">
         <nav class="navbar-wrapper">
           <div class="asimov-menu">
             <div class="asimov-logo">
@@ -119,7 +131,7 @@
             <i class="bi bi-list" id="list-btn"></i>
           </div>
         </nav>
-      </header>
+      </header> -->
 
       <div class="container-screen">
         <div class="mainscreenContainer">
@@ -139,12 +151,12 @@
           />
 
           <div class="mainscreensSlogan slogan-animation">
-            <p>Dream More</p>
-            <p>Do More</p>
+            <p id="slogan1">Daha Fazlasını Hayal Et</p>
+            <p id="slogan2">Daha Fazlasını Yap</p>
           </div>
 
-          <button class="mainscreeniconButton">
-            Swipe right for notifications
+          <button id="kaydır" class="mainscreeniconButton">
+            Bildirimler için sağa kaydırınız
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
           </button>
         </div>
@@ -794,30 +806,38 @@
     <!-- footer -->
     <div class="footer-container">
       <div class="footer-wrapper">
-          <div class="footer-list">
-              <a href="/hakkımızda/hakkımızda.html">Hakkımızda</a>
-              <a href="#teamss">Takımlar</a>
-              <a href="#contactt">İletişim</a>
-              <a href="#galleryy">Galeri</a>
-          </div>
-          <div class="footer_content">
-              <div class="footer-design">
-                  <p>Designed by Hello World</p>
+        <div class="footer-list">
+          <a href="/hakkımızda/hakkımızda.html">Hakkımızda</a>
+          <a href="#teamss">Takımlar</a>
+          <a href="#contactt">İletişim</a>
+          <a href="#galleryy">Galeri</a>
+        </div>
+        <div class="footer_content">
+          <div class="footer-design">
+            <p>Designed by Hello World</p>
 
-                  <div class="social-links">
-                      <a href="https://t.me/ikuAsimov" class="footer-link"><i class="bx bxl-telegram"></i></a>
-                      <a href="https://www.instagram.com/ikuasimov/" class="footer-link"><i
-                              class="bx bxl-instagram"></i></a>
-                      <a href="https://www.linkedin.com/company/ikuasimov/" class="footer-link"><i
-                              class="bx bxl-linkedin"></i></a>
-                      <a href="https://t.me/mail" class="footer-link"><i class="bx bx-envelope"></i></a>
-                  </div>
-              </div>
+            <div class="social-links">
+              <a href="https://t.me/ikuAsimov" class="footer-link"
+                ><i class="bx bxl-telegram"></i
+              ></a>
+              <a href="https://www.instagram.com/ikuasimov/" class="footer-link"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/ikuasimov/"
+                class="footer-link"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+              <a href="https://t.me/mail" class="footer-link"
+                ><i class="bx bx-envelope"></i
+              ></a>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
 
     <!-- footer -->
-    <script defer src="anasayfa.js"></script>
+    <script defer type="module" src="anasayfa.js"></script>
   </body>
 </html>

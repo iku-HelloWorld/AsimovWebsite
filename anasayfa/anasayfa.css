@@ -92,18 +92,24 @@
 .nav-toggle a {
   text-decoration: none;
   color: var(--white);
+  border: var(--black) solid 1px;
   border-radius: 50%;
   color: var(--black);
-  padding: 5px 5px;
+  width: 36px;
+  height: 36px;
   background-color: var(--white);
   margin-right: 5px;
   font-size: 1.6rem;
+  font-weight: 500;
   z-index: 5;
+  /* transition: ease 400ms; */
+  text-align: center;
+  padding-top: 3px;
 }
 
 .nav-toggle a:hover {
-  background-color: transparent;
-  color: var(--black);
+  background-color: var(--light-color);
+  color: var(--main-color);
 }
 
 .nav-toggle i {
@@ -112,6 +118,10 @@
   font-size: 1.6rem;
   margin-left: 5px;
   z-index: 1;
+}
+
+.nav-toggle i:hover {
+  color: var(--light-color);
 }
 
 .nav-toggle {
@@ -317,6 +327,7 @@ body {
   background-size: ;
   transition: background-position 400ms; */
   transform: scale(1);
+  user-select: none;
 }
 
 .main--bgImg {
@@ -430,11 +441,13 @@ body {
   position: absolute;
   right: 0%;
   top: 0%;
-  z-index: 12;
+  z-index: 15;
   padding-top: 7%;
   display: initial;
   scroll-snap-type: x mandatory;
   opacity: 0;
+  box-shadow: -15px 0px 40px 5px rgba(0, 0, 0, 0.75);
+  border-left: var(--black) 1px solid;
 }
 
 .mainscreenSecond {
