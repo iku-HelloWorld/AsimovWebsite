@@ -1,4 +1,23 @@
 "use strict";
+import { CountUp } from "../node_modules/countup.js/dist/countUp.min.js";
+
+const nav = document.querySelector(".navbar-wrapper");
+const header = document.querySelector(".header");
+const navBtn = document.getElementById("list-btn");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY === 0) {
+    // header.style.position = "fixed";
+    console.log();
+    header.classList.remove("h-active");
+    console.log("hi");
+  } else {
+    // header.style.position = "absolute";
+    header.classList.add("h-active");
+
+    console.log("bye");
+  }
+});
 
 const timeline = document.querySelector(".timeline_container");
 const point = document.querySelectorAll(".point");
@@ -80,30 +99,23 @@ if (button) {
     menu.classList.toggle(`active`);
   });
 }
-const slider = document.querySelector(".slider");
-const slides = slider.querySelector(".slides");
-const slideWidth = slider.clientWidth;
 
-let slideIndex = 0;
+const sayaç = document.querySelector(".sayacContainer");
+const sayaçPos = sayaç.getClientRects().item(0);
+const sayaçTexts = document.querySelectorAll(".sayac-num");
 
-function slideNext() {
-  slideIndex++;
-  if (slideIndex >= slides.children.length) {
-    slideIndex = 0;
+sayaçTexts.forEach((t) => {
+  console.log(t.textContent);
+});
+window.addEventListener("scroll", function (e) {
+  const pageOffSet = window.scrollY;
+  if (pageOffSet >= sayaçPos.top) {
+    sayaçTexts.forEach((t) => {
+      console.log(t.textContent);
+      const countUp = new CountUp(t, Number(t.textContent));
+      countUp.start();
+    });
   }
-  updateSlidePosition();
-}
+});
 
-function slidePrevious() {
-  slideIndex--;
-  if (slideIndex < 0) {
-    slideIndex = slides.children.length - 1;
-  }
-  updateSlidePosition();
-}
-
-function updateSlidePosition() {
-  slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-}
-
-setInterval(slideNext, 3000);
+// console.log(sayaçPos, sayaçPos.top);
