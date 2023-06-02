@@ -65,6 +65,7 @@ mainScreen.addEventListener("mousedown", function (e) {
   console.log(e.target.closest(".sidebar"));
   if (e.target.closest(".sidebar") === sidebar) return;
   isPressedDown = true;
+  console.log();
   // console.log("down");
 });
 
@@ -99,29 +100,29 @@ const bgImgLeft = bgImg.getBoundingClientRect().left;
 const bgImgTop = bgImg.getBoundingClientRect().top;
 
 let totalDistance = 0;
-let oldCursorX, oldCursorY;
+let oldCursorX;
 
 $(window).on("mousemove", function (e) {
-  if (!isPressedDown) return;
-  if (oldCursorX)
-    totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
-  if (totalDistance >= cursorThreshold) {
-    // console.log("Mouse moved!");
-    // actual event
-    cursorThreshold = 1;
-    sidebar.style.transition = "0ms";
-    e.preventDefault();
-    let width = ((visualViewport.width - e.pageX) / visualViewport.width) * 100;
-    sidebar.style.opacity = "100%";
-    sidebar.style.width = `${width}%`;
-    mainScreenContainer.style.filter = "blur(2px)";
-    header.style.opacity = "0";
+  if (isPressedDown) {
+    if (Math.abs(oldCursorX - e.clientX) >= cursorThreshold) {
+      // totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
+      // console.log("Mouse moved!");
+      // actual event
+      cursorThreshold = 0;
+      sidebar.style.transition = "0ms";
+      e.preventDefault();
+      let width =
+        ((visualViewport.width - e.pageX) / visualViewport.width) * 100;
+      sidebar.style.opacity = "100%";
+      sidebar.style.width = `${width}%`;
+      mainScreenContainer.style.filter = "blur(2px)";
+      header.style.opacity = "0";
 
-    totalDistance = 0;
+      totalDistance = 0;
+    }
+  } else {
+    oldCursorX = e.clientX;
   }
-
-  oldCursorX = e.clientX;
-  oldCursorY = e.clientY;
 });
 
 const whenMouseMove = function (e) {
