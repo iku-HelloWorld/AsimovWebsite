@@ -1,19 +1,24 @@
 {
   "Tr": {
+    "lang": "En",
     "navbar": {
       "kulübümüz": "Kulübümüz",
       "hakkımızda": "Hakkımızda",
       "yönetimKurulu": "Yönetim Kurulu",
       "kurumsalİletişim": "Kurumsal İletişim",
-      "galeri": "Galeri",
       "takımlarımız": "Takımlarımız",
       "helloWorld": "Hello World",
       "otonom": "Otonom Araba",
       "roket": "Roket Takımı",
-      "sakurai": "Sakurai Takımı",
+      "dataai": "Dataai Takımı",
       "core": "Core Takımı",
+      "galeri": "Galeri",
       "iletişim": "İletişim",
-      "lang": "En"
+      "lang": "En",
+      "footerHakkımızda": "Hakkımızda",
+      "footerTakımlarımız": "Takımlarımız",
+      "footerGaleri": "Galeri",
+      "footerİletişim": "İletişim"
     },
     "unvanlar": {
       "yönetici": "Yönetici",
@@ -22,7 +27,7 @@
       "pho": "Fotoğrafçı",
       "dev": "Yazılım Geliştirici",
       "mekanik": "Mekanik Uzmanı",
-      "elektrik": "elektrik elektronik uzmanı"
+      "elektrik": "Elektrik Elektronik Uzmanı"
     },
     "bölümler": {
       "bm": "Bilgisayar Mühendisi",
@@ -34,21 +39,22 @@
       "kaydır": "Bildirimler için sağa kaydırınız",
       "bizkimiz": "Biz Kimiz?",
       "bizkimizAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.",
+      "bizkimizLink": "Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.",
       "misyon": "Misyon",
       "vizyon": "Vizyon",
       "hedef": "Hedef",
       "misyonAçıklama": "Misyon Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
       "vizyonAçıklama": "Vizyon Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
       "hedefAçıklama": "Hedef Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
+      "galeri": "Galeri",
       "takımlar": "Takımlar",
       "takımlarAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime,.",
-      "helloworld": "Hello World Takımı",
-      "otonom": "Otonom Takımı",
-      "roket": "Roket Takımı",
-      "dataAI": "Data AI Takımı",
-      "core": "Core Takımı",
-      "galeri": "Galeri",
-      "iletişim": "Bize Ulaşın"
+      "helloworldTakımı": "Hello World Takımı",
+      "otonomTakımı": "Otonom Takımı",
+      "roketTakımı": "Roket Takımı",
+      "dataaiTakımı": "Data AI Takımı",
+      "coreTakımı": "Core Takımı",
+      "bizeUlaşın": "Bize Ulaşın"
     },
 
     "hakkımızda": {
@@ -99,9 +105,9 @@
       "üyeler": "üyeler"
     }
   },
-
   "En": {
-    "mainscreen": {
+    "lang": "Tr",
+    "navbar": {
       "kulübümüz": "Our Club",
       "hakkımızda": "About Us",
       "yönetimKurulu": "Directory Team",
@@ -111,13 +117,97 @@
       "helloWorld": "Hello World",
       "otonom": "Autonomous Car",
       "roket": "Rocket Team",
-      "sakurai": "Sakurai",
+      "dataai": "Dataai",
       "core": "Core",
       "iletişim": "Contact Us",
       "lang": "Tr",
-      "slogan1": "Dream More",
-      "slogan2": "Do More",
-      "kaydır": "Swipe Right For Notifications"
+      "footerHakkımızda": "About Us",
+      "footerTakımlarımız": "Teams",
+      "footerGaleri": "Gallery",
+      "footerİletişim": "Contact Us"
+    },
+    "unvanlar": {
+      "yönetici": "Director",
+      "danışman": "Adviser",
+      "sm": "Social Media Moderator",
+      "pho": "Photographer",
+      "dev": "Software Devoloper",
+      "mekanik": "Mechanics",
+      "elektrik": "Electrical Electronics Specialist"
+    },
+    "bölümler": {
+      "bm": "Computer Science Engineer",
+      "eem": "Electrical Electronics Engineer",
+      "mm": "Mechanical Engineer"
+    },
+    "mainscreen": {
+      "kaydır": "Swipe Right For Notifications",
+      "bizkimiz": "Who We Are?",
+      "bizkimizAçıklama": "eng eng ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.",
+      "bizkimizLink": "Click here to learn more about us.",
+      "misyon": "Mission",
+      "vizyon": "Vision",
+      "hedef": "Goal",
+      "misyonAçıklama": "eng1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
+      "vizyonAçıklama": "eng2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
+      "hedefAçıklama": "eng3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
+      "takımlar": "Teams",
+      "takımlarAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime,.",
+      "helloworldTakımı": "Hello World Team",
+      "otonomTakımı": "Otonom Team",
+      "roketTakımı": "Rocket Team",
+      "dataaiTakımı": "Data AI Team",
+      "coreTakımı": "Core Team",
+      "galeri": "Gallery",
+      "bizeUlaşın": "Contact Us"
+    },
+
+    "hakkımızda": {
+      "asimov": "What Is This Asimov?",
+      "asimovAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et veniam officia quasi quos a necessitatibus debitis ipsum praesentium quaerat molestiae perspiciatis totam aspernatur dolorum sunt, sapiente illo. Ex exercitationem vero esse beatae fugiat eum quibusdam autem corrupti aperiam labore voluptate omnis aut incidunt commodi sequi soluta, nam doloribus blanditiis alias in dolor! Possimus numquam quidem incidunt, accusamus omnis, eveniet dignissimos quos vitae excepturi repellendus vel? Aspernatur labore, ducimus unde, debitis ullam sunt quam architecto deserunt qui repellat minima iusto atque possimus. Animi quisquam et quasi tempora consequatur aspernatur, itaque ex blanditiis debitis? Iure fugit odit nam assumenda adipisci sequi nobis, libero dolores laborum nostrum inventore aperiam laudantium deserunt! Minus praesentium dolorem, error aut dolor iusto unde obcaecati eum ea architecto ex autem vitae vel labore qui? Eius quis, a voluptate, saepe earum nihil nam suscipit debitis amet assumenda quaerat eos. Et id ratione iure rem quia libero ut voluptatum temporibus saepe laboriosam tempore, blanditiis repellat quas veritatis vero voluptates doloribus praesentium cupiditate natus! Nostrum dignissimos, ratione, unde expedita vitae illum maiores sed, molestiae temporibus consequatur nulla culpa fugiat exercitationem tenetur quos nihil sit ex. Beatae ut porro quo deserunt unde quia molestias voluptatem, neque eaque necessitatibus ipsum adipisci harum eius.",
+      "p1": "someone did something",
+      "p2": "someone did something",
+      "p3": "someone did something",
+      "p4": "someone did something",
+      "p5": "someone did something",
+      "p6": "someone did something",
+      "p7": "someone did something",
+      "p8": "someone did something",
+      "p9": "someone did something",
+      "p10": "someone did something",
+      "m1": "someone 1 did something",
+      "m2": "someone 2 did something",
+      "m3": "someone 3 did something",
+      "m4": "someone 4 did something",
+      "m5": "someone 5 did something",
+      "m6": "someone 6 did something",
+      "m7": "someone 7 did something",
+      "m8": "someone 8 did something",
+      "m9": "someone 9 did something",
+      "m10": "someone 10 did something",
+      "üye": "active member",
+      "çalışmaAlanı": "workspace",
+      "etkinlik": "event",
+      "etkinliklerimiz": "Events",
+      "etkinliklerimizAçıklama": "Lorem ipum dolor sit amet",
+      "sponsor": "Sponsorships ve Cooperations",
+      "sponsorAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus earum accusantium nostrum eum dolorem. Expedita fugit, in perspiciatis labore ut dolores architecto assumenda eos laborum magnam officiis minus voluptas possimus"
+    },
+    "yönetimKurulu": {
+      "yönetimKurulu": "Directory Team",
+      "yönetimKuruluAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis?",
+      "üyeler": "Members"
+    },
+    "kurumsalİletişim": {
+      "kurumsalİletişim": "Corporate Communication",
+      "kurumsalİletişimAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis?",
+      "üyeler": "Members"
+    },
+    "helloWorld": {
+      "helloWorld": "Hello World",
+      "helloWorldAçıklama1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis, corporis eaque doloribus et quaerat tempore repellendus facilis ut dolorum non a in omnis quia placeat adipisci saepe ullam blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam autem libero, rerum, corporis ex nemo ut commodi rem est maiores veritatis explicabo quia ad. Doloremque, id! Sequi, odit voluptates.",
+      "helloWorldAçıklama2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis, corporis eaque doloribus et quaerat tempore repellendus facilis ut dolorum non a in omnis quia placeat adipisci saepe ullam blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam autem libero, rerum, corporis ex nemo ut commodi rem est maiores veritatis explicabo quia ad. Doloremque, id! Sequi, odit voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis, corporis eaque doloribus et quaerat tempore repellendus facilis ut dolorum non a in omnis quia placeat adipisci saepe ullam blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam autem libero, rerum, corporis ex nemo ut commodi rem est maiores veritatis explicabo quia ad. Doloremque, id! Sequi, odit voluptates.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis, corporis eaque doloribus et quaerat tempore repellendus facilis ut dolorum non a in omnis quia placeat adipisci saepe ullam blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam autem libero, rerum, corporis ex nemo ut commodi rem est maiores veritatis explicabo quia ad. Doloremque, id! Sequi, odit voluptates.",
+      "üyeler": "Members"
     }
   }
 }

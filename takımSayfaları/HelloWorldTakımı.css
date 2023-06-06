@@ -24,12 +24,12 @@
   z-index: 1;
   position: sticky;
   width: 100%;
+  transition: ease 400ms;
 }
 
 .h-active {
   position: sticky;
-  height: 20vh;
-  background: transparent;
+  height: 10vh;
   top: 0;
   z-index: 1;
   width: 100%;
@@ -41,17 +41,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: block;
+}
+
+.asimov-logo {
+  height: 100%;
 }
 
 .asimov-logo img {
-  width: 15vw;
+  position: relative;
+  left: 50%;
+  top: 10%;
+  width: 13vw;
+  height: 80%;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .asimov-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .menu-list {

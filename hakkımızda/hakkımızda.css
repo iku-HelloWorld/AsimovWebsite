@@ -51,14 +51,25 @@ body {
   justify-content: space-between;
 }
 
+.asimov-logo {
+  height: 100%;
+}
+
 .asimov-logo img {
-  width: 15vw;
+  position: relative;
+  left: 50%;
+  top: 10%;
+  width: 13vw;
+  height: 80%;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .asimov-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .menu-list {
@@ -206,11 +217,18 @@ body {
 
   .asimov-logo {
     position: absolute;
-    top: 5%;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 18vw;
+    height: 20vw;
   }
 
   .asimov-logo img {
-    width: 30vw;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .navbar-wrapper {
@@ -233,6 +251,10 @@ body {
     overflow-x: hidden;
   }
 
+  .h-active:hover {
+    height: initial;
+  }
+
   .active {
     height: 85vh;
     transition: 0.7s;
@@ -249,6 +271,7 @@ body {
     justify-content: center;
     /* margin-right: 33%; */
     z-index: 8;
+    padding-right: 0;
   }
 
   .navbar-menu-item {
@@ -308,7 +331,7 @@ body {
     margin-left: 10px;
     z-index: 2;
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 2%;
   }
   .nav-list i {
@@ -481,7 +504,10 @@ body {
 
 .timeline_container .point span::before {
   content: attr(data-info);
+  color: var(--light-color);
+  font-weight: 100;
 
+  font-size: medium;
   position: relative;
   display: flex;
   bottom: 70px;
@@ -491,14 +517,21 @@ body {
 }
 .timeline_container .point span::after {
   content: attr(data-date);
-  font-weight: 600;
-  font-size: 13px;
+  color: var(--light-color);
+  font-weight: 100;
+  font-size: medium;
   position: relative;
   display: flex;
-  bottom: 15px;
   width: 70px;
   transform: translateX(-16px);
   text-indent: -10px;
+}
+
+.timeline_container .active span::before {
+  color: var(--side-color);
+}
+.timeline_container .active span::after {
+  color: var(--side-color);
 }
 
 .timeline_messages {
@@ -520,6 +553,8 @@ body {
   transition: ease 300ms;
   left: 50%;
   transform: translateX(-50%);
+  color: var(--white);
+  font-weight: 100;
 }
 
 .timeline_messages p.active {
