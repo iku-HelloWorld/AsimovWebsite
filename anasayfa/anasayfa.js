@@ -122,10 +122,11 @@ const bgImgTop = bgImg.getBoundingClientRect().top;
 let oldCursorX;
 
 $(window).on("mousemove", function (e) {
+  console.log("Mouse moved!");
   if (isPressedDown) {
     if (Math.abs(oldCursorX - e.clientX) >= cursorThreshold) {
       // totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
-      // console.log("Mouse moved!");
+
       // actual event
       cursorThreshold = 0;
       sidebar.style.transition = "0ms";

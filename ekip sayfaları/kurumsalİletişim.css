@@ -202,12 +202,19 @@
   }
 
   .asimov-logo {
-    position: absolute;
-    top: 5%;
+    position: relative;
+    left: 50%;
+
+    transform: translate(-50%, -100%);
+    width: 18vw;
+    height: 20vw;
   }
 
   .asimov-logo img {
-    width: 30vw;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 
   .navbar-wrapper {
@@ -232,7 +239,7 @@
 
   .active {
     height: 85vh;
-    transition: 0.7s;
+    transition: 400ms;
     visibility: inherit;
   }
 
@@ -250,6 +257,7 @@
     justify-content: center;
     /* margin-right: 33%; */
     z-index: 8;
+    padding-right: 0;
   }
 
   .navbar-menu-item {

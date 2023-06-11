@@ -226,7 +226,7 @@ body {
 
   .asimov-logo img {
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
   }
@@ -251,14 +251,14 @@ body {
     overflow-x: hidden;
   }
 
-  .h-active:hover {
-    height: initial;
-  }
-
   .active {
     height: 85vh;
-    transition: 0.7s;
+    transition: 0.4s;
     visibility: inherit;
+  }
+
+  .h-active:hover {
+    height: initial;
   }
 
   .menu-list {
@@ -486,48 +486,37 @@ body {
 }
 
 .timeline_container .point span {
-  width: 1px;
-  height: 1px;
+  width: 250px;
+  height: 80px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 80px;
+  left: 0%;
+  transform: rotateZ(-45deg);
   visibility: hidden;
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 100;
+  font-size: 18px;
   visibility: visible;
+  color: var(--white);
 }
 /* 
 .timeline_container .point.active span {
   font-size: 15px;
 } */
 
-.timeline_container .point span::before {
-  content: attr(data-info);
-  color: var(--light-color);
-  font-weight: 100;
-
-  font-size: medium;
-  position: relative;
-  display: flex;
-  bottom: 70px;
-  width: 70px;
-  transform: translateX(-5px) rotateZ(-45deg);
-  text-indent: -10px;
-}
 .timeline_container .point span::after {
   content: attr(data-date);
   color: var(--light-color);
   font-weight: 100;
   font-size: medium;
   position: relative;
+  top: 50px;
   display: flex;
   width: 70px;
-  transform: translateX(-16px);
+  transform: translateX(-80px) rotateZ(45deg);
   text-indent: -10px;
 }
 
-.timeline_container .active span::before {
+.timeline_container .active span {
   color: var(--side-color);
 }
 .timeline_container .active span::after {
@@ -597,7 +586,7 @@ body {
   left: 0;
   top: 60vh;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   user-select: none;
 }
 /* ////////////////////////////////////////////////////// */
@@ -953,21 +942,21 @@ body {
   .timeline_container .point:last-child::after {
     width: 0;
   }
-  .timeline_container .point span::before {
-    content: attr(data-info);
+  .timeline_container .point span {
     position: relative;
-    display: flex;
+    /* display: flex; */
     bottom: 10px;
-    left: calc(var(--dot-space) * 1.5);
-    width: 200px;
+    left: 50px;
+    min-width: 150px;
+    height: 80px;
     transform: translateX(0px) rotateZ(0deg);
-    text-indent: -10px;
+    /* text-indent: -10px; */
   }
   .timeline_container .point span::after {
     content: attr(data-date);
     font-weight: 600;
     font-size: 13px;
-    position: relative;
+    position: absolute;
     display: flex;
     bottom: calc(var(--point-size));
     left: calc(var(--point-size) * 2);
@@ -1012,15 +1001,8 @@ body {
     grid-template-rows: repeat(10, calc(var(--dot-space) + var(--point-size)));
     grid-template-columns: 50%;
   }
-  .timeline_container .point span::before {
-    content: attr(data-info);
-    position: relative;
-    display: flex;
-    bottom: -10px;
-    left: calc(var(--dot-space) / 2);
-    width: 200px;
-    transform: translateX(0px) rotateZ(0deg);
-    text-indent: -10px;
+  .timeline_container .point span {
+    font-size: small;
   }
   .timeline_messages {
     padding: 0;
@@ -1034,17 +1016,23 @@ body {
     transform: translateX(0%);
     padding: 0;
   }
-  .timeline_container .point span::before {
-    left: 35px;
-    bottom: 30px;
-    width: 100px;
-  }
 
   .sayacContainer {
     height: 150px;
   }
   .sayac-content {
     font-size: small;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .timeline_container .point span {
+    transform: rotate(0deg);
+  }
+  .timeline_container .point span::after {
+    transform: rotate(0deg);
+  }
+  .timeline_messages p {
+    left: 55%;
   }
 }
 
@@ -1097,11 +1085,11 @@ body {
   }
   .etkinliklerimiz--slider .before {
     position: absolute;
-    transform: translate(-20%, -50%) skew(10deg, -10deg);
+    transform: translate(-20%, -50%) skew(5deg, -10deg);
   }
   .etkinliklerimiz--slider .after {
     position: absolute;
-    transform: translate(20%, -50%) skew(-10deg, 10deg);
+    transform: translate(20%, -50%) skew(-5deg, 10deg);
   }
   .etkinliklerimiz--slider {
     width: 100vw;

@@ -1,11 +1,35 @@
 "use strict";
 import { CountUp } from "../node_modules/countup.js/dist/countUp.min.js";
+import json from "/language.json" assert { type: "json" };
 
-// const nav = document.querySelector(".navbar-wrapper");
+const nav = document.querySelector(".navbar-wrapper");
 const header = document.querySelector(".header");
+const navBtn = document.getElementById("list-btn");
+const navbarLinkUl = document.querySelector(".menu-list");
+const navbarLinks = [...document.querySelectorAll(".navbar-menu-item")];
+
+/* Header aşağı kayınca pozisyon sticky olacak */
+
+navbarLinkUl.addEventListener("click", function (e) {
+  // console.log(e.target);
+  if (
+    e.target.dataset.section &&
+    !navigator.userAgent.match(
+      /iPad|iPhone|Android|BlackBerry|Windows Phone|webOS/i
+    )
+  ) {
+    window.location.href = `${e.target.dataset.section}`;
+    // console.log(e.target.dataset.section);
+    // document
+    //   .querySelector(`${e.target.dataset.section}`)
+    //   .scrollIntoView({ behavior: "smooth" }, true);
+  }
+});
+// const nav = document.querySelector(".navbar-wrapper");
 // const navBtn = document.getElementById("list-btn");
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
+
 button.addEventListener(`click`, () => {
   menu.classList.toggle(`active`);
   window.addEventListener("scroll", function () {
@@ -131,4 +155,61 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// console.log(sayaçPos, sayaçPos.top);
+const textBtn = document.getElementById("lang");
+
+let lang = "Tr";
+
+const turnAnimate = { transform: "rotate(360deg)" };
+const turnTiming = { duration: 300, iterations: 1 };
+
+const handleAnimation = function () {
+  // console.log(lang);
+  textBtn.animate(turnAnimate, turnTiming);
+  // textBtn.textContent = lang;
+  handleLang();
+};
+
+const handleLang = function () {
+  if (lang === "Tr") {
+    lang = json.Tr.lang;
+    // navbar
+    for (let key in json.Tr.navbar) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.Tr.navbar[key]}`;
+      } else {
+        console.log(key + " key in json is not accesable in this page");
+      }
+    }
+
+    // hakkımızda TODO:
+    // for (let key in json.Tr.mainscreen) {
+    //   // console.log(key, document.getElementById(key));
+
+    //   document.getElementById(
+    //     `${key}`
+    //   ).textContent = `${json.Tr.mainscreen[key]}`;
+    // }
+  } else {
+    lang = json.En.lang;
+    // navbar
+    for (let key in json.En.navbar) {
+      // console.log(document.getElementById(`${key}`));
+      document.getElementById(`${key}`).textContent = `${json.En.navbar[key]}`;
+    }
+
+    // mainscreen
+    for (let key in json.En.mainscreen) {
+      // console.log(document.getElementById(`${key}`));
+      document.getElementById(
+        `${key}`
+      ).textContent = `${json.En.mainscreen[key]}`;
+    }
+  }
+};
+
+textBtn.addEventListener("click", function () {
+  handleAnimation();
+});
+handleLang();
