@@ -28,27 +28,29 @@
       <nav class="navbar-wrapper">
         <div class="asimov-menu">
           <div class="asimov-logo">
-            <img src="Asimov_Logolar/Asimov_Logo_Beyaz.png" />
+            <a href="#" onclick="window.reload();"
+              ><img src="Asimov_Logolar/asimov_reshape_logo_beyaz.png"
+            /></a>
           </div>
           <ul class="menu-list">
             <li class="navbar-menu-item">
-              <a id="nav_kulübümüz" href="#whowe">Kulübümüz</a>
+              <a id="kulübümüz" data-section="#whowe">Kulübümüz</a>
               <ul class="drop-down-menu1">
                 <li>
-                  <a id="nav_hakkımızda" href="/hakkımızda/hakkımızda.html"
+                  <a id="hakkımızda" href="/hakkımızda/hakkımızda.html"
                     >Hakkımızda</a
                   >
                 </li>
                 <li>
                   <a
-                    id="nav_yönetim_kurulu"
+                    id="yönetimKurulu"
                     href="/ekip sayfaları/yönetimKurulu.html"
                     >Yönetim Kurulu
                   </a>
                 </li>
                 <li>
                   <a
-                    id="nav_kurumsal_iletişim"
+                    id="kurumsalİletişim"
                     href="/ekip sayfaları/kurumsalİletişim.html"
                     >Kurumsal İletişim</a
                   >
@@ -56,46 +58,48 @@
               </ul>
             </li>
             <li class="navbar-menu-item">
-              <a id="nav_takımlarımız" href="#teamss">Takımlarımız</a>
+              <a id="takımlarımız" data-section="#teamss">Takımlarımız</a>
               <ul class="drop-down-menu2">
                 <li>
-                  <a id="nav_hw" href="/takımSayfaları/HelloWorldTakımı.html"
+                  <a
+                    id="helloWorld"
+                    href="/takımSayfaları/HelloWorldTakımı.html"
                     >Hello World</a
                   >
                 </li>
                 <li>
-                  <a id="nav_otonom" href="/takımSayfaları/OtonomTakımı.html"
+                  <a id="otonom" href="/takımSayfaları/OtonomTakımı.html"
                     >Otonom Araba</a
                   >
                 </li>
                 <li>
-                  <a id="nav_roket" href="/takımSayfaları/RoketTakımı.html"
+                  <a id="roket" href="/takımSayfaları/RoketTakımı.html"
                     >Roket Takımı</a
                   >
                 </li>
                 <li>
-                  <a id="nav_dataai" href="/takımSayfaları/DataAITakımı.html"
+                  <a id="dataai" href="/takımSayfaları/DataAITakımı.html"
                     >Data AI Takımı</a
                   >
                 </li>
                 <li>
-                  <a id="nav_core" href="/takımSayfaları/CoreTakımı.html"
+                  <a id="core" href="/takımSayfaları/CoreTakımı.html"
                     >Core Takımı</a
                   >
                 </li>
               </ul>
             </li>
             <li class="navbar-menu-item">
-              <a id="nav_galeri" href="#galleryy">Galeri</a>
+              <a id="galeri" href="#galleryy">Galeri</a>
             </li>
 
             <li class="navbar-menu-item">
-              <a id="nav_iletişim" href="#contactt">İletişim</a>
+              <a id="iletişim" href="#contactt">İletişim</a>
             </li>
           </ul>
 
           <div class="nav-toggle">
-            <a id="the_btn" href="#">Tr</a>
+            <a id="lang" href="#">Tr</a>
             <i id="bell_btn" class="bi bi-bell"></i>
           </div>
         </div>
@@ -112,6 +116,7 @@
         <div class="mainscreenContainer">
           <div class="main--bgImg">
             <img
+              draggable="false"
               class="main--bgImg-ımg"
               src="Asimov_Logolar/asimovmainbackground.png"
             />
@@ -127,8 +132,8 @@
           />
 
           <div class="mainscreensSlogan slogan-animation">
-            <p id="slogan1">Daha Fazlasını Hayal Et</p>
-            <p id="slogan2">Daha Fazlasını Yap</p>
+            <p id="slogan1">Dream More</p>
+            <p id="slogan2">Do More</p>
           </div>
 
           <i id="kaydır" class="mainscreeniconButton">
@@ -142,21 +147,21 @@
               <div class="sidebar-menu">
                 <ul class="sidebar-list">
                   <li class="sidebar-list-item">
-                    <a href="">Kulübümüz</a>
+                    <a id="kulübümüz" href="">Kulübümüz</a>
                   </li>
                   <li class="sidebar-list-item">
-                    <a href="">Galeri</a>
+                    <a id="galeri" href="">Galeri</a>
                   </li>
                   <li class="sidebar-list-item">
-                    <a href="">Takımlarımız</a>
+                    <a id="takımlarımız" href="">Takımlarımız</a>
                   </li>
                   <li class="sidebar-list-item">
-                    <a href="">İletişim</a>
+                    <a id="iletişim" href="">İletişim</a>
                   </li>
                 </ul>
 
                 <div class="sidebar-toggle">
-                  <a href="">En</a>
+                  <a id="lang" href="">En</a>
                 </div>
               </div>
 
@@ -366,8 +371,8 @@
     <!-- biz kimiz -->
     <div class="bizkimiz--section" id="whowe">
       <div class="bizkimiz--content">
-        <h1>Biz Kimiz?</h1>
-        <p>
+        <h1 id="bizkimiz">Biz Kimiz?</h1>
+        <p id="bizkimizAçıklama">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
           reiciendis veritatis non vero distinctio in maxime, numquam expedita
           facere quaerat quas aut doloribus, dolorem consequuntur vel totam
@@ -375,20 +380,18 @@
           adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam
           nihil voluptatibus quos, nulla laudantium magnam ratione dolorem
           asperiores beatae accusamus nisi error inventore in consectetur.Lorem
-          ipsum dolor sit amet consectetur,
+          ipsum dolor sit amet consectetur,adipisicing elit. Harum, reiciendis
+          veritatis non vero distinctio in maxime, numquam expedita facere
+          quaerat quas aut doloribus, dolorem consequuntur vel totam atque!
         </p>
-        <p>
-          adipisicing elit. Harum, reiciendis veritatis non vero distinctio in
-          maxime, numquam expedita facere quaerat quas aut doloribus, dolorem
-          consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor,
-          sit amet consectetur adipisicing elit. Saepe beatae aperiam
-          perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium
-          magnam ratione dolorem asperiores beatae accusamus nisi error
-
-          <a class="hakkımızda_link" href="/hakkımızda/hakkımızda.html">
-            Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.
-          </a>
-        </p>
+        <br />
+        <a
+          id="bizkimizLink"
+          class="hakkımızda_link"
+          href="/hakkımızda/hakkımızda.html"
+        >
+          Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.
+        </a>
       </div>
       <div class="bizkimiz--img_slider">
         <div class="arrows">
@@ -419,21 +422,42 @@
       </div>
       <div class="bizkimiz--text_slider">
         <div class="tags">
-          <div data-index="1" data-tag="selected" class="tag">Misyon</div>
-          <div data-index="2" data-tag="non-selected" class="tag">Vizyon</div>
-          <div data-index="3" data-tag="non-selected" class="tag">Hedef</div>
+          <div data-index="1" data-tag="selected" id="misyon" class="tag">
+            Misyon
+          </div>
+          <div data-index="2" data-tag="non-selected" id="vizyon" class="tag">
+            Vizyon
+          </div>
+          <div data-index="3" data-tag="non-selected" id="hedef" class="tag">
+            Hedef
+          </div>
         </div>
         <div class="texts">
-          <div data-index="1" data-text="show" class="text-slide">
+          <div
+            data-index="1"
+            data-text="show"
+            id="misyonAçıklama"
+            class="text-slide"
+          >
             bu birinci Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Beatae, ex repellendus asperiores id qui est saepe at doloremque
             nemo sapiente
           </div>
-          <div data-index="2" data-text="hide" class="text-slide">
+          <div
+            data-index="2"
+            data-text="hide"
+            id="vizyonAçıklama"
+            class="text-slide"
+          >
             bu ikiiiiii Lorem ipsum dolor, sit amet consectetur adipisicing
             elit. Beatae,
           </div>
-          <div data-index="3" data-text="hide" class="text-slide">
+          <div
+            data-index="3"
+            data-text="hide"
+            id="hedefAçıklama"
+            class="text-slide"
+          >
             üçüçüçüçüççü Lorem ipsum dolor, sit amet consectetur adipisicing
             elit. Beatae, ex repellendus asperiores id qui est saepe at
           </div>
@@ -445,234 +469,12 @@
     <!-- giriş ekranı -->
     <!-- giriş ekranı -->
 
-    <!-- galeri -->
-    <div class="new_div">
-      <span onclick="ımgFocusClose()" class="new_div-close">x</span>
-      <img src="Asimov_Logolar/asimov.jpg" />
-      <div class="new_div-info">
-        <p>açıklamaaçıklamaaçıklamaaçıklama</p>
-
-        <p>tarih/trh/trih</p>
-      </div>
-    </div>
-    <div class="galeri_content" id="galleryy">
-      <h1>
-        <b> Gallery </b>
-      </h1>
-
-      <div class="line"></div>
-
-      <div class="galeri_page">
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-      </div>
-      <div class="galeri_page">
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-      </div>
-      <div class="galeri_page">
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="image">
-          <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>Lorem Ipsum</p>
-          </div>
-        </div>
-      </div>
-      <div class="arrow1"><</div>
-
-      <div class="arrow2">></div>
-    </div>
-
-    <!-- galeri -->
-
     <!-- takım sayfası -->
 
     <section class="TeamMain" id="teamss">
       <div class="TeamHeader">
-        <h1>Takımlar</h1>
-        <p>
+        <h1 id="takımlar">Takımlar</h1>
+        <p id="takımlarAçıklama">
           Bünyemizde 5 takım var. Logolara tıklayarak detaylı bilgi
           alabilirsiniz.
         </p>
@@ -688,7 +490,7 @@
               />
             </a>
           </div>
-          <h3>Hello World Takımı</h3>
+          <h3 id="helloworldTakımı">Hello World Takımı</h3>
         </li>
         <li class="TeamLogo">
           <!--OTONOM-->
@@ -700,7 +502,7 @@
               />
             </a>
           </div>
-          <h3>Otonom Takımı</h3>
+          <h3 id="otonomTakımı">Otonom Takımı</h3>
         </li>
         <li class="TeamLogo">
           <!--ROKET-->
@@ -709,7 +511,7 @@
               <img src="Asimov_Logolar\AsimovX_Normal.png" alt="Roket_logo" />
             </a>
           </div>
-          <h3>Roket Takımı</h3>
+          <h3 id="roketTakımı">Roket Takımı</h3>
         </li>
         <li class="TeamLogo">
           <!--Data AI-->
@@ -718,7 +520,7 @@
               <img src="Asimov_Logolar\beyazsayfa.png" alt="DataAI_logo" />
             </a>
           </div>
-          <h3>Data AI Takımı</h3>
+          <h3 id="dataaiTakımı">Data AI Takımı</h3>
         </li>
         <li class="TeamLogo">
           <!--CORE-->
@@ -730,21 +532,306 @@
               />
             </a>
           </div>
-          <h3>Core Takımı</h3>
+          <h3 id="coreTakımı">Core Takımı</h3>
         </li>
       </ul>
     </section>
 
     <!-- takım sayfası -->
+    <div class="new_div">
+      <span onclick="ımgFocusClose()" class="new_div-close"
+        ><i class="fa fa-close"></i
+      ></span>
+      <img src="Asimov_Logolar/asimov.jpg" />
+      <div class="new_div-info">
+        <p>açıkl amaaçıkl amaa çıklamaaçı klama</p>
 
+        <p>tarih/trh/trih</p>
+      </div>
+    </div>
+    <div class="galeri_content" id="galleryy">
+      <h1>
+        <b id="galeri"> Gallery </b>
+      </h1>
+
+      <div class="line"></div>
+      <span class="galeri_page-counter">1/3</span>
+      <div class="galeri_page">
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+      <div class="galeri_page">
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+      <div class="galeri_page">
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+      <div class="galeri_page">
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+        <div class="image">
+          <img src="Asimov_Logolar/asimov.jpg" alt="" />
+
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+      <div class="arrow1"><i class="fa fa-angle-left"></i></div>
+
+      <div class="arrow2"><i class="fa fa-angle-right"></i></div>
+    </div>
     <!-- iletişim -->
     <section class="communicationMain" id="contactt">
-      <h1 class="communicationTitle">Bize Ulaşın</h1>
+      <h1 id="bizeUlaşın" class="communicationTitle">Bize Ulaşın</h1>
       <div class="communicationPage">
         <iframe
           class="communicationMap"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.55186447374!2d28.829560475936653!3d40.99129277135292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa35ee1fdc1b1%3A0x658a212e6b4359b5!2zVC5DLiDEsHN0YW5idWwgS8O8bHTDvHIgw5xuaXZlcnNpdGVzaQ!5e0!3m2!1str!2str!4v1682264895438!5m2!1str!2str"
-          style="border: 0px"
+          frameborder="0px"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -779,10 +866,10 @@
     <div class="footer-container">
       <div class="footer-wrapper">
         <div class="footer-list">
-          <a href="#whowe">Hakkımızda</a>
-          <a href="#teamss">Takımlar</a>
-          <a href="#galleryy">Galeri</a>
-          <a href="#contactt">İletişim</a>
+          <a id="footerHakkımızda" href="#whowe">Hakkımızda</a>
+          <a id="footerTakımlarımız" href="#teamss">Takımlar</a>
+          <a id="footerGaleri" href="#galleryy">Galeri</a>
+          <a id="footerİletişim" href="#contactt">İletişim</a>
         </div>
         <div class="footer_content">
           <div class="footer-design">

@@ -45,17 +45,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: block;
+}
+
+.asimov-logo {
+  height: 100%;
 }
 
 .asimov-logo img {
-  width: 15vw;
+  position: relative;
+  left: 50%;
+  top: 10%;
+  width: 13vw;
+  height: 80%;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .asimov-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .menu-list {
@@ -192,12 +202,19 @@
   }
 
   .asimov-logo {
-    position: absolute;
-    top: 5%;
+    position: relative;
+    left: 50%;
+
+    transform: translate(-50%, -100%);
+    width: 18vw;
+    height: 20vw;
   }
 
   .asimov-logo img {
-    width: 30vw;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
   }
 
   .navbar-wrapper {
@@ -222,8 +239,12 @@
 
   .active {
     height: 85vh;
-    transition: 0.7s;
+    transition: 400ms;
     visibility: inherit;
+  }
+
+  .h-active:hover {
+    height: initial;
   }
 
   .menu-list {
@@ -236,6 +257,7 @@
     justify-content: center;
     /* margin-right: 33%; */
     z-index: 8;
+    padding-right: 0;
   }
 
   .navbar-menu-item {
@@ -295,7 +317,7 @@
     margin-left: 10px;
     z-index: 2;
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 2%;
   }
   .nav-list i {

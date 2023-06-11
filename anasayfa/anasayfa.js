@@ -4,31 +4,48 @@ import json from "/language.json" assert { type: "json" };
 
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
-
-if (button) {
-  button.addEventListener(`click`, () => {
-    menu.classList.toggle(`active`);
+button.addEventListener(`click`, () => {
+  menu.classList.toggle(`active`);
+  window.addEventListener("scroll", function () {
+    menu.classList.remove(`active`);
   });
-}
+});
 
 const nav = document.querySelector(".navbar-wrapper");
 const header = document.querySelector(".header");
 const navBtn = document.getElementById("list-btn");
+const navbarLinkUl = document.querySelector(".menu-list");
+const navbarLinks = [...document.querySelectorAll(".navbar-menu-item")];
 
 window.addEventListener("scroll", function () {
   if (window.scrollY >= window.visualViewport.height * 0.9) {
     // header.style.position = "fixed";
     header.classList.add("h-active");
     navBtn.style.color = "var(--black)";
-    console.log("hi");
+    // console.log("hi");
   } else {
     // header.style.position = "absolute";
     header.classList.remove("h-active");
     navBtn.style.color = "var(--black)";
-    console.log("bye");
+    // console.log("bye");
   }
 });
 /* Header aşağı kayınca pozisyon sticky olacak */
+
+navbarLinkUl.addEventListener("click", function (e) {
+  // console.log(e.target);
+  if (
+    e.target.dataset.section &&
+    !navigator.userAgent.match(
+      /iPad|iPhone|Android|BlackBerry|Windows Phone|webOS/i
+    )
+  ) {
+    console.log(e.target.dataset.section);
+    document
+      .querySelector(`${e.target.dataset.section}`)
+      .scrollIntoView({ behavior: "smooth" }, true);
+  }
+});
 
 const sidebar = document.querySelector(".sidebar");
 const mainContent = document.querySelector(".mainscreenSecond");
@@ -62,10 +79,12 @@ document.querySelector(".go_back_btn").addEventListener("click", sidebarClose);
 let cursorThreshold = 100;
 
 mainScreen.addEventListener("mousedown", function (e) {
-  console.log(e.target.closest(".sidebar"));
-  if (e.target.closest(".sidebar") === sidebar) return;
-  isPressedDown = true;
-  console.log();
+  // console.log(e.target.closest(".sidebar"));
+  if (e.target.closest(".mainscreenContainer")) {
+    isPressedDown = true;
+  }
+
+  // console.log();
   // console.log("down");
 });
 
@@ -92,21 +111,22 @@ mainScreen.addEventListener("mouseup", function () {
 //   let width = ((visualViewport.width - e.pageX) / visualViewport.width) * 100;
 //   sidebar.style.opacity = "100%";
 //   sidebar.style.width = `${width}%`;
-//   console.log(width, e.pageX, visualViewport.width);
+// console.log(width, e.pageX, visualViewport.width);
 // });
 // background img follows cursor
 const bgImg = document.querySelector(".main--bgImg-ımg");
 const bgImgLeft = bgImg.getBoundingClientRect().left;
 const bgImgTop = bgImg.getBoundingClientRect().top;
 
-let totalDistance = 0;
+// let totalDistance = 0;
 let oldCursorX;
 
 $(window).on("mousemove", function (e) {
+  console.log("Mouse moved!");
   if (isPressedDown) {
     if (Math.abs(oldCursorX - e.clientX) >= cursorThreshold) {
       // totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
-      // console.log("Mouse moved!");
+
       // actual event
       cursorThreshold = 0;
       sidebar.style.transition = "0ms";
@@ -155,8 +175,21 @@ const prevBtn = document.querySelector(".arrow1");
 const nextBtn = document.querySelector(".arrow2");
 const galeriCont = document.querySelector(".galeri_content");
 const newDiv = document.querySelector(".new_div");
+const galeriPageCounter = document.querySelector(".galeri_page-counter");
 
 let index = 1;
+
+const galeriPageCounterHandler = function (i) {
+  galeriPageCounter.textContent = `${[...page].indexOf(page[i]) + 1}/${
+    page.length
+  }`;
+  galeriPageCounter.style.opacity = "100%";
+  galeriPageCounter.style.transform = "translate(-50%,50px)";
+  setTimeout(function () {
+    galeriPageCounter.style.transform = "translate(-50%,0px)";
+    galeriPageCounter.style.opacity = "0%";
+  }, 2000);
+};
 
 const displaySlider = function (i) {
   if (index < 1) {
@@ -166,9 +199,10 @@ const displaySlider = function (i) {
     index = 1;
   }
 
-  console.log(index);
+  // console.log(index);
   page.forEach((p) => p.classList.remove("show"));
   page.item(index - 1).classList.add("show");
+  galeriPageCounterHandler(index - 1);
 };
 
 const galeriChangeSlide = function (n) {
@@ -187,31 +221,43 @@ nextBtn.addEventListener("click", function () {
 displaySlider(index);
 
 // image focus ver
-const ımgFocusShow = function (e) {
-  console.log("hi");
-
-  galeriCont.style.filter = "blur(5px)";
-  newDiv.innerHTML = `<span onclick="ımgFocusClose()" class="new_div-close">x</span>
+const imgFocusShow = function (img, state) {
+  // console.log("hi");
+  if (state) {
+    galeriCont.style.filter = "blur(5px)";
+    newDiv.innerHTML = `<span class="new_div-close"><i class="fa fa-close"></i
+    ></span>
     <img src="asimov_Logolar/asimov.jpg" />
     <div class="new_div-info">
       <p>
-        açıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklamaaçıklama
+        Hello World takımımızın teknofest 2024'te 1.oldup ödül aldığı günden hatıralar
       </p>
-      <p>tarih/trh/trih</p>
+      <p>14/05/2024</p>
     </div>`;
-  newDiv.style.display = "initial";
-};
-const ımgFocusClose = function () {
-  newDiv.style.display = "none";
-  galeriCont.style.filter = "blur(0px)";
+    newDiv.style.display = "initial";
+
+    newDiv.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+    newDiv
+      .querySelector(".new_div-close")
+      .addEventListener("click", function () {
+        imgFocusShow(0, false);
+      });
+  } else {
+    newDiv.style.display = "none";
+    galeriCont.style.filter = "blur(0px)";
+  }
 };
 
 galeriCont.addEventListener("click", function (e) {
   const chosenImg = e.target.closest(".image");
-  console.log(chosenImg);
+  // console.log(chosenImg);
   if (chosenImg) {
-    ımgFocusShow(e);
-    console.log("hi");
+    imgFocusShow(chosenImg, true);
+    // console.log("hi");
   }
 });
 // image focus ver
@@ -230,7 +276,7 @@ const texts = document.querySelectorAll(".text-slide");
 /* biz kimiz text slider */
 let imgIndex = 1;
 let textIndex = 1;
-console.log(slides);
+// console.log(slides);
 
 const displaySlide = function (index) {
   if (index > slides.length) {
@@ -239,7 +285,7 @@ const displaySlide = function (index) {
   if (index < 1) {
     imgIndex = slides.length;
   }
-  console.log(imgIndex);
+  // console.log(imgIndex);
   slides.forEach((s) => (s.style.opacity = "0%"));
   slides.item(imgIndex - 1).style.opacity = "100%";
 
@@ -274,19 +320,19 @@ dotsDiv.addEventListener("click", function (e) {
 
 const displayText = function (index) {
   texts.forEach((t) => (t.dataset.text = "hide"));
-  texts.item(index).dataset.text = "show";
+  texts.item(index - 1).dataset.text = "show";
 };
 
 const tagHandler = function (index) {
   tags.forEach((t) => (t.dataset.tag = "non-selected"));
-  tags.item(index).dataset.tag = "selected";
+  tags.item(index - 1).dataset.tag = "selected";
 };
 
 tagsDiv.addEventListener("click", function (e) {
   let i = e.target.dataset.index;
-  console.log(i);
+  // console.log(i);
   if (i) {
-    textIndex = i - 1;
+    textIndex = i;
     tagHandler(textIndex);
     displayText(textIndex);
   }
@@ -297,22 +343,7 @@ displayText(textIndex);
 
 // lang
 
-const textKulübümüz = document.getElementById("nav_kulübümüz");
-const textHakkımızda = document.getElementById("nav_hakkımızda");
-const textYönetimKurulu = document.getElementById("nav_yönetim_kurulu");
-const textKurumsalİletişim = document.getElementById("nav_kurumsal_iletişim");
-const textGaleri = document.getElementById("nav_galeri");
-const textTakımlarımız = document.getElementById("nav_takımlarımız");
-const textHw = document.getElementById("nav_hw");
-const textOtonom = document.getElementById("nav_otonom");
-const textRoket = document.getElementById("nav_roket");
-const textDataai = document.getElementById("nav_dataai");
-const textCore = document.getElementById("nav_core");
-const textİletişim = document.getElementById("nav_iletişim");
-const textBtn = document.getElementById("the_btn");
-const slogan1 = document.getElementById("slogan1");
-const slogan2 = document.getElementById("slogan2");
-const kaydır = document.getElementById("kaydır");
+const textBtn = document.getElementById("lang");
 
 let lang = "Tr";
 
@@ -320,51 +351,43 @@ const turnAnimate = { transform: "rotate(360deg)" };
 const turnTiming = { duration: 300, iterations: 1 };
 
 const handleAnimation = function () {
-  console.log(lang);
+  // console.log(lang);
   textBtn.animate(turnAnimate, turnTiming);
   // textBtn.textContent = lang;
   handleLang();
 };
 
-console.log(json.En.mainscreen.kulübümüz);
-
 const handleLang = function () {
-  if (lang === "En") {
-    textBtn.textContent = `${json.En.mainscreen.lang}`;
-    textKulübümüz.textContent = `${json.En.mainscreen.kulübümüz}`;
-    textHakkımızda.textContent = `${json.En.mainscreen.hakkımızda}`;
-    textYönetimKurulu.textContent = `${json.En.mainscreen.yönetimKurulu}`;
-    textKurumsalİletişim.textContent = `${json.En.mainscreen.kurumsalİletişim}`;
-    textGaleri.textContent = `${json.En.mainscreen.galeri}`;
-    textTakımlarımız.textContent = `${json.En.mainscreen.takımlarımız}`;
-    textHw.textContent = `${json.En.mainscreen.helloWorld}`;
-    textOtonom.textContent = `${json.En.mainscreen.otonom}`;
-    textRoket.textContent = `${json.En.mainscreen.roket}`;
-    textDataai.textContent = `${json.En.mainscreen.sakurai}`;
-    textCore.textContent = `${json.En.mainscreen.core}`;
-    textİletişim.textContent = `${json.En.mainscreen.iletişim}`;
-    slogan1.textContent = `${json.En.mainscreen.slogan1}`;
-    slogan2.textContent = `${json.En.mainscreen.slogan2}`;
-    kaydır.textContent = `${json.En.mainscreen.kaydır}`;
-    lang = "Tr";
+  if (lang === "Tr") {
+    lang = json.Tr.lang;
+    // navbar
+    for (let key in json.Tr.navbar) {
+      document.getElementById(`${key}`).textContent = `${json.Tr.navbar[key]}`;
+    }
+
+    // mainscreen
+    for (let key in json.Tr.mainscreen) {
+      // console.log(key, document.getElementById(key));
+
+      document.getElementById(
+        `${key}`
+      ).textContent = `${json.Tr.mainscreen[key]}`;
+    }
   } else {
-    textBtn.textContent = `${json.Tr.mainscreen.lang}`;
-    textKulübümüz.textContent = `${json.Tr.mainscreen.kulübümüz}`;
-    textHakkımızda.textContent = `${json.Tr.mainscreen.hakkımızda}`;
-    textYönetimKurulu.textContent = `${json.Tr.mainscreen.yönetimKurulu}`;
-    textKurumsalİletişim.textContent = `${json.Tr.mainscreen.kurumsalİletişim}`;
-    textGaleri.textContent = `${json.Tr.mainscreen.galeri}`;
-    textTakımlarımız.textContent = `${json.Tr.mainscreen.takımlarımız}`;
-    textHw.textContent = `${json.Tr.mainscreen.helloWorld}`;
-    textOtonom.textContent = `${json.Tr.mainscreen.otonom}`;
-    textRoket.textContent = `${json.Tr.mainscreen.roket}`;
-    textDataai.textContent = `${json.Tr.mainscreen.sakurai}`;
-    textCore.textContent = `${json.Tr.mainscreen.core}`;
-    textİletişim.textContent = `${json.Tr.mainscreen.iletişim}`;
-    slogan1.textContent = `${json.Tr.mainscreen.slogan1}`;
-    slogan2.textContent = `${json.Tr.mainscreen.slogan2}`;
-    kaydır.textContent = `${json.Tr.mainscreen.kaydır}`;
-    lang = "En";
+    lang = json.En.lang;
+    // navbar
+    for (let key in json.En.navbar) {
+      // console.log(document.getElementById(`${key}`));
+      document.getElementById(`${key}`).textContent = `${json.En.navbar[key]}`;
+    }
+
+    // mainscreen
+    for (let key in json.En.mainscreen) {
+      // console.log(document.getElementById(`${key}`));
+      document.getElementById(
+        `${key}`
+      ).textContent = `${json.En.mainscreen[key]}`;
+    }
   }
 };
 
