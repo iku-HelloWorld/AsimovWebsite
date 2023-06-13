@@ -1,5 +1,7 @@
 "use strict";
 
+import json from "/language.json" assert { type: "json" };
+
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
 
@@ -25,3 +27,70 @@ window.addEventListener("scroll", function () {
     // console.log("bye");
   }
 });
+
+const textBtn = document.getElementById("lang");
+
+let lang = "Tr";
+
+const turnAnimate = { transform: "rotate(360deg)" };
+const turnTiming = { duration: 300, iterations: 1 };
+
+const handleAnimation = function () {
+  // console.log(lang);
+  textBtn.animate(turnAnimate, turnTiming);
+  // textBtn.textContent = lang;
+  handleLang();
+};
+
+const handleLang = function () {
+  if (lang === "Tr") {
+    lang = json.Tr.lang;
+    // navbar
+    for (let key in json.Tr.navbar) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.Tr.navbar[key]}`;
+      } else {
+        console.log(key + " key in json is not accesable in this page");
+      }
+    }
+
+    for (let key in json.Tr.core) {
+      // console.log(key, document.getElementById(key));
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(`${key}`).textContent = `${json.Tr.core[key]}`;
+      } else {
+        console.log(key + " key in json is not accesable in this page");
+      }
+    }
+  } else {
+    lang = json.En.lang;
+    // navbar
+
+    for (let key in json.En.navbar) {
+      if (document.getElementById(`${key}`)) {
+        // console.log(document.getElementById(`${key}`));
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.En.navbar[key]}`;
+      } else {
+        console.log(key + " key in json is not accesable in this page");
+      }
+    }
+
+    for (let key in json.En.core) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(`${key}`).textContent = `${json.En.core[key]}`;
+      } else {
+        console.log(key + " key in json is not accesable in this page");
+      }
+      // console.log(document.getElementById(`${key}`));
+    }
+  }
+};
+
+textBtn.addEventListener("click", function () {
+  handleAnimation();
+});
+handleLang();

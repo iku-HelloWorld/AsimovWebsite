@@ -627,7 +627,7 @@ body {
 
 .etkinliklerimiz--slider .etkinliklerimiz--slide {
   width: 25%;
-  height: 100%;
+  height: 95%;
   background-color: var(--white);
   position: absolute;
   top: 50%;
@@ -640,6 +640,7 @@ body {
   transition: ease 400ms;
   font-size: larger;
   filter: blur(2px) grayscale(100%);
+  cursor: pointer;
 }
 
 .etkinliklerimiz--slider .active {
@@ -698,14 +699,14 @@ body {
 
 /* sponsor işbirlik */
 .sponsor-section {
-  height: 140vh;
+  height: min-content;
   color: var(--white);
   position: relative;
   top: 80vh;
 }
 
 .sponsor-head {
-  position: absolute;
+  position: relative;
   left: 15%;
   width: 70%;
 }
@@ -724,28 +725,41 @@ body {
   width: 70%;
   margin: auto;
   position: relative;
-  top: 5%;
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .sponsor {
   display: block;
-  height: 200px;
+  height: 150px;
 }
 
 .sponsor-content {
   position: relative;
+  left: 10%;
   top: 50%;
   transform: translateY(-50%);
 }
-
 .sponsor img {
   float: left;
+  height: 100%;
+  width: 40%;
+  object-fit: contain;
 }
-
-.right img {
-  float: right;
+.sponsor-name {
+  font-size: large;
 }
-
+@media only screen and (max-width: 1350px) {
+  .sponsor-container {
+    margin: 10%;
+    column-gap: 20%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .sponsor-container {
+    grid-template-columns: auto;
+  }
+}
 /* sponsor işbirlik */
 
 /*responsive*/
@@ -785,7 +799,11 @@ body {
     transition: 1s all;
   }
 }
-
+@media only screen and (max-height: 740px) {
+  .etkinliklerimiz--section {
+    height: 700px;
+  }
+}
 /*responsive*/
 /* /////////////////////////// */
 .footer-container {
@@ -1114,12 +1132,13 @@ body {
   .etkinliklerimiz--slider .etkinliklerimiz--slide.active {
     width: 50%;
   }
-  .sponsor {
-    font-size: small;
-    height: 300px;
+  .etkinliklerimiz--slider .before {
+    position: absolute;
+    transform: translate(-60%, -50%) skew(5deg, -10deg);
   }
-  .sponsor-container {
-    top: 15%;
+  .etkinliklerimiz--slider .after {
+    position: absolute;
+    transform: translate(60%, -50%) skew(-5deg, 10deg);
   }
 }
 @media only screen and (max-width: 290px) {

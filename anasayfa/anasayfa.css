@@ -476,7 +476,6 @@
   right: 0%;
   top: 0%;
   z-index: 15;
-  padding-top: 7%;
   display: initial;
   scroll-snap-type: x mandatory;
   opacity: 0;
@@ -489,19 +488,15 @@
   height: 100%;
   background-color: #fff;
   transition: 1s ease;
-  position: absolute;
-  top: 10vw;
+  position: relative;
+
   gap: 5px;
 }
 
-.mainSidebar {
-  height: 100vh;
+.mainSideBar {
+  padding-top: 2%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  overflow-y: scroll;
+  flex-direction: column;
 }
 
 .mainscreeniconButton {
@@ -570,6 +565,8 @@
   margin-bottom: 3%;
   position: relative;
   gap: 30px;
+  padding: 2%;
+  border: var(--black) 2px solid;
 }
 
 .mainimagepage {
@@ -592,8 +589,7 @@
   padding: 20px 20px;
   width: 100%;
   background: var(--main-color);
-  top: 0px;
-  position: absolute;
+  position: relative;
 }
 
 .sidebar-navbar {
@@ -838,7 +834,15 @@
     right: 7vw;
   }
 }
-
+@media only screen and (max-width: 550px) {
+  .mainnewspage {
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    gap: 20px;
+  }
+}
 /* giriş ekranı */
 
 /* biz kimiz */

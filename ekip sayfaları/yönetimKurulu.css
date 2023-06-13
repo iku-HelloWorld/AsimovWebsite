@@ -348,6 +348,9 @@
   position: relative;
   top: 5vh;
 }
+.yönetimkurulusayfasıiçerik p {
+  height: min-content;
+}
 .yönetimkurulusayfasıiçerik h1 {
   font-size: xx-large;
   font-weight: bolder;
@@ -357,9 +360,9 @@
 
 .slider-container {
   width: 60%;
-  height: 55vh;
+  height: 55%;
   position: relative;
-  top: 10vh;
+  top: 150px;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
@@ -460,7 +463,7 @@
   top: 0vh;
   padding-left: 5vw;
   padding-right: 5vw;
-  /* TODO: */
+  background: linear-gradient(to bottom, #fff, #d4d9df, #fff);
 }
 
 .TeamPageMembersHeader {
@@ -619,7 +622,6 @@
   .slider-container {
     width: 70vw;
     height: 40vw;
-    top: 20vh;
   }
   .yönetimkuruludots {
     bottom: 12%;
@@ -627,7 +629,7 @@
 }
 @media only screen and (max-width: 850px) {
   .slider-container {
-    top: 25vh;
+    top: 200px;
   }
   .yönetimkuruludots .dot {
     width: 13px;
@@ -659,7 +661,7 @@
 
 @media (max-width: 600px) {
   .slider-container {
-    top: 45vh;
+    top: 250px;
   }
   .TeamPageMembersMain {
     display: flex;
