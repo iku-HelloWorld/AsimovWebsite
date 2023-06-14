@@ -1,4 +1,4 @@
-:root {
+root {
   --main-color: #3d4149;
   --dark-color: #101010;
   --light-color: #d4d9df;
@@ -15,9 +15,9 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: backdrop;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -29,6 +29,17 @@ body {
   width: 300px;
   margin: auto;
   border: var(--side-color) 5px outset;
+  transition: ease 300ms;
+  display: initial;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.edit {
+  transition: ease 300ms;
+  display: initial;
 }
 
 h1 {
@@ -51,4 +62,48 @@ p {
   font-size: large;
   margin-left: 20px;
   margin-top: 15px;
+}
+
+.bildirim-sil {
+  height: 300px;
+  overflow: scroll;
+  border: var(--black) 2px solid;
+}
+
+.bildirimler {
+  border: var(--black) 2px solid;
+}
+
+.takımlar {
+  border: var(--black) 2px solid;
+}
+.galeri-resim {
+  border: var(--black) 2px solid;
+}
+.etkinlikler {
+  border: var(--black) 2px solid;
+}
+.sponsor {
+  border: var(--black) 2px solid;
+}
+.kurumsal-iletişim-üye {
+  border: var(--black) 2px solid;
+}
+.yönetim-kurulu-üye {
+  border: var(--black) 2px solid;
+}
+.helloworld-üye {
+  border: var(--black) 2px solid;
+}
+.otonom-üye {
+  border: var(--black) 2px solid;
+}
+.roket-üye {
+  border: var(--black) 2px solid;
+}
+.dataai-üye {
+  border: var(--black) 2px solid;
+}
+.core-üye {
+  border: var(--black) 2px solid;
 }
