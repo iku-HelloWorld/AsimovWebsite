@@ -8,13 +8,13 @@
     <title>adminPanel</title>
   </head>
   <body>
-    <div class="login" style="opacity: 100%">
+    <div class="login" style="opacity: 0%; display: none">
       <h1>Giriş Yapın</h1>
       <p>E-posta<input class="username" type="text" /></p>
       <p>Şifre<input class="password" type="text" /></p>
       <input class="submit" type="submit" value="login" />
     </div>
-    <section class="edit" style="opacity: 0%">
+    <section class="edit" style="opacity: 100%">
       <div class="bildirimler">
         <h1>Bildirimler</h1>
 
@@ -50,6 +50,23 @@
       <div class="yönetim-kurulu-üye">
         <h1>yönetim kurulu üye</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="yönetim-kurulu-üye-resim"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="yönetim-kurulu-üye-ad" placeholder="ad" />
+        <input
+          type="text"
+          class="yönetim-kurulu-üye-ünvan"
+          placeholder="ünvan"
+        />
+        <input
+          type="text"
+          class="yönetim-kurulu-üye-bölüm"
+          placeholder="bölüm"
+        />
+        <input type="submit" class="yönetim-kurulu-üye-submit" />
         <p>sil</p>
       </div>
       <div class="helloworld-üye">
