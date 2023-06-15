@@ -56,3 +56,9 @@ submit.addEventListener("click", function () {
   // login.style.display = "none";
   // edit.style.display = "initial";
 });
+
+
+const kayit = document.querySelector(".sponsor-kayit")
+const yükleme = document.querySelector("#sponsor-yükleme")
+const aciklama = document.querySelector("#sponsor-aciklama")
+
