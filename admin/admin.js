@@ -56,3 +56,92 @@ submit.addEventListener("click", function () {
   // login.style.display = "none";
   // edit.style.display = "initial";
 });
+
+// sil
+const anasayfaGaleriSil = document.querySelector(".anasayfa-galeri-sil");
+get(child(dbRef, `anasayfaGaleri/`))
+  .then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(Object.entries(snapshot.val()));
+
+      Object.entries(snapshot.val()).forEach((e) => {
+        const ad = e[1].ad;
+        const nick = e[1].nick;
+        anasayfaGaleriSil.insertAdjacentHTML(
+          "afterbegin",
+          `<div>
+          <!--${nick}-->
+            ${ad}
+            <span class="resmi-sil">resmi sil</span>
+          </div>`
+        );
+      });
+    } else {
+      console.log("No data available");
+    }
+  })
+  .catch((error) => {
+    console.error("resim yüklenemedi");
+  });
+yönetimKuruluÜyeSil.addEventListener("click", function (e) {
+  if (e.target.closest(".resmi-sil")) {
+    const chosenName = e.target.parentElement.childNodes[2];
+    const chosenNick = e.target.parentElement.childNodes[1].data;
+    console.log();
+    remove(child(dbRef, `anasayfaGaleri/` + chosenNick))
+      .then(() => {
+        console.log("fotoğraf silindi");
+      })
+      .catch((error) => {
+        console.log("fotoğraf silinemedi");
+      });
+  }
+});
+// sil
+
+//ekle
+
+const anasayfaGaleriResim = document.querySelector(".anasayfa-galeri-resim");
+const anasayfaGaleriSubmit = document.querySelector(".anasayfa-galeri-submit");
+const anasayfaGaleriAcıklama = document.querySelector(
+  ".anasayfa-galeri-acıklama"
+);
+
+anasayfaGaleriSubmit.addEventListener("click", function () {
+  const resim = anasayfaGaleriResim.files[0];
+  const acıklama = anasayfaGaleriAcıklama.value;
+
+  if (resim && acıklama) {
+    if (!acıklama.split(" ")[1]) {
+      alert("Lütfen açıklama giriniz!");
+    }
+    const nick =
+      acıklama.split(" ")[0].slice(0, 2) +
+      ad.split(" ")[1].slice(0, 2) +
+      acıklama.length;
+
+    const imageRef = sRef(storage, "anasayfaGaleri/" + nick);
+    const metadata = {
+      contentType: resim.type,
+      name: nick,
+    };
+    const uploadTask = uploadBytes(imageRef, resim, metadata).then(
+      (snapshot) => {
+        // getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+        //   console.log("File available at", downloadURL);
+        // });
+        console.log("success");
+        anasayfaGaleriResim.value = "";
+        anasayfaGaleriAcıklama.value = "";
+      }
+    );
+    console.log(acıklama, nick);
+    set(ref(db, "anasayfaGaleri/" + nick), {
+      acıklama: acıklama,
+      nick: nick,
+    });
+  } else {
+    alert("Tüm boşlukları doldurunuz");
+  }
+});
+//ekle
