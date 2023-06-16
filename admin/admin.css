@@ -86,12 +86,24 @@ p {
 .sponsor {
   border: var(--black) 2px solid;
 }
+
+.üyeyi-sil {
+  font-weight: bolder;
+  cursor: pointer;
+}
 .kurumsal-iletişim-üye {
   border: var(--black) 2px solid;
 }
 .yönetim-kurulu-üye {
   border: var(--black) 2px solid;
 }
+
+.yönetim-kurulu-üye-sil {
+  height: 300px;
+  overflow: scroll;
+  border: var(--black) 2px solid;
+}
+
 .helloworld-üye {
   border: var(--black) 2px solid;
 }

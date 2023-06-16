@@ -47,6 +47,7 @@ const üyeler = document.querySelector(".TeamPageMembersMain");
 // `
 
 const getMembers = function () {
+  üyeler.innerHTML = "no member available!";
   get(child(ref(db), `yönetimKuruluÜye/`))
     .then((snapshot) => {
       if (snapshot.exists()) {

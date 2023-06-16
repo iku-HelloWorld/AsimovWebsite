@@ -6,6 +6,9 @@ import {
   getDatabase,
   ref,
   set,
+  get,
+  child,
+  remove,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 import {
   getStorage,
@@ -41,8 +44,9 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
 const db = getDatabase();
+const dbRef = ref(getDatabase());
 const storage = getStorage();
-
+// login
 const login = document.querySelector(".login");
 const edit = document.querySelector(".edit");
 const username = document.querySelector(".username");
@@ -69,7 +73,56 @@ submit.addEventListener("click", function () {
   // login.style.display = "none";
   // edit.style.display = "initial";
 });
+// login
 // üyeler
+
+// sil
+const yönetimKuruluÜyeSil = document.querySelector(".yönetim-kurulu-üye-sil");
+
+get(child(dbRef, `yönetimKuruluÜye/`))
+  .then((snapshot) => {
+    if (snapshot.exists()) {
+      console.log(Object.entries(snapshot.val()));
+
+      Object.entries(snapshot.val()).forEach((e) => {
+        const ad = e[1].ad;
+        const nick = e[1].nick;
+
+        yönetimKuruluÜyeSil.insertAdjacentHTML(
+          "afterbegin",
+          `<div>
+          <!--${nick}-->
+            ${ad}
+            <span class="üyeyi-sil">üyeyi sil</span>
+          </div>`
+        );
+      });
+    } else {
+      console.log("No data available");
+    }
+
+    // console.log(üyeler);
+  })
+  .catch((error) => {
+    console.error("üye Listesi yüklenemedi");
+  });
+yönetimKuruluÜyeSil.addEventListener("click", function (e) {
+  if (e.target.closest(".üyeyi-sil")) {
+    const chosenName = e.target.parentElement.childNodes[2];
+    const chosenNick = e.target.parentElement.childNodes[1].data;
+    console.log();
+    remove(child(dbRef, `yönetimKuruluÜye/` + chosenNick))
+      .then(() => {
+        console.log("üye silindi");
+      })
+      .catch((error) => {
+        console.log("üye silinemedi");
+      });
+  }
+});
+// sil
+//ekle
+
 const yönetimKuruluÜyeResmi = document.querySelector(
   ".yönetim-kurulu-üye-resim"
 );
@@ -126,3 +179,5 @@ yönetimKuruluÜyeSubmit.addEventListener("click", function () {
     alert("Tüm boşlukları doldurunuz");
   }
 });
+//ekle
+// üyeler
