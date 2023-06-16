@@ -58,11 +58,61 @@ submit.addEventListener("click", function () {
 });
 
 
-const kayit = document.querySelector(".sponsor-kayit")
-const yükleme = document.querySelector("#sponsor-yükleme")
-const aciklama = document.querySelector("#sponsor-aciklama")
+/* const kayit = document.querySelector(".sponsor-kayit");
+const yükleme = document.querySelector("#sponsor-yükleme");
+const aciklama = document.querySelector("#sponsor-aciklama");
 
 kayit.addEventListener("click", () => {
   const file = kayit.files[0];
   const description = aciklama.value;
-})
+
+  const imageRes = sRef(storage, "Sponsor/" + isim);
+  const metadatasponsor = {
+    contentType: file.type,
+    isim: description,
+  };
+  const uploadRes = uploadBytes(imageRes, file, metadatasponsor).then((snapshot) => {
+    // Yükleme tamamlandığında yapılacak işlemler buraya gelebilir.
+  });
+}); */
+
+const kayit = document.querySelector(".sponsor-kayit");
+const yükleme = document.querySelector("#sponsor-yükleme");
+const aciklama = document.querySelector("#sponsor-aciklama");
+
+kayit.addEventListener("click", () => {
+  const file = kayit.files[0];
+  const description = aciklama.value;
+
+  const storage = firebase.storage();
+  const storageRef = storage.ref("Sponsor/" + file.name);
+
+  const metadata = {
+    contentType: file.type,
+    customMetadata: {
+      isim: description,
+    },
+  };
+
+  const uploadTask = storageRef.put(file, metadata);
+
+  uploadTask
+    .then((snapshot) => {
+      // Yükleme tamamlandığında yapılacak işlemler buraya gelebilir.
+      console.log("Resim başarıyla yüklendi.");
+      return snapshot.ref.getDownloadURL();
+    })
+    .then((downloadURL) => {
+      // Resim URL'sini veritabanına kaydedebilirsiniz
+      firebase.database().ref("images").push({
+        description: description,
+        imageURL: downloadURL,
+      });
+    })
+    .then(() => {
+      console.log("Resim veritabanına kaydedildi.");
+    })
+    .catch((error) => {
+      console.error("Hata:", error);
+    });
+});
