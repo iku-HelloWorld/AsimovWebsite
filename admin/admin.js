@@ -59,5 +59,31 @@ submit.addEventListener("click", function () {
 });
 
 // etkinliklerimiz
+import {
+  getDatabase,
+  ref,
+  set,
+  get,
+  child,
+} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+function writeUserData(userId, name, email, imageUrl) {
+  const db = getDatabase();
+  set(ref(db, "users/" + userId), {
+    username: name,
+    email: email,
+    profile_picture: imageUrl,
+  });
+
+    console.log(userId, name, email, imageUrl);
+    set(ref(db, "etkinlikler/" +imageUrl), {
+      userId: userId,
+      name: name,
+      email: email,
+      imageUrl: imageUrl,
+    });
+  } else {
+    alert("Tüm boşlukları doldurunuz");
+  }
 
 // etkinliklerimiz
