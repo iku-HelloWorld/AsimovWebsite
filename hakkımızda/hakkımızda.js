@@ -84,45 +84,6 @@ timeline.addEventListener("click", function (e) {
 });
 
 displayTimeline(timeInd);
-const etkinlikSlides = document.querySelectorAll(".etkinliklerimiz--slide");
-const etkinlikSlider = document.querySelector(".etkinliklerimiz--slider");
-const etkinlikSlideArr = [...etkinlikSlides];
-
-// console.log(slides);
-let etkinlikSlideIndex = 1;
-let afterIndex, beforeIndex;
-
-const displaySlides = function () {
-  afterIndex = etkinlikSlideIndex + 1;
-  beforeIndex = etkinlikSlideIndex - 1;
-  if (etkinlikSlideIndex === 1) beforeIndex = etkinlikSlides.length;
-  if (etkinlikSlideIndex < 1) {
-    beforeIndex = etkinlikSlides.length - 1;
-    etkinlikSlideIndex = etkinlikSlides.length;
-  }
-  if (etkinlikSlideIndex === etkinlikSlides.length) afterIndex = 1;
-  if (etkinlikSlideIndex > etkinlikSlides.length) {
-    afterIndex = 2;
-    etkinlikSlideIndex = 1;
-  }
-  // console.log(beforeIndex, etkinlikSlideIndex, afterIndex);
-  etkinlikSlides.forEach((s) => s.classList.remove("active"));
-  etkinlikSlides.forEach((s) => s.classList.remove("after"));
-  etkinlikSlides.forEach((s) => s.classList.remove("before"));
-  etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
-  etkinlikSlides.item(beforeIndex - 1).classList.add("before");
-  etkinlikSlides.item(afterIndex - 1).classList.add("after");
-};
-
-etkinlikSlider.addEventListener("click", function (e) {
-  const target = e.target.closest(".etkinliklerimiz--slide");
-  if (!etkinlikSlideArr.includes(target)) return;
-  const targetIndex = etkinlikSlideArr.indexOf(target);
-  etkinlikSlideIndex = targetIndex + 1;
-  displaySlides(etkinlikSlideIndex);
-});
-
-displaySlides(etkinlikSlideIndex);
 
 const sayaç = document.querySelector(".sayacContainer");
 const sayaçPos = sayaç.getClientRects()[0];

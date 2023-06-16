@@ -2,6 +2,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
 import {
   getAuth,
@@ -56,3 +57,7 @@ submit.addEventListener("click", function () {
   // login.style.display = "none";
   // edit.style.display = "initial";
 });
+
+// etkinliklerimiz
+
+// etkinliklerimiz
