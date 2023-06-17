@@ -72,18 +72,23 @@ const isEight = function (arr) {
     galeriPage.classList.add("galeri_page");
     galericontent.appendChild(galeriPage);
     arr.forEach(function (key, i) {
-      // console.log(key);
-      galeriPage.insertAdjacentHTML(
-        "beforeend",
-        `<div class="image">
-      <img src="Asimov_Logolar/asimov.jpg" alt="" />
-
-      <div class="image_div_content">
-        <div class="image_blur"></div>
-        <p>${(key[1].nick, i)}</p>
-      </div>
-    </div>`
+      getDownloadURL(sRef(storage, "galeriResim/" + key[1].nick)).then(
+        (imgurl) => {
+          console.log(imgurl);
+          galeriPage.insertAdjacentHTML(
+            "beforeend",
+            `<div class="image">
+          <img src="${imgurl}" alt="" />
+    
+          <div class="image_div_content">
+            <div class="image_blur"></div>
+            <p>${key[1].acıklama}</p>
+          </div>
+        </div>`
+          );
+        }
       );
+      //console.log(url);
     });
   });
   displaySlider(index);
