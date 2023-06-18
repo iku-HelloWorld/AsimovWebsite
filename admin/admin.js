@@ -78,15 +78,32 @@ const anasayfagaleriresim = document.querySelector(".anasayfa-galeri-resim");
 const anasayfagaleriacıklama = document.querySelector(
   ".anasayfa-galeri-acıklama"
 );
+
 anasayfagalerisubmit.addEventListener("click", function () {
   const resim = anasayfagaleriresim.files[0];
   const acıklama = anasayfagaleriacıklama.value;
+  const dt = new Date();
+
+  const makeItTwo = (num) => {
+    if (num < 10) return "0" + num;
+    else {
+      num > 10;
+    }
+    return num;
+  };
+  const day = makeItTwo(dt.getDate());
+  const month = makeItTwo(dt.getMonth());
+  const year = dt.getFullYear();
+  // console.log(makeItTwo(5));
+  const date = day + "/" + month + "/" + year;
+  // console.log(date);
 
   if (resim && acıklama) {
-    const dt = new Date();
-    const nick = acıklama.slice(0, 10) + dt.getHours();
+    const nick =
+      acıklama.slice(0, 10).replace(/ /g, "") + dt.getHours() + dt.getMinutes();
     const imageRef = sRef(storage, "galeriResim/" + nick);
     const metadata = { contentType: resim.type, name: nick };
+
     const uploadTask = uploadBytes(imageRef, resim, metadata).then(
       (snapshot) => {
         console.log("success");
@@ -94,6 +111,7 @@ anasayfagalerisubmit.addEventListener("click", function () {
     );
     set(ref(db, "galeriResim/" + nick), {
       acıklama: acıklama,
+      date: date,
       nick: nick,
     }).then(() => {
       console.log("success");

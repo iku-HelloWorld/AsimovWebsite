@@ -42,9 +42,11 @@ const galericontent = document.querySelector(".galeri_content");
 const getImages = function () {
   get(child(ref(db), "galeriResim/")).then((snapshot) => {
     if (snapshot.val()) {
-      // Object.entries(snapshot.val()).forEach((e) => {
-      //   console.log(e[1]);
-      // });
+      console.log(
+        Object.values(snapshot.val()).sort((a, b) => {
+          return a.age - b.age;
+        })
+      );
       isEight(Object.entries(snapshot.val()));
     }
   });
@@ -52,6 +54,17 @@ const getImages = function () {
 getImages();
 
 let index = 1;
+
+const replaceGaleri = function (galeriPage, key, imgurl) {
+  galeriPage.insertAdjacentHTML(
+    "beforeend",
+    `<div class="image">
+<img src="${imgurl}" alt="" />
+
+<div style="display:none" class="image_div_content">${key[1].nick}</div>
+</div>`
+  );
+};
 
 const isEight = function (arr) {
   function sliceIntoChunks(arr, chunkSize) {
@@ -66,26 +79,17 @@ const isEight = function (arr) {
   const chunks = sliceIntoChunks(arr, 8);
   // console.log(chunks);
 
-  let galeriPage;
+  // let galeriPage;
   chunks.forEach((arr) => {
-    galeriPage = document.createElement("div");
+    let galeriPage = document.createElement("div");
+    // console.log(galeriPage);
     galeriPage.classList.add("galeri_page");
     galericontent.appendChild(galeriPage);
-    arr.forEach(function (key, i) {
+    arr.forEach(function (key) {
       getDownloadURL(sRef(storage, "galeriResim/" + key[1].nick)).then(
         (imgurl) => {
-          console.log(imgurl);
-          galeriPage.insertAdjacentHTML(
-            "beforeend",
-            `<div class="image">
-          <img src="${imgurl}" alt="" />
-    
-          <div class="image_div_content">
-            <div class="image_blur"></div>
-            <p>${key[1].acıklama}</p>
-          </div>
-        </div>`
-          );
+          // console.log(imgurl);
+          replaceGaleri(galeriPage, key, imgurl);
         }
       );
       //console.log(url);
@@ -143,18 +147,19 @@ nextBtn.addEventListener("click", function () {
 // displaySlider(index);
 
 // // image focus ver
-const imgFocusShow = function (img, state) {
+const imgFocusShow = function (metadata, url, state) {
+  console.log(metadata);
   // console.log("hi");
   if (state) {
     galeriCont.style.filter = "blur(5px)";
     newDiv.innerHTML = `<span class="new_div-close"><i class="fa fa-close"></i
     ></span>
-    <img src="asimov_Logolar/asimov.jpg" />
+    <img src="${url}" />
     <div class="new_div-info">
       <p>
-        Hello World takımımızın teknofest 2024'te 1.oldup ödül aldığı günden hatıralar
+        ${metadata.acıklama}
       </p>
-      <p>14/05/2024</p>
+      <p>${metadata.date}</p>
     </div>`;
     newDiv.style.display = "initial";
 
@@ -175,11 +180,23 @@ const imgFocusShow = function (img, state) {
 };
 
 galeriCont.addEventListener("click", function (e) {
-  console.log(e.target);
-  const chosenImg = e.target.closest(".image");
-  // console.log(chosenImg);
-  // if (chosenImg) {
-  //   imgFocusShow(chosenImg, true);
-  //   // console.log("hi");
-  // }
+  const t = e.target.closest(".image");
+
+  if (t) {
+    const nick = t.querySelector(".image_div_content").textContent;
+    const url = e.target.src;
+    console.log(nick);
+    const dbRef = ref(getDatabase());
+    get(child(dbRef, `galeriResim/${nick}`))
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          imgFocusShow(snapshot.val(), url, true);
+        } else {
+          console.log("resim bulunamadı");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 });
