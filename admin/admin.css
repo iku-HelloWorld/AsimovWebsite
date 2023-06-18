@@ -94,11 +94,11 @@ p {
 .kurumsal-iletişim-üye {
   border: var(--black) 2px solid;
 }
-.yönetim-kurulu-üye {
+.directory-team-member {
   border: var(--black) 2px solid;
 }
 
-.yönetim-kurulu-üye-sil {
+.directory-team-member-remove {
   height: 300px;
   overflow: scroll;
   border: var(--black) 2px solid;

@@ -42,39 +42,112 @@
         <p>ekle</p>
         <p>sil</p>
       </div>
-      <div class="kurumsal-iletişim-üye">
+      <!-- //////////////////////////////////////////////////////////// -->
+      <div class="corporate-communication-member">
         <h1>kurumsal iletişim üye</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="corporate-communication-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input
+          type="text"
+          class="corporate-communication-member-name"
+          placeholder="isim"
+        />
+        <select name="duty" class="corporate-communication-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="corporate-communication-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="corporate-communication-member-submit" />
         <p>sil</p>
+        <div class="corporate-communication-member-remove"></div>
       </div>
-      <div class="yönetim-kurulu-üye">
+      <!-- //////////////////////////////////////////////////////////// -->
+      <div class="directory-team-member">
         <h1>yönetim kurulu üye</h1>
         <p>ekle</p>
         <input
           type="file"
-          class="yönetim-kurulu-üye-resim"
+          class="directory-team-member-img"
           accept="image/jpeg,image/png"
         />
-        <input type="text" class="yönetim-kurulu-üye-ad" placeholder="ad" />
         <input
           type="text"
-          class="yönetim-kurulu-üye-ünvan"
-          placeholder="ünvan"
+          class="directory-team-member-name"
+          placeholder="isim"
         />
-        <input
-          type="text"
-          class="yönetim-kurulu-üye-bölüm"
-          placeholder="bölüm"
-        />
-        <input type="submit" class="yönetim-kurulu-üye-submit" />
+        <select name="duty" class="directory-team-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="directory-team-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="directory-team-member-submit" />
         <p>sil</p>
-        <div class="yönetim-kurulu-üye-sil"></div>
+        <div class="directory-team-member-remove"></div>
       </div>
-      <div class="helloworld-üye">
+      <!-- //////////////////////////////////////////////////////////// -->
+      <div class="helloworld-member">
         <h1>hello world üye</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="helloworld-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="helloworld-member-name" placeholder="isim" />
+
+        <select name="duty" class="helloworld-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="helloworld-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="helloworld-member-submit" />
         <p>sil</p>
+        <div class="helloworld-member-remove"></div>
       </div>
+      <!-- //////////////////////////////////////////////////////////// -->
       <div class="otonom-üye">
         <h1>otonom üye</h1>
         <p>ekle</p>
@@ -98,4 +171,7 @@
     </section>
   </body>
   <script defer type="module" src="admin.js"></script>
+  <script defer type="module" src="corporateCommunicationFb.js"></script>
+  <script defer type="module" src="directoryTeamFb.js"></script>
+  <script defer type="module" src="helloWorldFb.js"></script>
 </html>
