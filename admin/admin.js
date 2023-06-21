@@ -67,23 +67,32 @@ import {
   child,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
-function writeUserData(userId, name, email, imageUrl) {
-  const db = getDatabase();
-  set(ref(db, "users/" + userId), {
-    username: name,
-    email: email,
-    profile_picture: imageUrl,
-  });
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
-    console.log(userId, name, email, imageUrl);
-    set(ref(db, "etkinlikler/" +imageUrl), {
-      userId: userId,
-      name: name,
-      email: email,
-      imageUrl: imageUrl,
+const etkinliklerRef = ref(database, "etkinlikler"); // Reference to the 'etkinlikler' node in the database
+
+const yeniEtkinlik = {
+  başlık: "New Event Title",
+  açıklama: "New Event Description"
+};
+
+submit.addEventListener("click", function () {
+  signInWithEmailAndPassword(auth, username.value, password.value)
+    .then((userCredential) => {
+      if (userCredential) {
+        push(etkinliklerRef, yeniEtkinlik)
+          .then(() => {
+            console.log("New event added successfully!");
+          })
+          .catch((error) => {
+            console.error("Error adding new event:", error);
+          });
+      }
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
     });
-  } else {
-    alert("Tüm boşlukları doldurunuz");
-  }
+});
 
 // etkinliklerimiz
