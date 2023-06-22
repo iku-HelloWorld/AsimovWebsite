@@ -81,7 +81,7 @@ const yükleme = document.querySelector("#sponsor-yükleme");
 const aciklama = document.querySelector("#sponsor-aciklama");
 
 kayit.addEventListener("click", () => {
-  const file = kayit.files[0];
+  const file = yükleme.files[0];
   const description = aciklama.value;
 
   const storage = firebase.storage();
