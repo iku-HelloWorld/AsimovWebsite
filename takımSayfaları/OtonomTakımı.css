@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  position: fixed;
+  position: sticky;
   width: 100%;
   transition: ease 400ms;
 }

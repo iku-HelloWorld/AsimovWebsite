@@ -151,12 +151,66 @@
       <div class="otonom-üye">
         <h1>otonom üye</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="otonom-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="otonom-member-name" placeholder="isim" />
+
+        <select name="duty" class="otonom-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="otonom-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="otonom-member-submit" />
         <p>sil</p>
+        <div class="otonom-member-remove"></div>
       </div>
       <div class="roket-üye">
         <h1>roket üye</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="roket-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="roket-member-name" placeholder="isim" />
+
+        <select name="duty" class="roket-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="roket-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="roket-member-submit" />
         <p>sil</p>
+        <div class="roket-member-remove"></div>
       </div>
       <div class="dataai-üye">
         <h1>dataAI üye</h1>
@@ -174,4 +228,6 @@
   <script defer type="module" src="corporateCommunicationFb.js"></script>
   <script defer type="module" src="directoryTeamFb.js"></script>
   <script defer type="module" src="helloWorldFb.js"></script>
+  <script defer type="module" src="otonomFb.js"></script>
+  <script defer type="module" src="roketFb.js"></script>
 </html>

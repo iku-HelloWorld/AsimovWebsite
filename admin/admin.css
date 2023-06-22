@@ -1,4 +1,4 @@
-root {
+:root {
   --main-color: #3d4149;
   --dark-color: #101010;
   --light-color: #d4d9df;
@@ -87,18 +87,37 @@ p {
   border: var(--black) 2px solid;
 }
 
-.üyeyi-sil {
-  font-weight: bolder;
-  cursor: pointer;
-}
-.kurumsal-iletişim-üye {
+.corporate-communication-member-remove {
+  height: 300px;
+  overflow: scroll;
   border: var(--black) 2px solid;
 }
-.directory-team-member {
-  border: var(--black) 2px solid;
-}
-
 .directory-team-member-remove {
+  height: 300px;
+  overflow: scroll;
+  border: var(--black) 2px solid;
+}
+.helloworld-member-remove {
+  height: 300px;
+  overflow: scroll;
+  border: var(--black) 2px solid;
+}
+.otonom-member-remove {
+  height: 300px;
+  overflow: scroll;
+  border: var(--black) 2px solid;
+}
+.roket-member-remove {
+  height: 300px;
+  overflow: scroll;
+  border: var(--black) 2px solid;
+}
+.otonom-member-remove {
+  height: 300px;
+  overflow: scroll;
+  border: var(--black) 2px solid;
+}
+.otonom-member-remove {
   height: 300px;
   overflow: scroll;
   border: var(--black) 2px solid;

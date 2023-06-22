@@ -63,7 +63,11 @@ let timeInd = 0;
 const displayTimeline = function () {
   point.forEach((p) => {
     p.classList.remove("active");
-    if (p.dataset.index <= timeInd) {
+    p.classList.remove("selected");
+    if (p.dataset.index === timeInd) {
+      p.classList.add("selected");
+      p.classList.add("active");
+    } else if (p.dataset.index <= timeInd) {
       p.classList.add("active");
     }
   });
