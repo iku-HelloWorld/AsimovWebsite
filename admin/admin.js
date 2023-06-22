@@ -4,6 +4,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
 import {
+  getStorage,
+  ref as sRef,
+  getDownloadURL,
+  uploadBytes,
+} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js";
+import {
   getAuth,
   signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
@@ -57,7 +63,6 @@ submit.addEventListener("click", function () {
   // edit.style.display = "initial";
 });
 
-
 /* const kayit = document.querySelector(".sponsor-kayit");
 const yükleme = document.querySelector("#sponsor-yükleme");
 const aciklama = document.querySelector("#sponsor-aciklama");
@@ -83,9 +88,8 @@ const aciklama = document.querySelector("#sponsor-aciklama");
 kayit.addEventListener("click", () => {
   const file = yükleme.files[0];
   const description = aciklama.value;
-
-  const storage = firebase.storage();
-  const storageRef = storage.ref("Sponsor/" + file.name);
+  const storage = getStorage();
+  const storageRef = sRef(storage, "sponsorImages/" + file.name);
 
   const metadata = {
     contentType: file.type,
@@ -94,25 +98,31 @@ kayit.addEventListener("click", () => {
     },
   };
 
-  const uploadTask = storageRef.put(file, metadata);
-
-  uploadTask
+  const uploadTask = uploadBytes(storageRef, file, metadata)
     .then((snapshot) => {
-      // Yükleme tamamlandığında yapılacak işlemler buraya gelebilir.
-      console.log("Resim başarıyla yüklendi.");
-      return snapshot.ref.getDownloadURL();
-    })
-    .then((downloadURL) => {
-      // Resim URL'sini veritabanına kaydedebilirsiniz
-      firebase.database().ref("images").push({
-        description: description,
-        imageURL: downloadURL,
-      });
-    })
-    .then(() => {
-      console.log("Resim veritabanına kaydedildi.");
+      console.log("success");
     })
     .catch((error) => {
       console.error("Hata:", error);
     });
+
+  // uploadTask
+  //   .then((snapshot) => {
+  //     // Yükleme tamamlandığında yapılacak işlemler buraya gelebilir.
+  //     console.log("Resim başarıyla yüklendi.");
+  //     return snapshot.ref.getDownloadURL();
+  //   })
+  //   .then((downloadURL) => {
+  //     // Resim URL'sini veritabanına kaydedebilirsiniz
+  //     firebase.database().ref("sponsorImages/").push({
+  //       description: description,
+  //       imageURL: downloadURL,
+  //     });
+  //   })
+  //   .then(() => {
+  //     console.log("Resim veritabanına kaydedildi.");
+  //   })
+  //   .catch((error) => {
+  //     console.error("Hata:", error);
+  //   });
 });
