@@ -28,3 +28,39 @@ const db = getDatabase()
 const analytics = getAnalytics(app);
 const auth = getAuth();
 const storage = getStorage(app);
+
+const sponsorContainer = document.querySelector(".sponsor-container");
+
+// Verileri Firebase'den alıp HTML'e ekleme
+function showSponsors() {
+  get(child(ref(db), "sponsorlar"))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        sponsorContainer.innerHTML = "";
+        const sponsors = snapshot.val();
+        Object.keys(sponsors).forEach((sponsorKey) => {
+          const sponsor = sponsors[sponsorKey];
+          const description = sponsor.description;
+          const image = sponsor.image;
+          const title = sponsor.title;
+
+          const sponsorHTML = `
+            <div class="sponsor-card">
+              <img class="sponsor-img" src="${image}" alt="${title}" />
+              <h3 class="sponsor-title">${title}</h3>
+              <p class="sponsor-description">${description}</p>
+            </div>
+          `;
+          sponsorContainer.insertAdjacentHTML("beforeend", sponsorHTML);
+        });
+      } else {
+        console.log("No data available");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+// Sponsors'u göster
+showSponsors();
