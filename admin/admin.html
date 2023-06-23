@@ -148,7 +148,7 @@
         <div class="helloworld-member-remove"></div>
       </div>
       <!-- //////////////////////////////////////////////////////////// -->
-      <div class="otonom-üye">
+      <div class="otonom-member">
         <h1>otonom üye</h1>
         <p>ekle</p>
         <input
@@ -180,7 +180,7 @@
         <p>sil</p>
         <div class="otonom-member-remove"></div>
       </div>
-      <div class="roket-üye">
+      <div class="roket-member">
         <h1>roket üye</h1>
         <p>ekle</p>
         <input
@@ -212,15 +212,70 @@
         <p>sil</p>
         <div class="roket-member-remove"></div>
       </div>
-      <div class="dataai-üye">
+      <div class="dataai-member">
         <h1>dataAI üye</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="dataai-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="dataai-member-name" placeholder="isim" />
+
+        <select name="duty" class="dataai-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="dataai-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="dataai-member-submit" />
         <p>sil</p>
+        <div class="dataai-member-remove"></div>
+      </div>
       </div>
       <div class="core-üye">
         <h1>core üye</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="core-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="core-member-name" placeholder="isim" />
+
+        <select name="duty" class="core-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="core-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="core-member-submit" />
         <p>sil</p>
+        <div class="core-member-remove"></div>
       </div>
     </section>
   </body>
@@ -230,4 +285,6 @@
   <script defer type="module" src="helloWorldFb.js"></script>
   <script defer type="module" src="otonomFb.js"></script>
   <script defer type="module" src="roketFb.js"></script>
+  <script defer type="module" src="dataaiFb.js"></script>
+  <script defer type="module" src="coreFb.js"></script>
 </html>
