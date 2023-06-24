@@ -33,7 +33,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase();
 const storage = getStorage();
 
-const bildirim = document.querySelector(".mainSideBar")
+const Notification = document.querySelector(".mainSideBar")
 /* <section class="mainnewspage">
                 <div>
                   <img
@@ -50,12 +50,12 @@ const bildirim = document.querySelector(".mainSideBar")
                 </div>
               </section>*/
 const getNotification = function () {
-  bildirim.innerHTML = "";
+  Notification.innerHTML = "";
   get(child(ref(database), `bildirim/`))
     .then((snapshot) => {
 
       if (snapshot.exists()) {
-        bildirim.innerHTML = "";
+        Notification.innerHTML = "";
         Object.entries(snapshot.val()).forEach((m) => {
           console.log(m)
           const RightBoxHeader = m[1].başlık;
@@ -67,7 +67,7 @@ const getNotification = function () {
             (imgURL) => {
               console.log(imgURL)
               url = imgURL;
-              bildirim.insertAdjacentHTML(
+              Notification.insertAdjacentHTML(
                 "afterbegin",
                 `<section class="mainnewspage">
                           <div>
@@ -87,33 +87,6 @@ const getNotification = function () {
               );
             }
           );
-
-
-          /*let urlBildirim;
-          //getDownloadURL(sRef(storage, "bildirim/")).then(
-              (RightBoximgurl) => {
-                  
-                  urlBildirim = RightBoximgurl;
-                  bildirim.insertAdjacentHTML(
-                      "afterbegin",
-                      `<section class="mainnewspage">
-                    <div>
-                      <img
-                        class="mainimagepage"
-                        src=""
-                        alt="Example Image"
-                      />
-                    </div>
-                    <div class="maintextpage">
-                      <h2>${RightBoxHeader}</h2>
-                      <p>
-                      ${RightBoxParagraph}
-                      </p>
-                    </div>
-                  </section>`
-                  );
-              }
-          ); */
         });
       } else {
         console.log("No data available");
