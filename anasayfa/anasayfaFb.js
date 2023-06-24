@@ -44,7 +44,7 @@ const getImages = function () {
     if (snapshot.val()) {
       console.log(
         Object.values(snapshot.val()).sort((a, b) => {
-          return a.age - b.age;
+          return a.date - b.date;
         })
       );
       isEight(Object.entries(snapshot.val()));
@@ -57,7 +57,7 @@ let index = 1;
 
 const replaceGaleri = function (galeriPage, key, imgurl) {
   galeriPage.insertAdjacentHTML(
-    "beforeend",
+    "afterbegin",
     `<div class="image">
 <img src="${imgurl}" alt="" />
 
