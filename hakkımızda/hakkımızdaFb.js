@@ -71,13 +71,22 @@ const displaySlides = function () {
     afterIndex = 2;
     etkinlikSlideIndex = 1;
   }
-  // console.log(beforeIndex, etkinlikSlideIndex, afterIndex);
   etkinlikSlides.forEach((s) => s.classList.remove("active"));
   etkinlikSlides.forEach((s) => s.classList.remove("after"));
   etkinlikSlides.forEach((s) => s.classList.remove("before"));
-  etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
-  etkinlikSlides.item(beforeIndex - 1).classList.add("before");
-  etkinlikSlides.item(afterIndex - 1).classList.add("after");
+  if (etkinlikSlides.length == 1) {
+    // console.log("here");
+    etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+  } else {
+    etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+    etkinlikSlides.item(beforeIndex - 1).classList.add("before");
+    etkinlikSlides.item(afterIndex - 1).classList.add("after");
+  }
+  // console.log(beforeIndex, etkinlikSlideIndex, afterIndex);
+
+  //   etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+  //   etkinlikSlides.item(beforeIndex - 1).classList.add("before");
+  //   etkinlikSlides.item(afterIndex - 1).classList.add("after");
 };
 
 etkinlikSlider.addEventListener("click", function (e) {
