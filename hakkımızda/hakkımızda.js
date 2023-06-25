@@ -217,3 +217,5 @@ textBtn.addEventListener("click", function () {
   handleAnimation();
 });
 handleLang();
+
+

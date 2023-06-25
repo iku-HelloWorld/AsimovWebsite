@@ -1,4 +1,4 @@
-:root {
+root {
   --main-color: #3d4149;
   --dark-color: #101010;
   --light-color: #d4d9df;
@@ -35,6 +35,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: 5;
+  display: none;
 }
 
 .edit {

@@ -53,6 +53,8 @@ const username = document.querySelector(".username");
 const password = document.querySelector(".password");
 const submit = document.querySelector(".submit");
 
+const bildirimSil = document.querySelector(".bildirim-sil");
+
 const signedInHandler = function () {
   login.style.opacity = "0%";
   login.style.display = "none";
