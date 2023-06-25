@@ -90,6 +90,8 @@ const displaySlides = function () {
 };
 
 etkinlikSlider.addEventListener("click", function (e) {
+  const etkinlikSlides = document.querySelectorAll(".etkinliklerimiz--slide");
+  const etkinlikSlideArr = [...etkinlikSlides];
   const target = e.target.closest(".etkinliklerimiz--slide");
   if (!etkinlikSlideArr.includes(target)) return;
   const targetIndex = etkinlikSlideArr.indexOf(target);
