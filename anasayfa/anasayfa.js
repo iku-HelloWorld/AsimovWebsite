@@ -40,7 +40,7 @@ navbarLinkUl.addEventListener("click", function (e) {
       /iPad|iPhone|Android|BlackBerry|Windows Phone|webOS/i
     )
   ) {
-    console.log(e.target.dataset.section);
+    // console.log(e.target.dataset.section);
     document
       .querySelector(`${e.target.dataset.section}`)
       .scrollIntoView({ behavior: "smooth" }, true);
@@ -122,6 +122,7 @@ const bgImgTop = bgImg.getBoundingClientRect().top;
 let oldCursorX;
 
 $(window).on("mousemove", function (e) {
+  // console.log("Mouse moved!");
   if (isPressedDown) {
     if (Math.abs(oldCursorX - e.clientX) >= cursorThreshold) {
       // totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
@@ -178,87 +179,87 @@ const galeriPageCounter = document.querySelector(".galeri_page-counter");
 
 let index = 1;
 
-const galeriPageCounterHandler = function (i) {
-  galeriPageCounter.textContent = `${[...page].indexOf(page[i]) + 1}/${
-    page.length
-  }`;
-  galeriPageCounter.style.opacity = "100%";
-  galeriPageCounter.style.transform = "translate(-50%,50px)";
-  setTimeout(function () {
-    galeriPageCounter.style.transform = "translate(-50%,0px)";
-    galeriPageCounter.style.opacity = "0%";
-  }, 2000);
-};
+// const galeriPageCounterHandler = function (i) {
+//   galeriPageCounter.textContent = `${[...page].indexOf(page[i]) + 1}/${
+//     page.length
+//   }`;
+//   galeriPageCounter.style.opacity = "100%";
+//   galeriPageCounter.style.transform = "translate(-50%,50px)";
+//   setTimeout(function () {
+//     galeriPageCounter.style.transform = "translate(-50%,0px)";
+//     galeriPageCounter.style.opacity = "0%";
+//   }, 2000);
+// };
 
-const displaySlider = function (i) {
-  if (index < 1) {
-    index = page.length;
-  }
-  if (index > page.length) {
-    index = 1;
-  }
+// const displaySlider = function (i) {
+//   if (index < 1) {
+//     index = page.length;
+//   }
+//   if (index > page.length) {
+//     index = 1;
+//   }
 
-  // console.log(index);
-  page.forEach((p) => p.classList.remove("show"));
-  page.item(index - 1).classList.add("show");
-  galeriPageCounterHandler(index - 1);
-};
+//   // console.log(index);
+//   page.forEach((p) => p.classList.remove("show"));
+//   page.item(index - 1).classList.add("show");
+//   galeriPageCounterHandler(index - 1);
+// };
 
-const galeriChangeSlide = function (n) {
-  index += n;
-  displaySlider(index);
-};
+// const galeriChangeSlide = function (n) {
+//   index += n;
+//   displaySlider(index);
+// };
 
-prevBtn.addEventListener("click", function () {
-  galeriChangeSlide(-1);
-});
+// prevBtn.addEventListener("click", function () {
+//   galeriChangeSlide(-1);
+// });
 
-nextBtn.addEventListener("click", function () {
-  galeriChangeSlide(1);
-});
+// nextBtn.addEventListener("click", function () {
+//   galeriChangeSlide(1);
+// });
 
-displaySlider(index);
+// displaySlider(index);
 
-// image focus ver
-const imgFocusShow = function (img, state) {
-  // console.log("hi");
-  if (state) {
-    galeriCont.style.filter = "blur(5px)";
-    newDiv.innerHTML = `<span class="new_div-close"><i class="fa fa-close"></i
-    ></span>
-    <img src="asimov_Logolar/asimov.jpg" />
-    <div class="new_div-info">
-      <p>
-        Hello World takımımızın teknofest 2024'te 1.oldup ödül aldığı günden hatıralar
-      </p>
-      <p>14/05/2024</p>
-    </div>`;
-    newDiv.style.display = "initial";
+// // image focus ver
+// const imgFocusShow = function (img, state) {
+//   // console.log("hi");
+//   if (state) {
+//     galeriCont.style.filter = "blur(5px)";
+//     newDiv.innerHTML = `<span class="new_div-close"><i class="fa fa-close"></i
+//     ></span>
+//     <img src="asimov_Logolar/asimov.jpg" />
+//     <div class="new_div-info">
+//       <p>
+//         Hello World takımımızın teknofest 2024'te 1.oldup ödül aldığı günden hatıralar
+//       </p>
+//       <p>14/05/2024</p>
+//     </div>`;
+//     newDiv.style.display = "initial";
 
-    newDiv.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-    newDiv
-      .querySelector(".new_div-close")
-      .addEventListener("click", function () {
-        imgFocusShow(0, false);
-      });
-  } else {
-    newDiv.style.display = "none";
-    galeriCont.style.filter = "blur(0px)";
-  }
-};
+//     newDiv.scrollIntoView({
+//       behavior: "smooth",
+//       block: "end",
+//       inline: "nearest",
+//     });
+//     newDiv
+//       .querySelector(".new_div-close")
+//       .addEventListener("click", function () {
+//         imgFocusShow(0, false);
+//       });
+//   } else {
+//     newDiv.style.display = "none";
+//     galeriCont.style.filter = "blur(0px)";
+//   }
+// };
 
-galeriCont.addEventListener("click", function (e) {
-  const chosenImg = e.target.closest(".image");
-  // console.log(chosenImg);
-  if (chosenImg) {
-    imgFocusShow(chosenImg, true);
-    // console.log("hi");
-  }
-});
+// galeriCont.addEventListener("click", function (e) {
+//   const chosenImg = e.target.closest(".image");
+//   // console.log(chosenImg);
+//   if (chosenImg) {
+//     imgFocusShow(chosenImg, true);
+//     // console.log("hi");
+//   }
+// });
 // image focus ver
 /* biz kimiz img slider */
 const dotsDiv = document.querySelector(".dots");
