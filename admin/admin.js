@@ -41,7 +41,7 @@ const username = document.querySelector(".username");
 const password = document.querySelector(".password");
 const submit = document.querySelector(".submit");
 
-const NotificationSil = document.querySelector(".Notification-delete");
+const NotificationDelete = document.querySelector(".Notification-delete");
 
 const signedInHandler = function () {
   login.style.opacity = "0%";
@@ -63,31 +63,3 @@ submit.addEventListener("click", function () {
   // login.style.display = "none";
   // edit.style.display = "initial";
 });
-const NotificationPictureAdmin = document.querySelector(".NotificationPictureAdmin");
-const NotificationHeaderAdmin = document.querySelector(".NotificationHeaderAdmin");
-const NotificationParagraphAdmin = document.querySelector(".NotificationParagraphAdmin");
-
-const NotificationSubmit = document.querySelector(".Notification-submit");
-function writeNotificationData() {
-  const db = getDatabase();
-  if (NotificationPictureAdmin.value && NotificationHeaderAdmin.value && NotificationParagraphAdmin.value) {
-    set(ref(db, 'bildirim/' + NotificationHeaderAdmin.value.slice(0, 10)), {
-      başlık: NotificationHeaderAdmin.value,
-      açıklama: NotificationParagraphAdmin.value
-    });
-
-    const storageRef = sRef(storage, 'bildirim/' + NotificationHeaderAdmin.value.slice(0, 10));
-    // 'file' comes from the Blob or File API
-    uploadBytes(storageRef, NotificationPictureAdmin.files[0]).then((snapshot) => {
-      console.log('Uploaded a blob or file!');
-      NotificationPictureAdmin.value = "";
-      NotificationHeaderAdmin.value = "";
-      NotificationParagraphAdmin.value = "";
-    });
-  }
-
-}
-
-NotificationSubmit.addEventListener("click", function () {
-  writeNotificationData();
-})
