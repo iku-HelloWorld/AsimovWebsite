@@ -89,7 +89,7 @@ kayit.addEventListener("click", () => {
   const file = yükleme.files[0];
   const description = aciklama.value;
   const storage = getStorage();
-  const storageRef = sRef(storage, "sponsorImages/" + file.name);
+  const storageRef = ref(storage, "sponsorImages/" + file.name);
 
   const metadata = {
     contentType: file.type,
@@ -98,31 +98,25 @@ kayit.addEventListener("click", () => {
     },
   };
 
-  const uploadTask = uploadBytes(storageRef, file, metadata)
+  const uploadTask = put(storageRef, file, metadata)
     .then((snapshot) => {
       console.log("success");
+      return snapshot.ref.getDownloadURL();
+    })
+    .then((downloadURL) => {
+      const newSponsor = {
+        description: description,
+        imageURL: downloadURL,
+        title: "", // Eklenecek başlık
+      };
+      const newSponsorRef = ref(db, "sponsorImages");
+      return set(push(newSponsorRef), newSponsor);
+    })
+    .then(() => {
+      console.log("Resim veritabanına kaydedildi.");
+      showSponsors(); // Sponsorları güncelleyerek yeniden göster
     })
     .catch((error) => {
       console.error("Hata:", error);
     });
-
-  // uploadTask
-  //   .then((snapshot) => {
-  //     // Yükleme tamamlandığında yapılacak işlemler buraya gelebilir.
-  //     console.log("Resim başarıyla yüklendi.");
-  //     return snapshot.ref.getDownloadURL();
-  //   })
-  //   .then((downloadURL) => {
-  //     // Resim URL'sini veritabanına kaydedebilirsiniz
-  //     firebase.database().ref("sponsorImages/").push({
-  //       description: description,
-  //       imageURL: downloadURL,
-  //     });
-  //   })
-  //   .then(() => {
-  //     console.log("Resim veritabanına kaydedildi.");
-  //   })
-  //   .catch((error) => {
-  //     console.error("Hata:", error);
-  //   });
 });

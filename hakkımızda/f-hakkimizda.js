@@ -33,7 +33,7 @@ const sponsorContainer = document.querySelector(".sponsor-container");
 
 // Verileri Firebase'den alıp HTML'e ekleme
 function showSponsors() {
-  get(child(ref(db), "sponsorlar"))
+  get(child(ref(db), "sponsorImages"))
     .then((snapshot) => {
       if (snapshot.exists()) {
         sponsorContainer.innerHTML = "";
@@ -41,7 +41,7 @@ function showSponsors() {
         Object.keys(sponsors).forEach((sponsorKey) => {
           const sponsor = sponsors[sponsorKey];
           const description = sponsor.description;
-          const image = sponsor.image;
+          const image = sponsor.imageURL;
           const title = sponsor.title;
 
           const sponsorHTML = `
