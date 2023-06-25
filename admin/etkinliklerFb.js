@@ -36,14 +36,17 @@ const etkinlilerRemove = document.querySelector(
   ".etkinlikler-remove"
 );
 
+const etkinliklerRef = ref(database, "etkinlikler"); // Reference to the 'etkinlikler' node in the database
+
+const dbRef = ref(getDatabase());
 get(child(dbRef, `etkinlikler/`))
   .then((snapshot) => {
     if (snapshot.exists()) {
       // console.log(Object.entries(snapshot.val()));
 
       Object.entries(snapshot.val()).forEach((e) => {
-        const ad = e[1].isim;
-        const nick = e[1].etkinlikler;
+        const başlık = e[1].başlık;
+        const açıklama = e[1].açıklama;
 
         etkinliklerRemove.insertAdjacentHTML(
           "afterbegin",
@@ -81,16 +84,4 @@ get(child(dbRef, `etkinlikler/`))
     }
   );
 
-const etkinliklerRef = ref(database, "etkinlikler"); // Reference to the 'etkinlikler' node in the database
-
-const dbRef = ref(getDatabase());
-get(child(dbRef, `etkinlikler/`)).then((snapshot) => {
-  if (snapshot.exists()) {
-    console.log(snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.error(error);
-});
 // etkinliklerimiz
