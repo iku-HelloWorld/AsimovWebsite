@@ -124,6 +124,12 @@ p {
   border: var(--black) 2px solid;
 }
 
+.kurumsal-iletişim-üye {
+  border: var(--black) 2px solid;
+}
+.yönetim-kurulu-üye {
+  border: var(--black) 2px solid;
+}
 .helloworld-üye {
   border: var(--black) 2px solid;
 }
