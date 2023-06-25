@@ -122,7 +122,6 @@ const bgImgTop = bgImg.getBoundingClientRect().top;
 let oldCursorX;
 
 $(window).on("mousemove", function (e) {
-  
   if (isPressedDown) {
     if (Math.abs(oldCursorX - e.clientX) >= cursorThreshold) {
       // totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
@@ -138,7 +137,7 @@ $(window).on("mousemove", function (e) {
       mainScreenContainer.style.filter = "blur(2px)";
       header.style.opacity = "0";
 
-      totalDistance = 0;
+      // totalDistance = 0;
     }
   } else {
     oldCursorX = e.clientX;
