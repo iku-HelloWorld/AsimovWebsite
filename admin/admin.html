@@ -35,7 +35,19 @@
       <div class="etkinlikler">
         <h1>etkinlikler</h1>
         <p>ekle</p>
+        <input
+          type="file"
+          class="etkinlikler-img"
+          accept="image/jpeg,image/png"
+        />
+        <input
+        type="text"
+          class="etkinlikler-name"
+          placeholder="isim"
+        />
+        <input type="submit" class="etkinlikler-submit" />
         <p>sil</p>
+        <div class="etkinlikler-remove"></div>
       </div>
       <div class="sponsor">
         <h1>sponsor</h1>
@@ -80,4 +92,5 @@
     </section>
   </body>
   <script defer type="module" src="admin.js"></script>
+  <script defer type="module" src="etkinliklerFb.js"></script>
 </html>
