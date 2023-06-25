@@ -15,22 +15,31 @@
       <input class="submit" type="submit" value="login" />
     </div>
     <section class="edit" style="opacity: 100%">
-      <div class="bildirimler">
+      <div class="Notification">
         <h1>Bildirimler</h1>
 
         <p>ekle</p>
+        <input
+          type="file"
+          class="NotificationPictureAdmin"
+          accept="image/jpeg,image/png"
+        />
+        <input
+          type="text"
+          class="NotificationHeaderAdmin"
+          placeholder="Başlık"
+        />
+        <input
+          type="text"
+          class="NotificationParagraphAdmin"
+          placeholder="Açıklama"
+        />
 
+        <input type="submit" class="Notification-submit" />
         <p>sil</p>
+        <div class="Notification-delete"></div>
       </div>
-      <div class="takımlar">
-        <h1>takımlar</h1>
-        <p>ekle</p>
-        <p>sil</p>
-      </div>
-      <div class="galeri-resim">
-        <h1>galeri</h1>
-        <p>ekle</p>
-        <p>sil</p>
+
       <div class="anasayfa-galeri">
         <h1>anasayfa galeri</h1>
         <p>ekle</p>
@@ -47,15 +56,7 @@
         />
         <input type="submit" class="anasayfa-galeri-submit" />
         <p>sil</p>
-        <div class="anasayfa-galeri-sil">
-          
-        </div>
-      </div>
-      </div>
-      <div class="etkinlikler">
-        <h1>etkinlikler</h1>
-        <p>ekle</p>
-        <p>sil</p>
+        <div class="anasayfa-galeri-sil"></div>
       </div>
 
       <!-- //////////////////////////////////////////////////////////// -->
@@ -78,13 +79,16 @@
         <div class="activities-remove"></div>
       </div>
 
-      <!-- //////////////////////////////////////////////////////////// -->
-      <div class="sponsor">
+      <div class="sponsor-member">
         <h1>sponsor</h1>
-        <p>ekle</p>
+        <input type="file" name="" class="sponsor-file" />
+        <input type="text" placeholder="isim" class="sponsor-header" />
+        <input type="submit" class="sponsor-submit" />
+
         <p>sil</p>
+        <div class="sponsor-remove-div"></div>
       </div>
-      <!-- //////////////////////////////////////////////////////////// -->
+
       <div class="corporate-communication-member">
         <h1>kurumsal iletişim üye</h1>
         <p>ekle</p>
@@ -287,42 +291,6 @@
         <div class="dataai-member-remove"></div>
       </div>
 
-        <input type="file" name="" class="sponsor-file" />
-        <input type="text" placeholder="isim" class="sponsor-header" />
-        <input type="submit" class="sponsor-submit" />
-      </div>
-      <p>sil</p>
-      <div class="sponsor-remove-div"></div>
-      <div class="kurumsal-iletişim-üye">
-        <h1>kurumsal iletişim üye</h1>
-        <p>ekle</p>
-        <p>sil</p>
-      </div>
-      <div class="yönetim-kurulu-üye">
-        <h1>yönetim kurulu üye</h1>
-        <p>ekle</p>
-        <p>sil</p>
-      </div>
-      <div class="helloworld-üye">
-        <h1>hello world üye</h1>
-        <p>ekle</p>
-        <p>sil</p>
-      </div>
-      <div class="otonom-üye">
-        <h1>otonom üye</h1>
-        <p>ekle</p>
-        <p>sil</p>
-      </div>
-      <div class="roket-üye">
-        <h1>roket üye</h1>
-        <p>ekle</p>
-        <p>sil</p>
-      </div>
-      <div class="dataai-üye">
-        <h1>dataAI üye</h1>
-        <p>ekle</p>
-        <p>sil</p>
-      </div>
       <div class="core-üye">
         <h1>core üye</h1>
         <p>ekle</p>
@@ -359,6 +327,9 @@
     </section>
   </body>
   <script defer type="module" src="admin.js"></script>
+  <script defer type="module" src="NotificationAdmin.js"></script>
+  <script defer type="module" src="galeriFb.js"></script>
+  <script defer type="module" src="etkinliklerFb.js"></script>
   <script defer type="module" src="corporateCommunicationFb.js"></script>
   <script defer type="module" src="directoryTeamFb.js"></script>
   <script defer type="module" src="helloWorldFb.js"></script>
@@ -367,98 +338,4 @@
   <script defer type="module" src="dataaiFb.js"></script>
   <script defer type="module" src="coreFb.js"></script>
   <script defer type="module" src="sponsorFb.js"></script>
-</html>
-
-<head>
-  <link rel="stylesheet" href="admin.css" />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>adminPanel</title>
-</head>
-
-<body>
-  <div class="login" style="opacity: 0%; display: none">
-    <h1>Giriş Yapın</h1>
-    <p>E-posta<input class="username" type="text" /></p>
-    <p>Şifre<input class="password" type="text" /></p>
-    <input class="submit" type="submit" value="login" />
-  </div>
-  <section class="edit" style="opacity: 100%">
-    <div class="Notification">
-      <h1>Bildirimler</h1>
-
-
-      <p>ekle</p>
-      <input type="file" class="NotificationPictureAdmin" accept="image/jpeg,image/png" />
-      <input type="text" class="NotificationHeaderAdmin" placeholder="Başlık" />
-      <input type="text" class="NotificationParagraphAdmin" placeholder="Açıklama" />
-
-      <input type="submit" class="Notification-submit" />
-      <p>sil</p>
-      <div class="Notification-delete">
-      </div>
-    </div>
-
-    <div class="takımlar">
-      <h1>takımlar</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="galeri-resim">
-      <h1>galeri</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="etkinlikler">
-      <h1>etkinlikler</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="sponsor">
-      <h1>sponsor</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="kurumsal-iletişim-üye">
-      <h1>kurumsal iletişim üye</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="yönetim-kurulu-üye">
-      <h1>yönetim kurulu üye</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="helloworld-üye">
-      <h1>hello world üye</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="otonom-üye">
-      <h1>otonom üye</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="roket-üye">
-      <h1>roket üye</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="dataai-üye">
-      <h1>dataAI üye</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-    <div class="core-üye">
-      <h1>core üye</h1>
-      <p>ekle</p>
-      <p>sil</p>
-    </div>
-  </section>
-</body>
-<script defer type="module" src="NotificationAdmin.js"></script>
-
-  <script defer type="module" src="etkinliklerFb.js"></script>
-  <script defer type="module" src="galeriFb.js"></script>
 </html>

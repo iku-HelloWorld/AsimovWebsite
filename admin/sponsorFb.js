@@ -31,6 +31,8 @@ import {
 const firebaseConfig = {
   apiKey: "AIzaSyCIQyW2X33YimVFujydd3ycfrmuC-oLYzo",
   authDomain: "asimov-website.firebaseapp.com",
+  databaseURL:
+    "https://asimov-website-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "asimov-website",
   storageBucket: "asimov-website.appspot.com",
   messagingSenderId: "693182885740",
@@ -108,13 +110,15 @@ removeDiv.addEventListener("click", function (e) {
   if (e.target.closest(".sponsor-remove-btn")) {
     let name = e.target.parentNode.dataset.name;
     // console.log(e.target.parentNode.dataset.name);
-    deleteObject(sRef(storage, "sponsorImages/" + name))
-      .then(() => {
-        // console.log("sildim");
-        location.reload();
-      })
-      .catch((error) => {
-        // console.error(error);
-      });
+    if (confirm(name + "adlı sponsor silinsin mi?")) {
+      deleteObject(sRef(storage, "sponsorImages/" + name))
+        .then(() => {
+          // console.log("sildim");
+          location.reload();
+        })
+        .catch((error) => {
+          // console.error(error);
+        });
+    }
   }
 });

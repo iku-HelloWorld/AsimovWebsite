@@ -345,6 +345,7 @@
   width: 30vw;
   box-shadow: -10px 10px 0px 0px#3d52a5;
   align-items: center;
+  object-fit: cover;
 }
 
 .TeamPageContentText {
