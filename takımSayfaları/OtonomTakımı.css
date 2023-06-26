@@ -336,7 +336,7 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-items: center;
-  padding-top: 4%;
+  padding-top: 9%;
   justify-content: center;
   gap: 10vh;
 }
