@@ -339,6 +339,7 @@
   padding-top: 9%;
   justify-content: center;
   gap: 10vh;
+  position: relative;
 }
 
 .TeamPageContentImg img {
