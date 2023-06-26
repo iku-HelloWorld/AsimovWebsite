@@ -81,6 +81,25 @@ p {
 .galeri-resim {
   border: var(--black) 2px solid;
 }
+
+.anasayfa-galeri-sil {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  overflow: scroll;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  display: grid;
+  align-items: center;
+}
+
 .etkinlikler {
   border: var(--black) 2px solid;
 }
@@ -89,7 +108,7 @@ p {
 }
 
 .corporate-communication-member-remove {
-  height: 300px;
+  height: 200px;
   overflow: scroll;
   border: var(--black) 2px solid;
 }
