@@ -107,35 +107,35 @@ button {
   border: var(--black) 2px solid;
 }
 .Notification-delete {
-  height: 200px;
+  height: 300px;
   overflow: scroll;
   border: var(--black) 2px solid;
   background-color: lightgrey;
   margin-top: 5px;
 }
 .anasayfa-galeri-sil {
-  height: 200px;
+  height: 300px;
   overflow: scroll;
   border: var(--black) 2px solid;
   background-color: lightgrey;
   margin-top: 5px;
 }
 .activities-remove {
-  height: 200px;
+  height: 300px;
   overflow: scroll;
   border: var(--black) 2px solid;
   background-color: lightgrey;
   margin-top: 5px;
 }
 .sponsor-remove-div {
-  height: 200px;
+  height: 300px;
   overflow: scroll;
   border: var(--black) 2px solid;
   background-color: lightgrey;
   margin-top: 5px;
 }
 .corporate-communication-member-remove {
-  height: 200px;
+  height: 300px;
   overflow: scroll;
   border: var(--black) 2px solid;
   background-color: lightgrey;
