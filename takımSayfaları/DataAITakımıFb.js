@@ -70,7 +70,7 @@ const getMembers = function () {
           <div class="TeamPageMembersCardsText">
             <p class="TeamPageMembersCardsTextHeader">${ad}</p>
             <p class="TeamPageMembersCardsTextMajor">
-              ${ünvan}<br>${bölüm}
+            <span class="${ünvan}"> ${ünvan}</span><br><span class="${bölüm}">${bölüm}</span>
             </p>
           </div>
         </section>

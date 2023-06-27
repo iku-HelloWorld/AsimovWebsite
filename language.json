@@ -20,19 +20,17 @@
       "footerGaleri": "Galeri",
       "footerİletişim": "İletişim"
     },
-    "unvanlar": {
-      "yönetici": "Yönetici",
-      "danışman": "Danışman",
-      "sm": "Sosyal Medya Moderatörü",
-      "pho": "Fotoğrafçı",
-      "dev": "Yazılım Geliştirici",
-      "mekanik": "Mekanik Uzmanı",
-      "elektrik": "Elektrik Elektronik Uzmanı"
+    "ünvanlar": {
+      "Yönetici": "Yönetici",
+      "Danışman": "Danışman",
+      "Fotoğrafçı": "Fotoğrafçı",
+      "Yazılımcı": "Yazılım Geliştirici",
+      "Mekanik": "Mekanik Uzmanı",
+      "Elektronikçi": "Elektrik Elektronik Uzmanı"
     },
     "bölümler": {
-      "bm": "Bilgisayar Mühendisi",
-      "eem": "Elektrik Elektronik Mühendisi",
-      "mm": "Makine Mühendisi"
+      "Bilgisayar Mühendisliği": "Bilgisayar Mühendisi",
+      "Elektrik Elektronik Mühendisliği": "Elektrik Elektronik Mühendisi"
     },
 
     "mainscreen": {
@@ -150,19 +148,17 @@
       "footerGaleri": "Gallery",
       "footerİletişim": "Contact Us"
     },
-    "unvanlar": {
-      "yönetici": "Director",
-      "danışman": "Adviser",
-      "sm": "Social Media Moderator",
-      "pho": "Photographer",
-      "dev": "Software Devoloper",
-      "mekanik": "Mechanics",
-      "elektrik": "Electrical Electronics Specialist"
+    "ünvanlar": {
+      "Yönetici": "Leader",
+      "Danışman": "Consultant",
+      "Fotoğrafçı": "Photographer",
+      "Yazılımcı": "Software Developer",
+      "Mekanik": "Mechanic",
+      "Elektronikçi": "Electronic"
     },
     "bölümler": {
-      "bm": "Computer Science Engineer",
-      "eem": "Electrical Electronics Engineer",
-      "mm": "Mechanical Engineer"
+      "Bilgisayar Mühendisliği": "Bilgisayar Mühendisi",
+      "Elektrik Elektronik Mühendisliği": "Elektrik Elektronik Mühendisi"
     },
     "mainscreen": {
       "kaydır": "Swipe Right For Notifications",

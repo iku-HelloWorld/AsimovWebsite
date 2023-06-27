@@ -162,6 +162,26 @@ const handleLang = function () {
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
+    for (let key in json.Tr.ünvanlar) {
+      if (document.querySelectorAll(`.${key}`)) {
+        document.querySelectorAll(`.${key}`).forEach((v) => {
+          v.textContent = `${json.Tr.ünvanlar[key]}`;
+        });
+      } else {
+        console.log(key + "is not accesable");
+      }
+      // console.log(document.querySelectorAll(`${key}`), json.En.navbar[key]);
+    }
+    for (let key in json.Tr.bölümler) {
+      if (document.querySelectorAll(`.${key}`)) {
+        document.querySelectorAll(`.${key}`).forEach((v) => {
+          v.textContent = `${json.Tr.bölümler[key]}`;
+        });
+      } else {
+        console.log(key + "is not accesable");
+      }
+      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
+    }
   } else {
     lang = json.En.lang;
     // navbar
@@ -187,6 +207,27 @@ const handleLang = function () {
         console.log(key + " not exist");
       }
       // console.log(document.getElementById(`${key}`));
+    }
+    for (let key in json.En.ünvanlar) {
+      // console.log(key);
+      if (document.querySelectorAll(`.${key}`)) {
+        document.querySelectorAll(`.${key}`).forEach((v) => {
+          v.textContent = `${json.En.ünvanlar[key]}`;
+        });
+      } else {
+        console.log(key + "is not accesable");
+      }
+      // console.log(document.querySelectorAll(`${key}`), json.En.navbar[key]);
+    }
+    for (let key in json.En.bölümler) {
+      if (document.querySelectorAll(`.${key}`)) {
+        document.querySelectorAll(`.${key}`).forEach((v) => {
+          v.textContent = `${json.En.bölümler[key]}`;
+        });
+      } else {
+        console.log(key + "is not accesable");
+      }
+      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
   }
 };
