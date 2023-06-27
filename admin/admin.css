@@ -12,6 +12,12 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  background-image: url("/admin/Asimov_Logolar/asimovmainbackground.png");
+  background-color: #cccccc;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode:difference;
 }
 
 * {
@@ -22,7 +28,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .login {
   background-color: var(--light-color);
   height: 400px;
@@ -47,6 +52,10 @@ h1 {
   margin-top: 20px;
   margin-bottom: 40px;
   margin-left: 20px;
+  font-family:'poppins';
+  font-size: 5vh;
+  color:#cccccc;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 input {
@@ -56,6 +65,11 @@ input {
 p {
   margin: 20px;
   display: grid;
+  font-family: sans-serif;
+  font-size: 3vh;
+  color:#322727;
+  text-shadow: 0px 0px 10px #cccccc;
+  font-weight: 600;
 }
 
 .submit {
@@ -106,12 +120,16 @@ button {
 .sponsor {
   border: var(--black) 2px solid;
 }
+.Notification-delete-button{
+  border-color: var(--black) 2px solid;
+  margin-left: 1%;
+  margin-top: 2%;
+}
 .Notification-delete {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
+  height: 40vh;
   background-color: lightgrey;
-  margin-top: 5px;
+  overflow: scroll;
+  font-size: 2vh;
 }
 .anasayfa-galeri-sil {
   height: 300px;

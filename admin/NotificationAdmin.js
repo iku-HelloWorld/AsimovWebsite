@@ -67,7 +67,7 @@ get(child(dbRef, `bildirim/`))
           `<div>
             <!--${NotificationDeleteHeader}-->
               ${NotificationDeleteText}
-              <button class="Notification-delete">Bildirimi sil</button>
+              <button class="Notification-delete-button">Bildirimi sil</button>
             </div>`
         );
       });
