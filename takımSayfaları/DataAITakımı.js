@@ -27,6 +27,20 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const textBtn = document.getElementById("lang");
+
+let lang = "Tr";
+
+const turnAnimate = { transform: "rotate(360deg)" };
+const turnTiming = { duration: 300, iterations: 1 };
+
+const handleAnimation = function () {
+  // console.log(lang);
+  textBtn.animate(turnAnimate, turnTiming);
+  // textBtn.textContent = lang;
+  handleLang();
+};
+
 const handleLang = function () {
   if (lang === "Tr") {
     lang = json.Tr.lang;
@@ -40,11 +54,11 @@ const handleLang = function () {
         console.log(key + " key in json is not accesable in this page");
       }
     }
-    for (let key in json.Tr.dataaiTakımı) {
+    for (let key in json.Tr.dataai) {
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`
-        ).textContent = `${json.Tr.dataaiTakımı[key]}`;
+        ).textContent = `${json.Tr.dataai[key]}`;
       } else {
         console.log(key + "is not accesable");
       }
@@ -65,11 +79,11 @@ const handleLang = function () {
     }
 
     // mainscreen
-    for (let key in json.En.dataaiTakımı) {
+    for (let key in json.En.dataai) {
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`
-        ).textContent = `${json.En.dataaiTakımı[key]}`;
+        ).textContent = `${json.En.dataai[key]}`;
       } else {
         console.log(key + " not exist");
       }
