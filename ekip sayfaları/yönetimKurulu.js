@@ -1,4 +1,5 @@
 "use strict";
+import json from "/language.json" assert { type: "json" };
 
 const nav = document.querySelector(".navbar-wrapper");
 const header = document.querySelector(".header");
