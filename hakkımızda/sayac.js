@@ -22,7 +22,8 @@ const ai = sRef(storage, "dataaiÜye/");
 const ki = sRef(storage, "coprorateCommunicationMember/");
 const yk = sRef(storage, "yönetimKuruluÜye/");
 
-const arr = [];
+let arr = [];
+let etkCount = 0;
 const getMemberCount = function () {
   listAll(hw)
     .then((res) => {
@@ -122,9 +123,14 @@ const getMemberCount = function () {
     .catch((error) => {
       // Uh-oh, an error occurred!
     });
+  get(child(ref(getDatabase()), "etkinlikler/")).then((snapshot) => {
+    etkCount = Object.keys(snapshot.val()).length;
+    updateCount();
+  });
 };
 const updateCount = function () {
-  document.querySelector(".sayac-num").textContent = arr.length;
+  document.querySelector("#member-count").dataset.value = arr.length;
+  document.querySelector("#activitiy-count").dataset.value = etkCount;
 };
 
 getMemberCount();
