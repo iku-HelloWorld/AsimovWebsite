@@ -20,6 +20,8 @@ import {
 const firebaseConfig = {
   apiKey: "AIzaSyCIQyW2X33YimVFujydd3ycfrmuC-oLYzo",
   authDomain: "asimov-website.firebaseapp.com",
+  databaseURL:
+    "https://asimov-website-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "asimov-website",
   storageBucket: "asimov-website.appspot.com",
   messagingSenderId: "693182885740",
