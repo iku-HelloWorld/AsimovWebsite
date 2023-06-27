@@ -44,3 +44,73 @@ navbarLinkUl.addEventListener("click", function (e) {
       .scrollIntoView({ behavior: "smooth" }, true);
   }
 });
+
+const textBtn = document.getElementById("lang");
+
+let lang = "Tr";
+
+const turnAnimate = { transform: "rotate(360deg)" };
+const turnTiming = { duration: 300, iterations: 1 };
+
+const handleAnimation = function () {
+  // console.log(lang);
+  textBtn.animate(turnAnimate, turnTiming);
+  // textBtn.textContent = lang;
+  handleLang();
+};
+
+const handleLang = function () {
+  if (lang === "Tr") {
+    lang = json.Tr.lang;
+    // navbar
+    for (let key in json.Tr.navbar) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.Tr.navbar[key]}`;
+      } else {
+        console.log(key + " key in json is not accesable in this page");
+      }
+    }
+    for (let key in json.Tr.helloWorld) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.Tr.helloWorld[key]}`;
+      } else {
+        console.log(key + "is not accesable");
+      }
+      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
+    }
+  } else {
+    lang = json.En.lang;
+    // navbar
+    for (let key in json.En.navbar) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.En.navbar[key]}`;
+      } else {
+        console.log(key + "is not accesable");
+      }
+      // console.log(document.getElementById(`${key}`));
+    }
+
+    // mainscreen
+    for (let key in json.En.helloWorld) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.En.helloWorld[key]}`;
+      } else {
+        console.log(key + " not exist");
+      }
+      // console.log(document.getElementById(`${key}`));
+    }
+  }
+};
+
+textBtn.addEventListener("click", function () {
+  handleAnimation();
+});
+handleLang();
