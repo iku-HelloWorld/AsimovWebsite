@@ -171,13 +171,14 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " is not accesable");
       }
       // console.log(document.getElementById(`${key}`));
     }
 
     // mainscreen
     for (let key in json.En.kurumsalİletişim) {
+      // console.log(key, document.getElementById(`${key}`));
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`

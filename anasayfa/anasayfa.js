@@ -377,7 +377,7 @@ const handleLang = function () {
     lang = json.En.lang;
     // navbar
     for (let key in json.En.navbar) {
-      // console.log(document.getElementById(`${key}`));
+      console.log(document.getElementById(`${key}`));
       document.getElementById(`${key}`).textContent = `${json.En.navbar[key]}`;
     }
 

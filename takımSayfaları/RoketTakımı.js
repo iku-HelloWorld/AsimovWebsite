@@ -26,6 +26,19 @@ window.addEventListener("scroll", function () {
     // console.log("bye");
   }
 });
+const textBtn = document.getElementById("lang");
+
+let lang = "Tr";
+
+const turnAnimate = { transform: "rotate(360deg)" };
+const turnTiming = { duration: 300, iterations: 1 };
+
+const handleAnimation = function () {
+  // console.log(lang);
+  textBtn.animate(turnAnimate, turnTiming);
+  // textBtn.textContent = lang;
+  handleLang();
+};
 
 const handleLang = function () {
   if (lang === "Tr") {
