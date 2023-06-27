@@ -147,29 +147,36 @@ const handleLang = function () {
         console.log(key + " key in json is not accesable in this page");
       }
     }
-
-    // hakkımızda TODO:
-    // for (let key in json.Tr.mainscreen) {
-    //   // console.log(key, document.getElementById(key));
-
-    //   document.getElementById(
-    //     `${key}`
-    //   ).textContent = `${json.Tr.mainscreen[key]}`;
-    // }
+    for (let key in json.Tr.hakkımızda) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.Tr.hakkımızda[key]}`;
+      } else {
+        console.log(key + "is not accesable");
+      }
+      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
+    }
   } else {
     lang = json.En.lang;
     // navbar
     for (let key in json.En.navbar) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.En.navbar[key]}`;
+      } else {
+        console.log(key + "is not accesable");
+      }
       // console.log(document.getElementById(`${key}`));
-      document.getElementById(`${key}`).textContent = `${json.En.navbar[key]}`;
     }
 
     // mainscreen
-    for (let key in json.En.mainscreen) {
+    for (let key in json.En.hakkımızda) {
       // console.log(document.getElementById(`${key}`));
       document.getElementById(
         `${key}`
-      ).textContent = `${json.En.mainscreen[key]}`;
+      ).textContent = `${json.En.hakkımızda[key]}`;
     }
   }
 };
@@ -178,5 +185,3 @@ textBtn.addEventListener("click", function () {
   handleAnimation();
 });
 handleLang();
-
-
