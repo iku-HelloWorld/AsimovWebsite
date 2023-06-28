@@ -294,7 +294,7 @@
 
     overflow: hidden;
     position: absolute;
-    left: 50%;
+    left: 25%;
     top: 0;
     background-color: transparent;
     color: var(--white);

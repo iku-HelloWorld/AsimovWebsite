@@ -208,12 +208,13 @@
   }
 
   .asimov-logo {
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 0%;
+    top: 20vh;
     transform: translate(-50%, -100%);
     width: 18vw;
     height: 20vw;
+    min-width: 80px;
   }
 
   .asimov-logo img {
@@ -221,6 +222,7 @@
     position: relative;
     top: 0;
     left: 0;
+    object-fit: contain;
   }
 
   .navbar-wrapper {
@@ -288,7 +290,7 @@
 
     overflow: hidden;
     position: absolute;
-    left: 50%;
+    left: 25%;
     top: 0;
     background-color: transparent;
     color: var(--white);

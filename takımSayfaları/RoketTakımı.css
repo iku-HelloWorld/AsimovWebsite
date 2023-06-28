@@ -208,8 +208,8 @@
   }
 
   .asimov-logo {
-    position: relative;
-    left: 50%;
+    position: absolute;
+    left: 20vh;
     transform: translate(-50%, -100%);
     width: 18vw;
     height: 20vw;
@@ -287,7 +287,7 @@
 
     overflow: hidden;
     position: absolute;
-    left: 50%;
+    left: 25%;
     top: 0;
     background-color: transparent;
     color: var(--white);

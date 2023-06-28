@@ -208,11 +208,13 @@
   }
 
   .asimov-logo {
-    position: relative;
+    position: absolute;
     left: 50%;
     transform: translate(-50%, -100%);
     width: 18vw;
     height: 20vw;
+    top: 20vh;
+    min-width: 80px;
   }
 
   .asimov-logo img {
@@ -220,6 +222,7 @@
     position: relative;
     top: 0;
     left: 0;
+    object-fit: contain;
   }
 
   .navbar-wrapper {
@@ -287,7 +290,7 @@
 
     overflow: hidden;
     position: absolute;
-    left: 50%;
+    left: 25%;
     top: 0;
     background-color: transparent;
     color: var(--white);
@@ -462,7 +465,7 @@
 /* içerik 2 */
 .takımsayfasıiçerik2 p {
   font-family: sans-serif;
-  font-size: 2vh;
+  font-size: large;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 0%;
@@ -491,7 +494,7 @@
 @media (max-width: 850px) {
   .takımsayfasıiçerik2 p {
     font-family: sans-serif;
-    font-size: 1vh;
+    font-size: medium;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 0%;
