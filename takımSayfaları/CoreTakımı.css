@@ -98,11 +98,13 @@
   display: flex;
   position: absolute;
   right: 3rem;
+  text-align: center;
 }
 
 .nav-toggle a {
   text-decoration: none;
-
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   color: black;
   padding: 5px 5px;
