@@ -211,7 +211,7 @@
   .asimov-logo {
     position: absolute;
     left: 50%;
-    top: 20%;
+    top: 0%;
     transform: translateX(-50%);
     width: 18vw;
     height: 20vw;

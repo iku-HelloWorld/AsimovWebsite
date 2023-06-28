@@ -21,7 +21,7 @@
   background: var(--main-color);
   top: 0;
   z-index: 1;
-  position: block;
+  position: absolute;
   width: 100%;
   transition: ease 300ms;
 }
@@ -200,14 +200,23 @@
     height: auto;
     width: 100%;
     z-index: 5;
-    position: block;
-    background-color: #3d4149c0;
+    position: fixed;
+    background-color: var(--main-color);
+  }
+
+  .h-active {
+    position: fixed;
+    height: 10vh;
+    background: transparent;
+    top: 0;
+    z-index: 1;
+    width: 100%;
   }
 
   .asimov-logo {
     position: relative;
     left: 50%;
-
+    top: 0%;
     transform: translate(-50%, -100%);
     width: 18vw;
     height: 20vw;
@@ -341,7 +350,6 @@
   padding-right: 5vw;
   height: 100vh;
   width: 100%;
-  
 }
 
 .kurumsalİletişimsayfasıiçerik {
@@ -367,8 +375,6 @@
   overflow: visible;
   display: flex;
   top: 14%;
-  
-  
 }
 .slide {
   width: 100%;
@@ -622,15 +628,15 @@
 /* /////////////////////////// */
 /*responsive*/
 @media only screen and (max-width: 1300px) {
-    .slider-container {
-      width: 70%;
-      height: 50%;
-    }
+  .slider-container {
+    width: 70%;
+    height: 50%;
+  }
 
-    .slide {
-      max-width: 100%;
-      max-height: 70%;
-    }
+  .slide {
+    max-width: 100%;
+    max-height: 70%;
+  }
   .kurumsalİletişimdots {
     bottom: 12%;
   }
@@ -657,8 +663,6 @@
   }
   .kurumsalİletişimsayfasıiçerik {
     font-size: small;
-    
-    
   }
   .TeamPageMembersHeader {
     font-size: medium;

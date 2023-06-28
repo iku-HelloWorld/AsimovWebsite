@@ -33,19 +33,19 @@ button.addEventListener(`click`, () => {
   });
 });
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY === 0) {
-    // header.style.position = "fixed";
-    console.log();
-    header.classList.remove("h-active");
-    console.log("hi");
-  } else {
-    // header.style.position = "absolute";
-    header.classList.add("h-active");
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY === 0) {
+//     // header.style.position = "fixed";
+//     // console.log();
+//     header.classList.remove("h-active");
+//     // console.log("hi");
+//   } else {
+//     // header.style.position = "absolute";
+//     header.classList.add("h-active");
 
-    console.log("bye");
-  }
-});
+//     // console.log("bye");
+//   }
+// });
 
 /* yönetim kurulu img slider */
 const slides = document.querySelectorAll(".slide");
