@@ -59,7 +59,7 @@ const replaceGaleri = function (galeriPage, key, imgurl) {
   galeriPage.insertAdjacentHTML(
     "afterbegin",
     `<div class="image">
-<img src="${imgurl}" alt="" />
+<img loading="lazy" src="${imgurl}" alt="" />
 
 <div style="display:none" class="image_div_content">${key[1].nick}</div>
 </div>`
@@ -154,7 +154,7 @@ const imgFocusShow = function (metadata, url, state) {
     galeriCont.style.filter = "blur(5px)";
     newDiv.innerHTML = `<span class="new_div-close"><i class="fa fa-close"></i
     ></span>
-    <img src="${url}" />
+    <img loading="lazy" src="${url}" />
     <div class="new_div-info">
       <p>
         ${metadata.acıklama}

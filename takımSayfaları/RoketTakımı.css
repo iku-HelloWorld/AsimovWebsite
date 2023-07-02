@@ -73,10 +73,10 @@
   list-style: none;
   text-decoration: none;
   position: absolute;
-  padding-right: 1rem;
+  /* padding-right: 1rem; */
   align-items: center;
   z-index: 5;
-  right: 8%;
+  /* right: 8%; */
   gap: 2rem;
 }
 
@@ -209,10 +209,12 @@
 
   .asimov-logo {
     position: absolute;
-    left: 20vh;
+    top: 20vh;
+    left: 50%;
     transform: translate(-50%, -100%);
     width: 18vw;
     height: 20vw;
+    min-width: 80px;
   }
 
   .asimov-logo img {
@@ -220,6 +222,8 @@
     position: relative;
     top: 0;
     left: 0;
+
+    object-fit: contain;
   }
 
   .navbar-wrapper {
@@ -563,6 +567,7 @@
   height: 15vh;
   border-radius: 50%;
   border: 2px solid var(--black);
+  object-fit: contain;
 }
 
 .TeamPageMembersCardsTextHeader {
@@ -586,43 +591,6 @@
   font-size: 1.6vh;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .TeamPageMembers {
-    padding-left: 5%;
-    padding-right: 5%;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersHeader {
-    font-size: 2vh;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCards {
-    width: 45%;
-    height: auto;
-    padding: 5%;
-    margin: 2% 0;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCardsImg img {
-    margin-top: 4%;
-    width: 40%;
-    height: auto;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCardsTextHeader {
-    font-size: 2vh;
-  }
-
-  .TeamPageMembersCardsTextMajor {
-    font-size: 1.4vh;
-  }
-}
-/*responsive*/
 /*üyeler*/
 
 /* footer */

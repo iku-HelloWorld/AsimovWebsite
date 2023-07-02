@@ -351,7 +351,6 @@
   width: 30vw;
   box-shadow: -10px 10px 0px 0px#3d52a5;
   align-items: center;
-  object-fit: cover;
 }
 
 .TeamPageContentText {
@@ -566,6 +565,7 @@
   height: 15vh;
   border-radius: 50%;
   border: 2px solid var(--black);
+  object-fit: contain;
 }
 
 .TeamPageMembersCardsTextHeader {
@@ -589,42 +589,6 @@
   font-size: 1.6vh;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .TeamPageMembers {
-    padding-left: 5%;
-    padding-right: 5%;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersHeader {
-    font-size: 2vh;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCards {
-    width: 45%;
-    height: auto;
-    padding: 5%;
-    margin: 2% 0;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCardsImg img {
-    margin-top: 4%;
-    width: 40%;
-    height: auto;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCardsTextHeader {
-    font-size: 2vh;
-  }
-
-  .TeamPageMembersCardsTextMajor {
-    font-size: 1.4vh;
-  }
-}
 /*responsive*/
 /*üyeler*/
 

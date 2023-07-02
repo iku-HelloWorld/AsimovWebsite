@@ -359,7 +359,7 @@
   width: 100%;
   height: auto;
   position: relative;
-  top: 5vh;
+  top: 20vh;
   margin: 0;
 }
 .kurumsalİletişimsayfasıiçerik h1 {
@@ -377,7 +377,7 @@
   transform: translateX(-50%);
   overflow: visible;
   display: flex;
-  top: 10vh;
+  top: 20vh;
   z-index: 0;
 }
 .slide {
