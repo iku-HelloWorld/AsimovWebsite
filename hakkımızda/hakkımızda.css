@@ -786,7 +786,7 @@ body {
   .aboutussection1 p {
     color: var(--white);
     font-size: 10px;
-    font-family: sans-serif;
+    font-family: "Poppins";
     transition: 1s all;
   }
 }

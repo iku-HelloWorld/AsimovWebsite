@@ -14,10 +14,10 @@ body {
   justify-content: center;
   background-image: url("/admin/Asimov_Logolar/asimovmainbackground.png");
   background-color: #cccccc;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode:difference;
+  background-blend-mode: difference;
 }
 
 * {
@@ -52,9 +52,9 @@ h1 {
   margin-top: 20px;
   margin-bottom: 40px;
   margin-left: 20px;
-  font-family:'poppins';
+  font-family: "poppins";
   font-size: 5vh;
-  color:#cccccc;
+  color: #cccccc;
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -65,9 +65,9 @@ input {
 p {
   margin: 20px;
   display: grid;
-  font-family: sans-serif;
+  font-family: "Poppins";
   font-size: 3vh;
-  color:#322727;
+  color: #322727;
   text-shadow: 0px 0px 10px #cccccc;
   font-weight: 600;
 }
@@ -120,7 +120,7 @@ button {
 .sponsor {
   border: var(--black) 2px solid;
 }
-.Notification-delete-button{
+.Notification-delete-button {
   border-color: var(--black) 2px solid;
   margin-left: 1%;
   margin-top: 2%;

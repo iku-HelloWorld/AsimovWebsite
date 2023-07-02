@@ -580,7 +580,7 @@
 
 .maintextpage {
   background-color: #fff;
-  font-family: sans-serif;
+  font-family: "Poppins";
   text-align: left;
   margin-left: 5px;
   width: 85%;
@@ -1092,7 +1092,7 @@
   width: 50%;
   height: 100%;
   padding: 5%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   color: var(--light-color);
 }
 
@@ -1268,7 +1268,7 @@
   width: 100%;
   height: 15px;
   transform: translateY(-100%);
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -1356,7 +1356,7 @@ h1 {
     width: 95%;
     height: 40%;
     padding: 5%;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins";
     color: var(--light-color);
   }
 
@@ -1542,7 +1542,7 @@ h1 {
 
 .TeamHeader p {
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: "Poppins";
   font-size: 20px;
   color: #000;
   margin-left: 15%;
@@ -1607,7 +1607,7 @@ h1 {
 
   .TeamHeader p {
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: "Poppins";
     font-size: 10px;
     transition: 1s all;
     margin-left: 15%;
@@ -1701,7 +1701,7 @@ h1 {
 
 .communicationPagetextpage {
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: "Poppins";
   font-size: 20px;
   font-weight: 200;
   color: var(--black);
