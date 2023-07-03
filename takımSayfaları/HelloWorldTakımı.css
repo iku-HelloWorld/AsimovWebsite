@@ -478,12 +478,10 @@
 /* içerik 2 */
 .takımsayfasıiçerik2 p {
   font-family: "Poppins";
-  font-size: 2vh;
+  font-size: large;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 0%;
-  min-height: 5vw;
-  height: auto !important;
 }
 
 .takımsayfasıgaleri {
