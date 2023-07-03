@@ -359,17 +359,23 @@
   width: 80vh;
   box-shadow: -5px 0px 0px 0px#3d52a5;
   padding-left: 5%;
+  min-height:5vw;
+	height:auto !important;
 }
 
 .TeamPageContentText h1 {
   font-family: "poppins";
   font-size: xx-large;
   margin-top: 0%;
+  min-height:5vw;
+	
 }
 
 .TeamPageContentText p {
   font-family: "Poppins";
   font-size: x-large;
+  min-height:5vw;
+	height:auto !important;
 }
 
 @media (max-width: 1400px) {
@@ -394,19 +400,25 @@
     box-shadow: -3px 0px 0px 0px#3d52a5;
     padding-left: 5%;
     transition: all 1s;
+    min-height:5vw;
+    height:auto !important;
   }
 
   .TeamPageContentText h1 {
     font-family: "poppins";
     font-size: 4vh;
     margin-top: 0%;
-    transition: all 1s;
+    transition: all 1s; 
+    min-height:5vw;
+    height:auto !important;
   }
 
   .TeamPageContentText p {
     font-family: "Poppins";
     font-size: 2vh;
     transition: all 1s;
+    min-height:5vw;
+    height:auto !important;
   }
 }
 

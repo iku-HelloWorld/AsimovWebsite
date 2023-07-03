@@ -357,17 +357,23 @@
   width: 80vh;
   box-shadow: -5px 0px 0px 0px#3d52a5;
   padding-left: 5%;
+  min-height:5vw;
+	height:auto !important;
 }
 
 .TeamPageContentText h1 {
   font-family: "poppins";
   font-size: xx-large;
   margin-top: 0%;
+  min-height:5vw;
+	
 }
 
 .TeamPageContentText p {
   font-family: "Poppins";
   font-size: x-large;
+  min-height:5vw;
+	height:auto !important;
 }
 
 @media (max-width: 1400px) {
@@ -392,6 +398,8 @@
     box-shadow: -3px 0px 0px 0px#3d52a5;
     padding-left: 5%;
     transition: all 1s;
+    min-height:5vw;
+    height:auto !important;
   }
 
   .TeamPageContentText h1 {
@@ -399,12 +407,16 @@
     font-size: 4vh;
     margin-top: 0%;
     transition: all 1s;
+    min-height:5vw;
+   
   }
 
   .TeamPageContentText p {
     font-family: "Poppins";
     font-size: 2vh;
-    transition: all 1s;
+    transition: all 1s; 
+    min-height:5vw;
+	
   }
 }
 
@@ -426,17 +438,22 @@
     box-shadow: none;
     box-shadow: -2px 0px 0px 0px#3d52a5;
     padding-left: 5%;
+    min-height:5vw;
+    height:auto !important;
   }
 
   .TeamPageContentText h1 {
     font-size: 3vh;
     margin-top: 0%;
     transition: all 1s;
+    min-height:5vw;
   }
 
   .TeamPageContentText p {
     font-size: 2vh;
     transition: all 1s;
+    min-height:5vw;
+    height:auto !important;
   }
 }
 /* içerik 1 */
@@ -468,6 +485,8 @@
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 0%;
+  min-height:5vw;
+	height:auto !important;
 }
 
 .takımsayfasıgaleri {
@@ -498,6 +517,8 @@
     margin-right: 10%;
     padding-top: 0%;
     transition: all 1s;
+    min-height:5vw;
+    
   }
 
   .takımsayfasıgaleri {
@@ -579,6 +600,8 @@
   font-family: "Poppins";
   color: var(--black);
   text-align: center;
+  min-height:5vw;
+	height:auto !important;
 }
 
 .TeamPageMembersCardsTextMajor {
@@ -607,6 +630,8 @@
 .footer_content {
   background-color: var(--dark-color);
   height: 40px;
+  min-height:5vw;
+	height:auto !important;
 }
 
 .footer-design {
@@ -646,6 +671,7 @@
     grid-template-rows: 40px 40px;
     row-gap: 20px;
     justify-content: center;
+    min-height:5vw;
   }
 
   .footer-design {
