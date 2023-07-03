@@ -445,14 +445,13 @@
 
 /* video */
 .TeamPageVideo {
-  width: 48vw;
-  height: 27vw;
+  width: 68vw;
+  height: 40vw;
   position: relative;
-  left: 50%;
-
+  left: 51%;
   margin: 0;
-  margin-bottom: 200px;
-  margin-top: 50px;
+  margin-bottom: 20vh;
+  margin-top: 10vh;
   padding: 0;
   transform: translateX(-50%);
 }
