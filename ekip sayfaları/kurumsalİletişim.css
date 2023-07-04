@@ -355,8 +355,6 @@
   width: 100%;
 }
 
-
-
 .kurumsalİletişimsayfasıiçerik {
   width: 100%;
   height: auto;
@@ -476,6 +474,7 @@
   padding-left: 5vw;
   padding-right: 5vw;
   overflow: hidden;
+  background: linear-gradient(to bottom, #fff, #d4d9df, #fff);
   /* TODO: */
 }
 
