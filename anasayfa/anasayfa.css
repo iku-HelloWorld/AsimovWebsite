@@ -856,7 +856,7 @@
   /* top: 100vh; */
   padding-left: 5vw;
   padding-right: 5vw;
-  padding-top: 3vw;
+  padding-top: 6vw;
   height: 100%;
 }
 
@@ -1425,7 +1425,7 @@ h1 {
 }
 @media only screen and (max-width: 1465px) {
   .bizkimiz--section {
-    padding-top: 2rem;
+    padding-top: 3rem;
   }
   .bizkimiz--content {
     width: 80%;
