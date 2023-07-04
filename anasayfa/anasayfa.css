@@ -193,6 +193,7 @@
 .navbar-menu-item:hover .drop-down-menu1 {
   height: 300px;
 }
+
 .navbar-menu-item:hover .drop-down-menu2 {
   height: 300px;
 }
@@ -271,6 +272,7 @@
     position: relative;
     margin-left: 45px;
   }
+
   .nav-toggle {
     display: flex;
     flex-direction: column;
@@ -327,6 +329,7 @@
     right: 15px;
     top: 2%;
   }
+
   .nav-list i {
     font-size: 1.5rem;
     cursor: pointer;
@@ -334,6 +337,7 @@
     z-index: 2;
   }
 }
+
 /* navbar */
 
 /* giriş ekranı */
@@ -379,6 +383,7 @@
 .container-screen {
   height: 100%;
 }
+
 .mainscreenContainer {
   height: 100vh;
   display: flex;
@@ -396,11 +401,13 @@
   filter: drop-shadow(0px 0px 20px var(--black));
   z-index: -1;
 }
+
 .logo-animation {
   animation-name: logo;
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
+
 @keyframes logo {
   0% {
     transform: translateX(0);
@@ -428,6 +435,7 @@
     transform: translateX(0);
   }
 }
+
 .mainscreensSlogan {
   text-decoration: none;
   font-family: "Poppins";
@@ -446,6 +454,7 @@
 #slogan1 {
   animation: popout 3s linear infinite;
 }
+
 #slogan2 {
   animation: popout 3s linear infinite;
   animation-delay: 200ms;
@@ -455,12 +464,15 @@
   0% {
     transform: scale(1);
   }
+
   25% {
     transform: scale(1.2);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     /* animate nothing to add pause at the end of animation */
     transform: scale(1);
@@ -556,6 +568,7 @@
 .go_back_btn_closs {
   width: 0%;
 }
+
 /* go back btn */
 
 .mainnewspage {
@@ -670,6 +683,7 @@
     z-index: -1;
     position: absolute;
   }
+
   .mainscreensSlogan {
     font-size: 4.2vh;
     transition: 0.6s all;
@@ -718,6 +732,7 @@
   .sidebar {
     height: auto;
   }
+
   .mainSidebar {
     height: 100%;
     align-items: center;
@@ -734,6 +749,7 @@
 
     flex-direction: row;
   }
+
   .mainimagepage {
     display: flex;
 
@@ -751,6 +767,7 @@
     margin-bottom: 14px;
     z-index: 11;
   }
+
   .go_back_btn {
     width: 25px;
     height: 25px;
@@ -824,6 +841,7 @@
     margin-right: 60px;
     margin-top: 10px;
   }
+
   .sidebar-list-menu {
     top: 0;
     right: 0;
@@ -834,9 +852,11 @@
     display: block;
     z-index: 11;
   }
+
   #kaydır {
     right: 7vw;
   }
+
   #kaydır-icon {
     right: 7vw;
   }
@@ -931,6 +951,7 @@
   height: 101%;
   object-fit: cover;
 }
+
 .bizkimiz--img_slider .arrows {
   display: grid;
   width: 100%;
@@ -957,9 +978,11 @@
   font-size: xx-large;
   cursor: pointer;
 }
+
 .bizkimiz--img_slider .arrows .arrow-left {
   margin-left: 10px;
 }
+
 .bizkimiz--img_slider .arrows .arrow-right {
   margin-right: 10px;
 }
@@ -1055,6 +1078,7 @@
   transition: ease 300ms;
   width: 70%;
 }
+
 .bizkimiz--text_slider .texts .text-slide[data-text="show"] {
   display: initial;
   top: 50%;
@@ -1119,7 +1143,8 @@
   top: 10vh;
   z-index: 10;
   font-size: xx-large;
-  color: var(--white); /* ımgFocusClose() */
+  color: var(--white);
+  /* ımgFocusClose() */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1142,6 +1167,7 @@
   top: 10vh;
   position: relative;
   transition: ease 400ms;
+  padding-top: 1vw;
 }
 
 .galeri_content b {
@@ -1177,8 +1203,7 @@
   width: 94%;
   height: 0;
   left: 3%;
-  top: 100px;
-
+  top: 155px;
   border: 2px solid #3e54ac;
 }
 
@@ -1334,18 +1359,22 @@ h1 {
     grid-template-rows: 20% 20% 20% 20%;
     column-gap: 2rem;
   }
+
   .image {
     width: 100%;
     text-align: center;
   }
+
   .image img {
     width: 60%;
     height: 100%;
     object-fit: contain;
   }
+
   .image_div_content {
     font-size: 10px;
   }
+
   .new_div img {
     position: absolute;
     top: 15vh;
@@ -1356,6 +1385,7 @@ h1 {
     object-fit: contain;
     background-color: #000000e1;
   }
+
   .new_div-info {
     position: absolute;
     right: 0;
@@ -1377,9 +1407,11 @@ h1 {
     transform: translateY(-50%);
     font-size: medium;
   }
+
   .arrow1 {
     left: 5px;
   }
+
   .arrow2 {
     right: 5px;
   }
@@ -1409,9 +1441,11 @@ h1 {
     width: 650px;
     height: 330px;
   }
+
   .bizkimiz--img_slider .arrow-right {
     transform: translateX(570px);
   }
+
   .slides {
     background-color: var(--light-color);
     border: var(--side-color) 10px outset;
@@ -1423,10 +1457,12 @@ h1 {
     overflow: hidden;
   }
 }
+
 @media only screen and (max-width: 1465px) {
   .bizkimiz--section {
     padding-top: 3rem;
   }
+
   .bizkimiz--content {
     width: 80%;
     position: relative;
@@ -1434,6 +1470,7 @@ h1 {
     transform: translateX(-50%);
     margin: 0;
   }
+
   .bizkimiz--img_slider {
     display: block;
     position: relative;
@@ -1458,10 +1495,12 @@ h1 {
     overflow: hidden;
   }
 }
+
 @media only screen and (max-width: 950px) {
   .bizkimiz--content {
     font-size: small;
   }
+
   .bizkimiz--img_slider {
     display: block;
     position: relative;
@@ -1473,6 +1512,7 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
   }
+
   .bizkimiz--img_slider .arrows {
     display: grid;
     width: 100%;
@@ -1485,6 +1525,7 @@ h1 {
 
     z-index: 10;
   }
+
   .bizkimiz--img_slider .arrows .arrow-left,
   .bizkimiz--img_slider .arrows .arrow-right {
     justify-self: center;
@@ -1514,10 +1555,12 @@ h1 {
   .slides {
     border: var(--side-color) 6px outset;
   }
+
   .bizkimiz--text_slider .tag {
     font-size: small;
   }
 }
+
 @media only screen and (max-width: 700px) {
   .bizkimiz--content {
     border: 0;
@@ -1525,11 +1568,13 @@ h1 {
     padding: 0;
     width: 100%;
   }
+
   .bizkimiz--text_slider {
     width: 90%;
     top: 3vh;
   }
 }
+
 /* biz kimiz */
 
 /* takım sayfası */
@@ -1540,6 +1585,7 @@ h1 {
   margin: 0;
   height: 800px;
   width: 100%;
+  padding-top: 3vw;
 }
 
 .TeamHeader h1 {
@@ -1597,6 +1643,7 @@ h1 {
   font-family: "Poppins";
   font-size: 25px;
 }
+
 @media screen and (max-width: 862px) {
   .TeamMain {
     background-color: #d4d9df;
@@ -1680,6 +1727,7 @@ h1 {
   padding-bottom: 5%;
   width: 100%;
   height: 100%;
+  padding-top: 2vw;
 }
 
 .communicationPage {
@@ -1726,12 +1774,14 @@ h1 {
   width: 300px;
   height: auto;
 }
+
 @media screen and (max-width: 862px) {
   .communicationTitle {
     transition: 1s all;
     font-size: 30px;
     padding-left: 2%;
   }
+
   .communicationMain {
     transition: 1s all;
     align-items: center;
@@ -1752,6 +1802,7 @@ h1 {
     transition: 1s all;
     align-items: center;
   }
+
   .communicationPagetextpage {
     font-size: 10px;
   }
@@ -1763,6 +1814,7 @@ h1 {
     align-items: center;
   }
 }
+
 @media screen and (max-width: 600px) {
   .communicationPage {
     display: grid;
@@ -1770,9 +1822,11 @@ h1 {
     grid-template-columns: 100%;
     text-align: center;
   }
+
   .communicationMap {
     margin: auto;
   }
+
   .communicationPagetextpage {
     display: flex;
     flex-direction: column;
@@ -1809,6 +1863,7 @@ h1 {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+
 .footer-wrapper {
   display: grid;
   grid-template-rows: 70px 40px;
@@ -1818,6 +1873,7 @@ h1 {
   background-color: var(--main-color);
   display: flex;
 }
+
 .footer-list a {
   text-decoration: none;
   color: white;
@@ -1865,6 +1921,7 @@ h1 {
   color: var(--light-color);
   transform: rotateY(360deg);
 }
+
 @media (max-width: 510px) {
   .footer-wrapper {
     grid-template-rows: 250px 100px;
@@ -1877,6 +1934,7 @@ h1 {
     text-align: center;
     padding-top: 30px;
   }
+
   .footer-list a {
     margin: 0;
   }
@@ -1910,6 +1968,7 @@ h1 {
     height: 800px;
   }
 }
+
 /* responsiveness */
 
 * {
