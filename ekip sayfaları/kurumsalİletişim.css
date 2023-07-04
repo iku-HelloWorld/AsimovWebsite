@@ -17,24 +17,22 @@
 
 /* navbar */
 .header {
-  height: 10vh;
+  height: 15vh;
   background: var(--main-color);
   top: 0;
-  z-index: 1;
-  width: 100%;
+  z-index: 5;
   position: absolute;
-  transition: ease 400ms;
-  
+  width: 100%;
+  transition: ease 300ms;
 }
 
 .h-active {
-  position: fixed;
+  position: sticky;
   height: 10vh;
   background: var(--main-color);
   top: 0;
   z-index: 5;
   width: 100%;
-  transition: ease 300ms;
 }
 
 .h-active:hover {
@@ -89,13 +87,13 @@
 
 .menu-list a {
   text-decoration: none;
-  color: var(--white);
+  color: white;
   font-size: 1.6rem;
   padding-right: 10px;
-  cursor: pointer;
 }
 
 .nav-toggle {
+  font-size: 1.6rem;
   align-items: center;
   display: flex;
   position: absolute;
@@ -106,29 +104,24 @@
 .nav-toggle a {
   text-decoration: none;
   color: white;
+  border-radius: 50%;
+  color: black;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  color: var(--black);
-  width: 36px;
-  height: 36px;
-  background-color: var(--white);
+  padding: 5px 5px;
+  background-color: white;
   margin-right: 5px;
-  font-size: x-large;
-  font-weight: 500;
+  font-size: 1.6rem;
   z-index: 5;
-  /* transition: ease 400ms; */
-  text-align: center;
-  padding-top: 3px;
 }
 
 .nav-toggle a:hover {
-  background-color: var(--light-color);
-  color: var(--main-color);
+  background-color: transparent;
+  color: black;
 }
 
 .nav-toggle i {
-  color: var(--white);
+  color: var(--black);
   cursor: pointer;
   font-size: 1.6rem;
   margin-left: 5px;
@@ -139,11 +132,6 @@
   font-size: 1.1rem;
   color: var(--black);
   cursor: pointer;
-  text-align: center;
-}
-
-#lang {
-  display: flex;
 }
 
 .nav-list {
@@ -212,24 +200,35 @@
     height: auto;
     width: 100%;
     z-index: 5;
-    position: block;
+    position: fixed;
     background-color: var(--main-color);
+  }
+
+  .h-active {
+    position: fixed;
+    height: 10vh;
+    background: transparent;
+    top: 0;
+    z-index: 10;
+    width: 100%;
   }
 
   .asimov-logo {
     position: absolute;
     left: 50%;
-    top: 0%;
-    transform: translateX(-50%);
+    top: 20vh;
+    transform: translate(-50%, -100%);
     width: 18vw;
+    min-width: 80px;
     height: 20vw;
   }
 
   .asimov-logo img {
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
+    object-fit: contain;
   }
 
   .navbar-wrapper {
@@ -254,7 +253,7 @@
 
   .active {
     height: 85vh;
-    transition: 0.7s;
+    transition: 400ms;
     visibility: inherit;
   }
 
@@ -340,32 +339,30 @@
     cursor: pointer;
     transition: 0.7s;
     z-index: 2;
+    color: var(--black);
   }
 }
-
 /* navbar */
 
 /* içerik  */
 
-.yönetimkurulusayfası {
+.kurumsalİletişimsayfası {
   position: relative;
   padding-left: 5vw;
   padding-right: 5vw;
   height: 100vh;
   min-height: 700px;
   width: 100%;
-  overflow: hidden;
-  padding-top: 3%;
-  display: block;
 }
 
-.yönetimkurulusayfasıiçerik {
+.kurumsalİletişimsayfasıiçerik {
   width: 100%;
   height: auto;
   position: relative;
-  top: 5vh;
+  top: 20vh;
+  margin: 0;
 }
-.yönetimkurulusayfasıiçerik h1 {
+.kurumsalİletişimsayfasıiçerik h1 {
   font-size: xx-large;
   font-weight: bolder;
   color: var(--black);
@@ -374,30 +371,31 @@
 
 .slider-container {
   width: 60%;
-  height: 55vh;
+  height: 40%;
   position: relative;
-  top: 20vh;
   left: 50%;
   transform: translateX(-50%);
   overflow: visible;
-  margin-bottom: 20px;
   display: flex;
+  top: 20vh;
+  z-index: 0;
 }
 .slide {
   width: 100%;
   height: 90%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 .slide img {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
+  width: 100%;
   border: 4px solid var(--side-color);
   object-fit: contain;
+  position: relative;
+  z-index: 0;
 }
 .slide.active {
   opacity: 1;
@@ -439,7 +437,7 @@
   border-radius: 50%;
 }
 
-.yönetimkuruludots {
+.kurumsalİletişimdots {
   position: absolute;
   bottom: 80px;
   left: 50%;
@@ -477,6 +475,7 @@
   top: 0vh;
   padding-left: 5vw;
   padding-right: 5vw;
+  overflow: hidden;
   /* TODO: */
 }
 
@@ -584,7 +583,7 @@
 }
 @media (max-width: 510px) {
   /* .footer-container {
-   
+    
   } */
 
   .footer_content {
@@ -635,27 +634,46 @@
 /*responsive*/
 @media only screen and (max-width: 1300px) {
   .slider-container {
-    width: 70vw;
-    height: 40vw;
+    width: 85%;
+    height: 50%;
   }
-  .yönetimkuruludots {
+
+  .slide {
+    max-width: 100%;
+    max-height: 70%;
+  }
+  .slide img {
+    z-index: 0;
+  }
+  .kurumsalİletişimdots {
     bottom: 12%;
+  }
+
+  .kurumsalİletişimsayfasıiçerik {
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 850px) {
-  .yönetimkuruludots .dot {
+  .kurumsalİletişimdots {
+    bottom: 20%;
+  }
+  .kurumsalİletişimdots .dot {
     width: 13px;
     height: 13px;
   }
 
-  .yönetimkurulusayfasıiçerik h1 {
+  .kurumsalİletişimsayfasıiçerik h1 {
     font-size: medium;
   }
-  .yönetimkurulusayfasıiçerik {
+  .kurumsalİletişimsayfasıiçerik {
     font-size: small;
   }
   .TeamPageMembersHeader {
     font-size: medium;
+    margin-top: 25%;
   }
   .next,
   .prev {
@@ -690,6 +708,7 @@
     top: 15%;
   }
 }
+
 * {
   font-family: "Poppins";
 }

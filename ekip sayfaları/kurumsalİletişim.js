@@ -1,4 +1,5 @@
 "use strict";
+
 import json from "/language.json" assert { type: "json" };
 
 const nav = document.querySelector(".navbar-wrapper");
@@ -6,6 +7,8 @@ const header = document.querySelector(".header");
 const navBtn = document.getElementById("list-btn");
 const navbarLinkUl = document.querySelector(".menu-list");
 const navbarLinks = [...document.querySelectorAll(".navbar-menu-item")];
+const button = document.getElementById(`list-btn`);
+const menu = document.querySelector(`.asimov-menu`);
 
 navbarLinkUl.addEventListener("click", function (e) {
   // console.log(e.target);
@@ -22,22 +25,6 @@ navbarLinkUl.addEventListener("click", function (e) {
     //   .scrollIntoView({ behavior: "smooth" }, true);
   }
 });
-window.addEventListener("scroll", function () {
-  if (window.scrollY === 0) {
-    // header.style.position = "fixed";
-    console.log();
-    header.classList.remove("h-active");
-    console.log("hi");
-  } else {
-    // header.style.position = "absolute";
-    header.classList.add("h-active");
-
-    console.log("bye");
-  }
-});
-
-const button = document.getElementById(`list-btn`);
-const menu = document.querySelector(`.asimov-menu`);
 
 button.addEventListener(`click`, () => {
   menu.classList.toggle(`active`);
@@ -45,6 +32,20 @@ button.addEventListener(`click`, () => {
     menu.classList.remove(`active`);
   });
 });
+
+// window.addEventListener("scroll", function () {
+//   if (window.scrollY === 0) {
+//     // header.style.position = "fixed";
+//     // console.log();
+//     header.classList.remove("h-active");
+//     // console.log("hi");
+//   } else {
+//     // header.style.position = "absolute";
+//     header.classList.add("h-active");
+
+//     // console.log("bye");
+//   }
+// });
 
 /* yönetim kurulu img slider */
 const slides = document.querySelectorAll(".slide");
@@ -123,6 +124,7 @@ function showSlide(n) {
   dots[n - 1].classList.add("active");
 }
 
+/*navbar*/
 const textBtn = document.getElementById("lang");
 
 let lang = "Tr";
@@ -150,11 +152,11 @@ const handleLang = function () {
         console.log(key + " key in json is not accesable in this page");
       }
     }
-    for (let key in json.Tr.yönetimKurulu) {
+    for (let key in json.Tr.kurumsalİletişim) {
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`
-        ).textContent = `${json.Tr.yönetimKurulu[key]}`;
+        ).textContent = `${json.Tr.kurumsalİletişim[key]}`;
       } else {
         console.log(key + "is not accesable");
       }
@@ -168,7 +170,7 @@ const handleLang = function () {
       } else {
         console.log(key + "is not accesable");
       }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
+      // console.log(document.querySelectorAll(`${key}`), json.En.navbar[key]);
     }
     for (let key in json.Tr.bölümler) {
       if (document.querySelectorAll(`.${key}`)) {
@@ -189,23 +191,25 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " is not accesable");
       }
       // console.log(document.getElementById(`${key}`));
     }
 
     // mainscreen
-    for (let key in json.En.yönetimKurulu) {
+    for (let key in json.En.kurumsalİletişim) {
+      // console.log(key, document.getElementById(`${key}`));
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`
-        ).textContent = `${json.En.yönetimKurulu[key]}`;
+        ).textContent = `${json.En.kurumsalİletişim[key]}`;
       } else {
         console.log(key + " not exist");
       }
       // console.log(document.getElementById(`${key}`));
     }
     for (let key in json.En.ünvanlar) {
+      // console.log(key);
       if (document.querySelectorAll(`.${key}`)) {
         document.querySelectorAll(`.${key}`).forEach((v) => {
           v.textContent = `${json.En.ünvanlar[key]}`;
@@ -213,7 +217,7 @@ const handleLang = function () {
       } else {
         console.log(key + "is not accesable");
       }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
+      // console.log(document.querySelectorAll(`${key}`), json.En.navbar[key]);
     }
     for (let key in json.En.bölümler) {
       if (document.querySelectorAll(`.${key}`)) {
