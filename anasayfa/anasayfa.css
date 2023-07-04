@@ -1585,7 +1585,8 @@ h1 {
   margin: 0;
   height: 800px;
   width: 100%;
-  padding-top: 3vw;
+  padding-top: 2.5vw;
+  margin-bottom: 2vw;
 }
 
 .TeamHeader h1 {
