@@ -363,14 +363,12 @@
 }
 
 .TeamPageContentText h1 {
-  font-family: "poppins";
   font-size: xx-large;
   margin-top: 0%;
   min-height: 5vw;
 }
 
 .TeamPageContentText p {
-  font-family: "Poppins";
   font-size: x-large;
   min-height: 5vw;
   height: auto !important;
@@ -403,7 +401,6 @@
   }
 
   .TeamPageContentText h1 {
-    font-family: "poppins";
     font-size: 4vh;
     margin-top: 0%;
     transition: all 1s;
@@ -412,7 +409,6 @@
   }
 
   .TeamPageContentText p {
-    font-family: "Poppins";
     font-size: 2vh;
     transition: all 1s;
     min-height: 5vw;
@@ -475,7 +471,6 @@
 
 /* içerik 2 */
 .takımsayfasıiçerik2 p {
-  font-family: "Poppins";
   font-size: 2vh;
   margin-left: 10%;
   margin-right: 10%;
@@ -504,7 +499,6 @@
 
 @media (max-width: 850px) {
   .takımsayfasıiçerik2 p {
-    font-family: "Poppins";
     font-size: 1vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -548,7 +542,6 @@
 
 .TeamPageMembersHeader {
   font-size: 3vh;
-  font-family: "Poppins";
   color: var(--black);
   padding: 3%;
 }
@@ -580,7 +573,6 @@
 }
 
 .TeamPageMembersCardsTextHeader {
-  font-family: "Poppins";
   color: var(--black);
   text-align: center;
   font-size: 2vh;
@@ -588,13 +580,11 @@
 }
 
 .TeamPageMembersCardsText {
-  font-family: "Poppins";
   color: var(--black);
   text-align: center;
 }
 
 .TeamPageMembersCardsTextMajor {
-  font-family: "Poppins";
   color: var(--black);
   text-align: center;
   font-size: 1.6vh;
@@ -695,5 +685,5 @@
   }
 }
 * {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }

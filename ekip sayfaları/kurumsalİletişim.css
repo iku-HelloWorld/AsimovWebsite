@@ -511,7 +511,6 @@
 }
 
 .TeamPageMembersCardsTextHeader {
-  font-family: "Poppins";
   color: var(--black);
   text-align: center;
   font-size: 2vh;
@@ -519,13 +518,11 @@
 }
 
 .TeamPageMembersCardsText {
-  font-family: "Poppins";
   color: var(--black);
   text-align: center;
 }
 
 .TeamPageMembersCardsTextMajor {
-  font-family: "Poppins";
   color: var(--black);
   text-align: center;
   font-size: 1.6vh;
@@ -709,5 +706,5 @@
 }
 
 * {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }

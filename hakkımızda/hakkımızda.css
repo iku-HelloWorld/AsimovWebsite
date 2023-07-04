@@ -432,8 +432,25 @@ body {
   background-color: var(--side-color);
 }
 
+@keyframes glow {
+  0% {
+    box-shadow: 1px 1px 5px 2px var(--dark-color),
+      -1px -1px 5px 2px var(--dark-color);
+  }
+
+  50% {
+    box-shadow: 1px 1px 10px 5px var(--dark-color),
+      -1px -1px 5px 2px var(--dark-color);
+  }
+
+  100% {
+    box-shadow: 1px 1px 5px 2px var(--dark-color),
+      -1px -1px 5px 2px var(--dark-color);
+  }
+}
+
 .timeline_container .selected {
-  box-shadow: 1px 1px 3px 3px var(--black), -1px -1px 3px 3px var(--black);
+  animation: glow infinite 4s;
 }
 
 .timeline_container .point.active::before {
@@ -723,7 +740,7 @@ body {
 .sponsor-img {
   height: 100%;
   width: 25%;
-  object-fit:contain;
+  object-fit: contain;
 }
 
 .sponsor-container {
@@ -787,7 +804,6 @@ body {
   .aboutussection1 p {
     color: var(--white);
     font-size: 10px;
-    font-family: "Poppins";
     transition: 1s all;
   }
 }
@@ -1141,5 +1157,5 @@ body {
 
 /* footer */
 * {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }
