@@ -140,10 +140,10 @@
   cursor: pointer;
   text-align: center;
 }
-
+/*
 #lang {
   display: flex;
-}
+} */
 
 .nav-list {
   display: none;
