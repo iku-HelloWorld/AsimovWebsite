@@ -8,8 +8,6 @@ root {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   background-image: url("/admin/Asimov_Logolar/asimovmainbackground.png");
@@ -28,6 +26,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .login {
   background-color: var(--light-color);
   height: 400px;
@@ -54,22 +53,101 @@ h1 {
   margin-left: 20px;
   font-family: "poppins";
   font-size: 5vh;
-  color: #cccccc;
+  color: #f0e6ca;
   text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+}
+
+label {
+  font-size: 13px;
+  font-family: sans-serif;
+  color: #331c1c;
+  text-shadow: 1px 1px 3px #dcd7ca;
+  font-weight: 600;
+  padding-top: 3%;
 }
 
 input {
   width: 90%;
 }
 
+input[type=submit] {
+  background-color: #756b59;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+input[type=submit]:hover {
+  background-color: #4c9c41;
+}
+
+input[type=submit]:active {
+  background-color: #2f8109;
+}
+
+input[type=submit]:disabled {
+  background-color: #626241;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+  transition: width 0.4s ease-in-out;
+  border-radius: 5%;
+}
+
+input[type=text]:focus {
+  background-color: rgb(225, 211, 178);
+  width: 43%;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=file] {
+  background-color: #c2b39958;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  border: #434038 1px solid;
+  border-radius: 5%;
+  margin-top: 2%;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=file]:hover {
+  background-color: #a0937b;
+}
+
+input[type=file]:active {
+  background-color: #b4a069;
+}
+
+.lineadmin {
+  border: #3b3434 1px solid;
+  width: 85vh;
+  text-align: center;
+}
+
 p {
-  margin: 20px;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
   display: grid;
   font-family: "Poppins";
   font-size: 3vh;
   color: #322727;
   text-shadow: 0px 0px 10px #cccccc;
-  font-weight: 600;
+  font-weight: 800;
+  text-align: left;
 }
 
 .submit {
@@ -77,30 +155,6 @@ p {
   font-size: large;
   margin-left: 20px;
   margin-top: 15px;
-}
-
-.bildirim-sil {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-}
-
-.bildirimler {
-  border: var(--black) 2px solid;
-}
-
-.takımlar {
-  border: var(--black) 2px solid;
-}
-.galeri-resim {
-  border: var(--black) 2px solid;
-}
-
-.anasayfa-galeri-sil {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px;
-  overflow: scroll;
 }
 
 img {
@@ -112,128 +166,173 @@ img {
 button {
   display: grid;
   align-items: center;
+  cursor: pointer;
+  padding: 2px 4px;
+  text-decoration: none;
+  margin: 4px 2px;
+  background-color: #a69c8b82;
+  color: #000;
+  border-radius: 10%;
 }
 
-.etkinlikler {
-  border: var(--black) 2px solid;
+button:hover {
+  background-color: #a59b85;
 }
+
+button:focus {
+  background-color: #b2d1a9;
+}
+
 .sponsor {
   border: var(--black) 2px solid;
 }
+
 .Notification-delete-button {
   border-color: var(--black) 2px solid;
   margin-left: 1%;
   margin-top: 2%;
 }
+
+/*delete*/
 .Notification-delete {
   height: 40vh;
-  background-color: lightgrey;
-  overflow: scroll;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
   font-size: 2vh;
-}
-.anasayfa-galeri-sil {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.activities-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.sponsor-remove-div {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.corporate-communication-member-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.directory-team-member-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.helloworld-member-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.otonom-member-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.roket-member-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.dataai-member-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
-  margin-top: 5px;
-}
-.core-member-remove {
-  height: 300px;
-  overflow: scroll;
-  border: var(--black) 2px solid;
-  background-color: lightgrey;
+  width: 80vh;
   margin-top: 5px;
 }
 
-.kurumsal-iletişim-üye {
-  border: var(--black) 2px solid;
+.anasayfa-galeri-sil {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
 }
-.yönetim-kurulu-üye {
-  border: var(--black) 2px solid;
+
+.activities-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
 }
-.helloworld-üye {
-  border: var(--black) 2px solid;
+
+.sponsor-remove-div {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
 }
-.otonom-üye {
-  border: var(--black) 2px solid;
+
+.corporate-communication-member-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
 }
-.roket-üye {
-  border: var(--black) 2px solid;
+
+.directory-team-member-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
 }
-.dataai-üye {
-  border: var(--black) 2px solid;
+
+.helloworld-member-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
 }
-.core-üye {
-  border: var(--black) 2px solid;
+
+.otonom-member-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
 }
+
+.roket-member-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
+}
+
+.dataai-member-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
+}
+
+.core-member-remove {
+  height: 40vh;
+  background-color: rgb(221, 209, 193);
+  border-radius: 1%;
+  border: #fff 2px solid;
+  overflow: auto;
+  font-size: 2vh;
+  width: 80vh;
+  margin-top: 5px;
+}
+
+/*delete*/
+
+/*notification*/
 .Notification {
   display: flex;
   flex-direction: column;
   font-size: larger;
 }
+
 .NotificationPictureAdmin {
   width: 255px;
   height: 24px;
   background-color: beige;
   border: var(--black) 2px solid;
 }
+
 .NotificationHeaderAdmin {
   width: 250px;
   height: 20px;
@@ -247,6 +346,7 @@ button {
   background-color: beige;
   margin-top: 5px;
 }
+
 .Notification-submit {
   background-color: burlywood;
   height: 24px;
@@ -254,12 +354,16 @@ button {
   margin-top: 5px;
 }
 
+/*notification*/
+
+/*gallery*/
 .anasayfa-galeri {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   font-size: larger;
 }
+
 .anasayfa-galeri-resim {
   width: 255px;
   height: 24px;
@@ -273,6 +377,7 @@ button {
   background-color: beige;
   margin-top: 5px;
 }
+
 .anasayfa-galeri-submit {
   background-color: burlywood;
   height: 24px;
@@ -280,6 +385,9 @@ button {
   margin-top: 5px;
 }
 
+/*gallery*/
+
+/*activities*/
 .activities {
   margin-top: 30px;
   display: flex;
@@ -315,12 +423,16 @@ button {
   margin-top: 5px;
 }
 
+/*activities*/
+
+/*sponsor*/
 .sponsor-member {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   font-size: larger;
 }
+
 .sponsor-file {
   width: 255px;
   height: 24px;
@@ -342,18 +454,23 @@ button {
   margin-top: 5px;
 }
 
+/*sponsor*/
+
+/*corporate-communication*/
 .corporate-communication-member {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   font-size: larger;
 }
+
 .corporate-communication-member-img {
   width: 255px;
   height: 24px;
   background-color: beige;
   border: var(--black) 2px solid;
 }
+
 .corporate-communication-member-name {
   width: 250px;
   height: 20px;
@@ -382,36 +499,44 @@ button {
   margin-top: 5px;
 }
 
+/*corporate-communication*/
+
+/*directory-team*/
 .directory-team-member {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   font-size: larger;
 }
+
 .directory-team-member-img {
   width: 255px;
   height: 24px;
   background-color: beige;
   border: var(--black) 2px solid;
 }
+
 .directory-team-member-name {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .directory-team-member-duty {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .directory-team-member-department {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .directory-team-member-submit {
   background-color: burlywood;
   height: 24px;
@@ -419,36 +544,44 @@ button {
   margin-top: 5px;
 }
 
+/*directory-team*/
+
+
 .helloworld-member {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   font-size: larger;
 }
+
 .helloworld-member-img {
   width: 255px;
   height: 24px;
   background-color: beige;
   border: var(--black) 2px solid;
 }
+
 .helloworld-member-name {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .helloworld-member-duty {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .helloworld-member-department {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .helloworld-member-submit {
   background-color: burlywood;
   height: 24px;
@@ -462,30 +595,35 @@ button {
   flex-direction: column;
   font-size: larger;
 }
+
 .otonom-member-img {
   width: 255px;
   height: 24px;
   background-color: beige;
   border: var(--black) 2px solid;
 }
+
 .otonom-member-name {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .otonom-member-duty {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .otonom-member-department {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .otonom-member-submit {
   background-color: burlywood;
   height: 24px;
@@ -499,6 +637,7 @@ button {
   flex-direction: column;
   font-size: larger;
 }
+
 .roket-member-img {
   width: 255px;
   height: 24px;
@@ -512,18 +651,21 @@ button {
   background-color: beige;
   margin-top: 5px;
 }
+
 .roket-member-duty {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .roket-member-department {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .roket-member-submit {
   background-color: burlywood;
   height: 24px;
@@ -537,30 +679,35 @@ button {
   flex-direction: column;
   font-size: larger;
 }
+
 .dataai-member-img {
   width: 255px;
   height: 24px;
   background-color: beige;
   border: var(--black) 2px solid;
 }
+
 .dataai-member-name {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .dataai-member-duty {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .dataai-member-department {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .dataai-member-submit {
   background-color: burlywood;
   height: 24px;
@@ -574,33 +721,472 @@ button {
   flex-direction: column;
   font-size: larger;
 }
+
 .core-member-img {
   width: 255px;
   height: 24px;
   background-color: beige;
   border: var(--black) 2px solid;
 }
+
 .core-member-name {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .core-member-duty {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .core-member-department {
   width: 250px;
   height: 20px;
   background-color: beige;
   margin-top: 5px;
 }
+
 .core-member-submit {
   background-color: burlywood;
   height: 24px;
   width: 80px;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 630px) {
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-size: 2.5vh;
+    transition: all 1s;
+  }
+
+  p {
+    font-size: 10px;
+    transition: all 1s;
+  }
+
+  label {
+    font-size: 9px;
+    transition: all 1s;
+  }
+
+  .lineadmin {
+    width: 42.5vh;
+    transition: all 1s;
+  }
+
+  input {
+    width: 50%;
+    transition: all 1s;
+  }
+
+  input[type=submit] {
+    font-size: 8px;
+    transition: all 1s;
+  }
+
+  input[type=text] {
+    padding: 6px 10px;
+    margin-top: 2.5px;
+    transition: all 1s;
+  }
+
+  /*delete*/
+  .Notification-delete {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    margin-top: 2.5px;
+    transition: all 1s;
+  }
+
+  .anasayfa-galeri-sil {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    grid-gap: 5px;
+    transition: all 1s;
+  }
+
+  .activities-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .sponsor-remove-div {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .corporate-communication-member-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .directory-team-member-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .helloworld-member-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .otonom-member-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .roket-member-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .dataai-member-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  .core-member-remove {
+    height: 20vh;
+    font-size: 1.5vh;
+    width: 40vh;
+    transition: all 1s;
+  }
+
+  /*delete*/
+  .NotificationPictureAdmin {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .NotificationHeaderAdmin {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .NotificationParagraphAdmin {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .Notification-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  /*notification*/
+
+  /*gallery*/
+  .anasayfa-galeri-resim {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .anasayfa-galeri-acıklama {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .anasayfa-galeri-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  /*gallery*/
+
+  /*activities*/
+  .activities-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .activities-header {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .activities-explanation {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .activities-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  /*activities*/
+
+  /*sponsor*/
+  .sponsor-file {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .sponsor-header {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .sponsor-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  /*sponsor*/
+
+  /*corporate-communication*/
+  .corporate-communication-member-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .corporate-communication-member-name {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .corporate-communication-member-duty {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .corporate-communication-member-department {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .corporate-communication-member-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  /*corporate-communication*/
+
+  /*directory-team*/
+  .directory-team-member-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .directory-team-member-name {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .directory-team-member-duty {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .directory-team-member-department {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .directory-team-member-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  /*directory-team*/
+
+  .helloworld-member-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .helloworld-member-name {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .helloworld-member-duty {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .helloworld-member-department {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .helloworld-member-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  .otonom-member-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .otonom-member-name {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .otonom-member-duty {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .otonom-member-department {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .otonom-member-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  .roket-member-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .roket-member-name {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .roket-member-duty {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .roket-member-department {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .roket-member-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  .dataai-member-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .dataai-member-name {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .dataai-member-duty {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .dataai-member-department {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .dataai-member-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
+
+  .core-member-img {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .core-member-name {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .core-member-duty {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .core-member-department {
+    width: 125px;
+    height: 24px;
+    transition: all 1s;
+  }
+
+  .core-member-submit {
+    height: 24px;
+    width: 40px;
+    transition: all 1s;
+  }
 }

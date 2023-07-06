@@ -19,12 +19,16 @@
   <section class="edit" style="opacity: 100%">
     <div class="Notification">
       <h1>Bildirimler</h1>
+      <div class="lineadmin"></div>
       <p>Bildirim Ekle</p>
+      <label for="image">Bildirim için Resim Ekle</label>
       <input type="file" class="NotificationPictureAdmin" accept="image/jpeg,image/png" />
+      <label for="header">Bildirim Başlığı Ekle</label>
       <input type="text" class="NotificationHeaderAdmin" placeholder="Başlık" />
+      <label for="explanation">Bildirim Açıklaması Ekle</label>
       <input type="text" class="NotificationParagraphAdmin" placeholder="Açıklama" />
 
-      <input type="submit" class="Notification-submit" />
+      <input type="submit" class="Notification-submit" value="Gönder" />
       <p>Bildirim Sil</p>
       <div class="Notification-delete">
       </div>
@@ -33,9 +37,11 @@
 
     <div class="anasayfa-galeri">
       <h1>Anasayfa Galeri</h1>
+      <div class="lineadmin"></div>
       <p>Resim Ekle</p>
+      <label for="image">Galeri için Resim Ekle</label>
       <input type="file" class="anasayfa-galeri-resim" accept="image/jpeg,image/png" />
-
+      <label for="explanation">Galeri için Resim Açıklaması Ekle</label>
       <input type="text" class="anasayfa-galeri-acıklama" placeholder="açıklama" />
       <input type="submit" class="anasayfa-galeri-submit" />
       <p>Resim Sil</p>
@@ -45,9 +51,13 @@
     <!-- //////////////////////////////////////////////////////////// -->
     <div class="activities">
       <h1>Etkinlikler</h1>
+      <div class="lineadmin"></div>
       <p>Etkinlik Ekle</p>
+      <label for="image">Galeri için Resim Ekle</label>
       <input type="file" class="activities-img" accept="image/jpeg,image/png" />
+      <label for="header">Etkinlik Başlığı Ekle</label>
       <input type="text" class="activities-header" placeholder="başlık" />
+      <label for="explanation">Etkinlik Açıklaması Ekle</label>
       <input type="text" class="activities-explanation" placeholder="açıklama" />
       <input type="submit" class="activities-submit" />
       <p>Etkinlik Sil</p>
@@ -56,8 +66,11 @@
 
     <div class="sponsor-member">
       <h1>Sponsor</h1>
+      <div class="lineadmin"></div>
       <p>Sponsor Ekle</p>
+      <label for="image">Sponsor için Resim Ekle</label>
       <input type="file" name="" class="sponsor-file" />
+      <label for="explanation">Sponsor İsmi Ekle</label>
       <input type="text" placeholder="isim" class="sponsor-header" />
       <input type="submit" class="sponsor-submit" />
 
@@ -67,9 +80,13 @@
 
     <div class="corporate-communication-member">
       <h1>Kurumsal İletişim Üye</h1>
+      <div class="lineadmin"></div>
       <p>Üye Ekle</p>
+      <label for="member-img">Üye Resmi Ekle</label>
       <input type="file" class="corporate-communication-member-img" accept="image/jpeg,image/png" />
+      <label for="member-name">Üye İsmi Ekle</label>
       <input type="text" class="corporate-communication-member-name" placeholder="isim" />
+      <label for="member-duty">Üye ünvanı Ekle</label>
       <select name="duty" class="corporate-communication-member-duty">
         <option value="" disabled selected>Ünvan Seçiniz</option>
         <option value="Yazılımcı">Yazılımcı</option>
@@ -79,6 +96,7 @@
         <option value="Mekanik">Mekanik</option>
         <option value="Elektronikçi">Elektronikçi</option>
       </select>
+      <label for="member-department">Üye departmanı Ekle</label>
       <select name="duty" class="corporate-communication-member-department">
         <option value="" disabled selected>Bölüm Seçiniz</option>
         <option value="Bilgisayar Mühendisliği">
@@ -95,9 +113,14 @@
     <!-- //////////////////////////////////////////////////////////// -->
     <div class="directory-team-member">
       <h1>Yönetim Kurulu Üye</h1>
+      <div class="lineadmin"></div>
       <p>Üye Ekle</p>
+      <label for="member-img">Üye Resmi Ekle</label>
       <input type="file" class="directory-team-member-img" accept="image/jpeg,image/png" />
+      <label for="member-name">Üye İsmi Ekle</label>
       <input type="text" class="directory-team-member-name" placeholder="isim" />
+
+      <label for="member-duty">Üye ünvanı Ekle</label>
       <select name="duty" class="directory-team-member-duty">
         <option value="" disabled selected>Ünvan Seçiniz</option>
         <option value="Yazılımcı">Yazılımcı</option>
@@ -107,6 +130,7 @@
         <option value="Mekanik">Mekanik</option>
         <option value="Elektronikçi">Elektronikçi</option>
       </select>
+      <label for="member-department">Üye departmanı Ekle</label>
       <select name="duty" class="directory-team-member-department">
         <option value="" disabled selected>Bölüm Seçiniz</option>
         <option value="Bilgisayar Mühendisliği">
@@ -123,10 +147,14 @@
     <!-- //////////////////////////////////////////////////////////// -->
     <div class="helloworld-member">
       <h1>Hello World Üye</h1>
+      <div class="lineadmin"></div>
       <p>Üye Ekle</p>
+      <label for="member-img">Üye Resmi Ekle</label>
       <input type="file" class="helloworld-member-img" accept="image/jpeg,image/png" />
+      <label for="member-name">Üye İsmi Ekle</label>
       <input type="text" class="helloworld-member-name" placeholder="isim" />
 
+      <label for="member-duty">Üye ünvanı Ekle</label>
       <select name="duty" class="helloworld-member-duty">
         <option value="" disabled selected>Ünvan Seçiniz</option>
         <option value="Yazılımcı">Yazılımcı</option>
@@ -136,6 +164,7 @@
         <option value="Mekanik">Mekanik</option>
         <option value="Elektronikçi">Elektronikçi</option>
       </select>
+      <label for="member-department">Üye departmanı Ekle</label>
       <select name="duty" class="helloworld-member-department">
         <option value="" disabled selected>Bölüm Seçiniz</option>
         <option value="Bilgisayar Mühendisliği">
@@ -152,10 +181,14 @@
     <!-- //////////////////////////////////////////////////////////// -->
     <div class="otonom-member">
       <h1>Otonom Üye</h1>
+      <div class="lineadmin"></div>
       <p>Üye Ekle</p>
+      <label for="member-img">Üye Resmi Ekle</label>
       <input type="file" class="otonom-member-img" accept="image/jpeg,image/png" />
+      <label for="member-name">Üye İsmi Ekle</label>
       <input type="text" class="otonom-member-name" placeholder="isim" />
 
+      <label for="member-duty">Üye ünvanı Ekle</label>
       <select name="duty" class="otonom-member-duty">
         <option value="" disabled selected>Ünvan Seçiniz</option>
         <option value="Yazılımcı">Yazılımcı</option>
@@ -165,6 +198,7 @@
         <option value="Mekanik">Mekanik</option>
         <option value="Elektronikçi">Elektronikçi</option>
       </select>
+      <label for="member-department">Üye departmanı Ekle</label>
       <select name="duty" class="otonom-member-department">
         <option value="" disabled selected>Bölüm Seçiniz</option>
         <option value="Bilgisayar Mühendisliği">
@@ -180,10 +214,14 @@
     </div>
     <div class="roket-member">
       <h1>Roket Üye</h1>
+      <div class="lineadmin"></div>
       <p>Üye Ekle</p>
+      <label for="member-img">Üye Resmi Ekle</label>
       <input type="file" class="roket-member-img" accept="image/jpeg,image/png" />
+      <label for="member-name">Üye İsmi Ekle</label>
       <input type="text" class="roket-member-name" placeholder="isim" />
 
+      <label for="member-duty">Üye ünvanı Ekle</label>
       <select name="duty" class="roket-member-duty">
         <option value="" disabled selected>Ünvan Seçiniz</option>
         <option value="Yazılımcı">Yazılımcı</option>
@@ -193,6 +231,7 @@
         <option value="Mekanik">Mekanik</option>
         <option value="Elektronikçi">Elektronikçi</option>
       </select>
+      <label for="member-department">Üye departmanı Ekle</label>
       <select name="duty" class="roket-member-department">
         <option value="" disabled selected>Bölüm Seçiniz</option>
         <option value="Bilgisayar Mühendisliği">
@@ -208,10 +247,14 @@
     </div>
     <div class="dataai-member">
       <h1>DataAI Üye</h1>
+      <div class="lineadmin"></div>
       <p>Üye Ekle</p>
+      <label for="member-img">Üye Resmi Ekle</label>
       <input type="file" class="dataai-member-img" accept="image/jpeg,image/png" />
+      <label for="member-name">Üye İsmi Ekle</label>
       <input type="text" class="dataai-member-name" placeholder="isim" />
 
+      <label for="member-duty">Üye ünvanı Ekle</label>
       <select name="duty" class="dataai-member-duty">
         <option value="" disabled selected>Ünvan Seçiniz</option>
         <option value="Yazılımcı">Yazılımcı</option>
@@ -221,6 +264,7 @@
         <option value="Mekanik">Mekanik</option>
         <option value="Elektronikçi">Elektronikçi</option>
       </select>
+      <label for="member-department">Üye departmanı Ekle</label>
       <select name="duty" class="dataai-member-department">
         <option value="" disabled selected>Bölüm Seçiniz</option>
         <option value="Bilgisayar Mühendisliği">
@@ -237,10 +281,13 @@
 
     <div class="core-üye">
       <h1>Core Üye</h1>
+      <div class="lineadmin"></div>
       <p>Üye Ekle</p>
+      <label for="member-img">Üye Resmi Ekle</label>
       <input type="file" class="core-member-img" accept="image/jpeg,image/png" />
+      <label for="member-name">Üye İsmi Ekle</label>
       <input type="text" class="core-member-name" placeholder="isim" />
-
+      <label for="member-duty">Üye ünvanı Ekle</label>
       <select name="duty" class="core-member-duty">
         <option value="" disabled selected>Ünvan Seçiniz</option>
         <option value="Yazılımcı">Yazılımcı</option>
@@ -250,6 +297,7 @@
         <option value="Mekanik">Mekanik</option>
         <option value="Elektronikçi">Elektronikçi</option>
       </select>
+      <label for="member-department">Üye departmanı Ekle</label>
       <select name="duty" class="core-member-department">
         <option value="" disabled selected>Bölüm Seçiniz</option>
         <option value="Bilgisayar Mühendisliği">
@@ -262,8 +310,10 @@
       <input type="submit" class="core-member-submit" />
       <p>Üye Sil</p>
       <div class="core-member-remove"></div>
-      <p>Üye Sil</p>
     </div>
+    <br>
+    <br>
+    <br>
   </section>
 </body>
 <script defer type="module" src="admin.js"></script>
