@@ -643,6 +643,8 @@ body {
   cursor: pointer;
 }
 
+
+
 .etkinliklerimiz--slider .active {
   background-color: var(--white);
   position: relative;
@@ -758,6 +760,10 @@ body {
 @media only screen and (max-width: 750px) {
   .sponsor-container {
     grid-template-columns: auto;
+  }
+
+  .etkinliklerimiz--slides h1 {
+    top: 2%;
   }
 }
 /* sponsor işbirlik */
