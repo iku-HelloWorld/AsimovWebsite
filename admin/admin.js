@@ -59,6 +59,7 @@ const signedInHandler = function () {
   login.style.opacity = "0%";
   login.style.display = "none";
   edit.style.opacity = "100%";
+  edit.style.display = "initial";
 };
 
 submit.addEventListener("click", function () {

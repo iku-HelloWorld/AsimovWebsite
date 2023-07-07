@@ -1,282 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="admin.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adminPanel</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="admin.css" />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>adminPanel</title>
-</head>
+  <body>
+    <div class="login" style="opacity: 100%; display: initial">
+      <h1>Giriş Yapın</h1>
+      <p>E-posta<input class="username" type="text" /></p>
+      <p>Şifre<input class="password" type="text" /></p>
+      <input class="submit" type="submit" value="login" />
+    </div>
+    <section class="edit" style="opacity: 0%; display: none">
+      <div class="Notification">
+        <h1>Bildirimler</h1>
+        <p>Bildirim Ekle</p>
+        <input
+          type="file"
+          class="NotificationPictureAdmin"
+          accept="image/jpeg,image/png"
+        />
+        <input
+          type="text"
+          class="NotificationHeaderAdmin"
+          placeholder="Başlık"
+        />
+        <input
+          type="text"
+          class="NotificationParagraphAdmin"
+          placeholder="Açıklama"
+        />
 
-<body>
-  <div class="login" style="opacity: 0%; display: none">
-    <h1>Giriş Yapın</h1>
-    <p>E-posta<input class="username" type="text" /></p>
-    <p>Şifre<input class="password" type="text" /></p>
-    <input class="submit" type="submit" value="login" />
-  </div>
-  <section class="edit" style="opacity: 100%">
-    <div class="Notification">
-      <h1>Bildirimler</h1>
-      <p>Bildirim Ekle</p>
-      <input type="file" class="NotificationPictureAdmin" accept="image/jpeg,image/png" />
-      <input type="text" class="NotificationHeaderAdmin" placeholder="Başlık" />
-      <input type="text" class="NotificationParagraphAdmin" placeholder="Açıklama" />
-
-      <input type="submit" class="Notification-submit" />
-      <p>Bildirim Sil</p>
-      <div class="Notification-delete">
+        <input type="submit" class="Notification-submit" />
+        <p>Bildirim Sil</p>
+        <div class="Notification-delete"></div>
       </div>
 
-    </div>
+      <div class="anasayfa-galeri">
+        <h1>Anasayfa Galeri</h1>
+        <p>Resim Ekle</p>
+        <input
+          type="file"
+          class="anasayfa-galeri-resim"
+          accept="image/jpeg,image/png"
+        />
 
-    <div class="anasayfa-galeri">
-      <h1>Anasayfa Galeri</h1>
-      <p>Resim Ekle</p>
-      <input type="file" class="anasayfa-galeri-resim" accept="image/jpeg,image/png" />
+        <input
+          type="text"
+          class="anasayfa-galeri-acıklama"
+          placeholder="açıklama"
+        />
+        <input type="submit" class="anasayfa-galeri-submit" />
+        <p>Resim Sil</p>
+        <div class="anasayfa-galeri-sil"></div>
+      </div>
 
-      <input type="text" class="anasayfa-galeri-acıklama" placeholder="açıklama" />
-      <input type="submit" class="anasayfa-galeri-submit" />
-      <p>Resim Sil</p>
-      <div class="anasayfa-galeri-sil"></div>
-    </div>
+      <!-- //////////////////////////////////////////////////////////// -->
+      <div class="activities">
+        <h1>Etkinlikler</h1>
+        <p>Etkinlik Ekle</p>
+        <input
+          type="file"
+          class="activities-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="activities-header" placeholder="başlık" />
+        <input
+          type="text"
+          class="activities-explanation"
+          placeholder="açıklama"
+        />
+        <input type="submit" class="activities-submit" />
+        <p>Etkinlik Sil</p>
+        <div class="activities-remove"></div>
+      </div>
 
-    <!-- //////////////////////////////////////////////////////////// -->
-    <div class="activities">
-      <h1>Etkinlikler</h1>
-      <p>Etkinlik Ekle</p>
-      <input type="file" class="activities-img" accept="image/jpeg,image/png" />
-      <input type="text" class="activities-header" placeholder="başlık" />
-      <input type="text" class="activities-explanation" placeholder="açıklama" />
-      <input type="submit" class="activities-submit" />
-      <p>Etkinlik Sil</p>
-      <div class="activities-remove"></div>
-    </div>
+      <div class="sponsor-member">
+        <h1>Sponsor</h1>
+        <p>Sponsor Ekle</p>
+        <input type="file" name="" class="sponsor-file" />
+        <input type="text" placeholder="isim" class="sponsor-header" />
+        <input type="submit" class="sponsor-submit" />
 
-    <div class="sponsor-member">
-      <h1>Sponsor</h1>
-      <p>Sponsor Ekle</p>
-      <input type="file" name="" class="sponsor-file" />
-      <input type="text" placeholder="isim" class="sponsor-header" />
-      <input type="submit" class="sponsor-submit" />
+        <p>Sponsor Sil</p>
+        <div class="sponsor-remove-div"></div>
+      </div>
 
-      <p>Sponsor Sil</p>
-      <div class="sponsor-remove-div"></div>
-    </div>
+      <div class="corporate-communication-member">
+        <h1>Kurumsal İletişim Üye</h1>
+        <p>Üye Ekle</p>
+        <input
+          type="file"
+          class="corporate-communication-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input
+          type="text"
+          class="corporate-communication-member-name"
+          placeholder="isim"
+        />
+        <select name="duty" class="corporate-communication-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="corporate-communication-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="corporate-communication-member-submit" />
+        <p>Üye Sil</p>
+        <div class="corporate-communication-member-remove"></div>
+      </div>
+      <!-- //////////////////////////////////////////////////////////// -->
+      <div class="directory-team-member">
+        <h1>Yönetim Kurulu Üye</h1>
+        <p>Üye Ekle</p>
+        <input
+          type="file"
+          class="directory-team-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input
+          type="text"
+          class="directory-team-member-name"
+          placeholder="isim"
+        />
+        <select name="duty" class="directory-team-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="directory-team-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="directory-team-member-submit" />
+        <p>Üye Sil</p>
+        <div class="directory-team-member-remove"></div>
+      </div>
+      <!-- //////////////////////////////////////////////////////////// -->
+      <div class="helloworld-member">
+        <h1>Hello World Üye</h1>
+        <p>Üye Ekle</p>
+        <input
+          type="file"
+          class="helloworld-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="helloworld-member-name" placeholder="isim" />
 
-    <div class="corporate-communication-member">
-      <h1>Kurumsal İletişim Üye</h1>
-      <p>Üye Ekle</p>
-      <input type="file" class="corporate-communication-member-img" accept="image/jpeg,image/png" />
-      <input type="text" class="corporate-communication-member-name" placeholder="isim" />
-      <select name="duty" class="corporate-communication-member-duty">
-        <option value="" disabled selected>Ünvan Seçiniz</option>
-        <option value="Yazılımcı">Yazılımcı</option>
-        <option value="Fotoğrafçı">Fotoğrafçı</option>
-        <option value="Yönetici">Yönetici</option>
-        <option value="Danışman">Danışman</option>
-        <option value="Mekanik">Mekanik</option>
-        <option value="Elektronikçi">Elektronikçi</option>
-      </select>
-      <select name="duty" class="corporate-communication-member-department">
-        <option value="" disabled selected>Bölüm Seçiniz</option>
-        <option value="Bilgisayar Mühendisliği">
-          Bilgisayar Mühendisliği
-        </option>
-        <option value="Elektrik Elektronik Mühendisliği">
-          Elektrik Elektronik Mühendisliği
-        </option>
-      </select>
-      <input type="submit" class="corporate-communication-member-submit" />
-      <p>Üye Sil</p>
-      <div class="corporate-communication-member-remove"></div>
-    </div>
-    <!-- //////////////////////////////////////////////////////////// -->
-    <div class="directory-team-member">
-      <h1>Yönetim Kurulu Üye</h1>
-      <p>Üye Ekle</p>
-      <input type="file" class="directory-team-member-img" accept="image/jpeg,image/png" />
-      <input type="text" class="directory-team-member-name" placeholder="isim" />
-      <select name="duty" class="directory-team-member-duty">
-        <option value="" disabled selected>Ünvan Seçiniz</option>
-        <option value="Yazılımcı">Yazılımcı</option>
-        <option value="Fotoğrafçı">Fotoğrafçı</option>
-        <option value="Yönetici">Yönetici</option>
-        <option value="Danışman">Danışman</option>
-        <option value="Mekanik">Mekanik</option>
-        <option value="Elektronikçi">Elektronikçi</option>
-      </select>
-      <select name="duty" class="directory-team-member-department">
-        <option value="" disabled selected>Bölüm Seçiniz</option>
-        <option value="Bilgisayar Mühendisliği">
-          Bilgisayar Mühendisliği
-        </option>
-        <option value="Elektrik Elektronik Mühendisliği">
-          Elektrik Elektronik Mühendisliği
-        </option>
-      </select>
-      <input type="submit" class="directory-team-member-submit" />
-      <p>Üye Sil</p>
-      <div class="directory-team-member-remove"></div>
-    </div>
-    <!-- //////////////////////////////////////////////////////////// -->
-    <div class="helloworld-member">
-      <h1>Hello World Üye</h1>
-      <p>Üye Ekle</p>
-      <input type="file" class="helloworld-member-img" accept="image/jpeg,image/png" />
-      <input type="text" class="helloworld-member-name" placeholder="isim" />
+        <select name="duty" class="helloworld-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="helloworld-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="helloworld-member-submit" />
+        <p>Üye Sil</p>
+        <div class="helloworld-member-remove"></div>
+      </div>
+      <!-- //////////////////////////////////////////////////////////// -->
+      <div class="otonom-member">
+        <h1>Otonom Üye</h1>
+        <p>Üye Ekle</p>
+        <input
+          type="file"
+          class="otonom-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="otonom-member-name" placeholder="isim" />
 
-      <select name="duty" class="helloworld-member-duty">
-        <option value="" disabled selected>Ünvan Seçiniz</option>
-        <option value="Yazılımcı">Yazılımcı</option>
-        <option value="Fotoğrafçı">Fotoğrafçı</option>
-        <option value="Yönetici">Yönetici</option>
-        <option value="Danışman">Danışman</option>
-        <option value="Mekanik">Mekanik</option>
-        <option value="Elektronikçi">Elektronikçi</option>
-      </select>
-      <select name="duty" class="helloworld-member-department">
-        <option value="" disabled selected>Bölüm Seçiniz</option>
-        <option value="Bilgisayar Mühendisliği">
-          Bilgisayar Mühendisliği
-        </option>
-        <option value="Elektrik Elektronik Mühendisliği">
-          Elektrik Elektronik Mühendisliği
-        </option>
-      </select>
-      <input type="submit" class="helloworld-member-submit" />
-      <p>Üye Sil</p>
-      <div class="helloworld-member-remove"></div>
-    </div>
-    <!-- //////////////////////////////////////////////////////////// -->
-    <div class="otonom-member">
-      <h1>Otonom Üye</h1>
-      <p>Üye Ekle</p>
-      <input type="file" class="otonom-member-img" accept="image/jpeg,image/png" />
-      <input type="text" class="otonom-member-name" placeholder="isim" />
+        <select name="duty" class="otonom-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="otonom-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="otonom-member-submit" />
+        <p>Üye Sil</p>
+        <div class="otonom-member-remove"></div>
+      </div>
+      <div class="roket-member">
+        <h1>Roket Üye</h1>
+        <p>Üye Ekle</p>
+        <input
+          type="file"
+          class="roket-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="roket-member-name" placeholder="isim" />
 
-      <select name="duty" class="otonom-member-duty">
-        <option value="" disabled selected>Ünvan Seçiniz</option>
-        <option value="Yazılımcı">Yazılımcı</option>
-        <option value="Fotoğrafçı">Fotoğrafçı</option>
-        <option value="Yönetici">Yönetici</option>
-        <option value="Danışman">Danışman</option>
-        <option value="Mekanik">Mekanik</option>
-        <option value="Elektronikçi">Elektronikçi</option>
-      </select>
-      <select name="duty" class="otonom-member-department">
-        <option value="" disabled selected>Bölüm Seçiniz</option>
-        <option value="Bilgisayar Mühendisliği">
-          Bilgisayar Mühendisliği
-        </option>
-        <option value="Elektrik Elektronik Mühendisliği">
-          Elektrik Elektronik Mühendisliği
-        </option>
-      </select>
-      <input type="submit" class="otonom-member-submit" />
-      <p>Üye Sil</p>
-      <div class="otonom-member-remove"></div>
-    </div>
-    <div class="roket-member">
-      <h1>Roket Üye</h1>
-      <p>Üye Ekle</p>
-      <input type="file" class="roket-member-img" accept="image/jpeg,image/png" />
-      <input type="text" class="roket-member-name" placeholder="isim" />
+        <select name="duty" class="roket-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="roket-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="roket-member-submit" />
+        <p>Üye Sil</p>
+        <div class="roket-member-remove"></div>
+      </div>
+      <div class="dataai-member">
+        <h1>DataAI Üye</h1>
+        <p>Üye Ekle</p>
+        <input
+          type="file"
+          class="dataai-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="dataai-member-name" placeholder="isim" />
 
-      <select name="duty" class="roket-member-duty">
-        <option value="" disabled selected>Ünvan Seçiniz</option>
-        <option value="Yazılımcı">Yazılımcı</option>
-        <option value="Fotoğrafçı">Fotoğrafçı</option>
-        <option value="Yönetici">Yönetici</option>
-        <option value="Danışman">Danışman</option>
-        <option value="Mekanik">Mekanik</option>
-        <option value="Elektronikçi">Elektronikçi</option>
-      </select>
-      <select name="duty" class="roket-member-department">
-        <option value="" disabled selected>Bölüm Seçiniz</option>
-        <option value="Bilgisayar Mühendisliği">
-          Bilgisayar Mühendisliği
-        </option>
-        <option value="Elektrik Elektronik Mühendisliği">
-          Elektrik Elektronik Mühendisliği
-        </option>
-      </select>
-      <input type="submit" class="roket-member-submit" />
-      <p>Üye Sil</p>
-      <div class="roket-member-remove"></div>
-    </div>
-    <div class="dataai-member">
-      <h1>DataAI Üye</h1>
-      <p>Üye Ekle</p>
-      <input type="file" class="dataai-member-img" accept="image/jpeg,image/png" />
-      <input type="text" class="dataai-member-name" placeholder="isim" />
+        <select name="duty" class="dataai-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="dataai-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="dataai-member-submit" />
+        <p>Üye Sil</p>
+        <div class="dataai-member-remove"></div>
+      </div>
 
-      <select name="duty" class="dataai-member-duty">
-        <option value="" disabled selected>Ünvan Seçiniz</option>
-        <option value="Yazılımcı">Yazılımcı</option>
-        <option value="Fotoğrafçı">Fotoğrafçı</option>
-        <option value="Yönetici">Yönetici</option>
-        <option value="Danışman">Danışman</option>
-        <option value="Mekanik">Mekanik</option>
-        <option value="Elektronikçi">Elektronikçi</option>
-      </select>
-      <select name="duty" class="dataai-member-department">
-        <option value="" disabled selected>Bölüm Seçiniz</option>
-        <option value="Bilgisayar Mühendisliği">
-          Bilgisayar Mühendisliği
-        </option>
-        <option value="Elektrik Elektronik Mühendisliği">
-          Elektrik Elektronik Mühendisliği
-        </option>
-      </select>
-      <input type="submit" class="dataai-member-submit" />
-      <p>Üye Sil</p>
-      <div class="dataai-member-remove"></div>
-    </div>
+      <div class="core-üye">
+        <h1>Core Üye</h1>
+        <p>Üye Ekle</p>
+        <input
+          type="file"
+          class="core-member-img"
+          accept="image/jpeg,image/png"
+        />
+        <input type="text" class="core-member-name" placeholder="isim" />
 
-    <div class="core-üye">
-      <h1>Core Üye</h1>
-      <p>Üye Ekle</p>
-      <input type="file" class="core-member-img" accept="image/jpeg,image/png" />
-      <input type="text" class="core-member-name" placeholder="isim" />
-
-      <select name="duty" class="core-member-duty">
-        <option value="" disabled selected>Ünvan Seçiniz</option>
-        <option value="Yazılımcı">Yazılımcı</option>
-        <option value="Fotoğrafçı">Fotoğrafçı</option>
-        <option value="Yönetici">Yönetici</option>
-        <option value="Danışman">Danışman</option>
-        <option value="Mekanik">Mekanik</option>
-        <option value="Elektronikçi">Elektronikçi</option>
-      </select>
-      <select name="duty" class="core-member-department">
-        <option value="" disabled selected>Bölüm Seçiniz</option>
-        <option value="Bilgisayar Mühendisliği">
-          Bilgisayar Mühendisliği
-        </option>
-        <option value="Elektrik Elektronik Mühendisliği">
-          Elektrik Elektronik Mühendisliği
-        </option>
-      </select>
-      <input type="submit" class="core-member-submit" />
-      <p>Üye Sil</p>
-      <div class="core-member-remove"></div>
-      <p>Üye Sil</p>
-    </div>
-  </section>
-</body>
-<script defer type="module" src="admin.js"></script>
-<script defer type="module" src="NotificationAdmin.js"></script>
-<script defer type="module" src="galeriFb.js"></script>
-<script defer type="module" src="etkinliklerFb.js"></script>
-<script defer type="module" src="corporateCommunicationFb.js"></script>
-<script defer type="module" src="directoryTeamFb.js"></script>
-<script defer type="module" src="helloWorldFb.js"></script>
-<script defer type="module" src="otonomFb.js"></script>
-<script defer type="module" src="roketFb.js"></script>
-<script defer type="module" src="dataaiFb.js"></script>
-<script defer type="module" src="coreFb.js"></script>
-<script defer type="module" src="sponsorFb.js"></script>
-
+        <select name="duty" class="core-member-duty">
+          <option value="" disabled selected>Ünvan Seçiniz</option>
+          <option value="Yazılımcı">Yazılımcı</option>
+          <option value="Fotoğrafçı">Fotoğrafçı</option>
+          <option value="Yönetici">Yönetici</option>
+          <option value="Danışman">Danışman</option>
+          <option value="Mekanik">Mekanik</option>
+          <option value="Elektronikçi">Elektronikçi</option>
+        </select>
+        <select name="duty" class="core-member-department">
+          <option value="" disabled selected>Bölüm Seçiniz</option>
+          <option value="Bilgisayar Mühendisliği">
+            Bilgisayar Mühendisliği
+          </option>
+          <option value="Elektrik Elektronik Mühendisliği">
+            Elektrik Elektronik Mühendisliği
+          </option>
+        </select>
+        <input type="submit" class="core-member-submit" />
+        <p>Üye Sil</p>
+        <div class="core-member-remove"></div>
+        <p>Üye Sil</p>
+      </div>
+    </section>
+  </body>
+  <script defer type="module" src="admin.js"></script>
+  <script defer type="module" src="NotificationAdmin.js"></script>
+  <script defer type="module" src="galeriFb.js"></script>
+  <script defer type="module" src="etkinliklerFb.js"></script>
+  <script defer type="module" src="corporateCommunicationFb.js"></script>
+  <script defer type="module" src="directoryTeamFb.js"></script>
+  <script defer type="module" src="helloWorldFb.js"></script>
+  <script defer type="module" src="otonomFb.js"></script>
+  <script defer type="module" src="roketFb.js"></script>
+  <script defer type="module" src="dataaiFb.js"></script>
+  <script defer type="module" src="coreFb.js"></script>
+  <script defer type="module" src="sponsorFb.js"></script>
 </html>
