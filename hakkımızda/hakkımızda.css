@@ -693,6 +693,13 @@ body {
   transform: translateY(-50%) skew(-10deg, 10deg);
   transition: ease 400ms;
 }
+.etkinliklerimiz--slider .other {
+  right: 20%;
+  z-index: 1;
+  visibility: visible;
+  transform: translateY(-50%) skew(-10deg, 10deg);
+  transition: ease 400ms;
+}
 
 .etkinliklerimiz--slider .etkinliklerimiz--slide img {
   width: 80%;
@@ -701,10 +708,9 @@ body {
 }
 .etkinliklerimiz--slider .etkinliklerimiz--slide h1 {
   font-size: larger;
-  float: left;
+  text-align: start;
   margin: 0;
   margin-bottom: 10px;
-  text-indent: 5px;
 }
 .etkinliklerimiz--slider .etkinliklerimiz--slide p {
   font-size: larger;

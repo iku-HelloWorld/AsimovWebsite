@@ -74,9 +74,15 @@ const displaySlides = function () {
   etkinlikSlides.forEach((s) => s.classList.remove("active"));
   etkinlikSlides.forEach((s) => s.classList.remove("after"));
   etkinlikSlides.forEach((s) => s.classList.remove("before"));
+  etkinlikSlides.forEach((s) => s.classList.remove("other"));
   if (etkinlikSlides.length == 1) {
     // console.log("here");
     etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+  } else if (etkinlikSlides.length == 2) {
+    etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+    etkinlikSlides.item(afterIndex - 1).classList.add("other");
+
+    // document.querySelector(".after").style.left = "100%";
   } else {
     etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
     etkinlikSlides.item(beforeIndex - 1).classList.add("before");
