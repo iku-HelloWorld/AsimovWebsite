@@ -744,7 +744,6 @@ body {
 }
 
 .sponsor-container {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   grid-gap: 5vw;
@@ -752,29 +751,27 @@ body {
   margin: auto;
   position: relative;
   width: 70%;
-  }
+  display: grid;
+  grid-gap: 5vw;
+}
 
 .sponsor {
   display: block;
   align-items: center;
   padding: 20px;
- }
+}
 
 .sponsor-content {
   position: relative;
- 
+
   margin-bottom: 2vw;
 }
 
-.sponsor img {
-  float: right;
-  flex: 0 0 50%;
-  object-fit: contain;
-  margin-right: 10px;
- }
-
 .right img {
   float: right;
+}
+.sponsor-title {
+  margin-right: 30px;
 }
 
 /* sponsor işbirlik */
