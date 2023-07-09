@@ -105,8 +105,7 @@
 .nav-toggle a {
   text-decoration: none;
   color: white;
-  width: 40px;
-  height: 40px;
+  border: var(--black) solid 1px;
   border-radius: 50%;
   color: var(--black);
   width: 36px;
@@ -116,6 +115,7 @@
   font-size: x-large;
   font-weight: 500;
   z-index: 5;
+  text-align: center;
   /* transition: ease 400ms; */
   text-align: center;
   padding-top: 3px;
@@ -138,12 +138,11 @@
   font-size: 1.1rem;
   color: var(--black);
   cursor: pointer;
-  text-align: center;
 }
 
-#lang {
+/* #lang {
   display: flex;
-}
+} */
 
 .nav-list {
   display: none;

@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  position: fixed;
+  position: sticky;
   width: 100%;
   transition: ease 400ms;
 }
@@ -98,11 +98,14 @@
   display: flex;
   position: absolute;
   right: 3rem;
+  text-align: center;
 }
 
 .nav-toggle a {
   text-decoration: none;
-
+  width: 40px;
+  height: 40px;
+  border: var(--black) solid 1px;
   border-radius: 50%;
   color: black;
   padding: 5px 5px;
@@ -206,11 +209,13 @@
   }
 
   .asimov-logo {
-    position: relative;
+    position: absolute;
     left: 50%;
     transform: translate(-50%, -100%);
     width: 18vw;
     height: 20vw;
+    top: 20vh;
+    min-width: 80px;
   }
 
   .asimov-logo img {
@@ -218,6 +223,7 @@
     position: relative;
     top: 0;
     left: 0;
+    object-fit: contain;
   }
 
   .navbar-wrapper {
@@ -285,7 +291,7 @@
 
     overflow: hidden;
     position: absolute;
-    left: 50%;
+    left: 25%;
     top: 0;
     background-color: transparent;
     color: var(--white);
@@ -336,34 +342,37 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-items: center;
-  padding-top: 4%;
+  padding-top: 2.2%;
   justify-content: center;
   gap: 10vh;
   position: relative;
-  top: 10vh;
 }
 
 .TeamPageContentImg img {
   width: 30vw;
   box-shadow: -10px 10px 0px 0px#3d52a5;
   align-items: center;
+  object-fit: cover;
 }
 
 .TeamPageContentText {
   width: 80vh;
   box-shadow: -5px 0px 0px 0px#3d52a5;
   padding-left: 5%;
+  min-height: 5vw;
+  height: auto !important;
 }
 
 .TeamPageContentText h1 {
-  font-family: "poppins";
   font-size: xx-large;
   margin-top: 0%;
+  min-height: 5vw;
 }
 
 .TeamPageContentText p {
-  font-family: sans-serif;
   font-size: x-large;
+  min-height: 5vw;
+  height: auto !important;
 }
 
 @media (max-width: 1400px) {
@@ -388,19 +397,23 @@
     box-shadow: -3px 0px 0px 0px#3d52a5;
     padding-left: 5%;
     transition: all 1s;
+    min-height: 5vw;
+    height: auto !important;
   }
 
   .TeamPageContentText h1 {
-    font-family: "poppins";
     font-size: 4vh;
     margin-top: 0%;
     transition: all 1s;
+    min-height: 5vw;
+    height: auto !important;
   }
 
   .TeamPageContentText p {
-    font-family: sans-serif;
     font-size: 2vh;
     transition: all 1s;
+    min-height: 5vw;
+    height: auto !important;
   }
 }
 
@@ -439,14 +452,13 @@
 
 /* video */
 .TeamPageVideo {
-  width: 48vw;
-  height: 27vw;
+  width: 68vw;
+  height: 40vw;
   position: relative;
-  left: 50%;
-  top: 130px;
+  left: 51%;
   margin: 0;
-  margin-bottom: 200px;
-  margin-top: 50px;
+  margin-bottom: 20vh;
+  margin-top: 10vh;
   padding: 0;
   transform: translateX(-50%);
 }
@@ -460,7 +472,6 @@
 
 /* içerik 2 */
 .takımsayfasıiçerik2 p {
-  font-family: sans-serif;
   font-size: 2vh;
   margin-left: 10%;
   margin-right: 10%;
@@ -489,7 +500,6 @@
 
 @media (max-width: 850px) {
   .takımsayfasıiçerik2 p {
-    font-family: sans-serif;
     font-size: 1vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -533,7 +543,6 @@
 
 .TeamPageMembersHeader {
   font-size: 3vh;
-  font-family: "Poppins";
   color: var(--black);
   padding: 3%;
 }
@@ -561,10 +570,10 @@
   height: 15vh;
   border-radius: 50%;
   border: 2px solid var(--black);
+  object-fit: contain;
 }
 
 .TeamPageMembersCardsTextHeader {
-  font-family: sans-serif;
   color: var(--black);
   text-align: center;
   font-size: 2vh;
@@ -572,55 +581,16 @@
 }
 
 .TeamPageMembersCardsText {
-  font-family: sans-serif;
   color: var(--black);
   text-align: center;
 }
 
 .TeamPageMembersCardsTextMajor {
-  font-family: sans-serif;
   color: var(--black);
   text-align: center;
   font-size: 1.6vh;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .TeamPageMembers {
-    padding-left: 5%;
-    padding-right: 5%;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersHeader {
-    font-size: 2vh;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCards {
-    width: 45%;
-    height: auto;
-    padding: 5%;
-    margin: 2% 0;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCardsImg img {
-    margin-top: 4%;
-    width: 40%;
-    height: auto;
-    transition: all 1s;
-  }
-
-  .TeamPageMembersCardsTextHeader {
-    font-size: 2vh;
-  }
-
-  .TeamPageMembersCardsTextMajor {
-    font-size: 1.4vh;
-  }
-}
-/*responsive*/
 /*üyeler*/
 
 /* footer */
@@ -714,4 +684,7 @@
     color: var(--light-color);
     transform: rotateY(360deg);
   }
+}
+* {
+  font-family: "Poppins", sans-serif;
 }
