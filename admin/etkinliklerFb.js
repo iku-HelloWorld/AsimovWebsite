@@ -82,11 +82,36 @@ removeDiv.addEventListener("click", function (e) {
   if (e.target.closest(".act-sil-btn")) {
     const { h, n } = e.target.closest(".act-sil-btn").dataset;
     // console.log(h, n);
-    if (confirm(h + "isimli etkinliği silmek istiyor musunuz?")) {
-      remove(ref(db, "etkinlikler/" + n)).then(() => {
-        console.log("success");
-        location.reload();
-      });
-    }
+    alertify.confirm(
+      "etkinlik sil",
+      `${h} isimli etkinlik silinsin mi?`,
+      function () {
+        remove(ref(db, "etkinlikler/" + n)).then(() => {
+          // console.log("success");
+          alertify.succes("etkinlik silindi");
+          location.reload();
+        });
+      },
+
+      function () {
+        alertify.error("etkinlik silinemedi");
+      }
+    );
   }
 });
+
+// alertify.confirm(
+//   "üye silme",
+//   `${chosenName} isimli üye silinsin mi?`,
+//   function () {
+//     remove(child(dbRef, `coreMember/` + chosenNick))
+//       .then(() => {
+//         alertify.success("üye silindi");
+//         location.reload();
+//       })
+//       .catch((error) => {
+//         // console.log("üye silinemedi");
+//       });
+//   },
+//   () => alertify.error("üye silinemedi")
+// );

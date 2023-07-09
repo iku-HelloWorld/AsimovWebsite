@@ -75,16 +75,22 @@ roketMemberRemove.addEventListener("click", function (e) {
     const chosenName = e.target.parentElement.childNodes[2].textContent;
     const chosenNick = e.target.parentElement.childNodes[1].data;
     // console.log(chosenName);
-    if (confirm(chosenName + "isimli üye silinsin mi?")) {
-      remove(child(dbRef, `roketMember/` + chosenNick))
-        .then(() => {
-          // console.log("üye silindi");
-          location.reload();
-        })
-        .catch((error) => {
-          // console.log("üye silinemedi");
-        });
-    }
+    alertify.confirm(
+      `${chosenName} isimli üye silinsin mi?`,
+      function () {
+        remove(child(dbRef, `roketMember/` + chosenNick))
+          .then(() => {
+            alertify.success("üye silindi");
+            location.reload();
+          })
+          .catch((error) => {
+            // console.log("üye silinemedi");
+          });
+      },
+      function () {
+        alertify.error("üye silinemedi");
+      }
+    );
   }
 });
 
@@ -104,7 +110,7 @@ roketMemberSubmit.addEventListener("click", function () {
 
   if (ad && ünvan && bölüm && resim) {
     if (!ad.split(" ")[1]) {
-      alert("İsim ve soyad olarak en az 2 kelime girilmeli!");
+      alertify.alert("İsim ve soyad olarak en az 2 kelime girilmeli!");
     }
     const nick =
       ad.split(" ")[0].slice(0, 2) + ad.split(" ")[1].slice(0, 2) + ad.length;
@@ -136,6 +142,6 @@ roketMemberSubmit.addEventListener("click", function () {
       nick: nick,
     });
   } else {
-    alert("Tüm boşlukları doldurunuz");
+    alertify.alert("Tüm boşlukları doldurunuz");
   }
 });

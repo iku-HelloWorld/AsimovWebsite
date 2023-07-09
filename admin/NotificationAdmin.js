@@ -86,24 +86,32 @@ NotificationDelete.addEventListener("click", function (m) {
     const chosenHeader = m.target.parentElement.childNodes[1].textContent;
     const chosenText = m.target.parentElement.childNodes[1].data;
     // console.log(chosenName);
-    if (confirm(chosenHeader + " bildirim silinsin mi?")) {
-      remove(child(dbRef, `bildirim/` + chosenHeader.slice(0, 10)))
-        .then(() => {
-          // console.log("Bildirim silindi");
-          // location.reload();
-        })
-        .catch((error) => {
-          // console.log("Bildirim silinemedi");
-        });
-      deleteObject(sRef(storage, `bildirim/` + chosenHeader.slice(0, 10)))
-        .then(() => {
-          console.log("deleted");
-          location.reload();
-        })
-        .catch(() => {
-          console.log("fuck");
-        });
-    }
+    alertify.confirm(
+      "bildirim sil",
+      `${chosenHeader} bildirim silinsin mi?`,
+      function () {
+        remove(child(dbRef, `bildirim/` + chosenHeader.slice(0, 10)))
+          .then(() => {
+            // console.log("Bildirim silindi");
+            // location.reload();
+          })
+          .catch((error) => {
+            // console.log("Bildirim silinemedi");
+          });
+        deleteObject(sRef(storage, `bildirim/` + chosenHeader.slice(0, 10)))
+          .then(() => {
+            // console.log("deleted");
+            alertify.success("bildirim silindi");
+            location.reload();
+          })
+          .catch(() => {
+            // console.log("fuck");
+          });
+      },
+      function () {
+        alertify.error("bildirim silinemedi");
+      }
+    );
   }
 });
 
