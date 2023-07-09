@@ -360,6 +360,9 @@
   position: relative;
   top: 5vh;
 }
+.yönetimkurulusayfasıiçerik p {
+  font-size: large;
+}
 .yönetimkurulusayfasıiçerik h1 {
   font-size: xx-large;
   font-weight: bolder;
@@ -477,7 +480,7 @@
 }
 
 .TeamPageMembersHeader {
-  font-size: 20px;
+  font-size: large;
   font-weight: 300;
   color: var(--black);
 }

@@ -596,7 +596,7 @@
   margin-left: 5px;
   width: 85%;
   height: auto;
-  font-size: 14px;
+  font-size: large;
 }
 
 .sidebar-header {
@@ -891,11 +891,14 @@
   color: var(--black);
   margin: 0;
 }
-
+.bizkimiz--content p {
+  font-size: large;
+}
 .hakkımızda_link {
   display: inline-block;
   position: relative;
   color: var(--black);
+  font-size: large;
 }
 
 .hakkımızda_link::after {
@@ -1028,6 +1031,7 @@
   width: 70%;
   justify-content: center;
   padding-bottom: 50px;
+  font-size: large;
 }
 
 .bizkimiz--text_slider .tags {
@@ -1171,6 +1175,7 @@
 .galeri_content b {
   position: relative;
   top: 50px;
+  font-size: xx-large;
 }
 
 .galeri_page {
@@ -1304,7 +1309,7 @@
 
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: x-large;
   line-height: 15px;
 
   /* identical to box height */
@@ -1336,7 +1341,7 @@ backdrop-filter: blur(2px); */
 
 h1 {
   margin: 50px;
-  font-size: 20px;
+  font-size: large;
   font-weight: 300;
   color: var(--white);
 }
@@ -1593,7 +1598,7 @@ h1 {
 .TeamHeader h1 {
   text-decoration: none;
 
-  font-size: 40px;
+  font-size: xx-large;
   color: #000;
   margin-left: 15%;
 }
@@ -1601,7 +1606,7 @@ h1 {
 .TeamHeader p {
   text-decoration: none;
 
-  font-size: 20px;
+  font-size: large;
   color: #000;
   margin-left: 15%;
 }
@@ -1646,7 +1651,7 @@ h1 {
 .TeamLogo h3 {
   text-decoration: none;
 
-  font-size: 25px;
+  font-size: large;
 }
 
 @media screen and (max-width: 862px) {
@@ -1745,7 +1750,7 @@ h1 {
 }
 
 .communicationTitle {
-  font-size: 40px;
+  font-size: xx-large;
   padding-left: 6%;
   color: #000;
 }
@@ -1764,7 +1769,7 @@ h1 {
 .communicationPagetextpage {
   text-decoration: none;
 
-  font-size: 20px;
+  font-size: large;
   font-weight: 200;
   color: var(--black);
 }

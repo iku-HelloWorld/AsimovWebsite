@@ -343,7 +343,6 @@ body {
 }
 /* navbar */
 
-/* navbar */
 .aboutussection1 {
   position: relative;
   top: 20vh;
@@ -351,7 +350,7 @@ body {
   padding-left: 5%;
   padding-right: 5%;
   color: var(--white);
-  font-size: 20px;
+  font-size: x-large;
 }
 
 .aboutussection1 p::before {
@@ -598,6 +597,7 @@ body {
 
 .sayac-text {
   margin-top: 15px;
+  font-size: x-large;
 }
 /* sayaç */
 
@@ -618,6 +618,7 @@ body {
   top: 2%;
   color: var(--white);
   width: 80%;
+  font-size: x-large;
 }
 
 .etkinliklerimiz--slider {
@@ -738,10 +739,11 @@ body {
   position: relative;
   left: 15%;
   width: 70%;
+  font-size: x-large;
 }
 
 .sponsor-description {
-  font-size: 0.9rem;
+  font-size: x-large;
 }
 
 .sponsor-img {
@@ -770,7 +772,7 @@ body {
 
 .sponsor-content {
   float: left;
-  font-size: small;
+  font-size: large;
   position: relative;
   top: 50%;
   right: 30%;

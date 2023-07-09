@@ -357,6 +357,10 @@
   position: relative;
   top: 12vh;
   margin: 0;
+  font-size: large;
+}
+.kurumsalİletişimsayfasıiçerik p {
+  font-size: large;
 }
 .kurumsalİletişimsayfasıiçerik h1 {
   font-size: xx-large;
@@ -475,7 +479,7 @@
 }
 
 .TeamPageMembersHeader {
-  font-size: 20px;
+  font-size: large;
   font-weight: 300;
   color: var(--black);
 }
