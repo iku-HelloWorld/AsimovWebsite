@@ -475,7 +475,7 @@
 
 /* içerik 2 */
 .takımsayfasıiçerik2 p {
-  font-size: large;
+  font-size: x-large;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 0%;
@@ -545,7 +545,7 @@
 }
 
 .TeamPageMembersHeader {
-  font-size: 3vh;
+  font-size: 2.2vh;
   color: var(--black);
   padding: 3%;
 }
