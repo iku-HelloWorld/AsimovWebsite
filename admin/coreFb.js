@@ -81,18 +81,34 @@ coreMemberRemove.addEventListener("click", function (e) {
     const chosenName = e.target.parentElement.childNodes[2].textContent;
     const chosenNick = e.target.parentElement.childNodes[1].data;
     // console.log(chosenName);
-    if (confirm(chosenName + "isimli üye silinsin mi?")) {
-      remove(child(dbRef, `coreMember/` + chosenNick))
-        .then(() => {
-          // console.log("üye silindi");
-          location.reload();
-        })
-        .catch((error) => {
-          // console.log("üye silinemedi");
-        });
-    }
+    alertify.confirm(
+      "üye silme",
+      `${chosenName} isimli üye silinsin mi?`,
+      function () {
+        remove(child(dbRef, `coreMember/` + chosenNick))
+          .then(() => {
+            alertify.success("üye silindi");
+            location.reload();
+          })
+          .catch((error) => {
+            // console.log("üye silinemedi");
+          });
+      },
+      () => alertify.error("üye silinemedi")
+    );
+    // .set("frameless", true);
   }
 });
+
+// alertify.confirm(
+//   "This is a confirm dialog.",
+//   function () {
+//     alertify.success("Ok");
+//   },
+//   function () {
+//     alertify.error("Cancel");
+//   }
+// );
 
 const coreMemberImg = document.querySelector(".core-member-img");
 const coreMemberSubmit = document.querySelector(".core-member-submit");
@@ -140,6 +156,6 @@ coreMemberSubmit.addEventListener("click", function () {
       nick: nick,
     });
   } else {
-    alert("Tüm boşlukları doldurunuz");
+    alertify.alert("Tüm boşlukları doldurunuz", function () {});
   }
 });

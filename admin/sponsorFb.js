@@ -110,15 +110,21 @@ removeDiv.addEventListener("click", function (e) {
   if (e.target.closest(".sponsor-remove-btn")) {
     let name = e.target.parentNode.dataset.name;
     // console.log(e.target.parentNode.dataset.name);
-    if (confirm(name + "adlı sponsor silinsin mi?")) {
-      deleteObject(sRef(storage, "sponsorImages/" + name))
-        .then(() => {
-          // console.log("sildim");
-          location.reload();
-        })
-        .catch((error) => {
-          // console.error(error);
-        });
-    }
+    alertify.confirm(
+      `${name} adlı sponsor silinsin mi?`,
+      function () {
+        deleteObject(sRef(storage, "sponsorImages/" + name))
+          .then(() => {
+            alertify.success("sponsor silindi");
+            location.reload();
+          })
+          .catch((error) => {
+            // console.error(error);
+          });
+      },
+      function () {
+        alertify.error("sponsor silinemedi");
+      }
+    );
   }
 });

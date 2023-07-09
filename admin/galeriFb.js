@@ -92,7 +92,7 @@ anasayfagalerisubmit.addEventListener("click", function () {
       anasayfagaleriacıklama.value = "";
     });
   } else {
-    alert("Tüm boşlukları doldurunuz!");
+    alertify.alert("Tüm boşlukları doldurunuz!");
   }
 });
 //sil
@@ -125,18 +125,26 @@ anasayfagalerisil.addEventListener("click", function (e) {
     //console.log(close.parentElement.childNodes[3].data);
     const url = close.parentElement.childNodes[3].src;
     const nick = close.parentElement.childNodes[3].dataset.nick;
-    if (confirm("Fotoğraf silinsin mi?")) {
-      deleteObject(sRef(storage, `galeriResim/${nick}`))
-        .then(() => {
-          console.log("success");
+    alertify.confirm(
+      "fotoğraf silme",
+      "Fotoğraf silinsin mi?",
+      function () {
+        deleteObject(sRef(storage, `galeriResim/${nick}`))
+          .then(() => {
+            // console.log("success");
+            alertify.succes("fotoğraf silindi");
+            location.reload();
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+        remove(ref(db, "galeriResim/" + nick)).then(() => {
           location.reload();
-        })
-        .catch((error) => {
-          console.error(error);
         });
-      remove(ref(db, "galeriResim/" + nick)).then(() => {
-        location.reload();
-      });
-    }
+      },
+      function () {
+        alertify.error("fotoğraf silinemedi");
+      }
+    );
   }
 });
