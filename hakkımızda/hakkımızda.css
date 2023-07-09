@@ -693,6 +693,13 @@ body {
   transform: translateY(-50%) skew(-10deg, 10deg);
   transition: ease 400ms;
 }
+.etkinliklerimiz--slider .other {
+  right: 10%;
+  z-index: 1;
+  visibility: visible;
+  transform: translateY(-50%) skew(-10deg, 10deg);
+  transition: ease 400ms;
+}
 
 .etkinliklerimiz--slider .etkinliklerimiz--slide img {
   width: 80%;

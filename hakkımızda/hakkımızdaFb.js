@@ -74,9 +74,13 @@ const displaySlides = function () {
   etkinlikSlides.forEach((s) => s.classList.remove("active"));
   etkinlikSlides.forEach((s) => s.classList.remove("after"));
   etkinlikSlides.forEach((s) => s.classList.remove("before"));
+  etkinlikSlides.forEach((s) => s.classList.remove("other"));
   if (etkinlikSlides.length == 1) {
     // console.log("here");
     etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+  } else if (etkinlikSlides.length == 2) {
+    etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
+    etkinlikSlides.item(afterIndex - 1).classList.add("other");
   } else {
     etkinlikSlides.item(etkinlikSlideIndex - 1).classList.add("active");
     etkinlikSlides.item(beforeIndex - 1).classList.add("before");
@@ -100,22 +104,3 @@ etkinlikSlider.addEventListener("click", function (e) {
 });
 
 displaySlides(etkinlikSlideIndex);
-
-{
-  /* <div class="etkinliklerimiz--slide">
-{
-  /* <div class="etkinliklerimiz--slide">
-            <img loading="lazy" src="Asimov_Logolar/HelloWorld_Normal.png" />
-            <h1>lorem ipsum</h1>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit.Accusantium, ullam. Iusto modi quidem excepturi! Unde
-              impeditlaudantium autem, natus nisi dicta, et aperiam accusamus
-              magnamvero, dolorum reiciendis quo incidunt!Lorem, ipsum dolor sit
-              ametconsectetur adipisicing elit. Accusantium, ullam. Iusto
-              modiquidem excepturi! Unde impedit danslideIndex Lorem, ipsum
-              dolorsit amet consectetur adipisicing elit. Accusantium, ullam.
-              Iustomodi quidem exceptur letter 562
-            </p>
-          </div> */
-}
