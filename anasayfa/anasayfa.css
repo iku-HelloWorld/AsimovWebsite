@@ -1584,7 +1584,7 @@ h1 {
   top: 20vh;
   background-color: #d4d9df;
   margin: 0;
-  height: 1000px;
+  height: 1100px;
   width: 100%;
   padding-top: 2.5vw;
   margin-bottom: 2vw;
@@ -1621,6 +1621,9 @@ h1 {
   line-height: 50px;
   margin: 5px;
   padding: 10px 92px;
+}
+.TeamLogo h3 {
+  white-space: nowrap;
 }
 
 .TeamLogoCircle {

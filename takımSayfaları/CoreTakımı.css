@@ -470,7 +470,7 @@
 
 /* içerik 2 */
 .takımsayfasıiçerik2 p {
-  font-size: 2vh;
+  font-size: x-large;
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 0%;
@@ -498,11 +498,12 @@
 
 @media (max-width: 850px) {
   .takımsayfasıiçerik2 p {
-    font-size: 1vh;
+    font-size: 2vh;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 0%;
     transition: all 1s;
+    font-size: 2vh;
   }
 
   .takımsayfasıgaleri {
@@ -525,6 +526,12 @@
     padding: 0px 46px;
     border: 2px solid var(--side-color);
     transition: all 1s;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .takımsayfasıiçerik2 p {
+    font-size: 2vh;
   }
 }
 /* içerik 2 */
