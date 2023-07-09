@@ -121,8 +121,7 @@ const bgImgTop = bgImg.getBoundingClientRect().top;
 // let totalDistance = 0;
 let oldCursorX;
 
-$(window).on("mousemove", function (e) {
-  // console.log("Mouse moved!");
+const sidebarhandler = function (e) {
   if (isPressedDown) {
     if (Math.abs(oldCursorX - e.clientX) >= cursorThreshold) {
       // totalDistance += Math.sqrt(Math.pow(oldCursorX - e.clientX, 2));
@@ -143,7 +142,76 @@ $(window).on("mousemove", function (e) {
   } else {
     oldCursorX = e.clientX;
   }
+};
+
+$(window).on("mousemove", function (e) {
+  sidebarhandler(e);
 });
+// mobile swipe
+document.addEventListener("touchstart", handleTouchStart, false);
+document.addEventListener("touchmove", handleTouchMove, false);
+document.addEventListener("touchend", handleTouchEnd);
+
+let xDown = null;
+
+const mobileSidebarHandler = function (w) {
+  sidebar.style.transition = "0ms";
+
+  let sWidth = (w / visualViewport.width) * 100;
+  sidebar.style.opacity = "100%";
+  sidebar.style.width = `${sWidth}%`;
+  mainScreenContainer.style.filter = "blur(2px)";
+  header.style.opacity = "0";
+};
+
+function getTouches(evt) {
+  return (
+    evt.touches || // browser API
+    evt.originalEvent.touches
+  ); // jQuery
+}
+
+function handleTouchStart(evt) {
+  if (evt.target.closest(".mainscreenContainer")) {
+    cursorThreshold = 50;
+    const firstTouch = getTouches(evt)[0];
+    xDown = firstTouch.clientX;
+  } else {
+    xDown = null;
+  }
+}
+function handleTouchEnd() {
+  xDown = null;
+  cursorThreshold = 50;
+  if (sidebar.style.width.slice(0, -1) > 50) {
+    sidebar.style.transition = "600ms ease";
+    sidebarOpen();
+  } else {
+    sidebarClose();
+    sidebar.style.transition = "600ms ease";
+  }
+}
+
+function handleTouchMove(evt) {
+  if (!xDown) {
+    return;
+  }
+
+  let xUp = evt.touches[0].clientX;
+
+  const xDiff = xDown - xUp;
+
+  /*most significant*/
+  if (xDiff > cursorThreshold) {
+    let width = window.visualViewport.width - xUp;
+    cursorThreshold = -500;
+
+    mobileSidebarHandler(width);
+  }
+
+  /* reset values */
+}
+// mobile swipe
 
 const whenMouseMove = function (e) {
   bgImg.style.transform = "translate(0,0)";

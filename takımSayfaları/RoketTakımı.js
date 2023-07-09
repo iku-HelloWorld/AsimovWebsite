@@ -1,4 +1,5 @@
 "use strict";
+
 import json from "/language.json" assert { type: "json" };
 
 const button = document.getElementById(`list-btn`);
@@ -26,6 +27,7 @@ window.addEventListener("scroll", function () {
     // console.log("bye");
   }
 });
+
 const textBtn = document.getElementById("lang");
 
 let lang = "Tr";
@@ -53,34 +55,35 @@ const handleLang = function () {
         console.log(key + " key in json is not accesable in this page");
       }
     }
+
     for (let key in json.Tr.roket) {
+      // console.log(key, document.getElementById(key));
       if (document.getElementById(`${key}`)) {
         document.getElementById(`${key}`).textContent = `${json.Tr.roket[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " key in json is not accesable in this page");
       }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
   } else {
     lang = json.En.lang;
     // navbar
+
     for (let key in json.En.navbar) {
       if (document.getElementById(`${key}`)) {
+        // console.log(document.getElementById(`${key}`));
         document.getElementById(
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " key in json is not accesable in this page");
       }
-      // console.log(document.getElementById(`${key}`));
     }
 
-    // mainscreen
     for (let key in json.En.roket) {
       if (document.getElementById(`${key}`)) {
         document.getElementById(`${key}`).textContent = `${json.En.roket[key]}`;
       } else {
-        console.log(key + " not exist");
+        console.log(key + " key in json is not accesable in this page");
       }
       // console.log(document.getElementById(`${key}`));
     }

@@ -147,36 +147,41 @@ const handleLang = function () {
         console.log(key + " key in json is not accesable in this page");
       }
     }
+
     for (let key in json.Tr.hakkımızda) {
+      // console.log(key, document.getElementById(key));
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`
         ).textContent = `${json.Tr.hakkımızda[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " key in json is not accesable in this page");
       }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
   } else {
     lang = json.En.lang;
     // navbar
+
     for (let key in json.En.navbar) {
       if (document.getElementById(`${key}`)) {
+        // console.log(document.getElementById(`${key}`));
         document.getElementById(
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " key in json is not accesable in this page");
       }
-      // console.log(document.getElementById(`${key}`));
     }
 
-    // mainscreen
     for (let key in json.En.hakkımızda) {
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.En.hakkımızda[key]}`;
+      } else {
+        console.log(key + " key in json is not accesable in this page");
+      }
       // console.log(document.getElementById(`${key}`));
-      document.getElementById(
-        `${key}`
-      ).textContent = `${json.En.hakkımızda[key]}`;
     }
   }
 };

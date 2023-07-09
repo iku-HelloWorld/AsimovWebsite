@@ -345,6 +345,7 @@
   justify-content: center;
   gap: 10vh;
   position: relative;
+  top: 10vh;
 }
 
 .TeamPageContentImg img {
@@ -457,7 +458,8 @@
   width: 68vw;
   height: 40vw;
   position: relative;
-  left: 51%;
+  left: 50%;
+  top: 130px;
   margin: 0;
   margin-bottom: 20vh;
   margin-top: 10vh;

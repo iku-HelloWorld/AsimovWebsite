@@ -1,6 +1,8 @@
 "use strict";
 import json from "/language.json" assert { type: "json" };
 
+import json from "/language.json" assert { type: "json" };
+
 const nav = document.querySelector(".navbar-wrapper");
 const header = document.querySelector(".header");
 const navBtn = document.getElementById("list-btn");
@@ -150,80 +152,41 @@ const handleLang = function () {
         console.log(key + " key in json is not accesable in this page");
       }
     }
+
     for (let key in json.Tr.yönetimKurulu) {
+      // console.log(key, document.getElementById(key));
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`
         ).textContent = `${json.Tr.yönetimKurulu[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " key in json is not accesable in this page");
       }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
-    }
-    for (let key in json.Tr.ünvanlar) {
-      if (document.querySelectorAll(`.${key}`)) {
-        document.querySelectorAll(`.${key}`).forEach((v) => {
-          v.textContent = `${json.Tr.ünvanlar[key]}`;
-        });
-      } else {
-        console.log(key + "is not accesable");
-      }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
-    }
-    for (let key in json.Tr.bölümler) {
-      if (document.querySelectorAll(`.${key}`)) {
-        document.querySelectorAll(`.${key}`).forEach((v) => {
-          v.textContent = `${json.Tr.bölümler[key]}`;
-        });
-      } else {
-        console.log(key + "is not accesable");
-      }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
   } else {
     lang = json.En.lang;
     // navbar
+
     for (let key in json.En.navbar) {
       if (document.getElementById(`${key}`)) {
+        // console.log(document.getElementById(`${key}`));
         document.getElementById(
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        console.log(key + " key in json is not accesable in this page");
       }
-      // console.log(document.getElementById(`${key}`));
     }
 
-    // mainscreen
     for (let key in json.En.yönetimKurulu) {
       if (document.getElementById(`${key}`)) {
         document.getElementById(
           `${key}`
         ).textContent = `${json.En.yönetimKurulu[key]}`;
       } else {
-        console.log(key + " not exist");
+        console.log(key + " key in json is not accesable in this page");
       }
       // console.log(document.getElementById(`${key}`));
-    }
-    for (let key in json.En.ünvanlar) {
-      if (document.querySelectorAll(`.${key}`)) {
-        document.querySelectorAll(`.${key}`).forEach((v) => {
-          v.textContent = `${json.En.ünvanlar[key]}`;
-        });
-      } else {
-        console.log(key + "is not accesable");
-      }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
-    }
-    for (let key in json.En.bölümler) {
-      if (document.querySelectorAll(`.${key}`)) {
-        document.querySelectorAll(`.${key}`).forEach((v) => {
-          v.textContent = `${json.En.bölümler[key]}`;
-        });
-      } else {
-        console.log(key + "is not accesable");
-      }
-      // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
   }
 };

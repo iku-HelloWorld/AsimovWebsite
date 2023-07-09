@@ -7,20 +7,6 @@ import {
   getAuth,
   signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-import {
-  getDatabase,
-  ref,
-  set,
-  get,
-  child,
-  remove,
-} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-import {
-  getStorage,
-  uploadBytes,
-  ref as sRef,
-  getDownloadURL,
-} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -43,10 +29,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
-const db = getDatabase();
-const dbRef = ref(getDatabase());
-const storage = getStorage();
-// login
 const login = document.querySelector(".login");
 const edit = document.querySelector(".edit");
 const username = document.querySelector(".username");
