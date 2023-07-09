@@ -93,44 +93,45 @@
 }
 
 .nav-toggle {
-  font-size: 1.6rem;
   align-items: center;
   display: flex;
   position: absolute;
   right: 3rem;
-  text-align: center;
 }
 
 .nav-toggle a {
   text-decoration: none;
-  width: 40px;
-  height: 40px;
+  color: var(--white);
+  border: var(--black) solid 1px;
   border-radius: 50%;
-  color: black;
-  padding: 5px 5px;
-  background-color: white;
+  color: var(--black);
+  width: 36px;
+  height: 36px;
+  background-color: var(--white);
   margin-right: 5px;
-  font-size: 1.6rem;
+  font-size: x-large;
+  font-weight: 500;
   z-index: 5;
+  /* transition: ease 400ms; */
+  text-align: center;
+  padding-top: 3px;
 }
 
 .nav-toggle a:hover {
-  background-color: transparent;
-  color: black;
+  background-color: var(--light-color);
+  color: var(--main-color);
 }
 
 .nav-toggle i {
-  color: white;
+  color: var(--white);
   cursor: pointer;
   font-size: 1.6rem;
   margin-left: 5px;
   z-index: 1;
 }
 
-.nav-toggle {
-  font-size: 1.1rem;
-  color: white;
-  cursor: pointer;
+.nav-toggle i:hover {
+  color: var(--light-color);
 }
 
 .nav-list {

@@ -116,6 +116,7 @@
   font-size: x-large;
   font-weight: 500;
   z-index: 5;
+  border: var(--black) solid 1px;
   /* transition: ease 400ms; */
   text-align: center;
   padding-top: 3px;
@@ -140,10 +141,11 @@
   cursor: pointer;
   text-align: center;
 }
-
+/*
 #lang {
   display: flex;
 }
+*/
 
 .nav-list {
   display: none;
