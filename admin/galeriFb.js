@@ -109,9 +109,9 @@ get(child(ref(db), "galeriResim/")).then((snapshot) => {
           "afterbegin",
           `<div>
           <button class="closeImg">
-            x
+            Resmi sil
           </button>
-          <img data-nick="${value.nick}" style="width:40px"; src="${url}"/>
+          <img data-nick="${value.nick}" style="width:80px"; src="${url}"/>
         </div>`
         );
       });
