@@ -632,7 +632,7 @@
 @media only screen and (max-width: 1300px) {
   .slider-container {
     width: 70vw;
-    height: 40vw;
+    height: 38vw;
   }
   .yönetimkuruludots {
     bottom: 12%;
@@ -642,6 +642,10 @@
   .yönetimkuruludots .dot {
     width: 13px;
     height: 13px;
+  }
+  .slider-container {
+    width: 70vw;
+    height: 30vw;
   }
 
   .yönetimkurulusayfasıiçerik h1 {

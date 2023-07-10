@@ -631,8 +631,8 @@
 /*responsive*/
 @media only screen and (max-width: 1300px) {
   .slider-container {
-    width: 60%;
-    height: 55vh;
+    width: 70vw;
+    height: 40vw;
   }
 
   .slide {
@@ -644,6 +644,7 @@
   }
   .kurumsalİletişimdots {
     bottom: 12%;
+    height: 10vw;
   }
 
   .kurumsalİletişimsayfasıiçerik {
