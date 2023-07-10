@@ -1974,7 +1974,7 @@ h1 {
 /* responsiveness */
 @media screen and (max-height: 800px) {
   .bizkimiz--section {
-    height: 800px;
+    height: 1000px;
   }
 }
 
