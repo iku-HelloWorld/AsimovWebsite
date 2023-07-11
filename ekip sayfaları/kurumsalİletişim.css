@@ -353,14 +353,13 @@
 
 .kurumsalİletişimsayfasıiçerik {
   width: 100%;
-  min-height: 50%;
+  /* min-height: 50%; */
   position: relative;
   top: 12vh;
   margin: 0;
-  font-size: large;
 }
 .kurumsalİletişimsayfasıiçerik p {
-  font-size: small;
+  font-size: large;
 }
 .kurumsalİletişimsayfasıiçerik h1 {
   font-size: xx-large;
@@ -471,7 +470,7 @@
   width: 100%;
   margin: 0%;
   position: relative;
-  top: 0vh;
+  top: 10vh;
   padding-left: 5vw;
   padding-right: 5vw;
   overflow: hidden;
@@ -549,6 +548,9 @@
 @media only screen and (max-width: 1040px) {
   .kurumsalİletişimsayfasıiçerik {
     top: 50px;
+  }
+  .kurumsalİletişimsayfasıiçerik p {
+    font-size: medium;
   }
   .slider-container {
     top: 100px;
@@ -639,6 +641,9 @@
   .kurumsalİletişimsayfası {
     height: 800px;
   }
+  .kurumsalİletişimsayfasıiçerik p {
+    font-size: small;
+  }
 }
 /* /////////////////////////// */
 .footer-container {
@@ -684,9 +689,21 @@
   transform: rotateY(360deg);
 }
 @media (max-width: 510px) {
-  /* .footer-container {
-   
-  } */
+  .TeamPageMembersCards {
+    width: 15vh;
+    height: 18vh;
+  }
+  .TeamPageMembersCardsImg {
+    width: 10vh;
+  }
+
+  .TeamPageMembersCardsTextHeader {
+    font-size: x-small;
+  }
+
+  .TeamPageMembersCardsText {
+    font-size: xx-small;
+  }
 
   .footer_content {
     height: 100px;
