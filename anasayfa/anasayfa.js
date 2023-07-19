@@ -56,6 +56,7 @@ let isPressedDown = false;
 const sidebarOpen = function () {
   sidebar.style.opacity = "100%";
   sidebar.style.width = "100%";
+
   mainScreen.style.overflowY = "scroll";
   header.style.display = "none";
 };
@@ -67,6 +68,9 @@ const sidebarClose = function () {
   header.style.display = "initial";
   mainScreenContainer.style.filter = "blur(0px)";
   header.style.opacity = "100";
+  setTimeout(() => {
+    sidebar.style.display = "none";
+  }, 400);
 };
 document
   .querySelector(".mainscreeniconButton")
@@ -133,6 +137,7 @@ $(window).on("mousemove", function (e) {
       e.preventDefault();
       let width =
         ((visualViewport.width - e.pageX) / visualViewport.width) * 100;
+      sidebar.style.display = "initial";
       sidebar.style.opacity = "100%";
       sidebar.style.width = `${width}%`;
       mainScreenContainer.style.filter = "blur(2px)";

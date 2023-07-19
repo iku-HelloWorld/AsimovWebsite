@@ -36,8 +36,8 @@
     "mainscreen": {
       "kaydır": "Bildirimler için sağa kaydırınız",
       "bizkimiz": "Biz Kimiz?",
-      "bizkimizAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.",
-      "bizkimizLink": "Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.",
+      "bizkimizAçıklama": "Asimov Teknoloji Kulübü mühendisliği temel alarak projeler üreten, ürettiği projelerle ulusal ve uluslararası yarışmalara katılmayı hedefleyen bir öğrenci kulübüdür.",
+      "bizkimizLink": "Bizim hakkımızda daha fazlasını öğrenmek için tıklayın.",
       "misyon": "Misyon",
       "vizyon": "Vizyon",
       "hedef": "Hedef",
@@ -46,7 +46,7 @@
       "hedefAçıklama": "Hedef Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime",
       "galeri": "Galeri",
       "takımlar": "Takımlar",
-      "takımlarAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime,.",
+      "takımlarAçıklama": "Asimov bünyesinde 5 takım bulundurmaktadır, detaylı bilgi için aşağıdaki logolardan takımlarımızın sayfasına gidebilirsiniz.",
       "helloworldTakımı": "Hello World Takımı",
       "otonomTakımı": "Otonom Takımı",
       "roketTakımı": "Roket Takımı",
@@ -57,7 +57,7 @@
 
     "hakkımızda": {
       "asimov": "Kim Bu Asimov?",
-      "asimovAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et veniam officia quasi quos a necessitatibus debitis ipsum praesentium quaerat molestiae perspiciatis totam aspernatur dolorum sunt, sapiente illo. Ex exercitationem vero esse beatae fugiat eum quibusdam autem corrupti aperiam labore voluptate omnis aut incidunt commodi sequi soluta, nam doloribus blanditiis alias in dolor! Possimus numquam quidem incidunt, accusamus omnis, eveniet dignissimos quos vitae excepturi repellendus vel? Aspernatur labore, ducimus unde, debitis ullam sunt quam architecto deserunt qui repellat minima iusto atque possimus. Animi quisquam et quasi tempora consequatur aspernatur, itaque ex blanditiis debitis? Iure fugit odit nam assumenda adipisci sequi nobis, libero dolores laborum nostrum inventore aperiam laudantium deserunt! Minus praesentium dolorem, error aut dolor iusto unde obcaecati eum ea architecto ex autem vitae vel labore qui? Eius quis, a voluptate, saepe earum nihil nam suscipit debitis amet assumenda quaerat eos. Et id ratione iure rem quia libero ut voluptatum temporibus saepe laboriosam tempore, blanditiis repellat quas veritatis vero voluptates doloribus praesentium cupiditate natus! Nostrum dignissimos, ratione, unde expedita vitae illum maiores sed, molestiae temporibus consequatur nulla culpa fugiat exercitationem tenetur quos nihil sit ex. Beatae ut porro quo deserunt unde quia molestias voluptatem, neque eaque necessitatibus ipsum adipisci harum eius.",
+      "asimovAçıklama": "Asimov Teknoloji Kulübü, 9 Mayıs 2020'de kurulmuştur. Mühendisliği temel alarak projeler üreten, ürettiği projelerle ulusal ve uluslararası yarışmalara katılmayı hedefleyen bir öğrenci kulübüdür. Dream more, do more! sloganı ile üretim yapan, yaparken öğrenen ve öğrencilerle birlikte sektördeki firmalar ve öğrencilerin köprüsünü kuran bir kulüp olmak. Kulübümüz bir diğer amacı, İstanbul Kültür Üniversitesinde bir öğrenci hareketi oluşturmaktır",
       "p1": "someone did something",
       "p2": "someone did something",
       "p3": "someone did something",
@@ -82,9 +82,9 @@
       "çalışmaAlanı": "çalışma alanı",
       "etkinlik": "etkinlik",
       "etkinliklerimiz": "etkinliklerimiz",
-      "etkinliklerimizAçıklama": "Lorem ipum dolor sit amet",
+      "etkinliklerimizAçıklama": "Asimov devamlı gerçekleştirdiği etkinliklerle üye etkileşimlerinin kuvvetlenmesini sağlamaktadır",
       "sponsor": "Sponsor ve İşbirliklerimiz",
-      "sponsorAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus earum accusantium nostrum eum dolorem. Expedita fugit, in perspiciatis labore ut dolores architecto assumenda eos laborum magnam officiis minus voluptas possimus"
+      "sponsorAçıklama": "Asimov farklı firmalar ve ekiplerle işbirliği, destekçi ve sponsor ilişkileri kurmaktadır. Sponsorluk ilişkileri hakkında bilgi almak için iletişim sayfasını ziyaret ediniz."
     },
     "yönetimKurulu": {
       "yönetimKurulu": "Directory Team",
