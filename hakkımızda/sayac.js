@@ -31,7 +31,7 @@ const getMemberCount = function () {
         //   console.log(folderRef);
       });
       res.items.forEach((itemRef) => {
-        console.log(itemRef);
+        // console.log(itemRef);
         arr.push(itemRef.name);
       });
       updateCount();
@@ -45,7 +45,7 @@ const getMemberCount = function () {
         //   console.log(folderRef);
       });
       res.items.forEach((itemRef) => {
-        console.log(itemRef);
+        // console.log(itemRef);
         arr.push(itemRef.name);
       });
       updateCount();
@@ -59,7 +59,7 @@ const getMemberCount = function () {
         //   console.log(folderRef);
       });
       res.items.forEach((itemRef) => {
-        console.log(itemRef);
+        // console.log(itemRef);
         arr.push(itemRef.name);
       });
       updateCount();
@@ -73,7 +73,7 @@ const getMemberCount = function () {
         //   console.log(folderRef);
       });
       res.items.forEach((itemRef) => {
-        console.log(itemRef);
+        // console.log(itemRef);
         arr.push(itemRef.name);
       });
       updateCount();
@@ -87,7 +87,7 @@ const getMemberCount = function () {
         //   console.log(folderRef);
       });
       res.items.forEach((itemRef) => {
-        console.log(itemRef);
+        // console.log(itemRef);
         arr.push(itemRef.name);
       });
       updateCount();
@@ -101,7 +101,7 @@ const getMemberCount = function () {
         //   console.log(folderRef);
       });
       res.items.forEach((itemRef) => {
-        console.log(itemRef);
+        // console.log(itemRef);
         arr.push(itemRef.name);
       });
       updateCount();

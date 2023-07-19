@@ -39,55 +39,11 @@ button.addEventListener(`click`, () => {
 
 window.addEventListener("scroll", function () {
   if (window.scrollY === 0) {
-    // header.style.position = "fixed";
-    // console.log();
     header.classList.remove("h-active");
-    // console.log("hi");
   } else {
-    // header.style.position = "absolute";
     header.classList.add("h-active");
-
-    // console.log("bye");
   }
 });
-
-const timeline = document.querySelector(".timeline_container");
-const point = document.querySelectorAll(".point");
-const messages = document.querySelector(".timeline_messages");
-
-const messagesArr = [...messages.childNodes].filter(
-  (n) => n.nodeName != "#text"
-);
-let timeInd = 0;
-
-const displayTimeline = function () {
-  point.forEach((p) => {
-    p.classList.remove("active");
-    p.classList.remove("selected");
-    if (p.dataset.index === timeInd) {
-      p.classList.add("selected");
-      p.classList.add("active");
-    } else if (p.dataset.index <= timeInd) {
-      p.classList.add("active");
-    }
-  });
-};
-
-const displayMessage = function (ind) {
-  messagesArr.forEach((m) => m.classList.remove("active"));
-  messagesArr[ind].classList.add("active");
-};
-
-timeline.addEventListener("click", function (e) {
-  const tar = e.target;
-  timeInd = tar.dataset.index;
-  if ([...point].includes(tar)) {
-    displayTimeline(timeInd);
-    displayMessage(timeInd);
-  }
-});
-
-displayTimeline(timeInd);
 
 const sayaç = document.querySelector(".sayacContainer");
 const sayaçPos = sayaç.getClientRects()[0];
@@ -102,7 +58,7 @@ const sayaçCount = function () {
   sayaçTexts.forEach((t) => {
     // console.log(t.dataset.value);
     const countOptions = {
-      duration: 5,
+      duration: 8,
     };
     const countUp = new CountUp(t, Number(t.dataset.value), countOptions);
     countUp.start();
@@ -144,7 +100,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.Tr.navbar[key]}`;
       } else {
-        console.log(key + " key in json is not accesable in this page");
+        // console.log(key + " key in json is not accesable in this page");
       }
     }
     for (let key in json.Tr.hakkımızda) {
@@ -153,7 +109,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.Tr.hakkımızda[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -166,7 +122,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`));
     }

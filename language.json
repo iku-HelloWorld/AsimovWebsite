@@ -57,34 +57,67 @@
 
     "hakkımızda": {
       "asimov": "Kim Bu Asimov?",
-      "asimovAçıklama": "Asimov Teknoloji Kulübü, 9 Mayıs 2020'de kurulmuştur. Mühendisliği temel alarak projeler üreten, ürettiği projelerle ulusal ve uluslararası yarışmalara katılmayı hedefleyen bir öğrenci kulübüdür. Dream more, do more! sloganı ile üretim yapan, yaparken öğrenen ve öğrencilerle birlikte sektördeki firmalar ve öğrencilerin köprüsünü kuran bir kulüp olmak. Kulübümüz bir diğer amacı, İstanbul Kültür Üniversitesinde bir öğrenci hareketi oluşturmaktır",
-      "p1": "someone did something",
-      "p2": "someone did something",
-      "p3": "someone did something",
-      "p4": "someone did something",
-      "p5": "someone did something",
-      "p6": "someone did something",
-      "p7": "someone did something",
-      "p8": "someone did something",
-      "p9": "someone did something",
-      "p10": "someone did something",
-      "m1": "someone 1 did something",
-      "m2": "someone 2 did something",
-      "m3": "someone 3 did something",
-      "m4": "someone 4 did something",
-      "m5": "someone 5 did something",
-      "m6": "someone 6 did something",
-      "m7": "someone 7 did something",
-      "m8": "someone 8 did something",
-      "m9": "someone 9 did something",
-      "m10": "someone 10 did something",
+      "asimovAçıklama": "Asimov Teknoloji Kulübü, 9 Kasım 2020 tarihinde kurulmuş dinamik ve heyecan verici bir öğrenci kulübüdür. Amacımız, teknoloji ve mühendislik alanında öğrencilere ilham vermek, onları sektörle yakınlaştırmak ve gerçek dünya deneyimleri kazandırmaktır. Ulusal ve uluslararası yarışmalara katılmak, bu hedeflere ulaşmak için bir araç olarak değerlendirilir. Kulübümüz, kurumsal iletişim ekibi ile etkin bir iletişim ağı kurarak kulüp içi ve dışı iletişimi yönetir. Etkinliklerimizin organizasyonundan sponsorluk ve işbirlikleri alanına kadar her aşamada profesyonel bir iletişim stratejisi benimseriz. Bu sayede, kulübümüzün vizyonunu geniş kitlelere aktarır ve katılımcıları etkinliklerimize çekeriz. Ayrıca iç iletişim stratejilerimiz, üyelerimiz arasında güçlü bir bağ kurarak bilgi alışverişini teşvik eder ve projelerimizin başarısını artırır. Kulüp bünyesindeki çeşitli takımlar, öğrencilerin ilgi alanlarına uygun olarak projeler geliştirir. OTONOM, otonom araba tasarımı ile ilgilenirken, HELLO WORLD yazılım projelerine odaklanır. CORE takımı kulübün temel yapısını oluşturarak tüm projelerin koordinasyonunu sağlar. DATA AI takımı yapay zeka alanında çalışırken, ROKET takımı uzay ve havacılık projeleri üzerine çalışır. Bu farklı takımlar, öğrencilerin kendilerini geliştirmeleri ve ekipler içinde işbirliği yaparak başarılı projelere imza atmaları için ideal bir platform sunar. Asimov Teknoloji Kulübü olarak, yarışmalara katılarak başarılar elde etmenin yanı sıra, sektörle yakınlaşmak ve öğrenci-sektör ilişkilerini güçlendirmek en önemli hedeflerimizdendir. Bu nedenle, sektörden uzmanları konuk eder, işbirliği içinde olduğumuz şirketlerle staj ve iş imkanları sağlar, seminerler ve atölye çalışmaları düzenleriz. Bu sayede, üyelerimiz teknoloji dünyasının iç yüzünü keşfeder ve meslek hayatlarına bir adım önde başlarlar. Kulüp olarak, Türkiye'nin teknolojik gelişimine katkı sağlamak ve geleceğin teknoloji liderlerini yetiştirmek vizyonumuzu her zaman koruyarak ilerliyoruz. Uluslararası alanda da ülkemizi başarıyla temsil etme hedefimiz için çaba sarf ediyor ve kulübümüzün her üyesini bu başarı yolculuğunda önemli bir rol üstlenmeye davet ediyoruz. Asimov Teknoloji Kulübü, öğrencilerin güçlü bir akademik ve sosyal çevre içinde kendilerini keşfetmeleri, yeni beceriler kazanmaları ve teknoloji dünyasına katkı sağlamaları için bir platform olmaya devam edecektir.",
       "üye": "aktif üye",
       "çalışmaAlanı": "çalışma alanı",
       "etkinlik": "etkinlik",
-      "etkinliklerimiz": "etkinliklerimiz",
-      "etkinliklerimizAçıklama": "Asimov devamlı gerçekleştirdiği etkinliklerle üye etkileşimlerinin kuvvetlenmesini sağlamaktadır",
+      "etkinliklerimiz": "Etkinliklerimiz",
+      "etkinliklerimizAçıklama": "Etkinliklerimiz sayesinde katılımcılarımızı katkıda bulunurken aynı zamanda firmalar ile olan bağımızı güçlendiriyoruz.",
       "sponsor": "Sponsor ve İşbirliklerimiz",
       "sponsorAçıklama": "Asimov farklı firmalar ve ekiplerle işbirliği, destekçi ve sponsor ilişkileri kurmaktadır. Sponsorluk ilişkileri hakkında bilgi almak için iletişim sayfasını ziyaret ediniz."
+    },
+    "timeline": {
+      "1": {
+        "nick": "Kuruluş",
+        "date": "2020 Kasım",
+        "message": "Asimov kuruldu."
+      },
+      "2": {
+        "nick": "Asimov-X Roket",
+        "date": "2020 Kasım",
+        "message": "Roket Takımı ilk takım olarak asimovda yerini aldı."
+      },
+      "3": {
+        "nick": "Hello World",
+        "date": "2021 Ocak",
+        "message": "İlk yazılım ekibimiz Hello World'ün temelleri atıldı."
+      },
+      "4": {
+        "nick": "Aysar İHA",
+        "date": "2020 Kasım",
+        "message": "İHA takımı kuruldu."
+      },
+
+      "5": {
+        "nick": "Otonom",
+        "date": "2021 Ekim",
+        "message": "Otonom takımı asimov da yerini aldı."
+      },
+      "6": {
+        "nick": "Core",
+        "date": "2021 Kasım",
+        "message": "Takımlara yeni üyeler yetiştirmek amacı ile core takımı kuruldu."
+      },
+      "7": {
+        "nick": "3.olduk",
+        "date": "2022 Mart/Mayıs",
+        "message": "Yarışmada Roket Takımı finalist , Hello World Takımı 3. Oldu."
+      },
+      "8": {
+        "nick": "Finalist Olduk",
+        "date": "2022 Temmuz",
+        "message": "Otonom Takımı yarışmada finalist oldu."
+      },
+      "9": {
+        "nick": "300+ üye",
+        "date": "2022 Ekim",
+        "message": "Asimov 300+ genel, 100+ aktif üyeye ulaştı."
+      },
+      "10": {
+        "nick": "Sakurai",
+        "date": "2022 Kasım",
+        "message": "Sakurai Takımı kuruldu hemen ardından yarışmada 200 takım arasından 13.oldu."
+      }
     },
     "yönetimKurulu": {
       "yönetimKurulu": "Directory Team",
@@ -185,26 +218,6 @@
     "hakkımızda": {
       "asimov": "What Is This Asimov?",
       "asimovAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et veniam officia quasi quos a necessitatibus debitis ipsum praesentium quaerat molestiae perspiciatis totam aspernatur dolorum sunt, sapiente illo. Ex exercitationem vero esse beatae fugiat eum quibusdam autem corrupti aperiam labore voluptate omnis aut incidunt commodi sequi soluta, nam doloribus blanditiis alias in dolor! Possimus numquam quidem incidunt, accusamus omnis, eveniet dignissimos quos vitae excepturi repellendus vel? Aspernatur labore, ducimus unde, debitis ullam sunt quam architecto deserunt qui repellat minima iusto atque possimus. Animi quisquam et quasi tempora consequatur aspernatur, itaque ex blanditiis debitis? Iure fugit odit nam assumenda adipisci sequi nobis, libero dolores laborum nostrum inventore aperiam laudantium deserunt! Minus praesentium dolorem, error aut dolor iusto unde obcaecati eum ea architecto ex autem vitae vel labore qui? Eius quis, a voluptate, saepe earum nihil nam suscipit debitis amet assumenda quaerat eos. Et id ratione iure rem quia libero ut voluptatum temporibus saepe laboriosam tempore, blanditiis repellat quas veritatis vero voluptates doloribus praesentium cupiditate natus! Nostrum dignissimos, ratione, unde expedita vitae illum maiores sed, molestiae temporibus consequatur nulla culpa fugiat exercitationem tenetur quos nihil sit ex. Beatae ut porro quo deserunt unde quia molestias voluptatem, neque eaque necessitatibus ipsum adipisci harum eius.",
-      "p1": "someone did something",
-      "p2": "someone did something",
-      "p3": "someone did something",
-      "p4": "someone did something",
-      "p5": "someone did something",
-      "p6": "someone did something",
-      "p7": "someone did something",
-      "p8": "someone did something",
-      "p9": "someone did something",
-      "p10": "someone did something",
-      "m1": "someone 1 did something",
-      "m2": "someone 2 did something",
-      "m3": "someone 3 did something",
-      "m4": "someone 4 did something",
-      "m5": "someone 5 did something",
-      "m6": "someone 6 did something",
-      "m7": "someone 7 did something",
-      "m8": "someone 8 did something",
-      "m9": "someone 9 did something",
-      "m10": "someone 10 did something",
       "üye": "active member",
       "çalışmaAlanı": "workspace",
       "etkinlik": "event",
@@ -212,6 +225,59 @@
       "etkinliklerimizAçıklama": "Lorem ipum dolor sit amet",
       "sponsor": "Sponsorships ve Cooperations",
       "sponsorAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus earum accusantium nostrum eum dolorem. Expedita fugit, in perspiciatis labore ut dolores architecto assumenda eos laborum magnam officiis minus voluptas possimus"
+    },
+    "timeline": {
+      "1": {
+        "nick": "Kuruluş",
+        "date": "2020 Kasım",
+        "message": "Asimov kuruldu."
+      },
+      "2": {
+        "nick": "Asimov-X Roket",
+        "date": "2020 Kasım",
+        "message": "Roket Takımı ilk takım olarak asimovda yerini aldı."
+      },
+      "3": {
+        "nick": "Hello World",
+        "date": "2021 Ocak",
+        "message": "İlk yazılım ekibimiz Hello World'ün temelleri atıldı."
+      },
+      "4": {
+        "nick": "Aysar İHA",
+        "date": "2020 Kasım",
+        "message": "İHA takımı kuruldu."
+      },
+
+      "5": {
+        "nick": "Otonom",
+        "date": "2021 Ekim",
+        "message": "Otonom takımı asimov da yerini aldı."
+      },
+      "6": {
+        "nick": "Core",
+        "date": "2021 Kasım",
+        "message": "Takımlara yeni üyeler yetiştirmek amacı ile core takımı kuruldu."
+      },
+      "7": {
+        "nick": "3.olduk",
+        "date": "2022 Mart/Mayıs",
+        "message": "Yarışmada Roket Takımı finalist , Hello World Takımı 3. Oldu."
+      },
+      "8": {
+        "nick": "Finalist Olduk",
+        "date": "2022 Temmuz",
+        "message": "Otonom Takımı yarışmada finalist oldu."
+      },
+      "9": {
+        "nick": "300+ üye",
+        "date": "2022 Ekim",
+        "message": "Asimov 300+ genel, 100+ aktif üyeye ulaştı."
+      },
+      "10": {
+        "nick": "Sakurai",
+        "date": "2022 Kasım",
+        "message": "Sakurai Takımı kuruldu hemen ardından yarışmada 200 takım arasından 13.oldu."
+      }
     },
     "yönetimKurulu": {
       "yönetimKurulu": "Yönetim Kurulu",

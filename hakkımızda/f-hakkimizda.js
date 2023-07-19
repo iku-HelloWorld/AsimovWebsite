@@ -44,7 +44,7 @@ function showSponsors() {
     .then((res) => {
       sponsorContainer.innerHTML = "";
       res.items.forEach((itemRef) => {
-        console.log(itemRef);
+        // console.log(itemRef);
         getDownloadURL(sRef(storage, "sponsorImages/" + itemRef.name)).then(
           (url) => {
             // console.log(url);
@@ -73,7 +73,7 @@ function showSponsors() {
       });
     })
     .catch((error) => {
-      console.error(error);
+      // console.error(error);
     });
   // get(child(ref(db), "sponsorImages"))
   //   .then((snapshot) => {

@@ -872,7 +872,7 @@
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 6vw;
-  height: 100%;
+  height: auto;
 }
 
 .bizkimiz--content {
@@ -1054,6 +1054,7 @@
   font-weight: 600;
   transition: ease 300ms;
   cursor: pointer;
+  font-size: large;
 }
 
 .bizkimiz--text_slider .tags .tag[data-tag="selected"] {
@@ -1346,6 +1347,9 @@ h1 {
 /* responsive in gallery */
 
 @media (max-width: 800px) {
+  #galeri {
+    font-size: small;
+  }
   .galeri_content {
     width: 100%;
     height: 1000px;
@@ -1500,7 +1504,16 @@ h1 {
 }
 
 @media only screen and (max-width: 950px) {
-  .bizkimiz--content {
+  .bizkimiz--section {
+    height: 700px;
+  }
+  .bizkimiz--content h1 {
+    font-size: small;
+  }
+  .bizkimiz--content p {
+    font-size: small;
+  }
+  .bizkimiz--content a {
     font-size: small;
   }
 
@@ -1559,12 +1572,18 @@ h1 {
     border: var(--side-color) 6px outset;
   }
 
-  .bizkimiz--text_slider .tag {
+  .bizkimiz--text_slider .tags .tag {
+    font-size: small;
+  }
+  .bizkimiz--text_slider .texts {
     font-size: small;
   }
 }
 
 @media only screen and (max-width: 700px) {
+  .bizkimiz--section {
+    height: auto;
+  }
   .bizkimiz--content {
     border: 0;
     margin: 0;
@@ -1786,6 +1805,8 @@ h1 {
     transition: 1s all;
     font-size: 30px;
     padding-left: 2%;
+    font-size: small;
+    font-weight: bolder;
   }
 
   .communicationMain {
@@ -1810,7 +1831,7 @@ h1 {
   }
 
   .communicationPagetextpage {
-    font-size: 10px;
+    font-size: small;
   }
 
   .communicationClubLogo,
@@ -1967,15 +1988,6 @@ h1 {
 }
 
 /* footer */
-
-/* responsiveness */
-@media screen and (max-height: 800px) {
-  .bizkimiz--section {
-    height: 1000px;
-  }
-}
-
-/* responsiveness */
 
 * {
   font-family: "Poppins", sans-serif;

@@ -28,7 +28,7 @@ get(child(ref(getDatabase()), "etkinlikler/"))
     if (snapshot.exists()) {
       etkinlikler.innerHTML = "";
       Object.entries(snapshot.val()).forEach((element) => {
-        console.log(element[1]);
+        // console.log(element[1]);
         etkinlikler.insertAdjacentHTML(
           "afterbegin",
           `
