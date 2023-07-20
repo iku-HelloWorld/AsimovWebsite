@@ -1022,7 +1022,7 @@
 .bizkimiz--text_slider {
   position: relative;
   left: 50%;
-  top: 150px;
+  top: 200px;
   transform: translateX(-50%);
   text-align: center;
   width: 70%;
