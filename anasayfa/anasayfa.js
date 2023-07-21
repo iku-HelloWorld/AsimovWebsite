@@ -56,25 +56,35 @@ let isPressedDown = false;
 const sidebarOpen = function () {
   sidebar.style.opacity = "100%";
   sidebar.style.width = "100%";
-
+  sidebar.style.display = "initial";
   mainScreen.style.overflowY = "scroll";
   header.style.display = "none";
 };
-
+const timeout = function (boo) {
+  if (boo) {
+    const t = setTimeout(() => {
+      sidebar.style.display = "none";
+    }, 400);
+  } else {
+    clearTimeout(t);
+  }
+};
 const sidebarClose = function () {
+  console.log("hi");
   sidebar.style.width = "0%";
   sidebar.style.opacity = "0";
   mainScreen.style.overflowY = "hidden";
   header.style.display = "initial";
   mainScreenContainer.style.filter = "blur(0px)";
   header.style.opacity = "100";
-  setTimeout(() => {
-    sidebar.style.display = "none";
-  }, 400);
+  timeout(true);
 };
 document
   .querySelector(".mainscreeniconButton")
-  .addEventListener("click", sidebarOpen);
+  .addEventListener("click", function () {
+    sidebarOpen();
+    timeout(false);
+  });
 
 document.getElementById("bell_btn").addEventListener("click", sidebarOpen);
 
@@ -169,11 +179,9 @@ document.addEventListener("mousemove", function (e) {
 const sideButton = document.getElementById(`sidebar-button`);
 const sideMenu = document.querySelector(`.sidebar-menu`);
 
-if (sideButton) {
-  sideButton.addEventListener(`click`, () => {
-    sideMenu.classList.toggle(`sidebar-active`);
-  });
-}
+sideButton.addEventListener(`click`, () => {
+  sidebarOpen();
+});
 
 const page = document.querySelectorAll(".galeri_page");
 const prevBtn = document.querySelector(".arrow1");

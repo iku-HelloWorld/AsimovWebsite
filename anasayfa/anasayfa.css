@@ -941,13 +941,15 @@
 .slide {
   position: absolute;
   opacity: 0%;
+  height: 100%;
+  width: 100%;
   transition: ease 200ms;
 }
 
 .slide img {
   width: 101%;
   height: 101%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .bizkimiz--img_slider .arrows {
