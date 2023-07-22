@@ -493,13 +493,18 @@
   padding: 1%;
 }
 
-.takımsayfasıresim img {
+.takımsayfasıresim {
   width: 400px;
   height: 250px;
   text-align: center;
   margin: 20px;
-  padding: 0px 92px;
   border: 5px solid var(--side-color);
+}
+
+.takımsayfasıresim img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 850px) {

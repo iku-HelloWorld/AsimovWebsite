@@ -463,7 +463,7 @@
   width: 100%;
   margin: 0%;
   position: relative;
-  top: 10vh;
+  top: 20vh;
   padding-left: 5vw;
   padding-right: 5vw;
   overflow: hidden;
@@ -640,7 +640,7 @@
   width: 100%;
   text-decoration: none;
   z-index: 20;
-  top: 10vh;
+  top: 20vh;
   padding-bottom: 0;
   margin-bottom: 0;
 }

@@ -278,6 +278,7 @@ let index = 1;
 const dotsDiv = document.querySelector(".dots");
 const dots = document.querySelectorAll(".dot");
 const slides = document.querySelectorAll(".slide");
+const slideContainer = document.querySelector(".slides");
 const arrowRight = document.querySelector(".arrow-right");
 const arrowLeft = document.querySelector(".arrow-left");
 /* biz kimiz img slider */
@@ -301,7 +302,13 @@ const displaySlide = function (index) {
   // console.log(imgIndex);
   slides.forEach((s) => (s.style.opacity = "0%"));
   slides.item(imgIndex - 1).style.opacity = "100%";
-
+  const chosenImgUrl = slides
+    .item(imgIndex - 1)
+    .childNodes[1].getAttribute("src");
+  slideContainer.querySelector(
+    ".bg-blur"
+  ).style.backgroundImage = `url("${chosenImgUrl}")`;
+  // console.log(chosenİmgUrl);
   displayDot(imgIndex);
 };
 
