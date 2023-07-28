@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "webpack"
+    "build": "echo building...",
+    "start": "node anasayfa/anasayfa.html"
   },
   "private": true,
   "dependencies": {
