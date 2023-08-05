@@ -60,15 +60,7 @@ const sidebarOpen = function () {
   mainScreen.style.overflowY = "scroll";
   header.style.display = "none";
 };
-const timeout = function (boo) {
-  if (boo) {
-    const t = setTimeout(() => {
-      sidebar.style.display = "none";
-    }, 400);
-  } else {
-    clearTimeout(t);
-  }
-};
+
 const sidebarClose = function () {
   console.log("hi");
   sidebar.style.width = "0%";
@@ -77,14 +69,7 @@ const sidebarClose = function () {
   header.style.display = "initial";
   mainScreenContainer.style.filter = "blur(0px)";
   header.style.opacity = "100";
-  timeout(true);
 };
-document
-  .querySelector(".mainscreeniconButton")
-  .addEventListener("click", function () {
-    sidebarOpen();
-    timeout(false);
-  });
 
 document.getElementById("bell_btn").addEventListener("click", sidebarOpen);
 
@@ -160,21 +145,37 @@ $(window).on("mousemove", function (e) {
   }
 });
 
-const whenMouseMove = function (e) {
-  bgImg.style.transform = "translate(0,0)";
-  bgImg.style.left = `${bgImgLeft + e.pageX / 25}px `;
-  bgImg.style.top = `${bgImgTop + e.pageY / 25}px`;
-  // console.log(bgImg.getBoundingClientRect());
-};
+// const whenMouseMove = function (e) {
+//   // console.log(window.visualViewport.width, window.visualViewport.height);
+//   if (window.visualViewport.width > 775 && window.visualViewport.height > 385) {
+//     const x = e.clientX * 0.25 - window.innerWidth * 0.25;
+//     const y = e.clientY * 0.25 - window.innerHeight * 0.25;
 
-document.addEventListener("mousemove", function (e) {
-  // console.log(window.visualViewport.width, window.visualViewport.height);
+//     bgImg.style.left = `${x}px `;
+//     bgImg.style.top = `${y}px`;
+//   }
+//   // bgImg.style.transform = "translate(0,0)";
+//   // console.log(e.pageX, e.pageY);
 
-  if (window.visualViewport.width > 775 && window.visualViewport.height > 385) {
-    whenMouseMove(e);
-  }
-});
+//   // console.log(bgImg.getBoundingClientRect());
+// };
+
+// document.addEventListener("mousemove", function (e) {
+//   whenMouseMove(e);
+// });
 // background img follows cursor
+let x,
+  y = 0;
+window.addEventListener("mousemove", (e) => {
+  // console.log(e);
+  x = e.clientX * 0.25 - window.innerWidth * 0.25;
+  y = e.clientY * 0.25 - window.innerHeight * 0.25;
+});
+setInterval(function () {
+  // console.log(x);
+  bgImg.style.left = `${x}px `;
+  bgImg.style.top = `${y}px`;
+}, 60);
 
 const sideButton = document.getElementById(`sidebar-button`);
 const sideMenu = document.querySelector(`.sidebar-menu`);
