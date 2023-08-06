@@ -33,13 +33,12 @@ body {
   transition: ease 300ms;
   position: absolute;
   /* box-shadow: 0px 18px 31px -10px rgba(0,0,0,0.75); */
-
 }
 
 .h-active {
   position: fixed;
   height: 10vh;
-  box-shadow: 0px 18px 31px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 18px 31px -10px rgba(0, 0, 0, 0.75);
 }
 
 .h-active:hover {
@@ -353,15 +352,13 @@ body {
   padding-left: 5%;
   padding-right: 5%;
   color: var(--white);
-  font-size: x-large;
+  font-size: large;
 }
 
 .aboutussection1 h1 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-
 
 .aboutussection1 p::before {
   content: "";
@@ -398,7 +395,7 @@ body {
   .aboutussection1 p::before {
     left: 2%;
   }
-  
+
   .aboutussection1 {
     top: 5vh;
   }
@@ -637,9 +634,13 @@ body {
   top: 2%;
   color: var(--white);
   width: 80%;
-  font-size: x-large;
+  font-size: large;
 }
-
+.etkinliklerimiz--section h1 {
+  font-size: x-large;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .etkinliklerimiz--slider {
   width: 95%;
   height: 70%;
@@ -758,11 +759,13 @@ body {
   position: relative;
   left: 15%;
   width: 70%;
-  font-size: x-large;
+  font-size: large;
 }
 
 .sponsor-description {
-  font-size: x-large;
+  font-size: large;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .sponsor-img {
