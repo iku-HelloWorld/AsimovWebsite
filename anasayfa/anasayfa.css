@@ -873,7 +873,7 @@
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 6vw;
-  height: auto;
+  height: 80vh;
 }
 
 .bizkimiz--content {
@@ -1034,7 +1034,7 @@
 .bizkimiz--text_slider {
   position: relative;
   left: 50%;
-  top: 200px;
+  top: 250px;
   transform: translateX(-50%);
   text-align: center;
   width: 70%;
@@ -1539,6 +1539,7 @@ h1 {
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
+    top: 10vh;
   }
 
   .bizkimiz--img_slider .arrows {
@@ -1605,7 +1606,7 @@ h1 {
 
   .bizkimiz--text_slider {
     width: 90%;
-    top: 3vh;
+    top: 18vh;
   }
 }
 
