@@ -1896,40 +1896,13 @@ h1 {
   width: 100%;
   text-decoration: none;
   z-index: 20;
-  /* top: 400vh; */
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-.footer-wrapper {
-  display: grid;
-  grid-template-rows: 70px 40px;
-}
-
-.footer-list {
-  background-color: var(--main-color);
-  display: flex;
-}
-
-.footer-list a {
-  text-decoration: none;
-  color: white;
-  margin-left: 50px;
-  margin-top: 20px;
-  margin-bottom: 0;
-  font-size: larger;
-  height: min-content;
-  border-bottom: var(--main-color) 1px solid;
-  transition: ease 200ms;
-}
-
-.footer-list a:hover {
-  border-bottom: var(--white) 2px solid;
-  margin-bottom: 2px;
-}
-
 .footer_content {
   background-color: var(--dark-color);
+  height: 40px;
 }
 
 .footer-design {
@@ -1942,7 +1915,7 @@ h1 {
 
 .social-links {
   position: absolute;
-  top: 80px;
+  top: 13px;
   right: 50px;
   display: flex;
   gap: 30px;
@@ -1958,42 +1931,64 @@ h1 {
   color: var(--light-color);
   transform: rotateY(360deg);
 }
-
 @media (max-width: 510px) {
-  .footer-wrapper {
-    grid-template-rows: 250px 100px;
+  .TeamPageMembersCards {
+    width: 20vh;
+    height: 24vh;
+  }
+  .TeamPageMembersCardsImg {
+    width: 12.67vh;
   }
 
-  .footer-list {
+  .TeamPageMembersCardsTextHeader {
+    font-size: x-small;
+  }
+
+  .TeamPageMembersCardsText {
+    font-size: xx-small;
+  }
+
+  .footer_content {
+    height: 100px;
     display: grid;
-    grid-template-rows: 50px 50px 50px 50px;
-    /* justify-content: center; */
-    text-align: center;
-    padding-top: 30px;
-  }
-
-  .footer-list a {
-    margin: 0;
-  }
-
-  .footer-content {
-    display: grid;
+    grid-template-rows: 40px 40px;
+    row-gap: 20px;
+    justify-content: center;
   }
 
   .footer-design {
-    position: absolute;
-    top: 270px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
+    color: var(--white);
+    position: relative;
+    left: 0px;
+    top: 15px;
+    width: 200px;
+    font-size: 100%;
+    text-align: center;
   }
 
   .social-links {
-    top: 100%;
-    transform: translate(50%, -130%);
-    right: 50%;
-    height: 30px;
-    position: absolute;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    column-gap: 4%;
+    text-align: center;
+  }
+
+  .social-links a {
+    color: var(--white);
+    width: 100%;
+    transition: ease 400ms;
+  }
+
+  .social-links i {
+    font-size: 100%;
+  }
+
+  .social-links a:hover {
+    color: var(--light-color);
+    transform: rotateY(360deg);
   }
 }
 
