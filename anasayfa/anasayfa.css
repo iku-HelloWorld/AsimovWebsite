@@ -874,7 +874,7 @@
   padding-left: 1vw;
   padding-right: 5vw;
   padding-top: 6vw;
-  height: auto;
+  height: 80vh;
 }
 
 .bizkimiz--content {
@@ -882,7 +882,6 @@
   border-left: var(--side-color) 4px solid;
   padding-left: 20px;
   margin-left: 100px;
-  
 }
 
 .bizkimiz--content h1 {
@@ -1370,7 +1369,7 @@ h1 {
     height: 1000px;
     transition: ease 400ms;
   }
-  
+
   .galeri_content b {
     position: absolute;
     top: 12%;
@@ -1548,6 +1547,7 @@ h1 {
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
+    top: 10vh;
   }
 
   .bizkimiz--img_slider .arrows {
@@ -1614,7 +1614,7 @@ h1 {
 
   .bizkimiz--text_slider {
     width: 90%;
-    top: 3vh;
+    top: 18vh;
   }
 }
 
@@ -1631,8 +1631,6 @@ h1 {
   padding-top: 2.5vw;
   margin-bottom: 2vw;
 }
-
-
 
 .TeamHeader h1 {
   text-decoration: none;
