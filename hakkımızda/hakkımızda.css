@@ -630,7 +630,7 @@ body {
 /* ////////////////////////////////////////////////////// */
 .etkinliklerimiz--content {
   position: relative;
-  left: 15%;
+  left: 6%;
   top: 2%;
   color: var(--white);
   width: 80%;
@@ -757,7 +757,7 @@ body {
 
 .sponsor-head {
   position: relative;
-  left: 15%;
+  left: 6%;
   width: 70%;
   font-size: large;
 }
