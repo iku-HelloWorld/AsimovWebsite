@@ -56,16 +56,16 @@ const getNotification = function () {
       if (snapshot.exists()) {
         Notification.innerHTML = "";
         Object.entries(snapshot.val()).forEach((m) => {
-          console.log(m);
+          // console.log(m);
           const RightBoxHeader = m[1].başlık;
           const RightBoxParagraph = m[1].açıklama;
-          console.log(RightBoxParagraph);
+          // console.log(RightBoxParagraph);
           let url;
 
           getDownloadURL(
             sRef(storage, "bildirim/" + RightBoxHeader.slice(0, 10))
           ).then((imgURL) => {
-            console.log(imgURL);
+            // console.log(imgURL);
             url = imgURL;
             Notification.insertAdjacentHTML(
               "afterbegin",
@@ -88,11 +88,11 @@ const getNotification = function () {
           });
         });
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     })
     .catch((error) => {
-      console.error(error);
+      // console.error(error);
     });
 };
 

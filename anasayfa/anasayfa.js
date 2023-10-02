@@ -52,6 +52,28 @@ const mainContent = document.querySelector(".mainscreenSecond");
 const mainScreen = document.querySelector(".main-screen");
 const mainScreenContainer = document.querySelector(".mainscreenContainer");
 let isPressedDown = false;
+let sidebarState;
+
+const stayTop = function () {
+  // console.log(document.getElementsByTagName("body")[0]);
+  document.getElementsByTagName("body")[0].style.height = "100vh";
+  document.getElementsByTagName("body")[0].style.overflowY = "hidden";
+};
+
+const sidebarMode = function (state) {
+  if (state) {
+    scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    setTimeout(() => {
+      stayTop();
+    }, 700);
+  } else {
+    document.getElementsByTagName("body")[0].style.overflowY = "initial";
+    document.getElementsByTagName("body")[0].style.height = "initial";
+    setTimeout(() => {
+      sidebarMode(false);
+    }, 5);
+  }
+};
 
 const sidebarOpen = function () {
   sidebar.style.opacity = "100%";
@@ -59,16 +81,20 @@ const sidebarOpen = function () {
   sidebar.style.display = "initial";
   mainScreen.style.overflowY = "scroll";
   header.style.display = "none";
+  sidebarMode(true);
+  sidebarState = true;
 };
 
 const sidebarClose = function () {
-  console.log("hi");
+  // console.log("hi");
   sidebar.style.width = "0%";
   sidebar.style.opacity = "0";
   mainScreen.style.overflowY = "hidden";
   header.style.display = "initial";
   mainScreenContainer.style.filter = "blur(0px)";
   header.style.opacity = "100";
+  sidebarState = false;
+  sidebarMode(false);
 };
 
 document.getElementById("bell_btn").addEventListener("click", sidebarOpen);
@@ -383,31 +409,42 @@ const handleLang = function () {
     lang = json.Tr.lang;
     // navbar
     for (let key in json.Tr.navbar) {
-      document.getElementById(`${key}`).textContent = `${json.Tr.navbar[key]}`;
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.Tr.navbar[key]}`;
+      }
     }
 
     // mainscreen
     for (let key in json.Tr.mainscreen) {
       // console.log(key, document.getElementById(key));
-
-      document.getElementById(
-        `${key}`
-      ).textContent = `${json.Tr.mainscreen[key]}`;
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.Tr.mainscreen[key]}`;
+      }
     }
   } else {
     lang = json.En.lang;
     // navbar
     for (let key in json.En.navbar) {
-      console.log(document.getElementById(`${key}`));
-      document.getElementById(`${key}`).textContent = `${json.En.navbar[key]}`;
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.En.navbar[key]}`;
+      }
+      // console.log(document.getElementById(`${key}`));
     }
 
     // mainscreen
     for (let key in json.En.mainscreen) {
       // console.log(document.getElementById(`${key}`));
-      document.getElementById(
-        `${key}`
-      ).textContent = `${json.En.mainscreen[key]}`;
+      if (document.getElementById(`${key}`)) {
+        document.getElementById(
+          `${key}`
+        ).textContent = `${json.En.mainscreen[key]}`;
+      }
     }
   }
 };

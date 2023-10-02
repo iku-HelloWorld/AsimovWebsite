@@ -42,11 +42,11 @@ const galericontent = document.querySelector(".galeri_content");
 const getImages = function () {
   get(child(ref(db), "galeriResim/")).then((snapshot) => {
     if (snapshot.val()) {
-      console.log(
-        Object.values(snapshot.val()).sort((a, b) => {
-          return a.date - b.date;
-        })
-      );
+      // console.log(
+      //   Object.values(snapshot.val()).sort((a, b) => {
+      //     return a.date - b.date;
+      //   })
+      // );
       isEight(Object.entries(snapshot.val()));
     }
   });
