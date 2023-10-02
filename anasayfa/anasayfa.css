@@ -1035,7 +1035,7 @@
 .bizkimiz--text_slider {
   position: relative;
   left: 52%;
-  top: 200px;
+  top: 300px;
   transform: translateX(-50%);
   text-align: center;
   width: 70%;
@@ -1177,7 +1177,7 @@
   width: 100%;
   height: 1000px;
   left: 0;
-  top: 10vh;
+  top: 20vh;
   position: relative;
   transition: ease 400ms;
   padding-top: 1vw;
@@ -1519,7 +1519,7 @@ h1 {
     overflow: hidden;
   }
   .bizkimiz--text_slider {
-    top: 2vh;
+    top: 13vh;
   }
 }
 
@@ -1623,7 +1623,7 @@ h1 {
 /* takım sayfası */
 .TeamMain {
   position: relative;
-  top: 20vh;
+  top: 40vh;
   background-color: #d4d9df;
   margin: 0;
   height: 1100px;
