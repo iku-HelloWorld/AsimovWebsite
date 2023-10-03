@@ -44,7 +44,7 @@ get(child(ref(getDatabase()), "etkinlikler/"))
       });
       displaySlides(etkinlikSlideIndex);
     } else {
-      console.log("No data available");
+      // console.log("No data available");
     }
   })
   .catch((error) => {

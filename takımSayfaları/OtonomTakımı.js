@@ -50,7 +50,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.Tr.navbar[key]}`;
       } else {
-        console.log(key + " key in json is not accesable in this page");
+        // console.log(key + " key in json is not accesable in this page");
       }
     }
     for (let key in json.Tr.otonom) {
@@ -59,7 +59,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.Tr.otonom[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -69,7 +69,7 @@ const handleLang = function () {
           v.textContent = `${json.Tr.ünvanlar[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -79,7 +79,7 @@ const handleLang = function () {
           v.textContent = `${json.Tr.bölümler[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -92,7 +92,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`));
     }
@@ -104,7 +104,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.otonom[key]}`;
       } else {
-        console.log(key + " not exist");
+        // console.log(key + " not exist");
       }
       // console.log(document.getElementById(`${key}`));
     }
@@ -114,7 +114,7 @@ const handleLang = function () {
           v.textContent = `${json.En.ünvanlar[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -124,7 +124,7 @@ const handleLang = function () {
           v.textContent = `${json.En.bölümler[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }

@@ -25,14 +25,14 @@ navbarLinkUl.addEventListener("click", function (e) {
 window.addEventListener("scroll", function () {
   if (window.scrollY === 0) {
     // header.style.position = "fixed";
-    console.log();
+    // console.log();
     header.classList.remove("h-active");
-    console.log("hi");
+    // console.log("hi");
   } else {
     // header.style.position = "absolute";
     header.classList.add("h-active");
 
-    console.log("bye");
+    // console.log("bye");
   }
 });
 
@@ -147,7 +147,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.Tr.navbar[key]}`;
       } else {
-        console.log(key + " key in json is not accesable in this page");
+        // console.log(key + " key in json is not accesable in this page");
       }
     }
     for (let key in json.Tr.yönetimKurulu) {
@@ -156,7 +156,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.Tr.yönetimKurulu[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -166,7 +166,7 @@ const handleLang = function () {
           v.textContent = `${json.Tr.ünvanlar[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -176,7 +176,7 @@ const handleLang = function () {
           v.textContent = `${json.Tr.bölümler[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -189,7 +189,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`));
     }
@@ -201,7 +201,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.yönetimKurulu[key]}`;
       } else {
-        console.log(key + " not exist");
+        // console.log(key + " not exist");
       }
       // console.log(document.getElementById(`${key}`));
     }
@@ -211,7 +211,7 @@ const handleLang = function () {
           v.textContent = `${json.En.ünvanlar[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -221,7 +221,7 @@ const handleLang = function () {
           v.textContent = `${json.En.bölümler[key]}`;
         });
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }

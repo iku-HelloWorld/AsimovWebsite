@@ -39,7 +39,7 @@ submit.addEventListener("click", function () {
   let exp = document.querySelector(".activities-explanation").value;
 
   const nick = header.slice(0, 10) + hour + minute;
-  console.log(header, exp, img);
+  // console.log(header, exp, img);
 
   if (header && exp && img) {
     set(ref(db, "etkinlikler/" + nick), {
@@ -47,7 +47,7 @@ submit.addEventListener("click", function () {
       açıklama: exp,
       nick: nick,
     });
-    console.log("success");
+    // console.log("success");
     document.querySelector(".activities-img").value = "";
     document.querySelector(".activities-header").value = "";
     document.querySelector(".activities-explanation").value = "";
@@ -70,11 +70,11 @@ get(child(ref(db), `etkinlikler/`))
         );
       });
     } else {
-      console.log("No data available");
+      // console.log("No data available");
     }
   })
   .catch((error) => {
-    console.error(error);
+    // console.error(error);
   });
 ///////
 

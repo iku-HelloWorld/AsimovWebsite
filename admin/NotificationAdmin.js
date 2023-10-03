@@ -145,7 +145,7 @@ function writeNotificationData() {
     // 'file' comes from the Blob or File API
     uploadBytes(storageRef, NotificationPictureAdmin.files[0]).then(
       (snapshot) => {
-        console.log("Uploaded a blob or file!");
+        // console.log("Uploaded a blob or file!");
         NotificationPictureAdmin.value = "";
         NotificationHeaderAdmin.value = "";
         NotificationParagraphAdmin.value = "";

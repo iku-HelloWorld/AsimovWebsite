@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: ikü asimov
-    runtime: static
-    buildCommand: yarn
-    startCommand: yarn start
-    staticPublishPath: ./build
-    pullRequestPreviewsEnabled: true # optional

@@ -5,7 +5,6 @@
       "kulübümüz": "Kulübümüz",
       "hakkımızda": "Hakkımızda",
       "yönetimKurulu": "Yönetim Kurulu",
-      "kurumsalİletişim": "Kurumsal İletişim",
       "takımlarımız": "Takımlarımız",
       "helloWorld": "Hello World",
       "otonom": "Otonom Araba",
@@ -121,14 +120,10 @@
     },
     "yönetimKurulu": {
       "yönetimKurulu": "Yönetim Kurulu",
-      "yönetimKuruluAçıklama": "**1. Kurumsal İletişim",
+      "yönetimKuruluAçıklama": "Kulüp yönetim kurulu, kurumsal yapısını ve görevlerini aşağıdaki üç ana birim üzerinden şekillendirmiştir: Kurumsal İletişim, Takımlar ve Yarışmalar Koordinatörlüğü, Denetim Kurulu. Bu üç ana grup, kulüp dinamiğini düzenlemek ve daha verimli bir yönetim sağlamak amacıyla hiyerarşik olarak bağlanmıştır.Kurumsal İletişim birimi, kulüp ile üyeleri, diğer kulüpleri, öğrenci topluluğunu ve dış paydaşları arasında iletişimi yönetir. Bu birim, kulüp etkinliklerini tanıtır, üyeleri bilgilendirir ve kulüp ile ilgili her türlü iletişimi koordine eder. Kurumsal İletişim birimi ayrıca kulüp web sitesi, sosyal medya hesapları ve diğer iletişim kanallarını yönetir.Takımlar ve Yarışmalar Koordinatörlüğü, kulüp içindeki teknoloji odaklı projeleri ve yarışmaları organize eder ve denetler. Bu birim, üyeler arasında işbirliği ve bilgi paylaşımını teşvik eder, teknik yetenekleri geliştirir ve takımların etkin bir şekilde çalışmasını sağlar. Aynı zamanda, ulusal ve uluslararası yarışmalara katılımı koordine eder.Denetim Kurulu, kulüp faaliyetlerinin şeffaflığını ve hesap verebilirliğini sağlar. Bu birim, kulüp bütçesini denetler, harcamaları izler ve mali raporları hazırlar. Ayrıca, kulüp içi süreçlerin ve kararların yasalara ve kulüp politikalarına uygunluğunu denetler. Denetim Kurulu, kulüp yönetiminin finansal ve idari sorumluluğunu korur.",
       "üyeler": "Üyeler"
     },
-    "kurumsalİletişim": {
-      "kurumsalİletişimBaşlık": "Kurumsal İletişim",
-      "kurumsalİletişimAçıklama": "Asimov Teknoloji Kulübü Kurumsal İletişim, kulübün aktif ve önemli bir parçasıdır. Kulüp içi ve dışı iletişimde, etkinliklerde ve diğer faaliyetlerde görev alır. İç iletişim ekibi kulüp etkinliklerini organize ederken, dış iletişimde sponsorluk ve işbirliklerini yönetir. Üyeler arasında sağlam bir bağ oluşturmak ve bilgi alışverişini desteklemek için iç iletişim stratejileri geliştirirler. Aynı zamanda dış dünyayla da güçlü ilişkiler kurarak kulüp etkinliklerini destekler ve büyütmek için sponsorluklar ve işbirlikleri sağlarlar.  Kurumsal İletişim ekibi, öğrencilerin iletişim becerilerini geliştirmeye odaklanır ve eğitim çalışmaları düzenler. Bu sayede, üyelerimiz iş dünyasında rekabetçi bir avantaj elde ederler. Kulübümüzün başarılı etkinliklerini organize eden ve kulübün vizyonunu geniş kitlelere ulaştıran ekibimiz geleceğin teknoloji liderlerini bir araya getirir. Kulübümüz Kurumsal ekibimizle daha da  büyümeye ve başarıya doğru emin adımlarla ilerlemeye devam edecektir.",
-      "üyeler": "Üyeler"
-    },
+
     "helloWorld": {
       "helloWorld": "Hello World",
       "helloWorldAçıklama1": "Hello World, 2021 yılında İstanbul Kültür Üniversitesi'nin Asimov Teknoloji Kulübü bünyesinde kurulmuş çalışkan bir yazılım ekibidir. Ekibimiz dijital yazılımların geliştirilmesinde kullanılan teknolojileri öğrenip bu teknolojileri kullanarak geliştirdikleri projeleri insanlara yaymaya çalışır. ",
@@ -166,7 +161,7 @@
       "kulübümüz": "Our Club",
       "hakkımızda": "About Us",
       "yönetimKurulu": "Directory Team",
-      "kurumsalİletişim": "Corporate Communication",
+
       "galeri": "Gallery",
       "takımlarımız": "Teams",
       "helloWorld": "Hello World",
@@ -284,11 +279,7 @@
       "yönetimKuruluAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis?",
       "üyeler": "Members"
     },
-    "kurumsalİletişim": {
-      "kurumsalİletişimBaşlık": "Corporate Communication",
-      "kurumsalİletişimAçıklama": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam nihil voluptatibus quos, nulla laudantium magnam ratione dolorem asperiores beatae accusamus nisi error inventore in consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reiciendis veritatis non vero distinctio in maxime, numquam expedita facere quaerat quas aut doloribus, dolorem consequuntur vel totam atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe beatae aperiam perspiciatis?",
-      "üyeler": "Members"
-    },
+
     "helloWorld": {
       "helloWorld": "Hello World",
       "helloWorldAçıklama1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae debitis, corporis eaque doloribus et quaerat tempore repellendus facilis ut dolorum non a in omnis quia placeat adipisci saepe ullam blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum veniam autem libero, rerum, corporis ex nemo ut commodi rem est maiores veritatis explicabo quia ad. Doloremque, id! Sequi, odit voluptates.",

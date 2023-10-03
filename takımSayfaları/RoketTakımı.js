@@ -50,14 +50,14 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.Tr.navbar[key]}`;
       } else {
-        console.log(key + " key in json is not accesable in this page");
+        // console.log(key + " key in json is not accesable in this page");
       }
     }
     for (let key in json.Tr.roket) {
       if (document.getElementById(`${key}`)) {
         document.getElementById(`${key}`).textContent = `${json.Tr.roket[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`), json.En.navbar[key]);
     }
@@ -70,7 +70,7 @@ const handleLang = function () {
           `${key}`
         ).textContent = `${json.En.navbar[key]}`;
       } else {
-        console.log(key + "is not accesable");
+        // console.log(key + "is not accesable");
       }
       // console.log(document.getElementById(`${key}`));
     }

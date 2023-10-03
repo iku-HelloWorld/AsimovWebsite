@@ -148,7 +148,7 @@ nextBtn.addEventListener("click", function () {
 
 // // image focus ver
 const imgFocusShow = function (metadata, url, state) {
-  console.log(metadata);
+  // console.log(metadata);
   // console.log("hi");
   if (state) {
     galeriCont.style.filter = "blur(5px)";
@@ -185,18 +185,18 @@ galeriCont.addEventListener("click", function (e) {
   if (t) {
     const nick = t.querySelector(".image_div_content").textContent;
     const url = e.target.src;
-    console.log(nick);
+    // console.log(nick);
     const dbRef = ref(getDatabase());
     get(child(dbRef, `galeriResim/${nick}`))
       .then((snapshot) => {
         if (snapshot.exists()) {
           imgFocusShow(snapshot.val(), url, true);
         } else {
-          console.log("resim bulunamadı");
+          // console.log("resim bulunamadı");
         }
       })
       .catch((error) => {
-        console.error(error);
+        // console.error(error);
       });
   }
 });

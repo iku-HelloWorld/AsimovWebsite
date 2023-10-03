@@ -59,7 +59,7 @@ const getMembers = function () {
           const nick = e[1].nick;
           let url;
           getDownloadURL(sRef(storage, "dataaiÜye/" + nick)).then((imgurl) => {
-            console.log(imgurl);
+            // console.log(imgurl);
             url = imgurl;
             üyeler.insertAdjacentHTML(
               "afterbegin",
@@ -79,7 +79,7 @@ const getMembers = function () {
           });
         });
       } else {
-        console.log("No data available");
+        // console.log("No data available");
       }
     })
     .catch((error) => {

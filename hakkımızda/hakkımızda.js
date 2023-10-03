@@ -53,7 +53,7 @@ let sayaçInScreen = false;
 const sayaçCount = function () {
   // console.log("this too");
   if (sayaçInScreen) return;
-  console.log("working");
+  // console.log("working");
   // console.log("amazing but");
   sayaçTexts.forEach((t) => {
     // console.log(t.dataset.value);

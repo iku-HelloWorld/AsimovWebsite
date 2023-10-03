@@ -79,7 +79,7 @@ anasayfagalerisubmit.addEventListener("click", function () {
 
     const uploadTask = uploadBytes(imageRef, resim, metadata).then(
       (snapshot) => {
-        console.log("success");
+        // console.log("success");
       }
     );
     set(ref(db, "galeriResim/" + nick), {
@@ -87,7 +87,7 @@ anasayfagalerisubmit.addEventListener("click", function () {
       date: date,
       nick: nick,
     }).then(() => {
-      console.log("success");
+      // console.log("success");
       anasayfagaleriresim.value = "";
       anasayfagaleriacıklama.value = "";
     });
@@ -97,13 +97,13 @@ anasayfagalerisubmit.addEventListener("click", function () {
 });
 //sil
 const closeImg = function () {
-  console.log("x");
+  // console.log("x");
 };
 
 get(child(ref(db), "galeriResim/")).then((snapshot) => {
   if (snapshot.val()) {
     Object.values(snapshot.val()).forEach((value) => {
-      console.log(value.nick);
+      // console.log(value.nick);
       getDownloadURL(sRef(storage, "galeriResim/" + value.nick)).then((url) => {
         anasayfagalerisil.insertAdjacentHTML(
           "afterbegin",

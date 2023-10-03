@@ -86,7 +86,7 @@ const displayMessage = function (ind) {
   const messagesArr = [...messages.childNodes].filter(
     (n) => n.nodeName != "#text"
   );
-  console.log(ind, messagesArr);
+  // console.log(ind, messagesArr);
   messagesArr.forEach((m) => m.classList.remove("active"));
   messagesArr[ind].classList.add("active");
 };
@@ -94,7 +94,7 @@ const displayMessage = function (ind) {
 timeline.addEventListener("click", function (e) {
   const point = document.querySelectorAll(".point");
   const tar = e.target;
-  console.log(tar.dataset.index);
+  // console.log(tar.dataset.index);
   timeInd = tar.dataset.index;
   //   console.log(+timeInd + 1);
   if ([...point].includes(tar)) {
