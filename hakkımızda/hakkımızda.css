@@ -413,6 +413,7 @@ body {
   left: 50%;
   top: 50vh;
   transform: translateX(-50%);
+  overflow: hidden;
 }
 
 .timeline_container {
