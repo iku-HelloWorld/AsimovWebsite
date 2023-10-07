@@ -251,12 +251,13 @@
         "date": "2021 January",
         "message": "Hello World has founded as the first software development team of Asimov."
       },
+    
       "4": {
         "nick": "Aysar İHA",
-        "date": "2021 Mart",
+        "date": "2021 March",
         "message": "Aysar İHA has founded."
       },
-
+      
       "5": {
         "nick": "Otonom",
         "date": "2021 October",
@@ -279,7 +280,7 @@
       },
       "9": {
         "nick": "300+ member",
-        "date": "2022 Ekim",
+        "date": "2022 November",
         "message": "Asimov reached 300+ general, 100+ active member."
       },
       "10": {
