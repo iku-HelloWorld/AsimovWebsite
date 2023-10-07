@@ -66,8 +66,13 @@ const getMembers = function () {
         Object.entries(snapshot.val()).forEach((e) => {
           const ad = e[1].ad;
           const ünvan = e[1].ünvan;
+
           const bölüm = e[1].bölüm;
+
           const nick = e[1].nick;
+          const ünvanSpc = e[1].ünvan.replaceAll(" ", "");
+          const bölümSpc = e[1].bölüm.replaceAll(" ", "");
+          // console.log(noSpace);
           let url;
           getDownloadURL(sRef(storage, "helloWorldMember/" + nick)).then(
             (imgurl) => {
@@ -82,7 +87,7 @@ const getMembers = function () {
           <div class="TeamPageMembersCardsText">
             <p class="TeamPageMembersCardsTextHeader">${ad}</p>
             <p class="TeamPageMembersCardsTextMajor">
-            <span class="${ünvan}"> ${ünvan}</span><br><span class="${bölüm}">${bölüm}</span>
+            <span class="${ünvanSpc}"> ${ünvan}</span><br><span class="${bölümSpc}">${bölüm}</span>
             </p>
           </div>
         </section>

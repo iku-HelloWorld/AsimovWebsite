@@ -132,7 +132,8 @@ const handleLang = function () {
   }
 };
 
-textBtn.addEventListener("click", function () {
+textBtn.addEventListener("click", function (e) {
+  e.preventDefault();
   handleAnimation();
 });
 handleLang();

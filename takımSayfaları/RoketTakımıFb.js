@@ -68,6 +68,8 @@ const getMembers = function () {
           const ünvan = e[1].ünvan;
           const bölüm = e[1].bölüm;
           const nick = e[1].nick;
+          const ünvanSpc = e[1].ünvan.replaceAll(" ", "");
+          const bölümSpc = e[1].bölüm.replaceAll(" ", "");
           let url;
           getDownloadURL(sRef(storage, "roketMember/" + nick)).then(
             (imgurl) => {
@@ -82,7 +84,7 @@ const getMembers = function () {
           <div class="TeamPageMembersCardsText">
             <p class="TeamPageMembersCardsTextHeader">${ad}</p>
             <p class="TeamPageMembersCardsTextMajor">
-              ${ünvan}<br>${bölüm}
+            <span class="${ünvanSpc}"> ${ünvan}</span><br><span class="${bölümSpc}">${bölüm}</span>
             </p>
           </div>
         </section>

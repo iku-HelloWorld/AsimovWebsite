@@ -120,6 +120,7 @@ const handleLang = function () {
         document.querySelectorAll(`.${key}`).forEach((v) => {
           v.textContent = `${json.En.ünvanlar[key]}`;
         });
+        // console.log(key, document.querySelectorAll(`.${key}`));
       } else {
         // console.log(key + "is not accesable");
       }
@@ -138,7 +139,8 @@ const handleLang = function () {
   }
 };
 
-textBtn.addEventListener("click", function () {
+textBtn.addEventListener("click", function (e) {
+  e.preventDefault();
   handleAnimation();
 });
 handleLang();

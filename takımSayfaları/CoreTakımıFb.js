@@ -59,7 +59,7 @@ get(ref(db, "videoLinks/links")).then((res) => {
 
 const getMembers = function () {
   üyeler.innerHTML = "no member available!";
-  get(child(ref(db), `helloWorldMember/`))
+  get(child(ref(db), `coreMember/`))
     .then((snapshot) => {
       if (snapshot.exists()) {
         üyeler.innerHTML = "";
@@ -68,28 +68,28 @@ const getMembers = function () {
           const ünvan = e[1].ünvan;
           const bölüm = e[1].bölüm;
           const nick = e[1].nick;
+          const ünvanSpc = e[1].ünvan.replaceAll(" ", "");
+          const bölümSpc = e[1].bölüm.replaceAll(" ", "");
           let url;
-          getDownloadURL(sRef(storage, "helloWorldMember/" + nick)).then(
-            (imgurl) => {
-              // console.log(imgurl);
-              url = imgurl;
-              üyeler.insertAdjacentHTML(
-                "afterbegin",
-                `<section class="TeamPageMembersCards">
+          getDownloadURL(sRef(storage, "coreMember/" + nick)).then((imgurl) => {
+            // console.log(imgurl);
+            url = imgurl;
+            üyeler.insertAdjacentHTML(
+              "afterbegin",
+              `<section class="TeamPageMembersCards">
           <div class="TeamPageMembersCardsImg">
             <img loading="lazy" src="${url}" />
           </div>
           <div class="TeamPageMembersCardsText">
-            <p class="TeamPageMembersCardsTextHeader">${ad}</p>
+            <p id="${ad}" class="TeamPageMembersCardsTextHeader">${ad}</p>
             <p class="TeamPageMembersCardsTextMajor">
-             <span class="${ünvan}"> ${ünvan}</span><br><span class="${bölüm}">${bölüm}</span>
+             <span class="${ünvanSpc}"> ${ünvan}</span><br><span class="${bölümSpc}">${bölüm}</span>
             </p>
           </div>
         </section>
         `
-              );
-            }
-          );
+            );
+          });
         });
       } else {
         // console.log("No data available");
