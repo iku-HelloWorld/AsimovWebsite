@@ -1935,12 +1935,15 @@ h1 {
   font-size: x-large;
   transition: ease 400ms;
 }
+#tiktokLink{
+  margin-top: -0.3vw;
+}
 
 .social-links a:hover {
   color: var(--light-color);
   transform: rotateY(360deg);
 }
-@media (max-width: 510px) {
+@media (max-width: 578px) {
   .TeamPageMembersCards {
     width: 20vh;
     height: 24vh;
@@ -1980,7 +1983,7 @@ h1 {
     top: 0px;
     right: 0px;
     display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-columns: 14% 14% 14% 14% 14% 14%;
     column-gap: 4%;
     text-align: center;
   }

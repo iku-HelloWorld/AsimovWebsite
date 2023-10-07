@@ -649,12 +649,14 @@
   font-size: x-large;
   transition: ease 400ms;
 }
-
+#tiktokLink{
+  margin-top: -0.3vw;
+}
 .social-links a:hover {
   color: var(--light-color);
   transform: rotateY(360deg);
 }
-@media (max-width: 510px) {
+@media (max-width: 578px) {
   .footer-container {
     top: 10vh;
   }
