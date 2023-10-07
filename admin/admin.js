@@ -47,6 +47,7 @@ const db = getDatabase();
 const dbRef = ref(getDatabase());
 const storage = getStorage();
 // login
+const body = document.getElementsByTagName("body");
 const login = document.querySelector(".login");
 const edit = document.querySelector(".edit");
 const username = document.querySelector(".username");
@@ -55,10 +56,18 @@ const submit = document.querySelector(".submit");
 
 const bildirimSil = document.querySelector(".bildirim-sil");
 
+// body[0].style.height = "100vh";
+// body[0].style.overflow = "hidden";
+
+// console.log(body[0]);
 const signedInHandler = function () {
+  // body[0].style.height = "initial";
+  // body[0].style.overflow = "initial";
+
   login.style.opacity = "0%";
   login.style.display = "none";
   edit.style.opacity = "100%";
+  edit.style.display = "initial";
 };
 
 submit.addEventListener("click", function () {
@@ -71,6 +80,7 @@ submit.addEventListener("click", function () {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      alertify.alert(errorCode, errorMessage);
     });
   // login.style.display = "none";
   // edit.style.display = "initial";

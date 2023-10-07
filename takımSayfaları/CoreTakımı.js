@@ -4,6 +4,17 @@ import json from "/language.json" assert { type: "json" };
 const button = document.getElementById(`list-btn`);
 const menu = document.querySelector(`.asimov-menu`);
 
+// get(ref(db, "videoLinks/links")).then((res) => {
+//   const val = res.val();
+//   const found = val.find((o) => o.name === "core");
+//   const url = found.url;
+//   const code = url.split("=")[1];
+//   const codefix = code.split("&")[0];
+//   const newLink = `https://www.youtube.com/embed/${codefix}?autoplay=1`;
+//   console.log(codefix);
+//   document.querySelector(".TeamPageVideoLink").src = newLink;
+// });
+
 button.addEventListener(`click`, () => {
   menu.classList.toggle(`active`);
   window.addEventListener("scroll", function () {
