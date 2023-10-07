@@ -47,7 +47,7 @@
       "misyon": "Misyon",
       "vizyon": "Vizyon",
       "hedef": "Hedef",
-      "misyonAçıklama": "Üyelerimizle birlikte ürettiğimiz projelerin ulusal ve uluslararası yarışmalara katılıması.",
+      "misyonAçıklama": "Üyelerimizle birlikte ürettiğimiz projelerin ulusal ve uluslararası yarışmalara katılması.",
       "vizyonAçıklama": "'Dream more, do more!' sloganı ile üretim yapan, yaparken öğrenen ve öğrencilerle birlikte sektördeki firmalar ve öğrencilerin köprüsünü kuran bir kulüp olmak.",
       "hedefAçıklama": "Yenilikçi, prestijli ve bulunduğu çevreye çok boyutlu değer katan projelere imza atmak.",
       "galeri": "Galeri",
@@ -290,13 +290,13 @@
     },
     "yönetimKurulu": {
       "yönetimKurulu": "Yönetim Kurulu",
-      "yönetimKuruluAçıklama":  "The club's board of directors has shaped its corporate structure and duties through the following three main units: Corporate Communications, Teams and Competitions Coordination, Supervisory Board. These three main groups are hierarchically connected in order to regulate the club dynamics and provide a more efficient management. The Corporate Communications unit manages the communication between the club and its members, other clubs, the student community and external stakeholders. This unit promotes club events, informs members and coordinates all kinds of communication related to the club. The Corporate Communications unit also manages the club website, social media accounts. and manages other communication channels. The Teams and Competitions Coordination Office organizes and supervises technology-focused projects and competitions within the club. This unit encourages cooperation and information sharing among members, develops technical skills and ensures that teams work effectively. At the same time, national and coordinates participation in international competitions. The Supervisory Board ensures the transparency and accountability of club activities. This unit audits the club budget, monitors expenditures and prepares financial reports. Additionally, it checks the compliance of internal club processes and decisions with the law and club policies. The Supervisory Board protects the financial and administrative responsibility of the club management.",
+      "yönetimKuruluAçıklama": "The club's board of directors has shaped its corporate structure and duties through the following three main units: Corporate Communications, Teams and Competitions Coordination, Supervisory Board. These three main groups are hierarchically connected in order to regulate the club dynamics and provide a more efficient management. The Corporate Communications unit manages the communication between the club and its members, other clubs, the student community and external stakeholders. This unit promotes club events, informs members and coordinates all kinds of communication related to the club. The Corporate Communications unit also manages the club website, social media accounts. and manages other communication channels. The Teams and Competitions Coordination Office organizes and supervises technology-focused projects and competitions within the club. This unit encourages cooperation and information sharing among members, develops technical skills and ensures that teams work effectively. At the same time, national and coordinates participation in international competitions. The Supervisory Board ensures the transparency and accountability of club activities. This unit audits the club budget, monitors expenditures and prepares financial reports. Additionally, it checks the compliance of internal club processes and decisions with the law and club policies. The Supervisory Board protects the financial and administrative responsibility of the club management.",
       "üyeler": "Members"
     },
 
     "helloWorld": {
       "helloWorld": "Hello World",
-      "helloWorldAçıklama1":"Hello World is a hard-working software team established within the Asimov Technology Club of Istanbul Kültür University in 2021. Our team learns the technologies used in the development of digital software and tries to disseminate the projects they have developed using these technologies to people.",
+      "helloWorldAçıklama1": "Hello World is a hard-working software team established within the Asimov Technology Club of Istanbul Kültür University in 2021. Our team learns the technologies used in the development of digital software and tries to disseminate the projects they have developed using these technologies to people.",
       "helloWorldAçıklama2": "Hello World specializes in web development and also advances in mobile application development and unity game development. Hello World, which has gained recognition in the university community, focuses on shaping the future in the world of programming with its perfectionist approaches and spirit of collaboration.",
       "üyeler": "Members"
     },
@@ -308,20 +308,20 @@
     },
     "roket": {
       "roket": "Team Rocket",
-      "roketAçıklama1":"Asimov-X Rocket Team is the first team established within the Asimov Technology Club of Istanbul Kültür University. The aim of the rocket is to successfully save the rocket by performing 2 separations. Work is carried out with team members who want to improve themselves in the fields of electronics, avionics, mechanics, software and aviation. ",
+      "roketAçıklama1": "Asimov-X Rocket Team is the first team established within the Asimov Technology Club of Istanbul Kültür University. The aim of the rocket is to successfully save the rocket by performing 2 separations. Work is carried out with team members who want to improve themselves in the fields of electronics, avionics, mechanics, software and aviation. ",
       "roketAçıklama2": "Asimov-X Rocket Team participates in various competitions, especially Teknofest. Our team became a finalist in the 2022 Teknofest and was entitled to go to the competition area. Likewise, we continue our work with different goals.",
       "üyeler": "Members"
     },
     "core": {
       "core": "Team Core",
       "coreAçıklama1": "CORE team, which is a part of İKÜ Asimov Technology Club, is a team established for preparatory and first year students to improve themselves and to get to know other teams in the club. As the CORE ROBOTICS team, we have an autonomous and remotely controlled kiosk-like team. We have developed a robot. This robot was designed to provide information by moving around in a certain area. Our robot can move autonomously in a specified area and provide information to users. At the same time, thanks to its remote control feature, it can be directed by users as desired. The main goal of our project is to interact with people To ensure the transfer of information.",
-      "coreAçıklama2":"Our team, which we created for those who have just started their engineering education and want to advance themselves in the field of robotics, renews itself with new members and projects every year. It is where Asimov's strong members are trained from the core.",
+      "coreAçıklama2": "Our team, which we created for those who have just started their engineering education and want to advance themselves in the field of robotics, renews itself with new members and projects every year. It is where Asimov's strong members are trained from the core.",
       "üyeler": "Members"
     },
     "dataai": {
       "dataai": "Data AI",
-      "dataaiAçıklama1":  "The Data team, founded by Boran Toktay and Ahmet Can Günay in March 2023, took its name from the character Mr. Data in the famous television series Star Trek: Next Generation. Its aim is to contribute to the development of all engineering students who want to work in the field of artificial intelligence. Our future goal is to maintain the solidarity within the team, to create TUBITAK projects, to organize conferences and to create a team that attracts the attention of young people by producing regular projects. In addition, we want to represent our team in projects at home and abroad.",
-      "dataaiAçıklama2":"Among the areas we can participate in within the context of Teknofest are projects such as Turkish Natural Language Processing Competition, Artificial Intelligence in Health, Artificial Intelligence in Transportation. We aim to deal with artificial intelligence and its subcategories in the basic context, and to establish an ecosystem that will encourage learning by motivating both yourself and your teammates in this field.",
+      "dataaiAçıklama1": "The Data team, founded by Boran Toktay and Ahmet Can Günay in March 2023, took its name from the character Mr. Data in the famous television series Star Trek: Next Generation. Its aim is to contribute to the development of all engineering students who want to work in the field of artificial intelligence. Our future goal is to maintain the solidarity within the team, to create TUBITAK projects, to organize conferences and to create a team that attracts the attention of young people by producing regular projects. In addition, we want to represent our team in projects at home and abroad.",
+      "dataaiAçıklama2": "Among the areas we can participate in within the context of Teknofest are projects such as Turkish Natural Language Processing Competition, Artificial Intelligence in Health, Artificial Intelligence in Transportation. We aim to deal with artificial intelligence and its subcategories in the basic context, and to establish an ecosystem that will encourage learning by motivating both yourself and your teammates in this field.",
       "üyeler": "Members"
     }
   }

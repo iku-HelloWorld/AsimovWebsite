@@ -32,7 +32,8 @@
   height: 10vh;
   top: 0;
   z-index: 1;
-  width: 100%;box-shadow: 0px 18px 31px -10px rgba(0,0,0,0.75);
+  width: 100%;
+  box-shadow: 0px 18px 31px -10px rgba(0, 0, 0, 0.75);
 }
 
 .h-active:hover {
@@ -349,7 +350,7 @@
 
 .TeamPageContentImg img {
   width: 30vw;
-  box-shadow: -10px 10px 0px 0px#3d52a5;
+  /* box-shadow: -10px 10px 0px 0px#3d52a5; */
   align-items: center;
   object-fit: cover;
   height: 20vw;
@@ -381,7 +382,7 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-items: center;
-    padding-top: 4%;
+    /* padding-top: 4%; */
     justify-content: center;
     gap: 5vh;
     transition: all 1s;
@@ -389,10 +390,10 @@
 
   .TeamPageContentImg img {
     width: 30vw;
-    box-shadow: -7px 7px 0px 0px#3d52a5;
+    /* box-shadow: -7px 7px 0px 0px#3d52a5; */
     transition: all 1s;
     height: 25vh;
-  overflow: hidden;
+    overflow: hidden;
   }
 
   .TeamPageContentText {
@@ -431,7 +432,7 @@
     transition: all 1s;
     align-items: center;
     height: 25vh;
-  overflow: hidden;
+    overflow: hidden;
   }
 
   .TeamPageContentText {

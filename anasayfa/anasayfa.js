@@ -67,18 +67,17 @@ const sidebarMode = function (state) {
       stayTop();
     }, 700);
   } else {
-    document.getElementsByTagName("body")[0].style.overflowY = "initial";
-    document.getElementsByTagName("body")[0].style.height = "initial";
     setTimeout(() => {
-      sidebarMode(false);
-    }, 5);
+      document.getElementsByTagName("body")[0].style.overflowY = "initial";
+      document.getElementsByTagName("body")[0].style.height = "initial";
+    }, 700);
   }
 };
 
 const sidebarOpen = function () {
+  console.log("open");
   sidebar.style.opacity = "100%";
   sidebar.style.width = "100%";
-  sidebar.style.display = "initial";
   mainScreen.style.overflowY = "scroll";
   header.style.display = "none";
   sidebarMode(true);
@@ -86,6 +85,7 @@ const sidebarOpen = function () {
 };
 
 const sidebarClose = function () {
+  console.log("close");
   // console.log("hi");
   sidebar.style.width = "0%";
   sidebar.style.opacity = "0";

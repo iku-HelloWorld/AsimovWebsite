@@ -382,6 +382,8 @@ body {
   margin-top: 2%;
   margin-right: 5%;
   border: var(--side-color) 4px outset;
+  object-fit: cover;
+  aspect-ratio: 16/9;
 }
 
 @media only screen and (max-width: 1040px) {

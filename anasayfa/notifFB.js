@@ -75,6 +75,7 @@ const getNotification = function () {
                               class="mainimagepage"
                               src="${url}"
                               alt="Example Image"
+                              draggable=false
                             />
                           </div>
                           <div class="maintextpage">
