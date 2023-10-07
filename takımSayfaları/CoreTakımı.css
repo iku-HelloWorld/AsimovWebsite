@@ -352,6 +352,8 @@
   box-shadow: -10px 10px 0px 0px#3d52a5;
   align-items: center;
   object-fit: cover;
+  height: 20vw;
+  overflow: hidden;
 }
 
 .TeamPageContentText {
@@ -389,6 +391,8 @@
     width: 30vw;
     box-shadow: -7px 7px 0px 0px#3d52a5;
     transition: all 1s;
+    height: 25vh;
+  overflow: hidden;
   }
 
   .TeamPageContentText {
@@ -426,6 +430,8 @@
     width: 40vh;
     transition: all 1s;
     align-items: center;
+    height: 25vh;
+  overflow: hidden;
   }
 
   .TeamPageContentText {
