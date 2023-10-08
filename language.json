@@ -232,21 +232,7 @@
       "footerGaleri": "Gallery",
       "footerİletişim": "Contact Us"
     },
-    "sidebar":{
-      "kulübümüz": "Our Club",
-      "hakkımızda": "About Us",
-      "yönetimKurulu": "Directory Team",
-
-      "galeri": "Gallery",
-      "takımlarımız": "Teams",
-      "helloWorld": "Hello World",
-      "otonom": "Autonomous Car",
-      "roket": "Rocket Team",
-      "dataai": "Dataai",
-      "core": "Core",
-      "iletişim": "Contact Us",
-      "lang": "Tr"
-    },
+    
     "ünvanlar": {
       "Başkan": "President",
       "BaşkanYardımcısı": "Vice President",
