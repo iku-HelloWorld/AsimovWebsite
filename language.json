@@ -133,14 +133,14 @@
         "message": "Roket Takımı ilk takım olarak asimovda yerini aldı."
       },
       "3": {
-        "nick": "Hello World",
-        "date": "2021 Ocak",
-        "message": "İlk yazılım ekibimiz Hello World'ün temelleri atıldı."
-      },
-      "4": {
         "nick": "Aysar İHA",
         "date": "2020 Kasım",
         "message": "İHA takımı kuruldu."
+      },
+      "4": {
+        "nick": "Hello World",
+        "date": "2021 Ocak",
+        "message": "İlk yazılım ekibimiz Hello World'ün temelleri atıldı."
       },
 
       "5": {
@@ -231,6 +231,21 @@
       "footerTakımlarımız": "Teams",
       "footerGaleri": "Gallery",
       "footerİletişim": "Contact Us"
+    },
+    "sidebar":{
+      "kulübümüz": "Our Club",
+      "hakkımızda": "About Us",
+      "yönetimKurulu": "Directory Team",
+
+      "galeri": "Gallery",
+      "takımlarımız": "Teams",
+      "helloWorld": "Hello World",
+      "otonom": "Autonomous Car",
+      "roket": "Rocket Team",
+      "dataai": "Dataai",
+      "core": "Core",
+      "iletişim": "Contact Us",
+      "lang": "Tr"
     },
     "ünvanlar": {
       "Başkan": "President",
@@ -344,16 +359,15 @@
         "date": "2020 November",
         "message": "Roket Team has founded and become the first team of Asimov."
       },
-      "3": {
+       "3": {
+        "nick": "Aysar İHA",
+        "date": "2020 November",
+        "message": "Aysar İHA has founded."
+      },
+      "4": {
         "nick": "Hello World",
         "date": "2021 January",
         "message": "Hello World has founded as the first software development team of Asimov."
-      },
-
-      "4": {
-        "nick": "Aysar İHA",
-        "date": "2021 March",
-        "message": "Aysar İHA has founded."
       },
 
       "5": {
@@ -378,7 +392,7 @@
       },
       "9": {
         "nick": "300+ member",
-        "date": "2022 November",
+        "date": "2022 October",
         "message": "Asimov reached 300+ general, 100+ active member."
       },
       "10": {
@@ -388,8 +402,8 @@
       }
     },
     "yönetimKurulu": {
-      "yönetimKurulu": "Yönetim Kurulu",
-      "yönetimKuruluAçıklama": "The club's board of directors has shaped its corporate structure and duties through the following three main units: Corporate Communications, Teams and Competitions Coordination, Supervisory Board. These three main groups are hierarchically connected in order to regulate the club dynamics and provide a more efficient management. The Corporate Communications unit manages the communication between the club and its members, other clubs, the student community and external stakeholders. This unit promotes club events, informs members and coordinates all kinds of communication related to the club. The Corporate Communications unit also manages the club website, social media accounts. and manages other communication channels. The Teams and Competitions Coordination Office organizes and supervises technology-focused projects and competitions within the club. This unit encourages cooperation and information sharing among members, develops technical skills and ensures that teams work effectively. At the same time, national and coordinates participation in international competitions. The Supervisory Board ensures the transparency and accountability of club activities. This unit audits the club budget, monitors expenditures and prepares financial reports. Additionally, it checks the compliance of internal club processes and decisions with the law and club policies. The Supervisory Board protects the financial and administrative responsibility of the club management.",
+      "yönetimKurulu": "Board of Directors",
+      "yönetimKuruluAçıklama": "The club's board of directors has shaped its corporate structure and duties through the following three main units: Corporate Communications, Teams and Competitions Coordination, Supervisory Board. These three main groups are hierarchically connected in order to regulate the club dynamics and provide a more efficient management. The Corporate Communications unit manages the communication between the club and its members, other clubs, the student community and external stakeholders. This unit promotes club events, informs members and coordinates all kinds of communication related to the club. The Corporate Communications unit also manages the club website, social media accounts. and manages other communication channels. The Teams and Competitions Coordination Office organizes and supervises technology-focused projects and competitions within the club. This unit encourages cooperation and information sharing among members, develops technical skills and ensures that teams work effectively. At the same time, national and coordinates participation in international competitions. This unit audits the club budget, monitors expenditures. Additionally, it checks the compliance of internal club processes and decisions with the law and club policies. The Supervisory Board protects the financial and administrative responsibility of the club management.",
       "üyeler": "Members"
     },
 
