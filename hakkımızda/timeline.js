@@ -45,7 +45,7 @@ const handleLang = function () {
 
       timeline.insertAdjacentHTML(
         "beforeend",
-        `   <div class="point " data-index="${index + 1}">
+        `   <div class="point " data-index="${index}">
                 <span id="p${index + 1}" data-date="${val.date}">${
           val.nick
         }</span>

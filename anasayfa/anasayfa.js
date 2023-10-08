@@ -75,9 +75,10 @@ const sidebarMode = function (state) {
 };
 
 const sidebarOpen = function () {
-  console.log("open");
+  // console.log("open");
   sidebar.style.opacity = "100%";
   sidebar.style.width = "100%";
+  sidebar.style.display = "initial  ";
   mainScreen.style.overflowY = "scroll";
   header.style.display = "none";
   sidebarMode(true);
@@ -85,7 +86,7 @@ const sidebarOpen = function () {
 };
 
 const sidebarClose = function () {
-  console.log("close");
+  // console.log("close");
   // console.log("hi");
   sidebar.style.width = "0%";
   sidebar.style.opacity = "0";
