@@ -1,518 +1,645 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anasayfa</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anasayfa</title>
+    <link rel="stylesheet" href="anasayfa.css" />
 
-  <link rel="stylesheet" href="anasayfa.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="/jquery-3.6.4.min.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="/jquery-3.6.4.min.js"></script>
-</head>
-
-<body>
-  <!-- navbar -->
-  <header class="header" id="header">
-    <nav class="navbar-wrapper">
-      <div class="asimov-menu">
-        <div class="asimov-logo">
-          <a href="#" onclick="window.reload();"><img src="Asimov_Logolar/asimov_reshape_logo_beyaz.png" /></a>
-        </div>
-        <ul class="menu-list">
-          <li class="navbar-menu-item">
-            <a id="kulübümüz" data-section="#whowe">Kulübümüz</a>
-            <ul class="drop-down-menu1">
-              <li>
-                <a id="hakkımızda" href="/hakkımızda/hakkımızda.html">Hakkımızda</a>
-              </li>
-              <li>
-                <a id="yönetimKurulu" href="/ekip sayfaları/yönetimKurulu.html">Yönetim Kurulu
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="navbar-menu-item">
-            <a id="takımlarımız" data-section="#teamss">Takımlarımız</a>
-            <ul class="drop-down-menu2">
-              <li>
-                <a id="helloWorld" href="/takımSayfaları/HelloWorldTakımı.html">Hello World</a>
-              </li>
-              <li>
-                <a id="otonom" href="/takımSayfaları/OtonomTakımı.html">Otonom Araba</a>
-              </li>
-              <li>
-                <a id="roket" href="/takımSayfaları/RoketTakımı.html">Roket Takımı</a>
-              </li>
-              <li>
-                <a id="dataai" href="/takımSayfaları/DataAITakımı.html">Data AI Takımı</a>
-              </li>
-              <li>
-                <a id="core" href="/takımSayfaları/CoreTakımı.html">Core Takımı</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navbar-menu-item">
-            <a id="galeri" href="#galleryy">Galeri</a>
-          </li>
-
-          <li class="navbar-menu-item">
-            <a id="iletişim" href="#contactt">İletişim</a>
-          </li>
-        </ul>
-
-        <div class="nav-toggle">
-          <a id="lang" href="#">Tr</a>
-          <i id="bell_btn" class="bi bi-bell"></i>
-        </div>
-      </div>
-      <div class="nav-list">
-        <i class="bi bi-list" id="list-btn"></i>
-      </div>
-    </nav>
-  </header>
-  <!-- navbar -->
-
-  <!-- giriş ekranı -->
-  <div class="main-screen">
-    <div class="container-screen">
-      <div class="mainscreenContainer">
-        <div class="main--bgImg">
-          <img draggable="false" class="main--bgImg-ımg" src="Asimov_Logolar/asimovmainbackground.png" />
-        </div>
-        <img draggable="false" id="mainscreenlogo" class="logo-animation" src="Asimov_Logolar/Asimov_Logo_Beyaz.png"
-          width="230" height="150" alt="logo" />
-
-        <div class="mainscreensSlogan slogan-animation">
-          <p id="slogan1">Dream More</p>
-          <p id="slogan2">Do More</p>
-        </div>
-
-        <i id="kaydır" class="mainscreeniconButton">
-          Bildirimler için sağa kaydırınız</i><i id="kaydır-icon" class="fa fa-angle-double-right"></i>
-      </div>
-
-      <div class="sidebar" style="opacity: 0; width: 0%; display: none">
-        <header class="sidebar-header" id="s-header">
-          <div class="sidebar-navbar">
-            <div class="sidebar-menu">
-              <ul class="sidebar-list">
-                <li class="sidebar-list-item">
-                  <a id="kulübümüz" href="/hakkımızda/hakkımızda.html">Kulübümüz</a>
+  <body>
+    <!-- navbar -->
+    <header class="header" id="header">
+      <nav class="navbar-wrapper">
+        <div class="asimov-menu">
+          <div class="asimov-logo">
+            <a href="#" onclick="window.reload();"
+              ><img src="Asimov_Logolar/asimov_reshape_logo_beyaz.png"
+            /></a>
+          </div>
+          <ul class="menu-list">
+            <li class="navbar-menu-item">
+              <a id="kulübümüz" data-section="#whowe">Kulübümüz</a>
+              <ul class="drop-down-menu1">
+                <li>
+                  <a id="hakkımızda" href="/hakkımızda/hakkımızda.html"
+                    >Hakkımızda</a
+                  >
                 </li>
-                <li class="sidebar-list-item">
-                  <a id="galeri" href="#galleryy">Galeri</a>
-                </li>
-                <li class="sidebar-list-item">
-                  <a id="takımlarımız" href="#teamss">Takımlarımız</a>
-                </li>
-                <li class="sidebar-list-item">
-                  <a id="iletişim" href="#contactt">İletişim</a>
+                <li>
+                  <a
+                    id="yönetimKurulu"
+                    href="/ekip sayfaları/yönetimKurulu.html"
+                    >Yönetim Kurulu
+                  </a>
                 </li>
               </ul>
+            </li>
+            <li class="navbar-menu-item">
+              <a id="takımlarımız" data-section="#teamss">Takımlarımız</a>
+              <ul class="drop-down-menu2">
+                <li>
+                  <a
+                    id="helloWorld"
+                    href="/takımSayfaları/HelloWorldTakımı.html"
+                    >Hello World</a
+                  >
+                </li>
+                <li>
+                  <a id="otonom" href="/takımSayfaları/OtonomTakımı.html"
+                    >Otonom Araba</a
+                  >
+                </li>
+                <li>
+                  <a id="roket" href="/takımSayfaları/RoketTakımı.html"
+                    >Roket Takımı</a
+                  >
+                </li>
+                <li>
+                  <a id="dataai" href="/takımSayfaları/DataAITakımı.html"
+                    >Data AI Takımı</a
+                  >
+                </li>
+                <li>
+                  <a id="core" href="/takımSayfaları/CoreTakımı.html"
+                    >Core Takımı</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-menu-item">
+              <a id="galeri" href="#galleryy">Galeri</a>
+            </li>
 
-              <div class="sidebar-toggle">
+            <li class="navbar-menu-item">
+              <a id="iletişim" href="#contactt">İletişim</a>
+            </li>
+          </ul>
+
+          <div class="nav-toggle">
+            <a id="lang" href="#">Tr</a>
+            <i id="bell_btn" class="bi bi-bell"></i>
+          </div>
+        </div>
+        <div class="nav-list">
+          <i class="bi bi-list" id="list-btn"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar -->
+
+    <!-- giriş ekranı -->
+    <div class="main-screen">
+      <div class="container-screen">
+        <div class="mainscreenContainer">
+          <div class="main--bgImg">
+            <img
+              draggable="false"
+              class="main--bgImg-ımg"
+              src="Asimov_Logolar/asimovmainbackground.png"
+            />
+          </div>
+          <img
+            draggable="false"
+            id="mainscreenlogo"
+            class="logo-animation"
+            src="Asimov_Logolar/Asimov_Logo_Beyaz.png"
+            width="230"
+            height="150"
+            alt="logo"
+          />
+
+          <div class="mainscreensSlogan slogan-animation">
+            <p id="slogan1">Dream More</p>
+            <p id="slogan2">Do More</p>
+          </div>
+
+          <i id="kaydır" class="mainscreeniconButton">
+            Bildirimler için sağa kaydırınız</i
+          ><i id="kaydır-icon" class="fa fa-angle-double-right"></i>
+        </div>
+
+        <div class="sidebar" style="opacity: 0; width: 0%; display: none">
+          <header class="sidebar-header" id="s-header">
+            <div class="sidebar-navbar">
+              <div class="sidebar-menu">
+                <ul class="sidebar-list">
+                  <li class="sidebar-list-item">
+                    <a id="navKulübümüz" href="/hakkımızda/hakkımızda.html"
+                      >Kulübümüz</a
+                    >
+                  </li>
+                  <li class="sidebar-list-item">
+                    <a id="navGaleri" href="#galleryy">Galeri</a>
+                  </li>
+                  <li class="sidebar-list-item">
+                    <a id="navTakımlarımız" href="#teamss">Takımlarımız</a>
+                  </li>
+                  <li class="sidebar-list-item">
+                    <a id="navİletişim" href="#contactt">İletişim</a>
+                  </li>
+                </ul>
+
+                <!-- <div class="sidebar-toggle">
                 <a id="lang" href="#">En</a>
+              </div> -->
+              </div>
+
+              <div class="sidebar-list-menu" id="sidebar-button">
+                <i class="bi bi-list" id="list-btn"></i>
               </div>
             </div>
+          </header>
 
-            <div class="sidebar-list-menu" id="sidebar-button">
-              <i class="bi bi-list" id="list-btn"></i>
+          <div class="mainscreenSecond">
+            <button class="go_back_btn">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+            <!-- go back btn -->
+            <div class="mainSideBar">
+              <section class="mainnewspage">
+                <div>
+                  <img
+                    class="mainimagepage"
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Example Image"
+                  />
+                </div>
+                <div class="maintextpage">
+                  <h2>Right Box</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod est eget magna dapibus aliquam. Fusce consequat arcu
+                    ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
+                    mauris vel libero pretium, eget mattis metus posuere.
+                    Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
+                    quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Sed euismod est eget
+                    magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
+                    quis dignissim nisl pharetra. Nullam dictum mauris vel
+                    libero pretium, eget mattis metus posuere. Suspendisse
+                    euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
+                    pulvinar bibendum id eget odio.
+                  </p>
+                </div>
+              </section>
+
+              <section class="mainnewspage">
+                <div>
+                  <img
+                    class="mainimagepage"
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Example Image"
+                  />
+                </div>
+                <div class="maintextpage">
+                  <h2>Right Box</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod est eget magna dapibus aliquam. Fusce consequat arcu
+                    ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
+                    mauris vel libero pretium, eget mattis metus posuere.
+                    Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
+                    quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Sed euismod est eget
+                    magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
+                    quis dignissim nisl pharetra. Nullam dictum mauris vel
+                    libero pretium, eget mattis metus posuere. Suspendisse
+                    euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
+                    pulvinar bibendum id eget odio.
+                  </p>
+                </div>
+              </section>
+
+              <section class="mainnewspage">
+                <div>
+                  <img
+                    class="mainimagepage"
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Example Image"
+                  />
+                </div>
+                <div class="maintextpage">
+                  <h2>Right Box</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod est eget magna dapibus aliquam. Fusce consequat arcu
+                    ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
+                    mauris vel libero pretium, eget mattis metus posuere.
+                    Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
+                    quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Sed euismod est eget
+                    magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
+                    quis dignissim nisl pharetra. Nullam dictum mauris vel
+                    libero pretium, eget mattis metus posuere. Suspendisse
+                    euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
+                    pulvinar bibendum id eget odio.
+                  </p>
+                </div>
+              </section>
+              <section class="mainnewspage">
+                <div>
+                  <img
+                    class="mainimagepage"
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Example Image"
+                  />
+                </div>
+                <div class="maintextpage">
+                  <h2>Right Box</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod est eget magna dapibus aliquam. Fusce consequat arcu
+                    ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
+                    mauris vel libero pretium, eget mattis metus posuere.
+                    Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
+                    quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Sed euismod est eget
+                    magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
+                    quis dignissim nisl pharetra. Nullam dictum mauris vel
+                    libero pretium, eget mattis metus posuere. Suspendisse
+                    euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
+                    pulvinar bibendum id eget odio.
+                  </p>
+                </div>
+              </section>
+              <section class="mainnewspage">
+                <div>
+                  <img
+                    class="mainimagepage"
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Example Image"
+                  />
+                </div>
+                <div class="maintextpage">
+                  <h2>Right Box</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod est eget magna dapibus aliquam. Fusce consequat arcu
+                    ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
+                    mauris vel libero pretium, eget mattis metus posuere.
+                    Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
+                    quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Sed euismod est eget
+                    magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
+                    quis dignissim nisl pharetra. Nullam dictum mauris vel
+                    libero pretium, eget mattis metus posuere. Suspendisse
+                    euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
+                    pulvinar bibendum id eget odio.
+                  </p>
+                </div>
+              </section>
+              <section class="mainnewspage">
+                <div>
+                  <img
+                    class="mainimagepage"
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Example Image"
+                  />
+                </div>
+                <div class="maintextpage">
+                  <h2>Right Box</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod est eget magna dapibus aliquam. Fusce consequat arcu
+                    ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
+                    mauris vel libero pretium, eget mattis metus posuere.
+                    Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
+                    quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Sed euismod est eget
+                    magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
+                    quis dignissim nisl pharetra. Nullam dictum mauris vel
+                    libero pretium, eget mattis metus posuere. Suspendisse
+                    euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
+                    pulvinar bibendum id eget odio.
+                  </p>
+                </div>
+              </section>
+              <section class="mainnewspage">
+                <div>
+                  <img
+                    class="mainimagepage"
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Example Image"
+                  />
+                </div>
+                <div class="maintextpage">
+                  <h2>Right Box</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    euismod est eget magna dapibus aliquam. Fusce consequat arcu
+                    ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
+                    mauris vel libero pretium, eget mattis metus posuere.
+                    Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
+                    quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Sed euismod est eget
+                    magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
+                    quis dignissim nisl pharetra. Nullam dictum mauris vel
+                    libero pretium, eget mattis metus posuere. Suspendisse
+                    euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
+                    pulvinar bibendum id eget odio.
+                  </p>
+                </div>
+              </section>
             </div>
           </div>
-        </header>
+        </div>
+      </div>
+    </div>
+    <!-- giriş ekranı -->
 
-        <div class="mainscreenSecond">
-          <button class="go_back_btn">
-            <i class="fa fa-arrow-left"></i>
-          </button>
-          <!-- go back btn -->
-          <div class="mainSideBar">
-            <section class="mainnewspage">
-              <div>
-                <img class="mainimagepage" src="https://picsum.photos/id/237/200/300" alt="Example Image" />
-              </div>
-              <div class="maintextpage">
-                <h2>Right Box</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod est eget magna dapibus aliquam. Fusce consequat arcu
-                  ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
-                  mauris vel libero pretium, eget mattis metus posuere.
-                  Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
-                  quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Sed euismod est eget
-                  magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
-                  quis dignissim nisl pharetra. Nullam dictum mauris vel
-                  libero pretium, eget mattis metus posuere. Suspendisse
-                  euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
-                  pulvinar bibendum id eget odio.
-                </p>
-              </div>
-            </section>
+    <!-- biz kimiz -->
+    <div class="bizkimiz--section" id="whowe">
+      <div class="bizkimiz--content">
+        <h1 id="bizkimiz">Biz Kimiz?</h1>
+        <p id="bizkimizAçıklama">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
+          reiciendis veritatis non vero distinctio in maxime, numquam expedita
+          facere quaerat quas aut doloribus, dolorem consequuntur vel totam
+          atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam
+          nihil voluptatibus quos, nulla laudantium magnam ratione dolorem
+          asperiores beatae accusamus nisi error inventore in consectetur.Lorem
+          ipsum dolor sit amet consectetur,adipisicing elit. Harum, reiciendis
+          veritatis non vero distinctio in maxime, numquam expedita facere
+          quaerat quas aut doloribus, dolorem consequuntur vel totam atque!
+        </p>
+        <br />
+        <a
+          id="bizkimizLink"
+          class="hakkımızda_link"
+          href="/hakkımızda/hakkımızda.html"
+        >
+          Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.
+        </a>
+      </div>
+      <div class="bizkimiz--img_slider">
+        <div class="arrows">
+          <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
+          <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
+        </div>
 
-            <section class="mainnewspage">
-              <div>
-                <img class="mainimagepage" src="https://picsum.photos/id/237/200/300" alt="Example Image" />
-              </div>
-              <div class="maintextpage">
-                <h2>Right Box</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod est eget magna dapibus aliquam. Fusce consequat arcu
-                  ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
-                  mauris vel libero pretium, eget mattis metus posuere.
-                  Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
-                  quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Sed euismod est eget
-                  magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
-                  quis dignissim nisl pharetra. Nullam dictum mauris vel
-                  libero pretium, eget mattis metus posuere. Suspendisse
-                  euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
-                  pulvinar bibendum id eget odio.
-                </p>
-              </div>
-            </section>
-
-            <section class="mainnewspage">
-              <div>
-                <img class="mainimagepage" src="https://picsum.photos/id/237/200/300" alt="Example Image" />
-              </div>
-              <div class="maintextpage">
-                <h2>Right Box</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod est eget magna dapibus aliquam. Fusce consequat arcu
-                  ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
-                  mauris vel libero pretium, eget mattis metus posuere.
-                  Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
-                  quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Sed euismod est eget
-                  magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
-                  quis dignissim nisl pharetra. Nullam dictum mauris vel
-                  libero pretium, eget mattis metus posuere. Suspendisse
-                  euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
-                  pulvinar bibendum id eget odio.
-                </p>
-              </div>
-            </section>
-            <section class="mainnewspage">
-              <div>
-                <img class="mainimagepage" src="https://picsum.photos/id/237/200/300" alt="Example Image" />
-              </div>
-              <div class="maintextpage">
-                <h2>Right Box</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod est eget magna dapibus aliquam. Fusce consequat arcu
-                  ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
-                  mauris vel libero pretium, eget mattis metus posuere.
-                  Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
-                  quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Sed euismod est eget
-                  magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
-                  quis dignissim nisl pharetra. Nullam dictum mauris vel
-                  libero pretium, eget mattis metus posuere. Suspendisse
-                  euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
-                  pulvinar bibendum id eget odio.
-                </p>
-              </div>
-            </section>
-            <section class="mainnewspage">
-              <div>
-                <img class="mainimagepage" src="https://picsum.photos/id/237/200/300" alt="Example Image" />
-              </div>
-              <div class="maintextpage">
-                <h2>Right Box</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod est eget magna dapibus aliquam. Fusce consequat arcu
-                  ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
-                  mauris vel libero pretium, eget mattis metus posuere.
-                  Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
-                  quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Sed euismod est eget
-                  magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
-                  quis dignissim nisl pharetra. Nullam dictum mauris vel
-                  libero pretium, eget mattis metus posuere. Suspendisse
-                  euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
-                  pulvinar bibendum id eget odio.
-                </p>
-              </div>
-            </section>
-            <section class="mainnewspage">
-              <div>
-                <img class="mainimagepage" src="https://picsum.photos/id/237/200/300" alt="Example Image" />
-              </div>
-              <div class="maintextpage">
-                <h2>Right Box</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod est eget magna dapibus aliquam. Fusce consequat arcu
-                  ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
-                  mauris vel libero pretium, eget mattis metus posuere.
-                  Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
-                  quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Sed euismod est eget
-                  magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
-                  quis dignissim nisl pharetra. Nullam dictum mauris vel
-                  libero pretium, eget mattis metus posuere. Suspendisse
-                  euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
-                  pulvinar bibendum id eget odio.
-                </p>
-              </div>
-            </section>
-            <section class="mainnewspage">
-              <div>
-                <img class="mainimagepage" src="https://picsum.photos/id/237/200/300" alt="Example Image" />
-              </div>
-              <div class="maintextpage">
-                <h2>Right Box</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod est eget magna dapibus aliquam. Fusce consequat arcu
-                  ac urna mollis, quis dignissim nisl pharetra. Nullam dictum
-                  mauris vel libero pretium, eget mattis metus posuere.
-                  Suspendisse euismod elit ac rutrum malesuada. Ut vitae erat
-                  quis lacus pulvinar bibendum id eget odio.Lorem ipsum dolor
-                  sit amet, consectetur adipiscing elit. Sed euismod est eget
-                  magna dapibus aliquam. Fusce consequat arcu ac urna mollis,
-                  quis dignissim nisl pharetra. Nullam dictum mauris vel
-                  libero pretium, eget mattis metus posuere. Suspendisse
-                  euismod elit ac rutrum malesuada. Ut vitae erat quis lacus
-                  pulvinar bibendum id eget odio.
-                </p>
-              </div>
-            </section>
+        <div class="dots">
+          <div data-index="1" data-dot="selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+          <div data-index="2" data-dot="non-selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+          <div data-index="3" data-dot="non-selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+          <div data-index="4" data-dot="non-selected" class="dot">
+            <i class="fa fa-circle"></i>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="bg-blur">
+            <img src="#" />
+          </div>
+          <div class="slide">
+            <img src="Asimov_Logolar/kulüpGenelFoto4.jpg" />
+          </div>
+          <div class="slide">
+            <img src="Asimov_Logolar/kulüpGenelFoto1.jpg" />
+          </div>
+          <div class="slide">
+            <img src="Asimov_Logolar/kulüpGenelFoto2.jpg" />
+          </div>
+          <div class="slide">
+            <img src="Asimov_Logolar/kulüpGenelFoto3.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="bizkimiz--text_slider">
+        <div class="tags">
+          <div data-index="1" data-tag="selected" id="misyon" class="tag">
+            Misyon
+          </div>
+          <div data-index="2" data-tag="non-selected" id="vizyon" class="tag">
+            Vizyon
+          </div>
+          <div data-index="3" data-tag="non-selected" id="hedef" class="tag">
+            Hedef
+          </div>
+        </div>
+        <div class="texts">
+          <div
+            data-index="1"
+            data-text="show"
+            id="misyonAçıklama"
+            class="text-slide"
+          >
+            bu birinci Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Beatae, ex repellendus asperiores id qui est saepe at doloremque
+            nemo sapiente
+          </div>
+          <div
+            data-index="2"
+            data-text="hide"
+            id="vizyonAçıklama"
+            class="text-slide"
+          >
+            bu ikiiiiii Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Beatae,
+          </div>
+          <div
+            data-index="3"
+            data-text="hide"
+            id="hedefAçıklama"
+            class="text-slide"
+          >
+            üçüçüçüçüççü Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Beatae, ex repellendus asperiores id qui est saepe at
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- giriş ekranı -->
+    <!-- biz kimiz -->
 
-  <!-- biz kimiz -->
-  <div class="bizkimiz--section" id="whowe">
-    <div class="bizkimiz--content">
-      <h1 id="bizkimiz">Biz Kimiz?</h1>
-      <p id="bizkimizAçıklama">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
-        reiciendis veritatis non vero distinctio in maxime, numquam expedita
-        facere quaerat quas aut doloribus, dolorem consequuntur vel totam
-        atque! Aspernatur, voluptas! Lorem ipsum dolor, sit amet consectetur
-        adipisicing elit. Saepe beatae aperiam perspiciatis? Eum quisquam
-        nihil voluptatibus quos, nulla laudantium magnam ratione dolorem
-        asperiores beatae accusamus nisi error inventore in consectetur.Lorem
-        ipsum dolor sit amet consectetur,adipisicing elit. Harum, reiciendis
-        veritatis non vero distinctio in maxime, numquam expedita facere
-        quaerat quas aut doloribus, dolorem consequuntur vel totam atque!
-      </p>
-      <br />
-      <a id="bizkimizLink" class="hakkımızda_link" href="/hakkımızda/hakkımızda.html">
-        Bizim hakkımızda daha faazlasını öğrenmek için tıklayın.
-      </a>
-    </div>
-    <div class="bizkimiz--img_slider">
-      <div class="arrows">
-        <div class="arrow-left"><i class="fa fa-angle-left"></i></div>
-        <div class="arrow-right"><i class="fa fa-angle-right"></i></div>
-      </div>
+    <!-- giriş ekranı -->
+    <!-- giriş ekranı -->
 
-      <div class="dots">
-        <div data-index="1" data-dot="selected" class="dot">
-          <i class="fa fa-circle"></i>
-        </div>
-        <div data-index="2" data-dot="non-selected" class="dot">
-          <i class="fa fa-circle"></i>
-        </div>
-        <div data-index="3" data-dot="non-selected" class="dot">
-          <i class="fa fa-circle"></i>
-        </div>
-        <div data-index="4" data-dot="non-selected" class="dot">
-          <i class="fa fa-circle"></i>
-        </div>
+    <!-- takım sayfası -->
+
+    <section class="TeamMain" id="teamss">
+      <div class="TeamHeader">
+        <h1 id="takımlar">Takımlar</h1>
+        <p id="takımlarAçıklama">
+          Bünyemizde 5 takım var. Logolara tıklayarak detaylı bilgi
+          alabilirsiniz.
+        </p>
       </div>
-      <div class="slides">
-        <div class="bg-blur">
-          <img src="#" />
-        </div>
-        <div class="slide">
-          <img src="Asimov_Logolar/kulüpGenelFoto4.jpg" />
-        </div>
-        <div class="slide">
-          <img src="Asimov_Logolar/kulüpGenelFoto1.jpg" />
-        </div>
-        <div class="slide">
-          <img src="Asimov_Logolar/kulüpGenelFoto2.jpg" />
-        </div>
-        <div class="slide">
-          <img src="Asimov_Logolar/kulüpGenelFoto3.jpg" />
-        </div>
-      </div>
-    </div>
-    <div class="bizkimiz--text_slider">
-      <div class="tags">
-        <div data-index="1" data-tag="selected" id="misyon" class="tag">
-          Misyon
-        </div>
-        <div data-index="2" data-tag="non-selected" id="vizyon" class="tag">
-          Vizyon
-        </div>
-        <div data-index="3" data-tag="non-selected" id="hedef" class="tag">
-          Hedef
-        </div>
-      </div>
-      <div class="texts">
-        <div data-index="1" data-text="show" id="misyonAçıklama" class="text-slide">
-          bu birinci Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Beatae, ex repellendus asperiores id qui est saepe at doloremque
-          nemo sapiente
-        </div>
-        <div data-index="2" data-text="hide" id="vizyonAçıklama" class="text-slide">
-          bu ikiiiiii Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Beatae,
-        </div>
-        <div data-index="3" data-text="hide" id="hedefAçıklama" class="text-slide">
-          üçüçüçüçüççü Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Beatae, ex repellendus asperiores id qui est saepe at
-        </div>
+      <ul class="Team">
+        <li class="TeamLogo">
+          <!--HELLO WORLD-->
+          <div class="TeamLogoCircle">
+            <a href="/takımSayfaları/HelloWorldTakımı.html">
+              <img
+                src="Asimov_Logolar\HelloWorld_Normal.png"
+                alt="HelloWorld_logo"
+              />
+            </a>
+          </div>
+          <h3 id="helloworldTakımı">Hello World Takımı</h3>
+        </li>
+        <li class="TeamLogo">
+          <!--OTONOM-->
+          <div class="TeamLogoCircle">
+            <a href="/takımSayfaları/OtonomTakımı.html">
+              <img
+                src="Asimov_Logolar\IKU_Otonom_Normal.png"
+                alt="Otonom_logo"
+              />
+            </a>
+          </div>
+          <h3 id="otonomTakımı">Otonom Takımı</h3>
+        </li>
+        <li class="TeamLogo">
+          <!--ROKET-->
+          <div class="TeamLogoCircle">
+            <a href="/takımSayfaları/RoketTakımı.html">
+              <img src="Asimov_Logolar\AsimovX_Normal.png" alt="Roket_logo" />
+            </a>
+          </div>
+          <h3 id="roketTakımı">Roket Takımı</h3>
+        </li>
+        <li class="TeamLogo">
+          <!--Data AI-->
+          <div class="TeamLogoCircle">
+            <a href="/takımSayfaları/DataAITakımı.html">
+              <img src="Asimov_Logolar/DATA.png" alt="DataAI_logo" />
+            </a>
+          </div>
+          <h3 id="dataaiTakımı">Data AI Takımı</h3>
+        </li>
+        <li class="TeamLogo">
+          <!--CORE-->
+          <div class="TeamLogoCircle">
+            <a href="/takımSayfaları/CoreTakımı.html">
+              <img
+                src="Asimov_Logolar\CORE logo beyaz arka.png"
+                alt="Core_logo"
+              />
+            </a>
+          </div>
+          <h3 id="coreTakımı">Core Takımı</h3>
+        </li>
+      </ul>
+    </section>
+
+    <!-- takım sayfası -->
+    <div class="new_div">
+      <span onclick="ımgFocusClose()" class="new_div-close"
+        ><i class="fa fa-close"></i
+      ></span>
+      <img src="Asimov_Logolar/asimov.jpg" />
+      <div class="new_div-info">
+        <p>açıkl amaaçıkl amaa çıklamaaçı klama</p>
+
+        <p>tarih/trh/trih</p>
       </div>
     </div>
-  </div>
-  <!-- biz kimiz -->
+    <div class="galeri_content" id="galleryy">
+      <h1>
+        <b id="galeri"> Gallery </b>
+      </h1>
 
-  <!-- giriş ekranı -->
-  <!-- giriş ekranı -->
+      <div class="line"></div>
+      <span class="galeri_page-counter">1/3</span>
+      <div class="arrow1"><i class="fa fa-angle-left"></i></div>
 
-  <!-- takım sayfası -->
-
-  <section class="TeamMain" id="teamss">
-    <div class="TeamHeader">
-      <h1 id="takımlar">Takımlar</h1>
-      <p id="takımlarAçıklama">
-        Bünyemizde 5 takım var. Logolara tıklayarak detaylı bilgi
-        alabilirsiniz.
-      </p>
+      <div class="arrow2"><i class="fa fa-angle-right"></i></div>
     </div>
-    <ul class="Team">
-      <li class="TeamLogo">
-        <!--HELLO WORLD-->
-        <div class="TeamLogoCircle">
-          <a href="/takımSayfaları/HelloWorldTakımı.html">
-            <img src="Asimov_Logolar\HelloWorld_Normal.png" alt="HelloWorld_logo" />
+    <!-- iletişim -->
+    <section class="communicationMain" id="contactt">
+      <h1 id="bizeUlaşın" class="communicationTitle">Bize Ulaşın</h1>
+      <div class="communicationPage">
+        <iframe
+          class="communicationMap"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.55186447374!2d28.829560475936653!3d40.99129277135292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa35ee1fdc1b1%3A0x658a212e6b4359b5!2zVC5DLiDEsHN0YW5idWwgS8O8bHTDvHIgw5xuaXZlcnNpdGVzaQ!5e0!3m2!1str!2str!4v1682264895438!5m2!1str!2str"
+          frameborder="0px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="communicationPagetextpage">
+          <b>Ataköy 7-8-9-10, E5 Karayolu Üzeri</b><br />
+          <b>Ataköy Yerleşkesi 34158 Bakırköy/İstanbul</b>
+          <br />
+          <br />
+          <a href="https://www.iku.edu.tr/" target="_blank">
+            <img
+              class="communicationSchoolLogo"
+              src="Asimov_Logolar/ikulogo.png"
+              width="230"
+              height="150"
+              alt="IKU_Logo"
+            />
           </a>
         </div>
-        <h3 id="helloworldTakımı">Hello World Takımı</h3>
-      </li>
-      <li class="TeamLogo">
-        <!--OTONOM-->
-        <div class="TeamLogoCircle">
-          <a href="/takımSayfaları/OtonomTakımı.html">
-            <img src="Asimov_Logolar\IKU_Otonom_Normal.png" alt="Otonom_logo" />
+      </div>
+    </section>
+    <!-- iletişim -->
+
+    <!-- footer -->
+    <div class="footer-container">
+      <div class="footer_content">
+        <div class="footer-design">
+          <p>Designed by Hello World</p>
+        </div>
+        <div class="social-links">
+          <a href="https://t.me/ikuAsimov" class="footer-link"
+            ><i class="bx bxl-telegram"></i
+          ></a>
+          <a href="https://www.instagram.com/ikuasimov/" class="footer-link"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/ikuasimov/"
+            class="footer-link"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="https://t.me/mail" class="footer-link"
+            ><i class="bx bx-envelope"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@asimov.teknoloji?is_from_webapp=1&sender_device=pc"
+            class="footer-link"
+          >
+            <img
+              id="tiktokLink"
+              src="Asimov_Logolar\icons8-tiktok-32.png"
+              alt="TikTok"
+          /></a>
+          <a
+            href="https://www.youtube.com/channel/UCPsNxgDRE4pd1F7XSaCZmkA"
+            class="footer-link"
+            ><i class="fa fa-youtube-play"></i>
           </a>
         </div>
-        <h3 id="otonomTakımı">Otonom Takımı</h3>
-      </li>
-      <li class="TeamLogo">
-        <!--ROKET-->
-        <div class="TeamLogoCircle">
-          <a href="/takımSayfaları/RoketTakımı.html">
-            <img src="Asimov_Logolar\AsimovX_Normal.png" alt="Roket_logo" />
-          </a>
-        </div>
-        <h3 id="roketTakımı">Roket Takımı</h3>
-      </li>
-      <li class="TeamLogo">
-        <!--Data AI-->
-        <div class="TeamLogoCircle">
-          <a href="/takımSayfaları/DataAITakımı.html">
-            <img src="Asimov_Logolar/DATA.png" alt="DataAI_logo" />
-          </a>
-        </div>
-        <h3 id="dataaiTakımı">Data AI Takımı</h3>
-      </li>
-      <li class="TeamLogo">
-        <!--CORE-->
-        <div class="TeamLogoCircle">
-          <a href="/takımSayfaları/CoreTakımı.html">
-            <img src="Asimov_Logolar\CORE logo beyaz arka.png" alt="Core_logo" />
-          </a>
-        </div>
-        <h3 id="coreTakımı">Core Takımı</h3>
-      </li>
-    </ul>
-  </section>
-
-  <!-- takım sayfası -->
-  <div class="new_div">
-    <span onclick="ımgFocusClose()" class="new_div-close"><i class="fa fa-close"></i></span>
-    <img src="Asimov_Logolar/asimov.jpg" />
-    <div class="new_div-info">
-      <p>açıkl amaaçıkl amaa çıklamaaçı klama</p>
-
-      <p>tarih/trh/trih</p>
-    </div>
-  </div>
-  <div class="galeri_content" id="galleryy">
-    <h1>
-      <b id="galeri"> Gallery </b>
-    </h1>
-
-    <div class="line"></div>
-    <span class="galeri_page-counter">1/3</span>
-    <div class="arrow1"><i class="fa fa-angle-left"></i></div>
-
-    <div class="arrow2"><i class="fa fa-angle-right"></i></div>
-  </div>
-  <!-- iletişim -->
-  <section class="communicationMain" id="contactt">
-    <h1 id="bizeUlaşın" class="communicationTitle">Bize Ulaşın</h1>
-    <div class="communicationPage">
-      <iframe class="communicationMap"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.55186447374!2d28.829560475936653!3d40.99129277135292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa35ee1fdc1b1%3A0x658a212e6b4359b5!2zVC5DLiDEsHN0YW5idWwgS8O8bHTDvHIgw5xuaXZlcnNpdGVzaQ!5e0!3m2!1str!2str!4v1682264895438!5m2!1str!2str"
-        frameborder="0px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="communicationPagetextpage">
-        <b>Ataköy 7-8-9-10, E5 Karayolu Üzeri</b><br />
-        <b>Ataköy Yerleşkesi 34158 Bakırköy/İstanbul</b>
-        <br />
-        <br />
-        <a href="https://www.iku.edu.tr/" target="_blank">
-          <img class="communicationSchoolLogo" src="Asimov_Logolar/ikulogo.png" width="230" height="150"
-            alt="IKU_Logo" />
-        </a>
       </div>
     </div>
-  </section>
-  <!-- iletişim -->
 
-  <!-- footer -->
-  <div class="footer-container">
-    <div class="footer_content">
-      <div class="footer-design">
-        <p>Designed by Hello World</p>
-      </div>
-      <div class="social-links">
-        <a href="https://t.me/ikuAsimov" class="footer-link"><i class="bx bxl-telegram"></i></a>
-        <a href="https://www.instagram.com/ikuasimov/" class="footer-link"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/ikuasimov/" class="footer-link"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://t.me/mail" class="footer-link"><i class="bx bx-envelope"></i></a>
-        <a href="https://www.tiktok.com/@asimov.teknoloji?is_from_webapp=1&sender_device=pc" class="footer-link"> <img id="tiktokLink"
-            src="Asimov_Logolar\icons8-tiktok-32.png" alt="TikTok"></a>
-        <a href="https://www.youtube.com/channel/UCPsNxgDRE4pd1F7XSaCZmkA" class="footer-link"><i
-            class="fa fa-youtube-play"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- footer -->
-  <script defer type="module" src="anasayfa.js"></script>
-  <script defer type="module" src="notifFB.js"></script>
-  <script defer type="module" src="anasayfaFb.js"></script>
-</body>
-
+    <!-- footer -->
+    <script defer type="module" src="anasayfa.js"></script>
+    <script defer type="module" src="notifFB.js"></script>
+    <script defer type="module" src="anasayfaFb.js"></script>
+  </body>
 </html>

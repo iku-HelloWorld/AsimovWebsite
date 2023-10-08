@@ -101,6 +101,10 @@ const sidebarClose = function () {
 document.getElementById("bell_btn").addEventListener("click", sidebarOpen);
 
 document.querySelector(".go_back_btn").addEventListener("click", sidebarClose);
+document.querySelector(".sidebar-list").addEventListener("click", function () {
+  // console.log("hi");
+  sidebarClose();
+});
 
 let cursorThreshold = 100;
 

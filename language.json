@@ -6,6 +6,10 @@
       "hakkımızda": "Hakkımızda",
       "yönetimKurulu": "Yönetim Kurulu",
       "takımlarımız": "Takımlarımız",
+      "navKulübümüz": "Kulübümüz",
+      "navGaleri": "Galeri",
+      "navTakımlarımız": "Takımlarımız",
+      "navİletişim": "İletişim",
       "helloWorld": "Hello World",
       "otonom": "Otonom Araba",
       "roket": "Roket Takımı",
@@ -216,10 +220,13 @@
     "navbar": {
       "kulübümüz": "Our Club",
       "hakkımızda": "About Us",
-      "yönetimKurulu": "Directory Team",
-
       "galeri": "Gallery",
       "takımlarımız": "Teams",
+      "yönetimKurulu": "Directory Team",
+      "navKulübümüz": "Our Club",
+      "navGaleri": "Gallery",
+      "navTakımlarımız": "Teams",
+      "navİletişim": "Contact Us",
       "helloWorld": "Hello World",
       "otonom": "Autonomous Car",
       "roket": "Rocket Team",
@@ -232,7 +239,7 @@
       "footerGaleri": "Gallery",
       "footerİletişim": "Contact Us"
     },
-    
+
     "ünvanlar": {
       "Başkan": "President",
       "BaşkanYardımcısı": "Vice President",
@@ -345,7 +352,7 @@
         "date": "2020 November",
         "message": "Roket Team has founded and become the first team of Asimov."
       },
-       "3": {
+      "3": {
         "nick": "Aysar İHA",
         "date": "2020 November",
         "message": "Aysar İHA has founded."
