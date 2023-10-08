@@ -120,6 +120,11 @@ function showSlide(n) {
     dots[i].classList.remove("active");
   }
   slides[n - 1].style.opacity = "1";
+  const img = slides[n - 1];
+  const src = img.children[0].src;
+  // console.log(src);
+  document.querySelector(".bgImg").style.backgroundImage = `url("${src}")`;
+
   dots[n - 1].classList.add("active");
 }
 
