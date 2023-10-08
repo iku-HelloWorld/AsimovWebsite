@@ -168,11 +168,16 @@ const imgFocusShow = function (metadata, url, state) {
       block: "end",
       inline: "nearest",
     });
+
     newDiv
       .querySelector(".new_div-close")
       .addEventListener("click", function () {
         imgFocusShow(0, false);
       });
+    setTimeout(
+      () => window.addEventListener("scroll", () => imgFocusShow(0, false)),
+      1000
+    );
   } else {
     newDiv.style.display = "none";
     galeriCont.style.filter = "blur(0px)";
