@@ -45,33 +45,37 @@ const helloWorldMemberRemove = document.querySelector(
   ".helloworld-member-remove"
 );
 
-get(child(dbRef, `helloWorldMember/`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      // console.log(Object.entries(snapshot.val()));
+const getMember = function () {
+  get(child(dbRef, `helloWorldMember/`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        helloWorldMemberRemove.innerHTML = "";
+        // console.log(Object.entries(snapshot.val()));
 
-      Object.entries(snapshot.val()).forEach((e) => {
-        const ad = e[1].ad;
-        const nick = e[1].nick;
+        Object.entries(snapshot.val()).forEach((e) => {
+          const ad = e[1].ad;
+          const nick = e[1].nick;
 
-        helloWorldMemberRemove.insertAdjacentHTML(
-          "afterbegin",
-          `<div>
+          helloWorldMemberRemove.insertAdjacentHTML(
+            "afterbegin",
+            `<div>
             <!--${nick}-->
               ${ad}
               <button class="member-remove">üyeyi sil</button>
             </div>`
-        );
-      });
-    } else {
-      // console.log("No data available");
-    }
+          );
+        });
+      } else {
+        // console.log("No data available");
+      }
 
-    // console.log(üyeler);
-  })
-  .catch((error) => {
-    // console.error("üye Listesi yüklenemedi");
-  });
+      // console.log(üyeler);
+    })
+    .catch((error) => {
+      // console.error("üye Listesi yüklenemedi");
+    });
+};
+getMember();
 
 helloWorldMemberRemove.addEventListener("click", function (e) {
   if (e.target.closest(".member-remove")) {
@@ -85,7 +89,8 @@ helloWorldMemberRemove.addEventListener("click", function (e) {
         remove(child(dbRef, `helloWorldMember/` + chosenNick))
           .then(() => {
             alertify.success("üye silindi");
-            location.reload();
+            // location.reload();
+            getMember();
           })
           .catch((error) => {
             // console.log("üye silinemedi");
@@ -132,7 +137,8 @@ helloWorldMemberSubmit.addEventListener("click", function () {
         //   console.log("File available at", downloadURL);
         // });
         // console.log("success");
-        location.reload();
+        // location.reload();
+        getMember();
         helloWorldMemberName.value = "";
         helloWorldMemberDuty.value = "";
         helloWorldMemberDepartment.value = "";

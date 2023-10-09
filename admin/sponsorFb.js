@@ -83,7 +83,8 @@ submit.addEventListener("click", () => {
   const uploadTask = uploadBytes(storageRef, file, metadata)
     .then((snapshot) => {
       //   console.log("success");
-      location.reload();
+      // location.reload();
+      listHandler();
     })
     .catch((error) => {
       //   console.error("Hata:", error);
@@ -92,19 +93,23 @@ submit.addEventListener("click", () => {
 
 // getDownloadURL(sRef(storage,"sponsorImages/"));
 const listRef = sRef(storage, "sponsorImages/");
-listAll(listRef)
-  .then((res) => {
-    res.items.forEach((itemRef) => {
-      //   console.log(itemRef.name);
-      removeDiv.insertAdjacentHTML(
-        "afterbegin",
-        `<div data-name="${itemRef.name}">${itemRef.name}<button class="sponsor-remove-btn"> sponsoru sil</button></div>`
-      );
+const listHandler = function () {
+  listAll(listRef)
+    .then((res) => {
+      removeDiv.innerHTML = "";
+      res.items.forEach((itemRef) => {
+        //   console.log(itemRef.name);
+        removeDiv.insertAdjacentHTML(
+          "afterbegin",
+          `<div data-name="${itemRef.name}">${itemRef.name}<button class="sponsor-remove-btn"> sponsoru sil</button></div>`
+        );
+      });
+    })
+    .catch((error) => {
+      console.error(error);
     });
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+};
+listHandler();
 
 removeDiv.addEventListener("click", function (e) {
   if (e.target.closest(".sponsor-remove-btn")) {
@@ -116,7 +121,8 @@ removeDiv.addEventListener("click", function (e) {
         deleteObject(sRef(storage, "sponsorImages/" + name))
           .then(() => {
             alertify.success("sponsor silindi");
-            location.reload();
+            // location.reload();
+            listHandler();
           })
           .catch((error) => {
             // console.error(error);

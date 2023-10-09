@@ -51,33 +51,36 @@ const directoryTeamMemberRemove = document.querySelector(
   ".directory-team-member-remove"
 );
 
-get(child(dbRef, `yönetimKuruluÜye/`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      // console.log(Object.entries(snapshot.val()));
+const getMember = function () {
+  get(child(dbRef, `yönetimKuruluÜye/`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        // console.log(Object.entries(snapshot.val()));
+        directoryTeamMemberRemove.innerHTML = "";
+        Object.entries(snapshot.val()).forEach((e) => {
+          const ad = e[1].ad;
+          const nick = e[1].nick;
 
-      Object.entries(snapshot.val()).forEach((e) => {
-        const ad = e[1].ad;
-        const nick = e[1].nick;
-
-        directoryTeamMemberRemove.insertAdjacentHTML(
-          "afterbegin",
-          `<div>
+          directoryTeamMemberRemove.insertAdjacentHTML(
+            "afterbegin",
+            `<div>
             <!--${nick}-->
               ${ad}
               <button class="member-remove">üyeyi sil</button>
             </div>`
-        );
-      });
-    } else {
-      // console.log("No data available");
-    }
+          );
+        });
+      } else {
+        // console.log("No data available");
+      }
 
-    // console.log(üyeler);
-  })
-  .catch((error) => {
-    // console.error("üye Listesi yüklenemedi");
-  });
+      // console.log(üyeler);
+    })
+    .catch((error) => {
+      // console.error("üye Listesi yüklenemedi");
+    });
+};
+getMember();
 
 directoryTeamMemberRemove.addEventListener("click", function (e) {
   if (e.target.closest(".member-remove")) {
@@ -91,7 +94,8 @@ directoryTeamMemberRemove.addEventListener("click", function (e) {
         remove(child(dbRef, `yönetimKuruluÜye/` + chosenNick))
           .then(() => {
             alertify.success("üye silindi");
-            location.reload();
+            // location.reload();
+            getMember();
           })
           .catch((error) => {
             // console.log("üye silinemedi");
@@ -162,7 +166,8 @@ directoryTeamMemberSubmit.addEventListener("click", function () {
         //   console.log("File available at", downloadURL);
         // });
         // console.log("success");
-        location.reload();
+        // location.reload();
+        getMember();
         directoryTeamMemberName.value = "";
         directoryTeamMemberDuty.value = "";
         directoryTeamMemberDepartment.value = "";

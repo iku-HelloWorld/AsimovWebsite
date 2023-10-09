@@ -42,33 +42,37 @@ const storage = getStorage();
 
 const otonomMemberRemove = document.querySelector(".otonom-member-remove");
 
-get(child(dbRef, `otonomMember/`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      // console.log(Object.entries(snapshot.val()));
+const getMember = function () {
+  get(child(dbRef, `otonomMember/`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        otonomMemberRemove.innerHTML = "";
+        // console.log(Object.entries(snapshot.val()));
 
-      Object.entries(snapshot.val()).forEach((e) => {
-        const ad = e[1].ad;
-        const nick = e[1].nick;
+        Object.entries(snapshot.val()).forEach((e) => {
+          const ad = e[1].ad;
+          const nick = e[1].nick;
 
-        otonomMemberRemove.insertAdjacentHTML(
-          "afterbegin",
-          `<div>
+          otonomMemberRemove.insertAdjacentHTML(
+            "afterbegin",
+            `<div>
             <!--${nick}-->
               ${ad}
               <button class="member-remove">üyeyi sil</button>
             </div>`
-        );
-      });
-    } else {
-      // console.log("No data available");
-    }
+          );
+        });
+      } else {
+        // console.log("No data available");
+      }
 
-    // console.log(üyeler);
-  })
-  .catch((error) => {
-    // console.error("üye Listesi yüklenemedi");
-  });
+      // console.log(üyeler);
+    })
+    .catch((error) => {
+      // console.error("üye Listesi yüklenemedi");
+    });
+};
+getMember();
 
 otonomMemberRemove.addEventListener("click", function (e) {
   if (e.target.closest(".member-remove")) {
@@ -82,7 +86,8 @@ otonomMemberRemove.addEventListener("click", function (e) {
         remove(child(dbRef, `otonomMember/` + chosenNick))
           .then(() => {
             alertify.success("üye silindi");
-            location.reload();
+            // location.reload();
+            getMember();
           })
           .catch((error) => {
             // console.log("üye silinemedi");
@@ -127,7 +132,8 @@ otonomMemberSubmit.addEventListener("click", function () {
         //   console.log("File available at", downloadURL);
         // });
         // console.log("success");
-        location.reload();
+        // location.reload();
+        getMember();
         otonomMemberName.value = "";
         otonomMemberDuty.value = "";
         otonomMemberDepartment.value = "";

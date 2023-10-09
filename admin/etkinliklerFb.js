@@ -51,31 +51,35 @@ submit.addEventListener("click", function () {
     document.querySelector(".activities-img").value = "";
     document.querySelector(".activities-header").value = "";
     document.querySelector(".activities-explanation").value = "";
-    location.reload();
+    // location.reload();
+    getMember();
   }
 });
-
-get(child(ref(db), `etkinlikler/`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      // console.log(snapshot.val());
-      Object.values(snapshot.val()).forEach((v) => {
-        removeDiv.insertAdjacentHTML(
-          "afterbegin",
-          `
+const getMember = function () {
+  get(child(ref(db), `etkinlikler/`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        removeDiv.innerHTML = "";
+        // console.log(snapshot.val());
+        Object.values(snapshot.val()).forEach((v) => {
+          removeDiv.insertAdjacentHTML(
+            "afterbegin",
+            `
         <div>
           ${v.başlık}
           <button data-h="${v.başlık}" data-n="${v.nick}" class="act-sil-btn">etkinliği sil</button>
         </div>`
-        );
-      });
-    } else {
-      // console.log("No data available");
-    }
-  })
-  .catch((error) => {
-    // console.error(error);
-  });
+          );
+        });
+      } else {
+        // console.log("No data available");
+      }
+    })
+    .catch((error) => {
+      // console.error(error);
+    });
+};
+getMember();
 ///////
 
 removeDiv.addEventListener("click", function (e) {
@@ -89,7 +93,8 @@ removeDiv.addEventListener("click", function (e) {
         remove(ref(db, "etkinlikler/" + n)).then(() => {
           // console.log("success");
           alertify.succes("etkinlik silindi");
-          location.reload();
+          // location.reload();removeDiv
+          getMember();
         });
       },
 

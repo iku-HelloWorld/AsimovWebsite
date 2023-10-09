@@ -55,32 +55,35 @@ const dbRef = ref(database);
 
 const NotificationDelete = document.querySelector(".Notification-delete");
 
-get(child(dbRef, `bildirim/`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      Object.entries(snapshot.val()).forEach((m) => {
-        const NotificationDeleteHeader = m[1].başlık;
-        const NotificationDeleteText = m[1].açıklama;
+const getImg = function () {
+  get(child(dbRef, `bildirim/`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        NotificationDelete.innerHTML = "";
+        Object.entries(snapshot.val()).forEach((m) => {
+          const NotificationDeleteHeader = m[1].başlık;
+          const NotificationDeleteText = m[1].açıklama;
 
-        NotificationDelete.insertAdjacentHTML(
-          "afterbegin",
-          `<div>
+          NotificationDelete.insertAdjacentHTML(
+            "afterbegin",
+            `<div>
             <!--${NotificationDeleteHeader}-->
               ${NotificationDeleteText}
               <button class="Notification-delete-button">Bildirimi sil</button>
             </div>`
-        );
-      });
-    } else {
-      // console.log("No data available");
-    }
+          );
+        });
+      } else {
+        // console.log("No data available");
+      }
 
-    // console.log(üyeler);
-  })
-  .catch((error) => {
-    // console.error("üye Listesi yüklenemedi");
-  });
-
+      // console.log(üyeler);
+    })
+    .catch((error) => {
+      // console.error("üye Listesi yüklenemedi");
+    });
+};
+getImg();
 NotificationDelete.addEventListener("click", function (m) {
   if (m.target.closest(".Notification-delete")) {
     const chosenHeader = m.target.parentElement.childNodes[1].textContent;
@@ -102,11 +105,12 @@ NotificationDelete.addEventListener("click", function (m) {
           .then(() => {
             // console.log("deleted");
             alertify.success("bildirim silindi");
-            location.reload();
+            // location.reload();
           })
           .catch(() => {
             // console.log("fuck");
           });
+        getImg();
       },
       function () {
         alertify.error("bildirim silinemedi");
@@ -149,7 +153,8 @@ function writeNotificationData() {
         NotificationPictureAdmin.value = "";
         NotificationHeaderAdmin.value = "";
         NotificationParagraphAdmin.value = "";
-        location.reload();
+        // location.reload();
+        getImg();
       }
     );
   }

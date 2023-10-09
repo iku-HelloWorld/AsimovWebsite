@@ -56,6 +56,7 @@ getImages();
 let index = 1;
 
 const replaceGaleri = function (galeriPage, key, imgurl) {
+  // console.log(imgurl);
   galeriPage.insertAdjacentHTML(
     "afterbegin",
     `<div class="image">
@@ -73,19 +74,22 @@ const isEight = function (arr) {
       const chunk = arr.slice(i, i + chunkSize);
       res.push(chunk);
     }
+    // console.log(res);
     return res;
   }
 
   const chunks = sliceIntoChunks(arr, 8);
   // console.log(chunks);
-
+  // console.log(chunks);
   // let galeriPage;
-  chunks.forEach((arr) => {
+  chunks.forEach((arr, i) => {
+    // console.log(i);
     let galeriPage = document.createElement("div");
     // console.log(galeriPage);
     galeriPage.classList.add("galeri_page");
     galericontent.appendChild(galeriPage);
     arr.forEach(function (key) {
+      // console.log(key);
       getDownloadURL(sRef(storage, "galeriResim/" + key[1].nick)).then(
         (imgurl) => {
           // console.log(imgurl);
@@ -126,7 +130,9 @@ const displaySlider = function (i) {
   }
 
   // console.log(index);
-  page.forEach((p) => p.classList.remove("show"));
+  page.forEach((p) => {
+    p.classList.remove("show");
+  });
   page.item(index - 1).classList.add("show");
   galeriPageCounterHandler(page, index - 1);
 };

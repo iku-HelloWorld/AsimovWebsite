@@ -332,7 +332,9 @@ const displaySlide = function (index) {
     imgIndex = slides.length;
   }
   // console.log(imgIndex);
-  slides.forEach((s) => (s.style.opacity = "0%"));
+  slides.forEach((s) => {
+    s.style.opacity = "0%";
+  });
   slides.item(imgIndex - 1).style.opacity = "100%";
   const chosenImgUrl = slides
     .item(imgIndex - 1)

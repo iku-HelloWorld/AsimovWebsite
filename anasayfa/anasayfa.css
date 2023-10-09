@@ -1197,12 +1197,14 @@
   transform: translate(-50%, -50%);
   display: grid;
   opacity: 0;
+  /* display: none; */
   width: 0%;
   grid-template-columns: repeat(4, 20%);
   gap: 1rem;
   transition: ease 300ms;
   justify-content: center;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .galeri_page.show {
@@ -1211,6 +1213,7 @@
   opacity: 100%;
   grid-template-columns: repeat(4, 20%);
   gap: 1rem;
+  overflow: initial;
 }
 
 .line {
@@ -1935,7 +1938,7 @@ h1 {
   font-size: x-large;
   transition: ease 400ms;
 }
-#tiktokLink{
+#tiktokLink {
   margin-top: -0.3vw;
 }
 

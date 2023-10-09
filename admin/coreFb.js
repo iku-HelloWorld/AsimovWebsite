@@ -47,34 +47,36 @@ const storage = getStorage();
 // sil
 
 const coreMemberRemove = document.querySelector(".core-member-remove");
+const getMember = function () {
+  get(child(dbRef, `coreMember/`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        // console.log(Object.entries(snapshot.val()));
+        coreMemberRemove.innerHTML = "";
+        Object.entries(snapshot.val()).forEach((e) => {
+          const ad = e[1].ad;
+          const nick = e[1].nick;
 
-get(child(dbRef, `coreMember/`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      // console.log(Object.entries(snapshot.val()));
-
-      Object.entries(snapshot.val()).forEach((e) => {
-        const ad = e[1].ad;
-        const nick = e[1].nick;
-
-        coreMemberRemove.insertAdjacentHTML(
-          "afterbegin",
-          `<div>
+          coreMemberRemove.insertAdjacentHTML(
+            "afterbegin",
+            `<div>
             <!--${nick}-->
               ${ad}
               <button class="member-remove">üyeyi sil</button>
             </div>`
-        );
-      });
-    } else {
-      // console.log("No data available");
-    }
+          );
+        });
+      } else {
+        // console.log("No data available");
+      }
 
-    // console.log(üyeler);
-  })
-  .catch((error) => {
-    // console.error("üye Listesi yüklenemedi");
-  });
+      // console.log(üyeler);
+    })
+    .catch((error) => {
+      // console.error("üye Listesi yüklenemedi");
+    });
+};
+getMember();
 
 coreMemberRemove.addEventListener("click", function (e) {
   if (e.target.closest(".member-remove")) {
@@ -88,7 +90,8 @@ coreMemberRemove.addEventListener("click", function (e) {
         remove(child(dbRef, `coreMember/` + chosenNick))
           .then(() => {
             alertify.success("üye silindi");
-            location.reload();
+            // location.reload();
+            getMember();
           })
           .catch((error) => {
             // console.log("üye silinemedi");
@@ -140,7 +143,8 @@ coreMemberSubmit.addEventListener("click", function () {
         //   console.log("File available at", downloadURL);
         // });
         // console.log("success");
-        location.reload();
+        // location.reload();
+        getMember();
         coreMemberName.value = "";
         coreMemberDuty.value = "";
         coreMemberDepartment.value = "";

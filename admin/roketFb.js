@@ -42,33 +42,37 @@ const storage = getStorage();
 
 const roketMemberRemove = document.querySelector(".roket-member-remove");
 
-get(child(dbRef, `roketMember/`))
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      // console.log(Object.entries(snapshot.val()));
+const getMember = function () {
+  get(child(dbRef, `roketMember/`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        roketMemberRemove.innerHTML = "";
+        // console.log(Object.entries(snapshot.val()));
 
-      Object.entries(snapshot.val()).forEach((e) => {
-        const ad = e[1].ad;
-        const nick = e[1].nick;
+        Object.entries(snapshot.val()).forEach((e) => {
+          const ad = e[1].ad;
+          const nick = e[1].nick;
 
-        roketMemberRemove.insertAdjacentHTML(
-          "afterbegin",
-          `<div>
+          roketMemberRemove.insertAdjacentHTML(
+            "afterbegin",
+            `<div>
             <!--${nick}-->
               ${ad}
               <button class="member-remove">üyeyi sil</button>
             </div>`
-        );
-      });
-    } else {
-      // console.log("No data available");
-    }
+          );
+        });
+      } else {
+        // console.log("No data available");
+      }
 
-    // console.log(üyeler);
-  })
-  .catch((error) => {
-    // console.error("üye Listesi yüklenemedi");
-  });
+      // console.log(üyeler);
+    })
+    .catch((error) => {
+      // console.error("üye Listesi yüklenemedi");
+    });
+};
+getMember();
 
 roketMemberRemove.addEventListener("click", function (e) {
   if (e.target.closest(".member-remove")) {
@@ -81,7 +85,8 @@ roketMemberRemove.addEventListener("click", function (e) {
         remove(child(dbRef, `roketMember/` + chosenNick))
           .then(() => {
             alertify.success("üye silindi");
-            location.reload();
+            // location.reload();
+            getMember();
           })
           .catch((error) => {
             // console.log("üye silinemedi");
@@ -126,7 +131,9 @@ roketMemberSubmit.addEventListener("click", function () {
         //   console.log("File available at", downloadURL);
         // });
         // console.log("success");
-        location.reload();
+        // location.reload();
+        getMember();
+
         roketMemberName.value = "";
         roketMemberDuty.value = "";
         roketMemberDepartment.value = "";

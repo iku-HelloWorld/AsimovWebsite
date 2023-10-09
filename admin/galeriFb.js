@@ -99,25 +99,30 @@ anasayfagalerisubmit.addEventListener("click", function () {
 const closeImg = function () {
   // console.log("x");
 };
-
-get(child(ref(db), "galeriResim/")).then((snapshot) => {
-  if (snapshot.val()) {
-    Object.values(snapshot.val()).forEach((value) => {
-      // console.log(value.nick);
-      getDownloadURL(sRef(storage, "galeriResim/" + value.nick)).then((url) => {
-        anasayfagalerisil.insertAdjacentHTML(
-          "afterbegin",
-          `<div>
+const getImages = function () {
+  get(child(ref(db), "galeriResim/")).then((snapshot) => {
+    if (snapshot.val()) {
+      anasayfagalerisil.innerHTML = "";
+      Object.values(snapshot.val()).forEach((value) => {
+        // console.log(value.nick);
+        getDownloadURL(sRef(storage, "galeriResim/" + value.nick)).then(
+          (url) => {
+            anasayfagalerisil.insertAdjacentHTML(
+              "afterbegin",
+              `<div>
           <button class="closeImg">
             Resmi sil
           </button>
           <img data-nick="${value.nick}" style="width:80px"; src="${url}"/>
         </div>`
+            );
+          }
         );
       });
-    });
-  }
-});
+    }
+  });
+};
+getImages();
 
 anasayfagalerisil.addEventListener("click", function (e) {
   const close = e.target.closest(".closeImg");
@@ -133,14 +138,15 @@ anasayfagalerisil.addEventListener("click", function (e) {
           .then(() => {
             // console.log("success");
             alertify.succes("fotoğraf silindi");
-            location.reload();
+            // location.reload();
           })
           .catch((error) => {
             console.error(error);
           });
         remove(ref(db, "galeriResim/" + nick)).then(() => {
-          location.reload();
+          // location.reload();
         });
+        getImages();
       },
       function () {
         alertify.error("fotoğraf silinemedi");
