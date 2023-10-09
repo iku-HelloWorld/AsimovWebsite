@@ -157,6 +157,8 @@ function writeNotificationData() {
         getImg();
       }
     );
+  } else {
+    alertify.alert("Lütfen tüm boşlukları doldurunuz");
   }
 }
 

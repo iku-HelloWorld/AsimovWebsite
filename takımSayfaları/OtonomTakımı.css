@@ -504,7 +504,7 @@
   height: 250px;
   text-align: center;
   margin: 20px;
-  border: 5px solid var(--side-color);
+  /* border: 5px solid var(--side-color); */
 }
 
 .takımsayfasıresim img {
@@ -647,7 +647,7 @@
   font-size: x-large;
   transition: ease 400ms;
 }
-#tiktokLink{
+#tiktokLink {
   margin-top: -0.3vw;
 }
 .social-links a:hover {
