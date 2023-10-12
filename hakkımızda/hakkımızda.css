@@ -419,7 +419,7 @@ body {
 .timeline_container {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translateX(-50%);
   justify-content: space-around;
   /* align-items: center; */
@@ -564,7 +564,7 @@ body {
 
 .timeline_messages {
   position: absolute;
-  top: 40%;
+  top: 80%;
 
   /* padding-left: 50px;
   padding-right: 50px; */
